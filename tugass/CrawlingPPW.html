@@ -1,0 +1,887 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Crawling Penambanagan Web &#8212; Penambanagan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/CrawlingPPW';</script>
+    <link rel="canonical" href="/ppw/tugass/CrawlingPPW.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Web Mining" href="pengantar.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambanagan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambanagan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tugas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pengantar.html">Web Mining</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Crawling Penambanagan Web</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw/issues/new?title=Issue%20on%20page%20%2Ftugass/CrawlingPPW.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/CrawlingPPW.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling Penambanagan Web</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-penambanagan-web">
+<h1>Crawling Penambanagan Web<a class="headerlink" href="#crawling-penambanagan-web" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="n">sprynger</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting sprynger
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>  Downloading sprynger-0.4.1-py3-none-any.whl.metadata (5.8 kB)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting lxml (from sprynger)
+  Downloading lxml-6.0.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl.metadata (3.8 kB)
+Requirement already satisfied: requests in /home/codespace/.local/lib/python3.12/site-packages (from sprynger) (2.32.4)
+Requirement already satisfied: urllib3 in /home/codespace/.local/lib/python3.12/site-packages (from sprynger) (2.5.0)
+Requirement already satisfied: platformdirs in /home/codespace/.local/lib/python3.12/site-packages (from sprynger) (4.3.8)
+Requirement already satisfied: charset_normalizer&lt;4,&gt;=2 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (3.4.2)
+Requirement already satisfied: idna&lt;4,&gt;=2.5 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (3.10)
+Requirement already satisfied: certifi&gt;=2017.4.17 in /home/codespace/.local/lib/python3.12/site-packages (from requests-&gt;sprynger) (2025.7.9)
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Downloading sprynger-0.4.1-py3-none-any.whl (40 kB)
+Downloading lxml-6.0.1-cp312-cp312-manylinux_2_26_x86_64.manylinux_2_28_x86_64.whl (5.3 MB)
+?25l   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0.0/5.3 MB</span> <span class=" -Color -Color-Red">?</span> eta <span class=" -Color -Color-Cyan">-:--:--</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">5.3/5.3 MB</span> <span class=" -Color -Color-Red">49.0 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25h
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Installing collected packages: lxml, sprynger
+?25l
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-C237">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">0/2</span> [lxml]
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>   <span class=" -Color -Color-Red">━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━</span> <span class=" -Color -Color-Green">2/2</span> [sprynger]
+?25h
+Successfully installed lxml-6.0.1 sprynger-0.4.1
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span><span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> A new release of pip is available: <span class=" -Color -Color-Red">25.1.1</span> -&gt; <span class=" -Color -Color-Green">25.2</span>
+<span class=" -Color -Color-Bold">[</span><span class=" -Color -Color-Blue">notice</span><span class=" -Color -Color-Bold">]</span> To update, run: <span class=" -Color -Color-Green">python3 -m pip install --upgrade pip</span>
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Note: you may need to restart the kernel to use updated packages.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="c1"># Silahkan membuat api key dari https://dev.springernature.com/#api</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;6812f052d58306c4316bac37cf837912&quot;</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="s2">&quot;web mining&quot;</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.springernature.com/meta/v2/json&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;keyword:</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="n">api_key</span><span class="p">,</span>
+    <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="mi">10</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total hasil: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;total&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;records&#39;</span><span class="p">]:</span>
+        <span class="n">doi</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;doi&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;No title&#39;</span><span class="p">)</span>
+        <span class="n">abstract</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;abstract&#39;</span><span class="p">,</span> <span class="s1">&#39;No abstract&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DOI: </span><span class="si">{</span><span class="n">doi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Title: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Abstract: </span><span class="si">{</span><span class="n">abstract</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total hasil: 7604
+
+DOI: 10.1007/978-3-031-89518-0_1
+Title: On the Centrality of Web Trackers: Assessing Its Potential for Automated Detection
+Abstract: For the past 20 years, web tracking has raised worries among privacy advocates and authorities responsible for data protection. Researchers have proposed several machine learning-driven remedies to identify Web trackers in an automated manner. While those have displayed potential, they have primarily remained as proofs-of-concept. This work extends on t.ex-Graph outlined in our previous work [ 36 ]. The aim of this model is to distinguish benign from tracking hosts by considering their centrality in the network, and data flows to them. Based on the results of our previous work, we abandoned the SLD-based approach. Consequently, we made slight modifications to the feature vector. Our classifier’s performance is comparable to its original version, and we tested its cross-browser and longitudinal performance. Our results indicate that while the cross-browser performance significantly decreases, the longitudinal performance maintains a high level.
+
+DOI: 10.1007/978-3-031-93257-1_6
+Title: Adaptive Web API Recommendation via Matching Service Clusters and Mashup Requirement
+Abstract: With the rapid proliferation of Web services and Web APIs, recommendation systems can effectively address the issue of information overload and alleviate the burden of meaningless filtering. Existing approaches can help filtering appropriate Web services for mashup creation, however, they often fall short of developers’ different and personalized needs by recommending only a fixed number of APIs and lack precision in aligning mashup requirements across all categories. To solve the above issue, this paper introduces a novel Web service recommendation framework called AWAR for mashup creation, which focuses on the matching strategy between mashup requirements and Web APIs, and enhances recommendation effectiveness by integrating natural language processing, optimization algorithms, and deep learning. Extensive experiments conducted on large-scale real datasets demonstrate that the proposed approach receives superior recommendation results on multiple evaluation metrics compared to advanced competing baselines.
+
+DOI: 10.1007/978-3-031-98287-3_14
+Title: Leveraging Web Scraping to Identify Opportunities for Young Talent to UK Digital Manufacturing
+Abstract: The rapid evolution of digital manufacturing presents significant opportunities for economic growth and technological advancement in the United Kingdom (UK). However, the sector faces a critical shortage of skilled professionals, particularly among the younger generation. This paper explores the potential of leveraging state-of-the-art web scraping technologies to identify opportunities for attracting young talent to careers in UK digital manufacturing. By employing web scraping tools such as Scrapy, Selenium, and Magical, the study gathered and analysed data from online platforms like LinkedIn to assess the opportunities for the young talent in the UK digital manufacturing industry. The findings reveal key trends in job attractiveness, salary scales, and skill requirements, with a focus on how small and large companies differ in their approach to talent acquisition. The analysis raised some interesting questions which are worth exploring. In addition to, the insights gained provide actionable recommendations for educators, policymakers, and industry leaders to enhance the alignment between educational offerings and industry needs, thereby fostering a robust talent pipeline for the future of UK manufacturing.
+
+DOI: 10.1007/978-3-031-94280-8_1
+Title: IoT-Enabled Child Monitoring and Control System via Web Interface
+Abstract: In this fast-paced society, working parents nowadays find it challenging to juggle childcare with their busy schedules. In light of this, a novel infant management system utilizing the Internet of Things has developed. This system functions by using sophisticated technology to automate tasks hence ensuring babies safety and comfort. The major features are sound sensor that results into automatic rocking cradle; integrated speaker which can play lullabies to a baby. The system is continuously monitored for its temperature and humidity by sensors sending the caregiver a summary notification about their vicinity while motion detectors are present alongside it. While a rain sensor identifies wet diapers, a DC fan keeps the room at a suitable temperature. Components like cradle swing, DC fan operations, or even playing of lullabies can be remotely controlled through web interface. It implies that one can easily control his infant immediate surroundings from anywhere around the world without hassle. The proposed system utilizes ESP32 technology making use of ESP32 camera for detecting children via live streaming. This all-inclusive monitoring has provided a new dimension to childcare technology thus relieving anxiety among workers as well as inexperienced parents.
+
+DOI: 10.1007/978-3-031-94455-0_17
+Title: Bag-of-Characters: A Multiple Instance Learning Framework for URL Embedding in Web Security
+Abstract: Nowadays, with the rapid growth of cyber threats, machine learning models are widely used to detect and identify malicious network activities, such as illegal web requests and network anomalies. Effective URL embeddings are essential for improving the performance of these detection models. However, traditional URL embedding methods often consider URLs as a single entity, overlooking the relationships and semantic structures among characters, and limiting models’ learning capability. To address these limitations, we propose a novel URL embedding framework called Bag-of-Characters (BoC). BoC employs the Multiple Instance Learning (MIL) paradigm and treats each URL as a collection of character instances. We convert each character into a low-dimensional vector and incorporate positional encoding to generate semantically rich character representations. After that, we combine these character vectors using MIL algorithms to create a fixed-length URL embedding, preventing the loss of semantic information that could happen with conventional truncation or padding techniques. We conduct experiments on multiple public datasets, and the results show that our proposed method significantly outperforms existing baseline methods in terms of accuracy and robustness for tasks such as malicious web request detection. We make our code publicly available at https://github.com/chiachen-chang/mil_urlembedding .
+
+DOI: 10.1007/978-3-032-00350-8_12
+Title: Ethical Implications of Using AI to Monitor and Regulate Dark Web Activities
+Abstract: The dark web continues to attract more illegal activities, and law enforcement and societal security face significant challenges. AI, though strong for monitoring and regulation, does raise critical ethical concerns concerning the use of these technologies for that purpose. This study considers the ethical aspects of AI systems for policing the dark web, including the trade-off between security and privacy, risks of bias and discrimination, and accountability in automated decision-making. Through a mixed-method approach involving both legal analysis, expert interviews, and case studies of existing AI-driven dark web monitoring systems, we identify central ethical challenges and potential mitigation strategies. In doing so, our results will reflect how AI may strengthen efficiency and effectiveness in terms of dark web policing, which equally result in the violation of user privacy, the perpetuation of systemic biases, and a lack of transparency in its operations. Ultimately, we conclude that proper use of AI in monitoring dark webs requires a robust governance framework, one that can ensure accountability, legitimacy, and respect for civil liberties. Such a framework must build on robust, clear guidelines for collecting and utilizing information, regular audits of bias, effectiveness, and mechanisms for human oversight and intervention. Given such measures, chances for using AI in the fight against crimes committed on the dark web are securely positioned within the right and constitutional means to protect the rights of individuals in this age of digitization.
+
+DOI: 10.1007/978-3-031-97144-0_6
+Title: IRIS: Rapid Curation Framework for Iterative Improvement of Noisy Named Entity Annotations
+Abstract: We propose IRIS (IteRative Improvement dS-ner), a rapid curation framework for the iterative improvement of noisy named entity annotations. The framework aims to provide an efficient and rapid method for curating noisy entity annotations initially made by distantly supervised named entity recognition (DS-NER). Unlike many existing entity annotation tools, which focus primarily on annotation from scratch, IRIS is designed to provide more efficient methods for improving entity annotations initially generated by DS-NER. This is enabled by robust annotation search capabilities and the automatic annotation capabilities suggested by the NER model, which is initialized with the DS-NER model and later incrementally updated during annotation. We also adopt Active Learning (AL), which allows curators to work with documents suggested by the system, rather than manually selecting them. This work also analyzes the trade-offs among different strategies for iteratively updating the NER model, such as selecting training samples and the strategies for fine-tuning the new NER model based on the previous model or training it from scratch.
+
+DOI: 10.1007/s10115-025-02444-z
+Title: Cross-modal associated learning with spatial–temporal attention for hot topic detection
+Abstract: With the explosion in the number of web videos, it has become a common practice to detect hot topics with web videos. However, each video clip contains multiple patterns, in which object actions might only appear in specific spatial areas or specific time periods, posing a huge challenge for web video hot topic detection. Fortunately, visual information during a specific time period and area will significantly enhance the rapid capture of key information, which is particularly important for detecting hot topics. Therefore, we propose a cross-modal associated learning method with spatial–temporal attention. It can automatically select discriminative time segments to detect hot topics by focusing on spatial regions with rich information. Firstly, after focusing on important keyframes related to the topic through temporal attention, spatial attention emphasizes the salient regions in the frame, thus incorporating discriminative features at the spatial level. Secondly, after integrating text structure knowledge into text semantic features, it can adaptively learn the weights of text features and visual features. Thirdly, adaptive learning of cross-modal fusion weights, achieving mutual guidance between text and visual information in attention dispersed association models to enhance feature learning. Finally, under the constraint of contrast loss, hot topics are detected with the similarity between features. Extensive experiments conducted on web videos from YouTube indicate that our method outperforms 8 leading state-of-the-art methods.
+
+DOI: 10.1007/s40647-024-00435-y
+Title: A Decade of Empirical Research into the Careers of Visual Artists: Mapping Thematic Trends Through Social Network Analysis
+Abstract: This article explores trends in the empirical studies on the careers of visual artists over the past decade. Methodologically, we used the Louvain algorithm to perform a co-occurrence analysis, revealing thematic clusters. This approach enabled us to identify five distinct trends, each highlighting specific aspects and the geographical diversity of visual artists’ careers, which were then evaluated using a thematic map. The main findings revealed that “working conditions, income inequalities, and professional practices in the creative and cultural industries” stand out as a central and influential theme, with a significant impact and notable advances that have shaped recent discussions and practices. The themes “professional dynamics, cultural policies, and career strategies in contemporary art” and “dynamics of artistic careers, resilience, and support policies in contemporary art” are well-developed and have a solid research base, offering an in-depth understanding of the relevant topics. The theme “positioning and success strategies of artists in the contemporary art market” represents an emerging theme that is receiving increasing attention and is likely to become prominent, while the theme “gender inequalities, geographical mobility, and dynamics of artistic clusters” indicates a waning influence for various reasons. The results obtained aim to provide concrete guidance to researchers and the institutions that confer legitimacy in the visual arts world. By shedding light on contemporary issues related to the construction of visual artists’ careers from a global perspective, this study contributes to a deeper understanding of current dynamics.
+
+DOI: 10.1007/s40558-025-00327-1
+Title: A recommender-based web platform to boost tourism in marginal territories
+Abstract: Recommender engines are software applications employed in online tourism information searches to suggest useful content and guide user choices. They represent a significant area of research within the tourism sector, crucially influencing traveler decisions through personalized recommendations. This paper focuses specifically on the Branding4Resilience (B4R) project, whose objective is to promote inner areas, by co-designing virtuous transformations with their inhabitants through novel branding strategies and digital enabling infrastructures. All experiments and assessments described in this study were conducted within the italian area of Sassoferrato, corresponding to the criteria defined by the B4R initiative. The paper introduces a dedicated web platform aimed at enhancing tourism by directing attention towards inland destinations and networking opportunities. The platform enables local providers of tourism-related services, such as guides, event organizers, and restaurateurs, to connect effectively with tourists seeking distinctive experiences. By facilitating interactions, the platform promotes collaboration, innovation, and the co-creation of personalized experiences, transforming tourists into active participants and contributors. To evaluate user experience, perceived usefulness, and innovation of the platform, we analyzed user responses to a structured questionnaire, which combined frequently addressed questions from existing literature with newly developed items specific to our platform. Constructs included tourist platform usage, perceived utility, content quality, design and usability, and innovative elements. The implemented algorithm demonstrated an average sensitivity of 79.74%, highlighting its efficacy in providing relevant suggestions to the platform’s “consumers” users.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+
+<span class="c1"># Silahkan membuat api key dari https://dev.springernature.com/#api</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;6812f052d58306c4316bac37cf837912&quot;</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="s2">&quot;web mining&quot;</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.springernature.com/meta/v2/json&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;keyword:</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="n">api_key</span><span class="p">,</span>
+    <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="mi">10</span>   <span class="c1"># jumlah hasil per halaman</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total hasil: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Simpan ke CSV</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;springer_results.csv&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="c1"># Header kolom</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s2">&quot;DOI&quot;</span><span class="p">,</span> <span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Abstract&quot;</span><span class="p">])</span>
+
+        <span class="c1"># Data hasil crawling</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;records&#39;</span><span class="p">]:</span>
+            <span class="n">doi</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;doi&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;No title&#39;</span><span class="p">)</span>
+            <span class="n">abstract</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;abstract&#39;</span><span class="p">,</span> <span class="s1">&#39;No abstract&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Tulis ke file CSV</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">doi</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">abstract</span><span class="p">])</span>
+
+            <span class="c1"># Print ke console juga</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DOI: </span><span class="si">{</span><span class="n">doi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Title: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Abstract: </span><span class="si">{</span><span class="n">abstract</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ Data berhasil disimpan ke springer_results.csv&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total hasil: 7604
+
+DOI: 10.1007/978-3-031-89518-0_1
+Title: On the Centrality of Web Trackers: Assessing Its Potential for Automated Detection
+Abstract: For the past 20 years, web tracking has raised worries among privacy advocates and authorities responsible for data protection. Researchers have proposed several machine learning-driven remedies to identify Web trackers in an automated manner. While those have displayed potential, they have primarily remained as proofs-of-concept. This work extends on t.ex-Graph outlined in our previous work [ 36 ]. The aim of this model is to distinguish benign from tracking hosts by considering their centrality in the network, and data flows to them. Based on the results of our previous work, we abandoned the SLD-based approach. Consequently, we made slight modifications to the feature vector. Our classifier’s performance is comparable to its original version, and we tested its cross-browser and longitudinal performance. Our results indicate that while the cross-browser performance significantly decreases, the longitudinal performance maintains a high level.
+
+DOI: 10.1007/978-3-031-93257-1_6
+Title: Adaptive Web API Recommendation via Matching Service Clusters and Mashup Requirement
+Abstract: With the rapid proliferation of Web services and Web APIs, recommendation systems can effectively address the issue of information overload and alleviate the burden of meaningless filtering. Existing approaches can help filtering appropriate Web services for mashup creation, however, they often fall short of developers’ different and personalized needs by recommending only a fixed number of APIs and lack precision in aligning mashup requirements across all categories. To solve the above issue, this paper introduces a novel Web service recommendation framework called AWAR for mashup creation, which focuses on the matching strategy between mashup requirements and Web APIs, and enhances recommendation effectiveness by integrating natural language processing, optimization algorithms, and deep learning. Extensive experiments conducted on large-scale real datasets demonstrate that the proposed approach receives superior recommendation results on multiple evaluation metrics compared to advanced competing baselines.
+
+DOI: 10.1007/978-3-031-98287-3_14
+Title: Leveraging Web Scraping to Identify Opportunities for Young Talent to UK Digital Manufacturing
+Abstract: The rapid evolution of digital manufacturing presents significant opportunities for economic growth and technological advancement in the United Kingdom (UK). However, the sector faces a critical shortage of skilled professionals, particularly among the younger generation. This paper explores the potential of leveraging state-of-the-art web scraping technologies to identify opportunities for attracting young talent to careers in UK digital manufacturing. By employing web scraping tools such as Scrapy, Selenium, and Magical, the study gathered and analysed data from online platforms like LinkedIn to assess the opportunities for the young talent in the UK digital manufacturing industry. The findings reveal key trends in job attractiveness, salary scales, and skill requirements, with a focus on how small and large companies differ in their approach to talent acquisition. The analysis raised some interesting questions which are worth exploring. In addition to, the insights gained provide actionable recommendations for educators, policymakers, and industry leaders to enhance the alignment between educational offerings and industry needs, thereby fostering a robust talent pipeline for the future of UK manufacturing.
+
+DOI: 10.1007/978-3-031-94280-8_1
+Title: IoT-Enabled Child Monitoring and Control System via Web Interface
+Abstract: In this fast-paced society, working parents nowadays find it challenging to juggle childcare with their busy schedules. In light of this, a novel infant management system utilizing the Internet of Things has developed. This system functions by using sophisticated technology to automate tasks hence ensuring babies safety and comfort. The major features are sound sensor that results into automatic rocking cradle; integrated speaker which can play lullabies to a baby. The system is continuously monitored for its temperature and humidity by sensors sending the caregiver a summary notification about their vicinity while motion detectors are present alongside it. While a rain sensor identifies wet diapers, a DC fan keeps the room at a suitable temperature. Components like cradle swing, DC fan operations, or even playing of lullabies can be remotely controlled through web interface. It implies that one can easily control his infant immediate surroundings from anywhere around the world without hassle. The proposed system utilizes ESP32 technology making use of ESP32 camera for detecting children via live streaming. This all-inclusive monitoring has provided a new dimension to childcare technology thus relieving anxiety among workers as well as inexperienced parents.
+
+DOI: 10.1007/978-3-031-94455-0_17
+Title: Bag-of-Characters: A Multiple Instance Learning Framework for URL Embedding in Web Security
+Abstract: Nowadays, with the rapid growth of cyber threats, machine learning models are widely used to detect and identify malicious network activities, such as illegal web requests and network anomalies. Effective URL embeddings are essential for improving the performance of these detection models. However, traditional URL embedding methods often consider URLs as a single entity, overlooking the relationships and semantic structures among characters, and limiting models’ learning capability. To address these limitations, we propose a novel URL embedding framework called Bag-of-Characters (BoC). BoC employs the Multiple Instance Learning (MIL) paradigm and treats each URL as a collection of character instances. We convert each character into a low-dimensional vector and incorporate positional encoding to generate semantically rich character representations. After that, we combine these character vectors using MIL algorithms to create a fixed-length URL embedding, preventing the loss of semantic information that could happen with conventional truncation or padding techniques. We conduct experiments on multiple public datasets, and the results show that our proposed method significantly outperforms existing baseline methods in terms of accuracy and robustness for tasks such as malicious web request detection. We make our code publicly available at https://github.com/chiachen-chang/mil_urlembedding .
+
+DOI: 10.1007/978-3-032-00350-8_12
+Title: Ethical Implications of Using AI to Monitor and Regulate Dark Web Activities
+Abstract: The dark web continues to attract more illegal activities, and law enforcement and societal security face significant challenges. AI, though strong for monitoring and regulation, does raise critical ethical concerns concerning the use of these technologies for that purpose. This study considers the ethical aspects of AI systems for policing the dark web, including the trade-off between security and privacy, risks of bias and discrimination, and accountability in automated decision-making. Through a mixed-method approach involving both legal analysis, expert interviews, and case studies of existing AI-driven dark web monitoring systems, we identify central ethical challenges and potential mitigation strategies. In doing so, our results will reflect how AI may strengthen efficiency and effectiveness in terms of dark web policing, which equally result in the violation of user privacy, the perpetuation of systemic biases, and a lack of transparency in its operations. Ultimately, we conclude that proper use of AI in monitoring dark webs requires a robust governance framework, one that can ensure accountability, legitimacy, and respect for civil liberties. Such a framework must build on robust, clear guidelines for collecting and utilizing information, regular audits of bias, effectiveness, and mechanisms for human oversight and intervention. Given such measures, chances for using AI in the fight against crimes committed on the dark web are securely positioned within the right and constitutional means to protect the rights of individuals in this age of digitization.
+
+DOI: 10.1007/978-3-031-97144-0_6
+Title: IRIS: Rapid Curation Framework for Iterative Improvement of Noisy Named Entity Annotations
+Abstract: We propose IRIS (IteRative Improvement dS-ner), a rapid curation framework for the iterative improvement of noisy named entity annotations. The framework aims to provide an efficient and rapid method for curating noisy entity annotations initially made by distantly supervised named entity recognition (DS-NER). Unlike many existing entity annotation tools, which focus primarily on annotation from scratch, IRIS is designed to provide more efficient methods for improving entity annotations initially generated by DS-NER. This is enabled by robust annotation search capabilities and the automatic annotation capabilities suggested by the NER model, which is initialized with the DS-NER model and later incrementally updated during annotation. We also adopt Active Learning (AL), which allows curators to work with documents suggested by the system, rather than manually selecting them. This work also analyzes the trade-offs among different strategies for iteratively updating the NER model, such as selecting training samples and the strategies for fine-tuning the new NER model based on the previous model or training it from scratch.
+
+DOI: 10.1007/s10115-025-02444-z
+Title: Cross-modal associated learning with spatial–temporal attention for hot topic detection
+Abstract: With the explosion in the number of web videos, it has become a common practice to detect hot topics with web videos. However, each video clip contains multiple patterns, in which object actions might only appear in specific spatial areas or specific time periods, posing a huge challenge for web video hot topic detection. Fortunately, visual information during a specific time period and area will significantly enhance the rapid capture of key information, which is particularly important for detecting hot topics. Therefore, we propose a cross-modal associated learning method with spatial–temporal attention. It can automatically select discriminative time segments to detect hot topics by focusing on spatial regions with rich information. Firstly, after focusing on important keyframes related to the topic through temporal attention, spatial attention emphasizes the salient regions in the frame, thus incorporating discriminative features at the spatial level. Secondly, after integrating text structure knowledge into text semantic features, it can adaptively learn the weights of text features and visual features. Thirdly, adaptive learning of cross-modal fusion weights, achieving mutual guidance between text and visual information in attention dispersed association models to enhance feature learning. Finally, under the constraint of contrast loss, hot topics are detected with the similarity between features. Extensive experiments conducted on web videos from YouTube indicate that our method outperforms 8 leading state-of-the-art methods.
+
+DOI: 10.1007/s40647-024-00435-y
+Title: A Decade of Empirical Research into the Careers of Visual Artists: Mapping Thematic Trends Through Social Network Analysis
+Abstract: This article explores trends in the empirical studies on the careers of visual artists over the past decade. Methodologically, we used the Louvain algorithm to perform a co-occurrence analysis, revealing thematic clusters. This approach enabled us to identify five distinct trends, each highlighting specific aspects and the geographical diversity of visual artists’ careers, which were then evaluated using a thematic map. The main findings revealed that “working conditions, income inequalities, and professional practices in the creative and cultural industries” stand out as a central and influential theme, with a significant impact and notable advances that have shaped recent discussions and practices. The themes “professional dynamics, cultural policies, and career strategies in contemporary art” and “dynamics of artistic careers, resilience, and support policies in contemporary art” are well-developed and have a solid research base, offering an in-depth understanding of the relevant topics. The theme “positioning and success strategies of artists in the contemporary art market” represents an emerging theme that is receiving increasing attention and is likely to become prominent, while the theme “gender inequalities, geographical mobility, and dynamics of artistic clusters” indicates a waning influence for various reasons. The results obtained aim to provide concrete guidance to researchers and the institutions that confer legitimacy in the visual arts world. By shedding light on contemporary issues related to the construction of visual artists’ careers from a global perspective, this study contributes to a deeper understanding of current dynamics.
+
+DOI: 10.1007/s40558-025-00327-1
+Title: A recommender-based web platform to boost tourism in marginal territories
+Abstract: Recommender engines are software applications employed in online tourism information searches to suggest useful content and guide user choices. They represent a significant area of research within the tourism sector, crucially influencing traveler decisions through personalized recommendations. This paper focuses specifically on the Branding4Resilience (B4R) project, whose objective is to promote inner areas, by co-designing virtuous transformations with their inhabitants through novel branding strategies and digital enabling infrastructures. All experiments and assessments described in this study were conducted within the italian area of Sassoferrato, corresponding to the criteria defined by the B4R initiative. The paper introduces a dedicated web platform aimed at enhancing tourism by directing attention towards inland destinations and networking opportunities. The platform enables local providers of tourism-related services, such as guides, event organizers, and restaurateurs, to connect effectively with tourists seeking distinctive experiences. By facilitating interactions, the platform promotes collaboration, innovation, and the co-creation of personalized experiences, transforming tourists into active participants and contributors. To evaluate user experience, perceived usefulness, and innovation of the platform, we analyzed user responses to a structured questionnaire, which combined frequently addressed questions from existing literature with newly developed items specific to our platform. Constructs included tourist platform usage, perceived utility, content quality, design and usability, and innovative elements. The implemented algorithm demonstrated an average sensitivity of 79.74%, highlighting its efficacy in providing relevant suggestions to the platform’s “consumers” users.
+
+✅ Data berhasil disimpan ke springer_results.csv
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="c1"># Silahkan membuat api key dari https://dev.springernature.com/#api</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;6812f052d58306c4316bac37cf837912&quot;</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="s2">&quot;web usage mining&quot;</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.springernature.com/meta/v2/json&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;keyword:</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="n">api_key</span><span class="p">,</span>
+    <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="mi">10</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total hasil: </span><span class="si">{</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;total&#39;</span><span class="p">]</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;records&#39;</span><span class="p">]:</span>
+        <span class="n">doi</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;doi&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+        <span class="n">title</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;No title&#39;</span><span class="p">)</span>
+        <span class="n">abstract</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;abstract&#39;</span><span class="p">,</span> <span class="s1">&#39;No abstract&#39;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DOI: </span><span class="si">{</span><span class="n">doi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Title: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+        <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Abstract: </span><span class="si">{</span><span class="n">abstract</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total hasil: 3188
+
+DOI: 10.1007/978-3-031-89518-0_1
+Title: On the Centrality of Web Trackers: Assessing Its Potential for Automated Detection
+Abstract: For the past 20 years, web tracking has raised worries among privacy advocates and authorities responsible for data protection. Researchers have proposed several machine learning-driven remedies to identify Web trackers in an automated manner. While those have displayed potential, they have primarily remained as proofs-of-concept. This work extends on t.ex-Graph outlined in our previous work [ 36 ]. The aim of this model is to distinguish benign from tracking hosts by considering their centrality in the network, and data flows to them. Based on the results of our previous work, we abandoned the SLD-based approach. Consequently, we made slight modifications to the feature vector. Our classifier’s performance is comparable to its original version, and we tested its cross-browser and longitudinal performance. Our results indicate that while the cross-browser performance significantly decreases, the longitudinal performance maintains a high level.
+
+DOI: 10.1007/978-3-031-93257-1_6
+Title: Adaptive Web API Recommendation via Matching Service Clusters and Mashup Requirement
+Abstract: With the rapid proliferation of Web services and Web APIs, recommendation systems can effectively address the issue of information overload and alleviate the burden of meaningless filtering. Existing approaches can help filtering appropriate Web services for mashup creation, however, they often fall short of developers’ different and personalized needs by recommending only a fixed number of APIs and lack precision in aligning mashup requirements across all categories. To solve the above issue, this paper introduces a novel Web service recommendation framework called AWAR for mashup creation, which focuses on the matching strategy between mashup requirements and Web APIs, and enhances recommendation effectiveness by integrating natural language processing, optimization algorithms, and deep learning. Extensive experiments conducted on large-scale real datasets demonstrate that the proposed approach receives superior recommendation results on multiple evaluation metrics compared to advanced competing baselines.
+
+DOI: 10.1007/s10115-025-02444-z
+Title: Cross-modal associated learning with spatial–temporal attention for hot topic detection
+Abstract: With the explosion in the number of web videos, it has become a common practice to detect hot topics with web videos. However, each video clip contains multiple patterns, in which object actions might only appear in specific spatial areas or specific time periods, posing a huge challenge for web video hot topic detection. Fortunately, visual information during a specific time period and area will significantly enhance the rapid capture of key information, which is particularly important for detecting hot topics. Therefore, we propose a cross-modal associated learning method with spatial–temporal attention. It can automatically select discriminative time segments to detect hot topics by focusing on spatial regions with rich information. Firstly, after focusing on important keyframes related to the topic through temporal attention, spatial attention emphasizes the salient regions in the frame, thus incorporating discriminative features at the spatial level. Secondly, after integrating text structure knowledge into text semantic features, it can adaptively learn the weights of text features and visual features. Thirdly, adaptive learning of cross-modal fusion weights, achieving mutual guidance between text and visual information in attention dispersed association models to enhance feature learning. Finally, under the constraint of contrast loss, hot topics are detected with the similarity between features. Extensive experiments conducted on web videos from YouTube indicate that our method outperforms 8 leading state-of-the-art methods.
+
+DOI: 10.1007/s40558-025-00327-1
+Title: A recommender-based web platform to boost tourism in marginal territories
+Abstract: Recommender engines are software applications employed in online tourism information searches to suggest useful content and guide user choices. They represent a significant area of research within the tourism sector, crucially influencing traveler decisions through personalized recommendations. This paper focuses specifically on the Branding4Resilience (B4R) project, whose objective is to promote inner areas, by co-designing virtuous transformations with their inhabitants through novel branding strategies and digital enabling infrastructures. All experiments and assessments described in this study were conducted within the italian area of Sassoferrato, corresponding to the criteria defined by the B4R initiative. The paper introduces a dedicated web platform aimed at enhancing tourism by directing attention towards inland destinations and networking opportunities. The platform enables local providers of tourism-related services, such as guides, event organizers, and restaurateurs, to connect effectively with tourists seeking distinctive experiences. By facilitating interactions, the platform promotes collaboration, innovation, and the co-creation of personalized experiences, transforming tourists into active participants and contributors. To evaluate user experience, perceived usefulness, and innovation of the platform, we analyzed user responses to a structured questionnaire, which combined frequently addressed questions from existing literature with newly developed items specific to our platform. Constructs included tourist platform usage, perceived utility, content quality, design and usability, and innovative elements. The implemented algorithm demonstrated an average sensitivity of 79.74%, highlighting its efficacy in providing relevant suggestions to the platform’s “consumers” users.
+
+DOI: 10.1007/s11227-025-07778-7
+Title: Graph-augmented web spam detection using evidential reasoning
+Abstract: Web spam persistently undermines search engine integrity through deceptive practices such as cloaking and link manipulation, incurring substantial economic costs. Existing detection approaches often contend with significant challenges, including the effective management of uncertainty in human judgments and the processing of high-dimensional feature spaces. To address these limitations, we propose Graph-Augmented Web Spam Evidential Reasoner (GAWSER). This innovative framework integrates Dempster–Shafer Theory (DST) for robust uncertainty quantification with advanced graph-based feature selection. This system dynamically assesses judge reliability through adaptive evidence aggregation while employing spectral clustering on a feature similarity graph to achieve noticeable dimensionality reduction without compromising discriminative power. Evaluated on the WEBSPAM-UK2006 and WEBSPAM-UK2007 datasets, GAWSER demonstrated notable performance improvements, achieving accuracy increases of 4.2% (to 0.952) and 3.2% (to 0.947), respectively, alongside a reduction in false negatives. The framework consistently demonstrates improved metrics over both traditional and deep learning-based methodologies, offering a novel solution for uncertainty-aware web spam detection. Furthermore, recognizing the inherent scalability challenges posed by massive, dynamic web datasets, GAWSER’s design is specifically engineered to leverage high-performance computing (HPC) paradigms. Its graph-based feature selection and evidential reasoning components are inherently adaptable for parallel and distributed processing, which is critical for real-time, web-scale spam detection. This architectural consideration renders GAWSER highly relevant to the field of Supercomputing, showcasing a novel application for advanced computational systems in mitigating web spam.
+
+DOI: 10.1186/s12859-025-06249-3
+Title: GeneSetCluster 2.0: a comprehensive toolset for summarizing and integrating gene-sets analysis
+Abstract: Background Gene-Set Analysis (GSA) is commonly used to analyze high-throughput experiments. However, GSA cannot readily disentangle clusters or pathways due to redundancies in upstream knowledge bases, which hinders comprehensive exploration and interpretation of biological findings. To address this challenge, we developed GeneSetCluster, an R package designed to summarize and integrate GSA results. Over time, we and users as well identified limitations in the original version, such as difficulties in managing redundancies across multiple gene-sets, large computational times, and its lack of accessibility for users without programming expertise. Results We present GeneSetCluster 2.0, a comprehensive upgrade that delivers methodological, computational, interpretative, and user-experience enhancements. Methodologically, GeneSetCluster 2.0 introduces a novel approach to address duplicated gene-sets and implements a seriation-based clustering algorithm that reorders results, aiding pattern identification. Computationally, the package is optimized for parallel processing, significantly reducing execution time. GeneSetCluster 2.0 enhances cluster annotations by associating clusters with relevant tissues and biological processes to improve biological interpretation, particularly for human and mouse data. To broaden accessibility, we have developed a user-friendly web application enabling non-programmers to use it. This version also ensures seamless integration between the R package, catering to users with programming expertise, and the web application for broader audiences. We evaluated the updates in a single-cell RNA public dataset. Conclusion GeneSetCluster 2.0 offers substantial improvements over its predecessor. Furthermore, by bridging the gap between bioinformaticians and clinicians in multidisciplinary teams, GeneSetCluster 2.0 facilitates collaborative research. The R package and web application, along with detailed installation and usage guides, are available on GitHub ( https://github.com/TranslationalBioinformaticsUnit/GeneSetCluster2.0 ), and the web application can be accessed at https://translationalbio.shinyapps.io/genesetcluster/ .
+
+DOI: 10.1038/s41598-025-15885-x
+Title: Semantic web ontology for structured knowledge representation and clinical decision support in eye diseases
+Abstract: Vision is a vital sense that allows people to interact with their surroundings and carry out tasks efficiently while maintaining safety and independence. At least 2.2 billion people globally suffer from blindness or vision impairment, of which more than 1 billion cases are avoidable or untreated because they lack access to eye care services. In ophthalmology, there are numerous challenges in knowledge organization and management, mainly due to the complexity of eye diseases. Ontologies are used as excellent tools for organizing and managing complicated information due to their structured representations of domain knowledge and to make data more findable, accessible, interoperable, and reusable. We have developed an ontology, that is, Eye Disease Ontology (EDO), for the most common eye diseases as a resource that helps in data extraction and analysis for the general public and medical professionals. EDO is a comprehensive and systematic knowledge representation system that categorizes and organizes information about commonly occurring eye diseases such as cataracts, glaucoma, age-related macular degeneration, etc, and connects it to vital details such as symptoms, causes, risk factors, diagnostic tests, and treatment options. The significant metrics of EDO include 566 classes, 16 object properties, 12 data properties, and 119 instances. In this study, the ontology of eye diseases has the potential to improve clinical diagnosis, advance research, and enrich medical education, while improving patient care. This ontology was created using the NeOn technique in the Protégé/OWL environment. Several competency questions were created to meet the demands of various stakeholders, and the ontology was validated using SPARQL queries, the Hermit Reasoner, and the OOPS Pitfalls Scanner. In addition, we develop comprehensive documentation for EDO to promote reuse and emphasise the importance of reuse in future applications.
+
+DOI: 10.1007/s12145-025-01982-y
+Title: Four decades of trends in invisible gold research: a web of science-based bibliometric analysis (1985–2024)
+Abstract: Invisible gold research is essential for understanding gold mineralization, overcoming analytical limitations, and addressing the technological bottlenecks in the economic extraction of refractory gold, thereby unlocking the potential of these deposits and their tailings. To assess research trends and demand, this study analyzed 1300 records from the Web of Science database (1985–2024) using the cross-disciplinary publication index (CDPI), the co-authorship model, and the technology-economic linkage model (TELM), with visualizations generated via VOSviewer and Microsoft Excel. The analysis reveals a 65% increase in publications between 2015 and 2021, with a peak of 98 papers in 2021. Articles constitute the majority (84.6%), followed by conference proceedings (9.8%) and reviews (3.9%). Interdisciplinary contributions surged by 40% after 2015, particularly in “materials science”, as indicated by a high CDPI of 0.81; while a discipline-pair co-occurrence score between “materials science and nanotechnology” reached a CDPI of 0.75. Notably, the CDPI model reveals that 68% of advancements in extraction technologies between 2015 and 2024 originated from nanoscale-oriented invisible gold research published in geoscience-focused journals employing advanced nanotechnologies. Furthermore, the TELM framework identifies that between 2021 and 2024, high gold prices—ranging from $1,798/oz to $1,940/oz—were well correlated (R^2 = 0.89) with publication counts, which remained consistently high at 94 to 98 papers annually. Two key methodological trends identified in this study for invisible gold research are: (1) the development of environmentally friendly extraction techniques, including biooxidation or thiosulfate leaching, and advanced pre-treatment processes; and (2) the adoption of high-precision analytical tools such as LA-ICP-MS, SIMS, and TIMA-X, which have significantly enhanced nanoscale gold detection and characterization. This methodological progress is further supported by the increase in annual research funding—from approximately $2–5 million when gold prices averaged $370/oz (1985–2000), to $10–30 million at around $700/oz (2001–2015), and up to $50–120 million as prices exceeded $1,500/oz (2016–2024)—demonstrating a strong positive association between rising gold prices and investment in invisible gold research. The findings reveal key trends in invisible gold research, demonstrating that Web of Science data, VOSviewer visualizations, and the CDPI and TELM frameworks provide a more reliable basis for identifying interdisciplinary patterns and economic drivers. They highlight not only scientific progress in mineral exploration, extraction technologies, and metallurgical methods, but also persistent challenges in the economic recovery of invisible gold. These insights offer a roadmap for future research, industrial application, and international collaboration.
+
+DOI: 10.1007/s41060-023-00483-9
+Title: Artificial intelligence trend analysis in German business and politics: a web mining approach
+Abstract: Current research on trend detection in artificial intelligence (AI) mainly concerns academic data sources and industrial applications of AI. However, we argue that industrial trends are influenced by public perception and political decisions (e.g., through industry subsidies and grants) and should be reflected in political data sources. To investigate this hypothesis, we examine the AI trend development in German business and politics from 1998 to 2020. Therefore, we propose a web mining approach to collect a novel data set consisting of business and political data sources combining 1.07 million articles and documents. We identify 246 AI-related buzzwords extracted from various glossaries. We use them to conduct an extensive trend detection and analysis study on the collected data using machine learning-based approaches. This study successfully detects an AI trend and follows its evolution in business and political data sources over the past two decades. Moreover, we find a faster adoption of AI in business than in politics, with a considerable increase in policy discourse in recent years. Finally, we show that the collected data can be used for trend detection besides AI-related topics using topic clustering and the COVID-19 pandemic as examples.
+
+DOI: 10.1007/s10209-025-01216-4
+Title: Beyond physical accessibility: a bibliometric analysis about the influence of digital communication and the use of technology on inclusive tourism in WCAG 3.0 era—tourism for all from a more accessible content perspective
+Abstract: This study aims to analyze the impact of digital communication and the use of technology in tourism. It also evaluates how new digital and technological trends, such as mobile applications and emerging virtual or augmented reality technologies, can be applied to web pages. Information that is not accessible becomes another barrier for travelers with disabilities and does not contribute to the concept of “tourism for all.” A bibliometric analysis through Web of Science (WoS) of published articles related to the influence of digital communication and the use of technology in tourism. A total of 290 articles were analysed using VOSviewer and SciMAT. The web accessibility does contemplate the regulations currently in force and therefore progress continues to be slow in this aspect. Also, technology together with new digital communication channels improve the experience of tourists and visitors to a destination, in turn impacting on their quality of life and enhancing “Tourism for all”. Furthermore, it is determined that the “phygital” concept takes on special relevance since many studies are aimed at combining both dimensions so that if a space complies with accessibility regulations, they are also considered from the information point of view in its digital sphere. This study provides an evolution of digital accessibility from a technological and communicational perspective by combining two complementary analyses and allows us to understand tourist behavior from a more inclusive aspect. There are important gaps in other areas of study, especially focused on stakeholders’ knowledge of the importance of making improvements in tourism for all.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">csv</span>
+
+<span class="c1"># Silahkan membuat api key dari https://dev.springernature.com/#api</span>
+<span class="n">api_key</span> <span class="o">=</span> <span class="s2">&quot;6812f052d58306c4316bac37cf837912&quot;</span>
+<span class="n">keyword</span> <span class="o">=</span> <span class="s2">&quot;web usage mining&quot;</span>
+
+<span class="n">url</span> <span class="o">=</span> <span class="s2">&quot;https://api.springernature.com/meta/v2/json&quot;</span>
+<span class="n">params</span> <span class="o">=</span> <span class="p">{</span>
+    <span class="s2">&quot;q&quot;</span><span class="p">:</span> <span class="sa">f</span><span class="s2">&quot;keyword:</span><span class="si">{</span><span class="n">keyword</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;api_key&quot;</span><span class="p">:</span> <span class="n">api_key</span><span class="p">,</span>
+    <span class="s2">&quot;p&quot;</span><span class="p">:</span> <span class="mi">10</span>   <span class="c1"># jumlah hasil per halaman</span>
+<span class="p">}</span>
+
+<span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">)</span>
+
+<span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span> <span class="o">==</span> <span class="mi">200</span><span class="p">:</span>
+    <span class="n">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">json</span><span class="p">()</span>
+    <span class="n">total</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;result&#39;</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="s1">&#39;total&#39;</span><span class="p">]</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Total hasil: </span><span class="si">{</span><span class="n">total</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Simpan ke CSV</span>
+    <span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;springer_results_web_usage_mining.csv&quot;</span><span class="p">,</span> <span class="n">mode</span><span class="o">=</span><span class="s2">&quot;w&quot;</span><span class="p">,</span> <span class="n">newline</span><span class="o">=</span><span class="s2">&quot;&quot;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8&quot;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+        <span class="n">writer</span> <span class="o">=</span> <span class="n">csv</span><span class="o">.</span><span class="n">writer</span><span class="p">(</span><span class="n">file</span><span class="p">)</span>
+        <span class="c1"># Header kolom</span>
+        <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="s2">&quot;DOI&quot;</span><span class="p">,</span> <span class="s2">&quot;Title&quot;</span><span class="p">,</span> <span class="s2">&quot;Abstract&quot;</span><span class="p">])</span>
+
+        <span class="c1"># Data hasil crawling</span>
+        <span class="k">for</span> <span class="n">record</span> <span class="ow">in</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;records&#39;</span><span class="p">]:</span>
+            <span class="n">doi</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;doi&#39;</span><span class="p">,</span> <span class="s1">&#39;N/A&#39;</span><span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;title&#39;</span><span class="p">,</span> <span class="s1">&#39;No title&#39;</span><span class="p">)</span>
+            <span class="n">abstract</span> <span class="o">=</span> <span class="n">record</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;abstract&#39;</span><span class="p">,</span> <span class="s1">&#39;No abstract&#39;</span><span class="p">)</span>
+
+            <span class="c1"># Tulis ke file CSV</span>
+            <span class="n">writer</span><span class="o">.</span><span class="n">writerow</span><span class="p">([</span><span class="n">doi</span><span class="p">,</span> <span class="n">title</span><span class="p">,</span> <span class="n">abstract</span><span class="p">])</span>
+
+            <span class="c1"># Print ke console juga</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;DOI: </span><span class="si">{</span><span class="n">doi</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Title: </span><span class="si">{</span><span class="n">title</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+            <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Abstract: </span><span class="si">{</span><span class="n">abstract</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot; Data berhasil disimpan ke springer_results_web_usage_mining.csv&quot;</span><span class="p">)</span>
+
+<span class="k">else</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Error:&quot;</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">status_code</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">text</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Total hasil: 3188
+
+DOI: 10.1007/978-3-031-89518-0_1
+Title: On the Centrality of Web Trackers: Assessing Its Potential for Automated Detection
+Abstract: For the past 20 years, web tracking has raised worries among privacy advocates and authorities responsible for data protection. Researchers have proposed several machine learning-driven remedies to identify Web trackers in an automated manner. While those have displayed potential, they have primarily remained as proofs-of-concept. This work extends on t.ex-Graph outlined in our previous work [ 36 ]. The aim of this model is to distinguish benign from tracking hosts by considering their centrality in the network, and data flows to them. Based on the results of our previous work, we abandoned the SLD-based approach. Consequently, we made slight modifications to the feature vector. Our classifier’s performance is comparable to its original version, and we tested its cross-browser and longitudinal performance. Our results indicate that while the cross-browser performance significantly decreases, the longitudinal performance maintains a high level.
+
+DOI: 10.1007/978-3-031-93257-1_6
+Title: Adaptive Web API Recommendation via Matching Service Clusters and Mashup Requirement
+Abstract: With the rapid proliferation of Web services and Web APIs, recommendation systems can effectively address the issue of information overload and alleviate the burden of meaningless filtering. Existing approaches can help filtering appropriate Web services for mashup creation, however, they often fall short of developers’ different and personalized needs by recommending only a fixed number of APIs and lack precision in aligning mashup requirements across all categories. To solve the above issue, this paper introduces a novel Web service recommendation framework called AWAR for mashup creation, which focuses on the matching strategy between mashup requirements and Web APIs, and enhances recommendation effectiveness by integrating natural language processing, optimization algorithms, and deep learning. Extensive experiments conducted on large-scale real datasets demonstrate that the proposed approach receives superior recommendation results on multiple evaluation metrics compared to advanced competing baselines.
+
+DOI: 10.1007/s10115-025-02444-z
+Title: Cross-modal associated learning with spatial–temporal attention for hot topic detection
+Abstract: With the explosion in the number of web videos, it has become a common practice to detect hot topics with web videos. However, each video clip contains multiple patterns, in which object actions might only appear in specific spatial areas or specific time periods, posing a huge challenge for web video hot topic detection. Fortunately, visual information during a specific time period and area will significantly enhance the rapid capture of key information, which is particularly important for detecting hot topics. Therefore, we propose a cross-modal associated learning method with spatial–temporal attention. It can automatically select discriminative time segments to detect hot topics by focusing on spatial regions with rich information. Firstly, after focusing on important keyframes related to the topic through temporal attention, spatial attention emphasizes the salient regions in the frame, thus incorporating discriminative features at the spatial level. Secondly, after integrating text structure knowledge into text semantic features, it can adaptively learn the weights of text features and visual features. Thirdly, adaptive learning of cross-modal fusion weights, achieving mutual guidance between text and visual information in attention dispersed association models to enhance feature learning. Finally, under the constraint of contrast loss, hot topics are detected with the similarity between features. Extensive experiments conducted on web videos from YouTube indicate that our method outperforms 8 leading state-of-the-art methods.
+
+DOI: 10.1007/s40558-025-00327-1
+Title: A recommender-based web platform to boost tourism in marginal territories
+Abstract: Recommender engines are software applications employed in online tourism information searches to suggest useful content and guide user choices. They represent a significant area of research within the tourism sector, crucially influencing traveler decisions through personalized recommendations. This paper focuses specifically on the Branding4Resilience (B4R) project, whose objective is to promote inner areas, by co-designing virtuous transformations with their inhabitants through novel branding strategies and digital enabling infrastructures. All experiments and assessments described in this study were conducted within the italian area of Sassoferrato, corresponding to the criteria defined by the B4R initiative. The paper introduces a dedicated web platform aimed at enhancing tourism by directing attention towards inland destinations and networking opportunities. The platform enables local providers of tourism-related services, such as guides, event organizers, and restaurateurs, to connect effectively with tourists seeking distinctive experiences. By facilitating interactions, the platform promotes collaboration, innovation, and the co-creation of personalized experiences, transforming tourists into active participants and contributors. To evaluate user experience, perceived usefulness, and innovation of the platform, we analyzed user responses to a structured questionnaire, which combined frequently addressed questions from existing literature with newly developed items specific to our platform. Constructs included tourist platform usage, perceived utility, content quality, design and usability, and innovative elements. The implemented algorithm demonstrated an average sensitivity of 79.74%, highlighting its efficacy in providing relevant suggestions to the platform’s “consumers” users.
+
+DOI: 10.1007/s11227-025-07778-7
+Title: Graph-augmented web spam detection using evidential reasoning
+Abstract: Web spam persistently undermines search engine integrity through deceptive practices such as cloaking and link manipulation, incurring substantial economic costs. Existing detection approaches often contend with significant challenges, including the effective management of uncertainty in human judgments and the processing of high-dimensional feature spaces. To address these limitations, we propose Graph-Augmented Web Spam Evidential Reasoner (GAWSER). This innovative framework integrates Dempster–Shafer Theory (DST) for robust uncertainty quantification with advanced graph-based feature selection. This system dynamically assesses judge reliability through adaptive evidence aggregation while employing spectral clustering on a feature similarity graph to achieve noticeable dimensionality reduction without compromising discriminative power. Evaluated on the WEBSPAM-UK2006 and WEBSPAM-UK2007 datasets, GAWSER demonstrated notable performance improvements, achieving accuracy increases of 4.2% (to 0.952) and 3.2% (to 0.947), respectively, alongside a reduction in false negatives. The framework consistently demonstrates improved metrics over both traditional and deep learning-based methodologies, offering a novel solution for uncertainty-aware web spam detection. Furthermore, recognizing the inherent scalability challenges posed by massive, dynamic web datasets, GAWSER’s design is specifically engineered to leverage high-performance computing (HPC) paradigms. Its graph-based feature selection and evidential reasoning components are inherently adaptable for parallel and distributed processing, which is critical for real-time, web-scale spam detection. This architectural consideration renders GAWSER highly relevant to the field of Supercomputing, showcasing a novel application for advanced computational systems in mitigating web spam.
+
+DOI: 10.1186/s12859-025-06249-3
+Title: GeneSetCluster 2.0: a comprehensive toolset for summarizing and integrating gene-sets analysis
+Abstract: Background Gene-Set Analysis (GSA) is commonly used to analyze high-throughput experiments. However, GSA cannot readily disentangle clusters or pathways due to redundancies in upstream knowledge bases, which hinders comprehensive exploration and interpretation of biological findings. To address this challenge, we developed GeneSetCluster, an R package designed to summarize and integrate GSA results. Over time, we and users as well identified limitations in the original version, such as difficulties in managing redundancies across multiple gene-sets, large computational times, and its lack of accessibility for users without programming expertise. Results We present GeneSetCluster 2.0, a comprehensive upgrade that delivers methodological, computational, interpretative, and user-experience enhancements. Methodologically, GeneSetCluster 2.0 introduces a novel approach to address duplicated gene-sets and implements a seriation-based clustering algorithm that reorders results, aiding pattern identification. Computationally, the package is optimized for parallel processing, significantly reducing execution time. GeneSetCluster 2.0 enhances cluster annotations by associating clusters with relevant tissues and biological processes to improve biological interpretation, particularly for human and mouse data. To broaden accessibility, we have developed a user-friendly web application enabling non-programmers to use it. This version also ensures seamless integration between the R package, catering to users with programming expertise, and the web application for broader audiences. We evaluated the updates in a single-cell RNA public dataset. Conclusion GeneSetCluster 2.0 offers substantial improvements over its predecessor. Furthermore, by bridging the gap between bioinformaticians and clinicians in multidisciplinary teams, GeneSetCluster 2.0 facilitates collaborative research. The R package and web application, along with detailed installation and usage guides, are available on GitHub ( https://github.com/TranslationalBioinformaticsUnit/GeneSetCluster2.0 ), and the web application can be accessed at https://translationalbio.shinyapps.io/genesetcluster/ .
+
+DOI: 10.1038/s41598-025-15885-x
+Title: Semantic web ontology for structured knowledge representation and clinical decision support in eye diseases
+Abstract: Vision is a vital sense that allows people to interact with their surroundings and carry out tasks efficiently while maintaining safety and independence. At least 2.2 billion people globally suffer from blindness or vision impairment, of which more than 1 billion cases are avoidable or untreated because they lack access to eye care services. In ophthalmology, there are numerous challenges in knowledge organization and management, mainly due to the complexity of eye diseases. Ontologies are used as excellent tools for organizing and managing complicated information due to their structured representations of domain knowledge and to make data more findable, accessible, interoperable, and reusable. We have developed an ontology, that is, Eye Disease Ontology (EDO), for the most common eye diseases as a resource that helps in data extraction and analysis for the general public and medical professionals. EDO is a comprehensive and systematic knowledge representation system that categorizes and organizes information about commonly occurring eye diseases such as cataracts, glaucoma, age-related macular degeneration, etc, and connects it to vital details such as symptoms, causes, risk factors, diagnostic tests, and treatment options. The significant metrics of EDO include 566 classes, 16 object properties, 12 data properties, and 119 instances. In this study, the ontology of eye diseases has the potential to improve clinical diagnosis, advance research, and enrich medical education, while improving patient care. This ontology was created using the NeOn technique in the Protégé/OWL environment. Several competency questions were created to meet the demands of various stakeholders, and the ontology was validated using SPARQL queries, the Hermit Reasoner, and the OOPS Pitfalls Scanner. In addition, we develop comprehensive documentation for EDO to promote reuse and emphasise the importance of reuse in future applications.
+
+DOI: 10.1007/s12145-025-01982-y
+Title: Four decades of trends in invisible gold research: a web of science-based bibliometric analysis (1985–2024)
+Abstract: Invisible gold research is essential for understanding gold mineralization, overcoming analytical limitations, and addressing the technological bottlenecks in the economic extraction of refractory gold, thereby unlocking the potential of these deposits and their tailings. To assess research trends and demand, this study analyzed 1300 records from the Web of Science database (1985–2024) using the cross-disciplinary publication index (CDPI), the co-authorship model, and the technology-economic linkage model (TELM), with visualizations generated via VOSviewer and Microsoft Excel. The analysis reveals a 65% increase in publications between 2015 and 2021, with a peak of 98 papers in 2021. Articles constitute the majority (84.6%), followed by conference proceedings (9.8%) and reviews (3.9%). Interdisciplinary contributions surged by 40% after 2015, particularly in “materials science”, as indicated by a high CDPI of 0.81; while a discipline-pair co-occurrence score between “materials science and nanotechnology” reached a CDPI of 0.75. Notably, the CDPI model reveals that 68% of advancements in extraction technologies between 2015 and 2024 originated from nanoscale-oriented invisible gold research published in geoscience-focused journals employing advanced nanotechnologies. Furthermore, the TELM framework identifies that between 2021 and 2024, high gold prices—ranging from $1,798/oz to $1,940/oz—were well correlated (R^2 = 0.89) with publication counts, which remained consistently high at 94 to 98 papers annually. Two key methodological trends identified in this study for invisible gold research are: (1) the development of environmentally friendly extraction techniques, including biooxidation or thiosulfate leaching, and advanced pre-treatment processes; and (2) the adoption of high-precision analytical tools such as LA-ICP-MS, SIMS, and TIMA-X, which have significantly enhanced nanoscale gold detection and characterization. This methodological progress is further supported by the increase in annual research funding—from approximately $2–5 million when gold prices averaged $370/oz (1985–2000), to $10–30 million at around $700/oz (2001–2015), and up to $50–120 million as prices exceeded $1,500/oz (2016–2024)—demonstrating a strong positive association between rising gold prices and investment in invisible gold research. The findings reveal key trends in invisible gold research, demonstrating that Web of Science data, VOSviewer visualizations, and the CDPI and TELM frameworks provide a more reliable basis for identifying interdisciplinary patterns and economic drivers. They highlight not only scientific progress in mineral exploration, extraction technologies, and metallurgical methods, but also persistent challenges in the economic recovery of invisible gold. These insights offer a roadmap for future research, industrial application, and international collaboration.
+
+DOI: 10.1007/s41060-023-00483-9
+Title: Artificial intelligence trend analysis in German business and politics: a web mining approach
+Abstract: Current research on trend detection in artificial intelligence (AI) mainly concerns academic data sources and industrial applications of AI. However, we argue that industrial trends are influenced by public perception and political decisions (e.g., through industry subsidies and grants) and should be reflected in political data sources. To investigate this hypothesis, we examine the AI trend development in German business and politics from 1998 to 2020. Therefore, we propose a web mining approach to collect a novel data set consisting of business and political data sources combining 1.07 million articles and documents. We identify 246 AI-related buzzwords extracted from various glossaries. We use them to conduct an extensive trend detection and analysis study on the collected data using machine learning-based approaches. This study successfully detects an AI trend and follows its evolution in business and political data sources over the past two decades. Moreover, we find a faster adoption of AI in business than in politics, with a considerable increase in policy discourse in recent years. Finally, we show that the collected data can be used for trend detection besides AI-related topics using topic clustering and the COVID-19 pandemic as examples.
+
+DOI: 10.1007/s10209-025-01216-4
+Title: Beyond physical accessibility: a bibliometric analysis about the influence of digital communication and the use of technology on inclusive tourism in WCAG 3.0 era—tourism for all from a more accessible content perspective
+Abstract: This study aims to analyze the impact of digital communication and the use of technology in tourism. It also evaluates how new digital and technological trends, such as mobile applications and emerging virtual or augmented reality technologies, can be applied to web pages. Information that is not accessible becomes another barrier for travelers with disabilities and does not contribute to the concept of “tourism for all.” A bibliometric analysis through Web of Science (WoS) of published articles related to the influence of digital communication and the use of technology in tourism. A total of 290 articles were analysed using VOSviewer and SciMAT. The web accessibility does contemplate the regulations currently in force and therefore progress continues to be slow in this aspect. Also, technology together with new digital communication channels improve the experience of tourists and visitors to a destination, in turn impacting on their quality of life and enhancing “Tourism for all”. Furthermore, it is determined that the “phygital” concept takes on special relevance since many studies are aimed at combining both dimensions so that if a space complies with accessibility regulations, they are also considered from the information point of view in its digital sphere. This study provides an evolution of digital accessibility from a technological and communicational perspective by combining two complementary analyses and allows us to understand tourist behavior from a more inclusive aspect. There are important gaps in other areas of study, especially focused on stakeholders’ knowledge of the importance of making improvements in tourism for all.
+
+ Data berhasil disimpan ke springer_results_web_usage_mining.csv
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="pengantar.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Web Mining</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
