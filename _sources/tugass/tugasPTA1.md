@@ -1,4 +1,5 @@
----
+# # Tugas PTA 1
+
 jupyter:
   colab:
     toc_visible: true
@@ -9,7 +10,7 @@ jupyter:
     name: python
   nbformat: 4
   nbformat_minor: 0
----
+
 
 ::: {.cell .markdown id="jAGryMJp9-XB"}
 **1. Crawling pta.trunojoyo.ac.id**
