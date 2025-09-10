@@ -1,0 +1,1342 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>&lt;no title&gt; &#8212; Penambanagan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/tugasPTA1';</script>
+    <link rel="canonical" href="/ppw/tugass/tugasPTA1.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Crawling Penambanagan Web" href="CrawlingPPW.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambanagan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambanagan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="nav bd-sidenav">
+<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Tugas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+<li class="toctree-l2"><a class="reference internal" href="pengantar.html">Web Mining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html">Crawling Penambanagan Web</a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw/issues/new?title=Issue%20on%20page%20%2Ftugass/tugasPTA1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/tugasPTA1.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1><no title></h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <div class="{.cell docutils">
+<p><strong>1. Crawling <a class="reference external" href="http://pta.trunojoyo.ac.id">pta.trunojoyo.ac.id</a></strong></p>
+</div>
+<div class="{.cell docutils">
+<p><strong>Library</strong></p>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<p><strong>Base url</strong></p>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">Base_Url</span> <span class="o">=</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod&quot;</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<p><strong>Function</strong></p>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_max_page</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Base_Url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">/1&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Cari tombol &gt;&gt; (last page)</span>
+    <span class="n">last_page</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;ol.pagination a:contains(&quot;»&quot;)&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">last_page</span> <span class="ow">and</span> <span class="s2">&quot;href&quot;</span> <span class="ow">in</span> <span class="n">last_page</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">href</span> <span class="o">=</span> <span class="n">last_page</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+        <span class="c1"># Pecah URL -&gt; ambil angka terakhir</span>
+        <span class="n">max_page</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">href</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">max_page</span>
+
+    <span class="c1"># fallback kalau pagination tidak ada</span>
+    <span class="k">return</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">get_max_page</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>172
+</pre></div>
+</div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">[</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">prodi</span><span class="si">}</span><span class="s1"> - Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="{.cell docutils">
+<p><strong>Function All Data</strong></p>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pta_all</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak_id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak_en&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;prodi&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">total_prodi</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">total_pages</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">max_pages_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># hitung total halaman (untuk tiap prodi)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_prodi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">max_page</span> <span class="o">=</span> <span class="n">get_max_page</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">max_pages_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_page</span>
+        <span class="n">total_pages</span> <span class="o">+=</span> <span class="n">max_page</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_prodi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">max_page</span> <span class="o">=</span> <span class="n">max_pages_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_page</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Base_Url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="n">isii</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#begin&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isii</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prodi_full</span> <span class="o">=</span> <span class="n">isii</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">prodi</span> <span class="o">=</span> <span class="n">prodi_full</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Journal Jurusan &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">link_keluar</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+                <span class="c1"># ambil ID dari link PTA (angka terakhir di URL)</span>
+                <span class="n">id_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/detail/(\d+)&quot;</span><span class="p">,</span> <span class="n">link_keluar</span><span class="p">)</span>
+                <span class="n">pta_id</span> <span class="o">=</span> <span class="n">id_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">id_match</span> <span class="k">else</span> <span class="kc">None</span>
+
+                <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link_keluar</span><span class="p">)</span>
+                <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+                <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+
+                <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">penulis</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Penulis&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing I&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing II&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; :&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="n">paragraf</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;p[align=&quot;justify&quot;]&#39;</span><span class="p">)</span>
+                <span class="n">abstrak_id</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+                <span class="n">abstrak_en</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pta_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;penulis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">penulis</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_en&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_en</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_pertama</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_kedua</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;prodi&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prodi</span><span class="p">)</span>
+
+            <span class="c1"># update progress bar per prodi</span>
+            <span class="n">print_progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">max_page</span><span class="p">)</span>
+
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># pindah baris setelah 1 prodi selesai</span>
+
+    <span class="c1"># simpan ke CSV</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta_all.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="c1"># hitung durasi</span>
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh data berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pta_all</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>/usr/local/lib/python3.12/dist-packages/soupsieve/css_parser.py:876: FutureWarning: The pseudo class &#39;:contains&#39; is deprecated, &#39;:-soup-contains&#39; should be used moving forward.
+  warnings.warn(  # noqa: B028
+</pre></div>
+</div>
+</div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 284/284 [████████████████████] 100.00%
+
+
+✅ Seluruh data berhasil dikumpulkan!
+📈 Total entri: 1417
+⏱️ Waktu eksekusi: 3 jam 3 menit 35 detik
+</pre></div>
+</div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="s2">&quot;{\n  \&quot;name\&quot;: \&quot;pta_all()\&quot;,\n  \&quot;rows\&quot;: 1417,\n  \&quot;fields\&quot;: [\n    {\n      \&quot;column\&quot;: \&quot;id\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 1417,\n        \&quot;samples\&quot;: [\n          \&quot;090111100139\&quot;,\n          \&quot;120111100276\&quot;,\n          \&quot;130111100263\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;penulis\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 1410,\n        \&quot;samples\&quot;: [\n          \&quot;HENDRAYANTO\&quot;,\n          \&quot;UMMI MAHSUNAH\&quot;,\n          \&quot;Auliya Mufidah\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;judul\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 1417,\n        \&quot;samples\&quot;: [\n          \&quot;PELAKSANAAN PERNIKAHAN PEREMPUAN HAMIL DILUAR NIKAH DI DESA GRUJUGAN KECAMATAN LARANGAN DAN DESA LARANGAN SLAMPAR KECAMATAN TLANAKAN KABUPATEN PAMEKASAN MENURUT UNDANG-UNDANG REPUBLIK INDONESIA NOMOR\&quot;,\n          \&quot;PENANGGULANGAN BALAP LIAR DI KOTA BANGKALAN\&quot;,\n          \&quot;TANGGUNG GUGAT PERUSAHAAN ASURANSI YANG MELAKUKAN TINDAKAN WANPRESTASI DALAM ASURANSI\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;abstrak_id\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 1408,\n        \&quot;samples\&quot;: [\n          \&quot;Dalam organisasi pemerintah, pelayanan kepada masyarakat adalah tujuan utama yang tidak mungkin dapat dihindari karena sudah merupakan kewajiban menyelenggarakan pelayanan dengan menciptakan pelayanan yang terbaik kepada masyarakat. Tujuan pemberian pelayanan publik adalah pemenuhan kebutuhan hak-hak dasar setiap warga negara dan penduduk atas suatu barang, jasa dan atau pelayanan administratif yang disediakan oleh pemerintah yang terkait dengan kepentingan publik. Salah satu jenis pelayanan publik tersebut adalah pelayanan publik di bidang kependudukan dan pencatatan sipil.  \\r\\nTujuan dalam penulisan skripsi ini adalah untuk mengetahui  secara yuridis Akuntabiltas pelayanan publik dalam pembuatan akte kelahiran beserta untuk mengetahui kewenangan Dinas Kependudukan dan Catatan Sipil Kabupaten Bangkalan dalam hal menerbitkan Akta Kelahiran. Sehingga Metode penelitian yang digunakan adalah menggunakan metode penelitian normatif. Adapun pendekatan masalah yang digunakan untuk menjawab rumusan masalah adalah menggunakan pendekatan peraturan perundang-undangan dan pendekatan fakta. \\r\\nSehingga, kesimpulan dari hasil penelitian ini menunjukkan bahwasannya Dinas Kependudukan dan Catatan Sipil Kabupaten Bangkalan yang merupakan Instansi Pelaksana tekhnis dalam asas otonomi daerah dan tugas pembantuan adalah bagian dari penyelenggara pelayanan publik yang melayani urusan kependudukan dan berdasarkan Peraturan  Daerah  Kabupaten Bangkalan  Nomor 6 Tahun 2014 Tentang Perubahan Kedua atas peraturan Daerah Kabupaten Bangkalan Nomor 20 Tahun 2008 Tentang Penyelenggaraan Administrasi Kependudukan berwenang melaksanakan urusan administrasi kependudukan sebagaimana disebutkan dalam pasal 1B huruf c yaitu mencetak, menerbitkan, dan mendistribusikan dokumen kependudukan serta mendokumentasikan hasil pendaftaran penduduk dan pencatatan sipil serta berwenang untuk  memberikan  keabsahan  identitas dan kepastian hukum atas dokumen penduduk untuk setiap peristiwa penting dan peristiwa kependudukan yang dialami oleh penduduk .\\r\\n\\r\\nKata Kunci : Akuntabilitas, Pelayanan Publik, Akte Kelahiran\&quot;,\n          \&quot;Hak angket adalah hak untuk melakukan penyelidikan terhadap penyelenggaraan pemerintahan daerah yang berkaitan dengan kebijakan yang dibuat oleh kepala daerah yang memiliki dampak luas dan strategis. Penyelenggaraan pemerintahan daeraeh terdiri dari pemerintah daerah dan DPRD kabupaten/Kota, keberadaan DPRD Kabupaten/Kota dituntut mampu menjadi pengawas atau \\u201ccontrol\\u201d terhadap kebijakan yang dibuat oleh pemerintah daerah, DPRD Kabupaten/kota dan kepala daerah merupakan bagian dari eksekutif, hal tersebut berbeda dengan DPR-Ri yang berperan sebagai lembaga legislatif dan suda sepatutunya melakukan pengawasan terhadap eksekutif, kedudukan DPRD Kabupaten/kota berbeda dengan DPRD-RI yang berada pada tingkatan pusat, sehingga bentuk pengawasan dengan cara angket menimbulkan sebuah masalah yang mengakibatkan urusan rumah tangga daerah tidak akan berjalan secara efektif mengingat kedunya adalah \\u201cmitra kerja\\u201d dalam membangun daerah. Metode penelitian dalam penulisan ini menggunakan penelitian hukum normatif yaitu penelitian hukum yang mencakup penelitian terhadap sinkronisasi peratran perundang-undangan secara vertical dan horizontal, perbandingan hukum dan sejarah hukum. Penelitian ini bersifat deskriptif analisis dengan mengkaji peraturan perundang-undangan. Hasil yang diperoleh dari penelitian tersebut diperlukan reduksi atau meniadakan pemberlakuan hak angket oleh DPRD Kabupaten/Kota, untuk memberikan keseimbangan, stabilitas, dan mencegah terjadinya impeachment terhada kepala daerah oleh DPRD Kabupaten/Kota, sebagaimana dikaetahui bahwasannya keduanya merupakan \\u201cmitra\\u201d dalam menyelenggarakan Pemerintahan Daerah\\nKata kunci: Pemerintahan Daerah, Pemerintah daerah, DPRD Kabupaten/Kota, pemberlakuan, kedudukan, dan hak angket\&quot;,\n          \&quot;Dalam skripsi ini yaitu Dikotomi Pemberian Remisi Terhadap Pelaku Tindak Pidana Korupsi Dengan Upaya Pemberantasan Korupsi, untuk melaksanakan hal tersebut diperlukan juga partisipasi atau keikutsertaan masyarakat, baik dengan mengadakan kerjasama dalam pembinaan maupun sikap bersedia menerima kembali narapidana yang telah selesai menjalankan pidananya. Narapidana korupsi mendapatkan hak-haknya didalam Rutan begitupun juga masyarakat wajib mendapatkan haknya, sebagai contoh pemberian remisi yang diberikan terhadap warga binaan korupsi.\\nRemisi adalah pengurangan masa hukuman yang diberikan kepada narapidana dan anak pidana yang telah berkelakuan baik selam menjalani pidana terkecuali yang dipidana mati atau seumur hidup, pemberian remisi kepada warga binaan korupsi memang wajib diberikan karena menyangkut hak mereka sebagai warga binaan tetapi masyarakat juga memerlukan hak mereka yang dikorupsi oleh koruptor, hak mereka lebih berharga.\\nKata kunci : Remisi, Korupsi, Rutan, pemidanaan\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;abstrak_en\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 1400,\n        \&quot;samples\&quot;: [\n          \&quot;Grant is a voluntarily gift. Grant has a social function to bind hospitality.\\nGrants practice may lead to disputes, such as the grant nullification. As a result, the dispute leads to broke the hospitality binding. One of the legal issues in the grant\\n\\n\\n\\n\\n1 \\n\\n\\n\\nnullification stated in the Verdict of Shariah Court of Gorontalo  Number 9 /Pdt.G\\n/ 2013 / PA.Gtlo. It was the case on conditional grant. Therefore, this study purposed to determine whether the reason of negligence deserved to be the lawsuit argumentation and whether the grant nullification is shariah compliance. This study was categorized as legal reseach and applied  the analytical approach and statute approach. The result of this reseach indicated that the negligence reason of the grant receiver cannot be the legal reason for the lawsuit. Islamic jurisprudence explained that the withdrawal or the nullification of the grant was depicted as like a vomiting dog whose eat its own vomit. The majority opinion of classical Islamic scholars said the nullification of the grant is illegal  while the minority scholars stated that s ruled as avoided is unhave argued the ruling makruh. However, the judge of the verdict approve the argument of the lawsuit and null the grant. The verdict is not shariah compliance because the judges were inconsistent on their verdict consideration, section 210 item (1) Islamic Compilation Law of Indonesia in which rules the maximum grant is 1/3 from the grantor\\u2019s property. In addition, the judges were lack of accuracy in checking the plaintif legal position who has no legal standing.\&quot;,\n          \&quot;The legal politics of the formation of the Regional Representative Council is the focal point in this skiripsi, the background of the title election on the legal politics of the establishment of the Regional Representative Council according to the author is very reasonable, because until now the existence of the Regional Representative Council as regional representatives is not visible and tend to fade. Many efforts made by the community to support in order that the Regional Representative Council is still held even voiced the need to amend the fifth of the 1945 Constitution. \\nIt is interesting to examine the legal politics of the establishment of the Regional Representatives Council. Why this Regional Representative Council was formed for what purpose? What is the relationship between the authority of the Regional Representative Council and the House of Representatives? The purpose of this study is to determine what considerations are used and the reasons underlying the formation of the Regional Representative Council. The method used for this research is the historical approach and the formation process undertaken by the People&#39;s Consultative Assembly at the post-reproduction session of 1999-2002 and the approach of the legislation. The results of this study say that the purpose of establishing the Regional Representative Council for the acceleration of democratization, safeguarding and strengthening regional ties within the Unitary State of the Republic of Indonesia and improving the accommodation of regional interests.\\n\\nKey terms: (The legal politics of the establishment of the Regional Representative Council, the relationship between the authority of the Regional Representative Council and the House of Representatives).\&quot;,\n          \&quot;The right to information is one of the human rights guaranteed by the Constitution In Section 28F of the Constitution of the Republic of Indonesia Year 1945 , Thus , as part of the state is obliged to respect human rights , uphold , and protect and ensure the fulfillment of these rights . Nevertheless the Act No. 14 of 2008 on Public Information there are some exempt information means there is some information that the Act is not allowed to be opened and accessible to the public . The exception is one of the most important aspects of the Act No. 14 of 2008 on Public Information because it defines the limits of the right to information . Restrictions on access to information is a limitation on Human Rights as to which is guaranteed in the Constitution of 1945, because of the exclusion must be based on an objective basis and legally valid and can be accessed and applied proportionately . As a result , the philosophy underlying the exceptions to access to information is very important to be understood . This type of research in this paper is normative research , ie research with writing that is based on an analysis of several legal theories and laws are appropriate and related to the issues in this thesis . The method used to approach the problem in this thesis using two (2 ) approaches , ie . Statute Approach approach is the approach by using legislation and regulation as well as Conseptual Approach Approach is approach to examine the views of legal scholars of the country in which this thesis was made . To ensure that the exclusion clause in the Act - Freedom of Information Act is implemented correctly then there should be a study to determine where the boundaries and categorization of information that must be disclosed to the public or otherwise . because of the exclusion must be based on an objective basis and legally valid and can be accessed and applied proportionately and the philosophy underlying the exceptions to access to information is very important to be understood\\r\\nKeywords : Rights , Public Information , Exceptions\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;pembimbing_pertama\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 950,\n        \&quot;samples\&quot;: [\n          \&quot;Dr. Wartiningsih., SH., Mhum\&quot;,\n          \&quot;Tolib Effendi, S.H.,M.H\&quot;,\n          \&quot;Dr. Djulaeka, S.H.,M.Hum.\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;pembimbing_kedua\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;category\&quot;,\n        \&quot;num_unique_values\&quot;: 203,\n        \&quot;samples\&quot;: [\n          \&quot;GATOET POERNOMO, S.H., M.Hum.\&quot;,\n          \&quot;Tolib Effendi, SH. MH.\&quot;,\n          \&quot;Dr.Wartiningsih,S.H.,M.Hum\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;prodi\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;category\&quot;,\n        \&quot;num_unique_values\&quot;: 1,\n        \&quot;samples\&quot;: [\n          \&quot;Ilmu Hukum\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    }\n  ]\n}&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;dataframe&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<p><strong>Function All Data 5 pages</strong></p>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">[</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">prodi</span><span class="si">}</span><span class="s1"> - Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pta</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># mulai hitung waktu</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak en&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;prodi&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">):</span>  <span class="c1"># jumlah prodi</span>
+        <span class="n">total_pages</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># jumlah page</span>
+        <span class="n">prodi_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_pages</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># loop page</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="n">isii</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#begin&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isii</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prodi_full</span> <span class="o">=</span> <span class="n">isii</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">prodi</span> <span class="o">=</span> <span class="n">prodi_full</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Journal Jurusan &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">prodi_name</span><span class="p">:</span>
+                <span class="n">prodi_name</span> <span class="o">=</span> <span class="n">prodi</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">link</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+                <span class="c1"># ambil ID dari link PTA</span>
+                <span class="n">id_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/detail/(\d+)&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">)</span>
+                <span class="n">pta_id</span> <span class="o">=</span> <span class="n">id_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">id_match</span> <span class="k">else</span> <span class="kc">None</span>
+
+                <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+                <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+                <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+
+                <span class="c1"># Judul</span>
+                <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+
+                <span class="c1"># Penulis</span>
+                <span class="n">penulis</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Penulis&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Pembimbing Pertama</span>
+                <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing I&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Pembimbing Kedua</span>
+                <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing II&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; :&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Abstrak</span>
+                <span class="n">paragraf</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;p[align=&quot;justify&quot;]&#39;</span><span class="p">)</span>
+                <span class="n">abstrak</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+                <span class="n">abstract</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+
+                <span class="c1"># simpan data</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pta_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;penulis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">penulis</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_pertama</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_kedua</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak en&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstract</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;prodi&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prodi</span><span class="p">)</span>
+
+            <span class="c1"># update progress bar</span>
+            <span class="n">print_progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">prodi_name</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh data berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[2] Teknologi Industri Pertanian - Page 5/5 [████████████████████] 100.00%
+
+[3] Agribisnis - Page 5/5 [████████████████████] 100.00%
+
+[4] Agroteknologi - Page 5/5 [████████████████████] 100.00%
+
+[5] Ilmu Kelautan - Page 5/5 [████████████████████] 100.00%
+
+[6] Ekonomi Pembangunan - Page 5/5 [████████████████████] 100.00%
+
+[7] Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[8] Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[9] Teknik Industri - Page 5/5 [████████████████████] 100.00%
+
+[10] Teknik Informatika - Page 5/5 [████████████████████] 100.00%
+
+[11] Manajemen Informatika - Page 5/5 [████████████████████] 100.00%
+
+[12] Sosiologi - Page 5/5 [████████████████████] 100.00%
+
+[13] Ilmu Komunikasi - Page 5/5 [████████████████████] 100.00%
+
+[14] Psikologi - Page 5/5 [████████████████████] 100.00%
+
+[15] Sastra Inggris - Page 5/5 [████████████████████] 100.00%
+
+[16] Ekonomi Syariah - Page 5/5 [████████████████████] 100.00%
+
+[17] Hukum Bisnis Syariah - Page 5/5 [████████████████████] 100.00%
+
+[18] Pgsd - Page 5/5 [████████████████████] 100.00%
+
+[19] Teknik Multimedia Dan Jaringan - Page 5/5 [████████████████████] 100.00%
+
+[20] Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[21] D3 Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[22] Magister Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[23] Teknik Elektro - Page 5/5 [████████████████████] 100.00%
+
+[24] Magister Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[25] Magister Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[26] D3 Enterpreneurship - Page 5/5 [████████████████████] 100.00%
+
+[27] Pendidikan Bhs Dan Sastra Indonesia - Page 5/5 [████████████████████] 100.00%
+
+[28] Pendidikan Informatika - Page 5/5 [████████████████████] 100.00%
+
+[29] Pendidikan Ipa - Page 5/5 [████████████████████] 100.00%
+
+[30] Pgpaud - Page 5/5 [████████████████████] 100.00%
+
+[31] Sistem Informasi - Page 5/5 [████████████████████] 100.00%
+
+[32] Teknik Mesin - Page 5/5 [████████████████████] 100.00%
+
+[33] Teknik Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[34] Journal Jurusan - Page 5/5 [████████████████████] 100.00%
+
+[35] Manajemen Sumberdaya Perairan - Page 5/5 [████████████████████] 100.00%
+
+[36] Magister Ilmu Ekonomi - Page 5/5 [████████████████████] 100.00%
+
+[37] Magister Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[38] Pendidikan Profesi Guru - Page 5/5 [████████████████████] 100.00%
+
+[39] Magister Pendidikan Dasar - Page 5/5 [████████████████████] 100.00%
+
+[40] Doktor Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[41] Doktor Ilmu Manajemen - Page 5/5 [████████████████████] 100.00%
+
+
+✅ Seluruh data berhasil dikumpulkan!
+📈 Total entri: 781
+⏱️ Waktu eksekusi: 1 jam 25 menit 43 detik
+</pre></div>
+</div>
+</div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="s2">&quot;{\n  \&quot;name\&quot;: \&quot;pta()\&quot;,\n  \&quot;rows\&quot;: 781,\n  \&quot;fields\&quot;: [\n    {\n      \&quot;column\&quot;: \&quot;id\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 781,\n        \&quot;samples\&quot;: [\n          \&quot;140121100020\&quot;,\n          \&quot;140121100001\&quot;,\n          \&quot;140261100001\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;penulis\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 773,\n        \&quot;samples\&quot;: [\n          \&quot;Mery Permatasari\&quot;,\n          \&quot;Muhammad Trio Maulana Putra\&quot;,\n          \&quot;ZAIMUS SILMI\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;judul\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 781,\n        \&quot;samples\&quot;: [\n          \&quot;KEWENANGAN PENGADILAN AGAMA DALAM MENETAPKAN ISBAT NIKAH TERHADAP PERKAWINAN POLIGAMI SIRI \&quot;,\n          \&quot;Kebijakan Kriminalisasi Mengkonsumsi Minuman Beralkohol dalam Rancangan Undang-Undang tentang Larangan Minuman Beralkohol\&quot;,\n          \&quot;PENGARUH GREEN MARKETING MIX TERHADAP     KEPUTUSAN PEMBELIAN (Studi Pada Produk Tupperware \\nDi Kabupaten Pamekasan\\n\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;abstrak id\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 759,\n        \&quot;samples\&quot;: [\n          \&quot;ABSTRAK\\r\\nPenyelesaian sengketa dibedakan menjadi dua diantaranya melalui litigasi dan non litigasi. Jalur litigasi merupakan penyelesaian sengketa melalui Pengadilan. Sedangkan non litigasi merupakan mekanisme penyelesaian sengketa diluar Pengadilan. Penyelesaian sengketa di Pengadilan Agama Bangkalan dilakukan melalui tahapan mediasi sebagai tahap awal dalam anjuran damai dalam menyelesaikan sengketa di Pengadilan Agama Bangkalan. Namun masih banyak sengketa melalui proses mediasi belum berhasil di damaikan. Oleh karena itu proses mediasi di Pengadilan Agama Bangkalan perlu di lakukan penelitian tentang efektivitas mediasi dalam menyelesaikan sengketa di Pengadilan Agama Bangkalan.\\r\\nPenelitian ini bertujuan untuk mengetahui pelaksanan mediasi dalam menyelesaikan sengketa di Pengadilan Agama Bangkalan dan untuk mengetahui efektivitas mediasi dalam menyelesaikan sengketa di Pengadilan Agama Bangkalan. Penulisan skripsi ini menggunakan jenis penelitian lapangan ((field research), dengan menggunakan metode pengumpulan data primer melalui wawancara dengan hakim Pengadilan Agama Bangkalan dan data sekunder melalui kepustakaan. Analisis yang digunakan adalah deskriptif kualitatif. \\r\\nTemuan yang diperoleh dari hasil penelitian ini adalah bahwasannya mediasi dalam menyelesaikan sengketa di Pengadilan Agama Bangkalan masih belum efektif. Hal tersebut dikarenakan beberapa faktor diantaranya tingkat kepatuhan masyarakat dalam menjalani proses mediasi yang sangat rendah dan Para pihak dalam proses mediasi seringkali salah satu dari pihak yang bersengketa atau keduanya merasa paling benar dan mementingkan keegoisan dari  para pihak itu sendiri. Fasilitas dan sarana mediasi di Pengadilan Agama Bangkalan masih kurang memadai, penataan ruangan mediasi kurang nyaman dan fasilitas penunjang didalamnya. Minimnya Hakim dalam memiliki sertifikat mediator dan kurangnya pelatihan mediasi yang dilakukan oleh Mahkamah Agumg RI.\\r\\n\\r\\nkata Kunci: Efektivitas, Mediasi, Sengketa, Pengadilan, Agama\&quot;,\n          \&quot;Faishal, SE., 130261100006. THE IMPACT OF SERVICE QUALITY TO CUSTOMER SATISFACTION AND CUSTOMER LOYALTY (Studi Pada PT. POS Indonesia Cabang Pamekasan). ADVISING BY Dr.  H. Muh. Syarif, Drs. Ec., M.Si. and Dr. Mohammad Arief, Drs.Ec., M.Si \\r\\nThis Study wanted to analyne the impact of service quality to customer satisfaction and customer loyalty (study at Indonesia Post Office Branch Pamekasan). This study was used causal method.\\r\\nThe population of this study is the customer of Indonesia Post Office Branch Pamekasan and this study was used sampling design which got 105 respondents. In this study, the writer was used accidental sampling and purposive sampling. The data processing technique was used the Structural Equation Modelling (SEM) to AMOS program version 22.\\r\\nThe service quality consisted of several dimensions. They were: reliability, responsiveness, assurance, tangible, and emphaty. The SEM analysis result had fulfilled criteria of goodness of fit index, it swowed that nilai Chi-square= 85.565; Significance probability = 0,372; RMSEA = 0,017; CMIN/DF = 1.031; TLI = 0,981; CFI = 0,984; GFI = 0,986 dan AGFI = 0,928. The result of analysis shown that service quality (reliability, responsiveness, assurance, emphaty, dan tangibles) is significant influential to customer satisfaction and customer loyalty.\\r\\nKeyword: reliability, responsiveness, assurance, emphaty, tangibles, customer satisfaction, customer loyalty.\&quot;,\n          \&quot;Nur Muhammad Ramdhan NRP 09.03.111.00004. Respon Pertumbuhan Dan Produksi Tanaman Kedelai (Glycine max (L) Merr) Kultivar Edamame Terhadap Pengolahan Tanah Dan Takaran Kotoran Ayam Di Tanah Mediteran, dibawah bimbingan Mustika Tripatmasari, SP., M.Si. dan Catur Wasonowati, SP.,M.Si.\\r\\n\\r\\nABSTRAK\\r\\n\\r\\n\\r\\nTanaman kedelai (Glycine max (L) Merr) kultivar edamame adalah tanaman sayuran biji yang dipanen muda. Kedelai edamame menghendaki jenis tanah yang subur yaitu cukup unsur hara dan bahan organik serta sifat fisik tanah yang gembur untuk pertumbuhannya. Tanah mediteran yang merupakan tanah yang terbentuk dari pelapukan batuan kapur dan bersifat tidak subur karena kandungan unsur hara dan bahan organik rendah serta sifat fisik tanah yang tidak gembur. Untuk mendapatkan pertumbuhan dan hasil kedelai edamame yang baik pada tanah mediteran perlu dilakukan pengolahan tanah dan pemberian kotoran ayam. Perlakuan pengolahan tanah dan takaran kotoran ayam ini diharapkan dapat memberikan pertumbuhan dan hasil tanaman edamame yang baik. Penelitian ini bertujuan untuk mengetahui pengaruh pengolahan tanah dan takaran kotoran ayam terhadap pertumbuhan dan hasil tanaman edamame. Penelitian  dilakukan  di Kebun Balai Penelitian Tanaman Hortikultura Socah, Kecamatan Socah, Kabupaten Bangkalan Jawa Timur di Ketinggian \\u00b1 4,2 meter diatas permukaan laut. Penelitian ini berlangsung dari bulan Desember 2012 \\u2013 Maret 2013. Metode  yang  digunakan dengan percobaan Rancangan Acak Kelompok (RAK) faktorial dengan tiga ulangan. Faktor pertama pengolahan tanah terdiri dari 3 taraf (tanpa pengolahan tanah, pengolahan tanah 1 kali dan pengolahan tanah 2 kali), sedangkan faktor kedua terdiri dari 3 taraf (takaran kotoran ayam 4 ton/ha, takaran kotoran ayam 6 ton/ha, dan takaran kotoran ayam 8 ton/ha). Dari hasil penelitian menunjukkan bahwa tidak terjadi interaksi antara perlakuan pengolahan tanah dan takaran kotoran ayam terhadap semua variabel pengamatan. Namun pada masing-masing perlakuan pengolahan tanah berpengaruh nyata terhadap variabel jumlah daun pada umur 42 dan 56 HST, jumlah cabang pada umur 42 HST, dan klorofil daun pada umur 35 HST, sedangkan pada perlakuan takaran kotoran ayam berpengaruh nyata terhadap variabel kandungan klorofil daun pada umur 35, 42, dan 49 HST, jumlah polong, bobot polong, dan polong isi per tanaman.\\r\\n\\r\\n\\r\\nKata kunci: edamame, pengolahan tanah, takaran, kotoran ayam.\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;abstrak en\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 745,\n        \&quot;samples\&quot;: [\n          \&quot;Mobile technology is an open source game develops very rapidly. Because of the diversity of its variations, mobile game has a lot of interest from various parties. This is the basis for the developers to continue to develop mobile games.\\r\\n In this study, a mobile game to hone thinking ability has been developed to implement the algorithm Prim and Depth First Search. In manufacturing, Prim algorithm is applied at the time of passage of the maze while the Depth First Search algorithm applied at the time of the solution search process.\\r\\n          From the test results it can be concluded that the algorithm Prim and Depth First Search can function properly at screen resolutions of 320 x 480 pixels in the formation of the track and the search for solutions of the maze\\r\\n Key words : Mobile Game, Android, Algoritma Prim, Algoritma Depth First Search.\&quot;,\n          \&quot;The role of family dysfunction in trafficking of girls in the Bongas Village, Bongas District, Indramayu Regency that three families studied through a qualitative case study approach to generate a description of the exposure of the professional backgrounds of parents who had become prostitutes turned out to be the basis for the role of family dysfunction that occurs in case, the role of the father as an important subject in the course of trade to the broker child &#39;/ pimp, be it in the bargain price of money as well as cash receipt charmer girls to want to work in accordance with the provisions pimp&#39;. While the girls mother as motivation to want to participate directly in the earnings through the acquisition of work specified pimps, the girls were made as a result of the trading behavior of girls is a family breadwinner who replaced the role of head of the family by prostituting themselves or work as a prostitute who is the impact of the provisions given the pimp their daughters.\\r\\n\\r\\nKeywords: dysfunction, family roles, trafficking of girls\&quot;,\n          \&quot;Tabuhan island is an island that has an area of  48,237 m\\u00b2, one of the potential can be developed on the island of Tabuhan are marine ecotourism, among others include: beaches, snorkelling and diving). The purpose of this study was to analyze the island of Tabuhan as marine ecotourism travel category seagrass, diving and snorkeling. The method used to interpret Quickbird imagery and combine data on the suitability for seagrass ecotourism, snorkeling and diving. Value suitability seagrass 49.20 (S1 or area that is less suitable for ecotourism region seagrass). Value suitability snorkling 73.64 (S2 or areas suitable for ecotourism snorkling), value congruence diving 70.37%. Island Tabuhan suitable to be used as diving and snorkeling tourist area but is less suitable for ecotourism seagrass areas.\\r\\n\\r\\n\\r\\nKeywords: ecotourism, Tabuhan Island, land suitability.\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;pembimbing_pertama\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 661,\n        \&quot;samples\&quot;: [\n          \&quot;Siti Fadjiyana Fitroh, S.Psi., MA\&quot;,\n          \&quot;Muhtar Wahyudi. S.Sos. MA \&quot;,\n          \&quot;Dr.RM Moch Wispandono,.S.E,.MS\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;pembimbing_kedua\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 543,\n        \&quot;samples\&quot;: [\n          \&quot;Sri Wahyuni, S.Kom., M.T\&quot;,\n          \&quot;Ariesta Kartika Sari S.Si., M.Pd\&quot;,\n          \&quot;Fitri Ahmad Kurniawan, SE., M.AK. AK\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;prodi\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;category\&quot;,\n        \&quot;num_unique_values\&quot;: 34,\n        \&quot;samples\&quot;: [\n          \&quot;Ekonomi Syariah\&quot;,\n          \&quot;Mekatronika\&quot;,\n          \&quot;Pendidikan Informatika\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    }\n  ]\n}&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;dataframe&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<p><strong>Page &amp; Output Link PTA</strong></p>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">[</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">prodi</span><span class="si">}</span><span class="s1"> - Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pta_links</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># mulai hitung waktu</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;link_keluar&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">no</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># nomor urut</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">):</span>  <span class="c1"># jumlah prodi</span>
+        <span class="n">total_pages</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># jumlah page</span>
+        <span class="n">prodi_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_pages</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># loop page</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="n">isii</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#begin&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isii</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prodi_full</span> <span class="o">=</span> <span class="n">isii</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">prodi</span> <span class="o">=</span> <span class="n">prodi_full</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Journal Jurusan &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">prodi_name</span><span class="p">:</span>
+                <span class="n">prodi_name</span> <span class="o">=</span> <span class="n">prodi</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">link</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;no&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">no</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;page&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>          <span class="c1"># link page</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;link_keluar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>  <span class="c1"># link detail</span>
+                <span class="n">no</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># update progress bar</span>
+            <span class="n">print_progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">prodi_name</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta_links.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh link berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📊 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pta_links</span><span class="p">()</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[2] Teknologi Industri Pertanian - Page 5/5 [████████████████████] 100.00%
+
+[3] Agribisnis - Page 5/5 [████████████████████] 100.00%
+
+[4] Agroteknologi - Page 5/5 [████████████████████] 100.00%
+
+[5] Ilmu Kelautan - Page 5/5 [████████████████████] 100.00%
+
+[6] Ekonomi Pembangunan - Page 5/5 [████████████████████] 100.00%
+
+[7] Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[8] Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[9] Teknik Industri - Page 5/5 [████████████████████] 100.00%
+
+[10] Teknik Informatika - Page 5/5 [████████████████████] 100.00%
+
+[11] Manajemen Informatika - Page 5/5 [████████████████████] 100.00%
+
+[12] Sosiologi - Page 5/5 [████████████████████] 100.00%
+
+[13] Ilmu Komunikasi - Page 5/5 [████████████████████] 100.00%
+
+[14] Psikologi - Page 5/5 [████████████████████] 100.00%
+
+[15] Sastra Inggris - Page 5/5 [████████████████████] 100.00%
+
+[16] Ekonomi Syariah - Page 5/5 [████████████████████] 100.00%
+
+[17] Hukum Bisnis Syariah - Page 5/5 [████████████████████] 100.00%
+
+[18] Pgsd - Page 5/5 [████████████████████] 100.00%
+
+[19] Teknik Multimedia Dan Jaringan - Page 5/5 [████████████████████] 100.00%
+
+[20] Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[21] D3 Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[22] Magister Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[23] Teknik Elektro - Page 5/5 [████████████████████] 100.00%
+
+[24] Magister Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[25] Magister Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[26] D3 Enterpreneurship - Page 5/5 [████████████████████] 100.00%
+
+[27] Pendidikan Bhs Dan Sastra Indonesia - Page 5/5 [████████████████████] 100.00%
+
+[28] Pendidikan Informatika - Page 5/5 [████████████████████] 100.00%
+
+[29] Pendidikan Ipa - Page 5/5 [████████████████████] 100.00%
+
+[30] Pgpaud - Page 5/5 [████████████████████] 100.00%
+
+[31] Sistem Informasi - Page 5/5 [████████████████████] 100.00%
+
+[32] Teknik Mesin - Page 5/5 [████████████████████] 100.00%
+
+[33] Teknik Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[34] Journal Jurusan - Page 5/5 [████████████████████] 100.00%
+
+[35] Manajemen Sumberdaya Perairan - Page 5/5 [████████████████████] 100.00%
+
+[36] Magister Ilmu Ekonomi - Page 5/5 [████████████████████] 100.00%
+
+[37] Magister Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[38] Pendidikan Profesi Guru - Page 5/5 [████████████████████] 100.00%
+
+[39] Magister Pendidikan Dasar - Page 5/5 [████████████████████] 100.00%
+
+[40] Doktor Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[41] Doktor Ilmu Manajemen - Page 5/5 [████████████████████] 100.00%
+
+
+✅ Seluruh link berhasil dikumpulkan!
+📊 Total entri: 781
+⏱️ Waktu eksekusi: 0 jam 18 menit 16 detik
+</pre></div>
+</div>
+</div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="s2">&quot;{\n  \&quot;name\&quot;: \&quot;pta_links()\&quot;,\n  \&quot;rows\&quot;: 781,\n  \&quot;fields\&quot;: [\n    {\n      \&quot;column\&quot;: \&quot;no\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;number\&quot;,\n        \&quot;std\&quot;: 225,\n        \&quot;min\&quot;: 1,\n        \&quot;max\&quot;: 781,\n        \&quot;num_unique_values\&quot;: 781,\n        \&quot;samples\&quot;: [\n          596,\n          588,\n          544\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;page\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;category\&quot;,\n        \&quot;num_unique_values\&quot;: 158,\n        \&quot;samples\&quot;: [\n          \&quot;https://pta.trunojoyo.ac.id/c_search/byprod/26/4\&quot;,\n          \&quot;https://pta.trunojoyo.ac.id/c_search/byprod/10/1\&quot;,\n          \&quot;https://pta.trunojoyo.ac.id/c_search/byprod/27/5\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;link_keluar\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 781,\n        \&quot;samples\&quot;: [\n          \&quot;https://pta.trunojoyo.ac.id/welcome/detail/140121100020\&quot;,\n          \&quot;https://pta.trunojoyo.ac.id/welcome/detail/140121100001\&quot;,\n          \&quot;https://pta.trunojoyo.ac.id/welcome/detail/140261100001\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    }\n  ]\n}&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;dataframe&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<p><strong>2. Crawling Berita <a class="reference external" href="http://www.cnnindonesia.com">www.cnnindonesia.com</a></strong></p>
+</div>
+</div>
+<div class="{.cell docutils">
+<p><strong>Library</strong></p>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<p><strong>Function</strong></p>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Progress bar manual</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ambil isi berita CNN</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_article_content</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0&quot;</span><span class="p">})</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+    <span class="n">paragraphs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">content_div</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;detail-text&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">content_div</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">content_div</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">):</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">text</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;baca juga&quot;</span><span class="p">):</span>
+                <span class="n">paragraphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">paragraphs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scraping CNN Indonesia</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">berita_cnn</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.cnnindonesia.com/indeks?page=</span><span class="si">{}</span><span class="s2">&quot;</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;isi_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;kategori_berita&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># mulai id dari 1</span>
+
+    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">pages</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">BASE_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0&quot;</span><span class="p">})</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+        <span class="n">articles</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;article a&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">title</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;https://www.cnnindonesia.com/&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Ambil kategori dari URL</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">kategori</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">kategori</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">get_article_content</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;isi_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kategori_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kategori</span><span class="p">)</span>
+
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># naikkan id</span>
+
+        <span class="n">print_progress</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;cnnindonesia_berita4.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh data berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Contoh pemanggilan</span>
+<span class="n">df_cnn</span> <span class="o">=</span> <span class="n">berita_cnn</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Page 100/100 [████████████████████] 100.00%
+
+
+✅ Seluruh data berhasil dikumpulkan!
+📈 Total entri: 1000
+⏱️ Waktu eksekusi: 0 jam 10 menit 32 detik
+</pre></div>
+</div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">berita_path</span> <span class="o">=</span><span class="s2">&quot;/content/drive/MyDrive/PPW/output/cnnindonesia_berita4.csv&quot;</span>
+<span class="n">berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">berita_path</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;id_berita&quot;</span><span class="p">)</span>
+
+<span class="n">berita</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="s2">&quot;{\n  \&quot;name\&quot;: \&quot;berita\&quot;,\n  \&quot;rows\&quot;: 1000,\n  \&quot;fields\&quot;: [\n    {\n      \&quot;column\&quot;: \&quot;id_berita\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;number\&quot;,\n        \&quot;std\&quot;: 288,\n        \&quot;min\&quot;: 1,\n        \&quot;max\&quot;: 1000,\n        \&quot;num_unique_values\&quot;: 1000,\n        \&quot;samples\&quot;: [\n          522,\n          738,\n          741\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;judul_berita\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 982,\n        \&quot;samples\&quot;: [\n          \&quot;Airlangga Buka Suara soal PHK di Gudang Garam: Karena ModernisasiEkonomi\\u2022 2 hari yang lalu\&quot;,\n          \&quot;Puncak Bogor Raih Peringkat Ke-3 Destinasi Pedesaan Terbaik AsiaGaya Hidup\\u2022 2 hari yang lalu\&quot;,\n          \&quot;Pajak Kendaraan di Indonesia Salah Satu Tertinggi di DuniaOtomotif\\u2022 2 hari yang lalu\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;isi_berita\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 938,\n        \&quot;samples\&quot;: [\n          \&quot;Polres Metro Jakarta Timur kembali menjadwalkan ulang klarifikasi terhadap musisiSherina Munafuntuk dimintai terkait unggahannya di media sosial soal penyelamatan seekor kucing milik anggota DPR RIUya Kuya, Jumat (12/9). Sherina mulanya dijadwalkan untuk diklarifikasi pada Senin (8/9), namun ia berhalangan hadir. Sherina kembali dijadwalkan diklarifikasi pada Selasa (9/9), namun masih belum bisa memenuhi panggilan. \\\&quot;(Pemanggilan ulang) Jumat besok jam 10.00 WIB pagi,\\\&quot; kata Kapolres Metro Jakarta Timur, Kombes Alfian Nurrizal kepada wartawan, Rabu (10/9). ADVERTISEMENT SCROLL TO CONTINUE WITH CONTENT Disampaikan Alfian, penjadwalkan ulang klarifikasi ini berdasarkan permintaan Sherina melalui kuasa hukumnya. Namun, Alfian tak membeberkan soal alasan Sherina meminta penjadwalan ulang. \\\&quot;Yang meminta jadwal ulang lawyernya itu. Katanya penyidik saya, ini ke penyidik, jadi kemarin yang bersangkutan enggak bisa hadir, minta dijadwalkan lagi, sehingga kita jadwalkan hari Jumat, kita layangkan surat lagi Jumat gitu,\\\&quot; tutur dia. Sebelumnya, Sherina Munaf membagikan kabar terbaru soal penyelamatan kucing milik Uya Kuya bernama Lili yang sudah ditemukan. \\\&quot;Salah satu kucing dari rumah Uya Kuya ada yang rescue dan semalaman saya dan @indiradiandra sudah koordinasi langsung dengan rescuer. Pagi ini dijemput dan sekarang kucing posisi aman, sedang sayafoster. Ini hanya satu ekor dari kemungkinan 16-20an ekor kucing yangdibreedingdi lokasi tersebut,\\\&quot; tulis Sherina. Sherina juga mendeskripsikan kondisi kucing yang diduga milik Uya Kuya tersebut. \\\&quot;Kondisi: sangat kurus, tulang-tulangnya berasa banget kalau lagi di pet badannya. Untuk para pet owners,pleasesebisa mungkin ADOPTdon&#39;tSHOP, steril kucingnya, kalau tak mampu rawat tak usah pelihara,\\\&quot; lanjut unggahan Sherina. Dalam kasus penjarahan rumah Uya Kuya, Polres Metro Jakarta Timur diketahui telah menetapkan 12 orang sebagai tersangka. Para tersangka ini memiliki peran berbeda, mulai dari provokator, pelaku penjarahan dan penyerangan kepada petugas.\&quot;,\n          \&quot;Bagi penderitakolesteroldan asam urat, menjaga polamakansangatlah penting. Makanan yang tinggi kolesterol dan purin harus dihindari karena dapat memperburuk kondisi kesehatan. Namun, hampir semua makanan hewani mengandung kolesterol dan purin dalam kadar tertentu, sehingga Anda harus lebih jeli dalam memilih makanan ini. Salah satu sumber protein yang banyak digemari adalah ikan. Namun tidak semua jenis ikan cocok untuk dikonsumsi oleh penderita kolesterol dan asam urat. ADVERTISEMENT SCROLL TO CONTINUE WITH CONTENT Untungnya, ada beberapa ikan yang boleh dimakan penderita kolesterol dan asam urat karena kandungan kolesterol dan purinnya relatif rendah. Meski demikian, Anda tetap harus bijak dalam mengatur porsi makan agar manfaat nutrisi dari ikan tetap optimal tanpa membahayakan kesehatan. MenurutCleveland Clinic, makanan yang dianggap rendah purin, adalah makanan yang mengandung kurang dari 100 miligram (mg) purin per 100 gram. Lantas, bagaimana dengan batas kolesterol yang aman? MengutipUCSF Health, bagi orang dengan faktor risiko penyakit jantung, sebaiknya tidak mengonsumsi lebih dari 200 mg kolesterol per hari. Jika Anda tidak ada faktor risiko penyakit jantung, sebaiknya tetap batasi konsumsi makanan berkolesterol, yakni tidak lebih dari 300 mg per hari. Merangkum dari berbagai sumber, berikut ini daftar lima ikan yang tergolong aman dan boleh dikonsumsi oleh penderita kolesterol dan asam urat: Ikan kod merupakan salah satu pilihan terbaik untuk penderita kolesterol dan asam urat. MengutipFoodstruct, kod mengandung sekitar 66 mg kolesterol dan 71 mg purin per porsi 100 gram. Selain itu, ikan kod kaya akan asam lemak omega-3 yang bermanfaat menurunkan kadar trigliserida dan meningkatkan kolesterol baik (HDL). Omega-3 juga membantu mencegah penggumpalan trombosit yang dapat menyumbat pembuluh darah dan menjaga kesehatan jantung tetap optimal. Ikan haddock yang masih satu famili dengan kod, memiliki rasa ringan dan tekstur daging yang lembut serta lembap. Ikan ini mengandung 55 mg kolesterol dan 59 mg purin per 100 gram, menjadikannya pilihan yang aman untuk penderita kolesterol serta asam urat. Selain itu,haddock kaya akan vitamin B12, B6, dan B3 yang sangat penting untuk metabolisme energi dan fungsi saraf. Ikan perch atau kerakap mengandung 115 mg kolesterol dan 67 mg purin per 100 gram. Meski tampak banyak, jumlah kolesterol ini 3,2 kali lebih rendah dibandingkan telur, sehingga aman dikonsumsi dalam batas wajar.\\u00a0Perch juga tinggi akan asam lemak omega-3 dan omega-6 yang bermanfaat untuk kesehatan jantung, mata, serta sistem imun tubuh. Tilapia merupakan ikan air tawar yang populer dan mengandung 57 mg kolesterol serta 60 mg purin per 100 gram. Selain rendah kalori, tilapia juga kaya protein dengan kandungan sekitar 26 gram protein dalam setiap 100 gram. MelansirHealthline, ikan ini juga menyediakan berbagai vitamin dan mineral penting seperti niasin, vitamin B12, fosfor, selenium, dan kalium yang mendukung fungsi tubuh secara menyeluruh. Pike, atau yang dikenal sebagai ikan tombak, mengandung sekitar 39 mg kolesterol dan 59 mg purin per 100 gram. Ini menjadikannya ikan dengan kadar kolesterol dan purin yang sangat rendah. Ikan ini juga rendah lemak jenuh, sehingga baik untuk kesehatan kardiovaskular. Selain itu,pike merupakan sumber protein berkualitas tinggi, kaya akan niasin, serta mineral seperti kalium dan fosfor. Berbagai vitamin dan mineral tersebut dapat membantu mengatur detak jantung, tekanan darah, kesehatan tulang, hingga fungsi saraf. Memilih ikan yang boleh dimakan penderita kolesterol dan asam urat sangat penting untuk mencegah komplikasi penyakit. Daftar ikan di atas merupakan pilihan yang tergolong aman karena kandungan kolesterol dan purinnya rendah. Meski demikian, konsumsi tetap harus dilakukan secara bijak dengan memperhatikan porsi agar manfaat kesehatan tetap optimal.\&quot;,\n          \&quot;Timnas Indonesiaakan menghadapiLebanonpada FIFA Matchday September 2025. Berikut prediksi Indonesia vs Lebanon versi redaksi CNNIndonesia. Duel Indonesia vs Lebanon akan digelar di Stadion Gelora Bung Tomo, Jawa Timur, Senin (8/9) malam WIB. Pertandingan ini akan disiarkan secara langsung di televisi pukul 20.30 WIB. Ini menjadi laga uji coba kedua Indonesia di FIFA Matchday September 2025. Sebelumnya skuad Garuda berhasil meraih kemenangan 6-0 atas Taiwan. ADVERTISEMENT SCROLL TO CONTINUE WITH CONTENT Pelatih Patrick Kluivert berpeluang menurunkan skuad terbaiknya saat melawan Lebanon. Beberapa pemain pilar yang disimpan seperti kapten Jay Idzes dan Justin Hubner siap dimainkan. Duet Thom Haye dan Joey Pelupessy juga kemungkinan bakal diandalkan sejak menit awal untuk menghidupkan lini tengah. Begitu pula dengan Kevin Diks dan Calvin Verdonk. Kedua bek sayap ini sengaja diistirahatkan saat Indonesia vs Taiwan. Duel kontra Lebanon menjadi penting bagi Kluivert. Selain bisa mendongkrak ranking FIFA Indonesia, uji coba ini menjadi persiapan terakhir jelang tampil di babak keempat Kualifikasi Piala Dunia 2026 melawan Irak dan Arab Saudi. Racikan strategi Patrick Kluivert menarik dinanti. Apakah tim Merah Putih mampu tampil impresif melawan Lebanon atau malah terpeleset? Berikut prediksi Indonesia vs Lebanon yang dirangkum redaksi CNNIndonesia.com: Timnas Indonesia telah menunjukkan permainan apik saat mengalahkan Taiwan 6-0 pada pertandingan uji coba terakhir. Kini para pemain Indonesia dalam kepercayaan diri yang baik dan pelatih yang dikepalai Patrick Kluivert juga sepertinya sudah menemukan cara terbaik timnya untuk menghadapi Lebanon. Kehadiran Mauro Zijlstra dan Miliano Jonathans mampu memberikan warna baru pada permainan Timnas Indonesia. Khususnya Miliano Jonathans yang disebut-sebut sebagai Arjen Robben-nya Indonesia yang mampu tampil memukau saat lawan Taiwan. Saya memprediksi Timnas Indonesia akan tampil onfire dan mengalahkan Lebanon 3-0. Baca di halaman berikutnya&gt;&gt;&gt; Lupakan kemenangan atas Taiwan, laga Indonesia vs Lebanon merupakan uji coba sesungguhnya. Pemain seperti Jay Idzes, Kevin Diks, Calvin Verdonk, dan Ragnar Oratmangoen yang hanya duduk di tribune penonton saat melawan Taiwan, dipastikan akan bermain dan menjadi starter. Patrick Kluivert harus mengeluarkan kekuatan terbaik, sudah tidak ada lagi eksperimen. Meski begitu, Miliano Jonathans layak menjadi starter. Lebanon mengandalkan fisik dan kecepatan. Itu sebabnya Indonesia harus waspada dengan permainan transisi yang cepat. Selain itu Indonesia harus cepat dalam melakukan pressing saat kehilangan bola. Meski Lebanon punya ranking FIFA di atas Indonesia, namun saya prediksi Tim Garuda punya peluang bagus untuk menang di Surabaya. Skor akhir 2-1 untuk Indonesia. Para pemain yang selama ini nyaman menghuni posisi di tim inti mungkin agak sedikit panas dengan penampilan para pemain pelapis di laga lawan Taiwan. Karena itu mereka akan gantian unjuk gigi di laga lawan Lebanon. Lebanon bisa dibilang punya kekuatan yang selevel dengan Indonesia dan bakal jadi alat ukur yang pas sebelum duel lawan Irak dan Arab Saudi. Indonesia bakal tampil enerjik di laga nanti dan meraih kemenangan 2-0 di akhir laga. Lebanon jadi satu-satunya lawan sepadan bagi Timnas Indonesia dalam FIFa Matchday kali ini. Karena itu, laga ini tidak akan mudah bagi Skuad Garuda. Dengan memainkan pemain utama, Indonesia sepertinya bakal memiliki sejumlah kesempatan dalam menguasai bola dan permainan. Akan tetapi, perlawanan juga diberikan Lebanon. Meski begitu, persoalan Indonesia sejak laga-laga sebelumnya tetap sama, yakni finishing. Dengan kehadiran Mauro Zijlstra dan Miliano Jonathan, Indonesia akan punya peluang gol. Kalau tidak bisa memanfaatkan gol, Indonesia bakal kesulitan lawan Lebanon. Sebaliknya, dengan finishing yang baik, Indonesia bisa menang 2-1. [Gambas:Photo CNN] Lebanon memang punya kualitas lebih baik dari Taiwan. Namun, para pemain Garuda tengahon firedan siap unjuk gigi demi mendapat tempat bermain di babak keempat Kualifikasi Piala Dunia 2026. Thom Haye akan kembali jadi pengatur ritme permainan di lini tengah. Gelandang Persib itu bakal berupaya memanjakan pemain baru, Miliano Jonathans dan Mauro Zijlstra yang berpeluang diberi durasi bermain lebih banyak. Dengan motivasi berlipat ganda, saya prediksi Indonesia mampu raih kemenangan 3-1 atas Lebanon di Stadion GBT. Jika Taiwan ibarat hanya pemanasan, maka Lebanon jadi lawan pas buat menguji kemampuan melawan Irak dan Arab Saudi pada Kualifikasi Piala Dunia 2026. Dibanding Taiwan, Lebanon tampaknya bakal lebih menyulitkan. Lantaran hal tersebut, Kluivert kemungkinan bakal menurunkan pemain-pemain yang akan menjadi starter pada bulan depan dalam laga melawan Lebanon. Saya prediksi Indonesia bisa menang dengan perjuangan lebih. Skor 3-1. [Gambas:Video CNN]\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;kategori_berita\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;category\&quot;,\n        \&quot;num_unique_values\&quot;: 10,\n        \&quot;samples\&quot;: [\n          \&quot;edukasi\&quot;,\n          \&quot;internasional\&quot;,\n          \&quot;ekonomi\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    }\n  ]\n}&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;dataframe&quot;</span><span class="p">,</span><span class="nt">&quot;variable_name&quot;</span><span class="p">:</span><span class="s2">&quot;berita&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<p><strong>Page &amp; Link Output Berita</strong></p>
+</div>
+</div>
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="c1"># progress bar</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># fungsi untuk kumpulkan link berita CNN Indonesia</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">berita_links</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.cnnindonesia.com/indeks?page=</span><span class="si">{}</span><span class="s2">&quot;</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;link_keluar&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">pages</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">BASE_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0&quot;</span><span class="p">})</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+        <span class="n">articles</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;article a&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">link</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;https://www.cnnindonesia.com/&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;page&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>       <span class="c1"># halaman indeks</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;link_keluar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>  <span class="c1"># link detail berita</span>
+
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">print_progress</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;cnnindonesia_links1.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh link berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># contoh pemanggilan: ambil 100 halaman pertama</span>
+<span class="n">df_links</span> <span class="o">=</span> <span class="n">berita_links</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>Page 100/100 [████████████████████] 100.00%
+
+
+✅ Seluruh link berhasil dikumpulkan!
+📈 Total entri: 1000
+⏱️ Waktu eksekusi: 0 jam 1 menit 0 detik
+</pre></div>
+</div>
+</div>
+</div>
+<div class="docutils">
+<div class="{.cell docutils">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">link_path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/PPW/output/cnnindonesia_links1.csv&quot;</span>
+<span class="n">link</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">link_path</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;id_berita&quot;</span><span class="p">)</span>
+
+<span class="n">link</span>
+</pre></div>
+</div>
+<div class="{.output docutils">
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span><span class="nt">&quot;summary&quot;</span><span class="p">:</span><span class="s2">&quot;{\n  \&quot;name\&quot;: \&quot;link\&quot;,\n  \&quot;rows\&quot;: 1000,\n  \&quot;fields\&quot;: [\n    {\n      \&quot;column\&quot;: \&quot;id_berita\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;number\&quot;,\n        \&quot;std\&quot;: 288,\n        \&quot;min\&quot;: 1,\n        \&quot;max\&quot;: 1000,\n        \&quot;num_unique_values\&quot;: 1000,\n        \&quot;samples\&quot;: [\n          522,\n          738,\n          741\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;page\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;category\&quot;,\n        \&quot;num_unique_values\&quot;: 100,\n        \&quot;samples\&quot;: [\n          \&quot;https://www.cnnindonesia.com/indeks?page=84\&quot;,\n          \&quot;https://www.cnnindonesia.com/indeks?page=54\&quot;,\n          \&quot;https://www.cnnindonesia.com/indeks?page=71\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    },\n    {\n      \&quot;column\&quot;: \&quot;link_keluar\&quot;,\n      \&quot;properties\&quot;: {\n        \&quot;dtype\&quot;: \&quot;string\&quot;,\n        \&quot;num_unique_values\&quot;: 976,\n        \&quot;samples\&quot;: [\n          \&quot;https://www.cnnindonesia.com/ekonomi/20250910111956-625-1272054/pertamina-resmi-groundbreaking-pilot-plant-green-hydrogen-di-ulubelu\&quot;,\n          \&quot;https://www.cnnindonesia.com/teknologi/20250909102826-199-1271545/benarkah-ketindihan-saat-tidur-ulah-setan-ini-penjelasan-ilmiahnya\&quot;,\n          \&quot;https://www.cnnindonesia.com/olahraga/20250910123713-170-1272098/peminat-tetap-tinggi-audisi-pb-djarum-diikuti-1729-peserta\&quot;\n        ],\n        \&quot;semantic_type\&quot;: \&quot;\&quot;,\n        \&quot;description\&quot;: \&quot;\&quot;\n      }\n    }\n  ]\n}&quot;</span><span class="p">,</span><span class="nt">&quot;type&quot;</span><span class="p">:</span><span class="s2">&quot;dataframe&quot;</span><span class="p">,</span><span class="nt">&quot;variable_name&quot;</span><span class="p">:</span><span class="s2">&quot;link&quot;</span><span class="p">}</span>
+</pre></div>
+</div>
+</div>
+</div>
+</div>
+<div class="docutils">
+</div>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CrawlingPPW.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Crawling Penambanagan Web</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="simple visible nav section-nav flex-column">
+</ul>
+
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
