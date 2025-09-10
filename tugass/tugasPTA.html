@@ -1,0 +1,2833 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Crawling PTA, Berita, dan Link &#8212; Penambanagan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/tugasPTA';</script>
+    <link rel="canonical" href="/ppw/tugass/tugasPTA.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Crawling Penambanagan Web" href="CrawlingPPW.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambanagan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambanagan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tugas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="pengantar.html">Web Mining</a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html">Crawling Penambanagan Web</a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Crawling PTA, Berita, dan Link</strong></a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw/issues/new?title=Issue%20on%20page%20%2Ftugass/tugasPTA.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/tugasPTA.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling PTA, Berita, dan Link</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-pta-berita-dan-link">
+<h1><strong>Crawling PTA, Berita, dan Link</strong><a class="headerlink" href="#crawling-pta-berita-dan-link" title="Link to this heading">#</a></h1>
+<p><strong>Library</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span><span class="o">,</span><span class="w"> </span><span class="nn">time</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Base url</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">Base_Url</span> <span class="o">=</span> <span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod&quot;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Function</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_max_page</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">):</span>
+    <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Base_Url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s2">/1&quot;</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+    <span class="c1"># Cari tombol &gt;&gt; (last page)</span>
+    <span class="n">last_page</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;ol.pagination a:contains(&quot;»&quot;)&#39;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">last_page</span> <span class="ow">and</span> <span class="s2">&quot;href&quot;</span> <span class="ow">in</span> <span class="n">last_page</span><span class="o">.</span><span class="n">attrs</span><span class="p">:</span>
+        <span class="n">href</span> <span class="o">=</span> <span class="n">last_page</span><span class="p">[</span><span class="s2">&quot;href&quot;</span><span class="p">]</span>
+        <span class="c1"># Pecah URL -&gt; ambil angka terakhir</span>
+        <span class="n">max_page</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">href</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="o">-</span><span class="mi">1</span><span class="p">])</span>
+        <span class="k">return</span> <span class="n">max_page</span>
+
+    <span class="c1"># fallback kalau pagination tidak ada</span>
+    <span class="k">return</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">get_max_page</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>172
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/home/codespace/.local/lib/python3.12/site-packages/soupsieve/css_parser.py:876: FutureWarning: The pseudo class &#39;:contains&#39; is deprecated, &#39;:-soup-contains&#39; should be used moving forward.
+  warnings.warn(  # noqa: B028
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">[</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">prodi</span><span class="si">}</span><span class="s1"> - Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Function All Data</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">pta_all</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak_id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak_en&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;prodi&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">total_prodi</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="n">total_pages</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="n">max_pages_dict</span> <span class="o">=</span> <span class="p">{}</span>
+
+    <span class="c1"># hitung total halaman (untuk tiap prodi)</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_prodi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">max_page</span> <span class="o">=</span> <span class="n">get_max_page</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
+        <span class="n">max_pages_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">max_page</span>
+        <span class="n">total_pages</span> <span class="o">+=</span> <span class="n">max_page</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_prodi</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+        <span class="n">max_page</span> <span class="o">=</span> <span class="n">max_pages_dict</span><span class="p">[</span><span class="n">i</span><span class="p">]</span>
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">max_page</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;</span><span class="si">{</span><span class="n">Base_Url</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="n">isii</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#begin&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isii</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prodi_full</span> <span class="o">=</span> <span class="n">isii</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">prodi</span> <span class="o">=</span> <span class="n">prodi_full</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Journal Jurusan &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">link_keluar</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+                <span class="c1"># ambil ID dari link PTA (angka terakhir di URL)</span>
+                <span class="n">id_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/detail/(\d+)&quot;</span><span class="p">,</span> <span class="n">link_keluar</span><span class="p">)</span>
+                <span class="n">pta_id</span> <span class="o">=</span> <span class="n">id_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">id_match</span> <span class="k">else</span> <span class="kc">None</span>
+
+                <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link_keluar</span><span class="p">)</span>
+                <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+                <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+
+                <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+                <span class="n">penulis</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Penulis&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing I&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+                <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing II&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; :&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="n">paragraf</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;p[align=&quot;justify&quot;]&#39;</span><span class="p">)</span>
+                <span class="n">abstrak_id</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+                <span class="n">abstrak_en</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pta_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;penulis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">penulis</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak_en&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak_en</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_pertama</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_kedua</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;prodi&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prodi</span><span class="p">)</span>
+
+            <span class="c1"># update progress bar per prodi</span>
+            <span class="n">print_progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">max_page</span><span class="p">)</span>
+
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>  <span class="c1"># pindah baris setelah 1 prodi selesai</span>
+
+    <span class="c1"># simpan ke CSV</span>
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta_all.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="c1"># hitung durasi</span>
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh data berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta_all</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 1/284 [--------------------] 0.35%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 2/284 [--------------------] 0.70%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 3/284 [--------------------] 1.06%
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 4/284 [--------------------] 1.41%
+</pre></div>
+</div>
+<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
+<span class="ne">KeyboardInterrupt</span><span class="g g-Whitespace">                         </span>Traceback (most recent call last)
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">7</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="ne">----&gt; </span><span class="mi">1</span> <span class="n">pta_all</span><span class="p">()</span>
+
+<span class="nn">Cell In[6], line 46,</span> in <span class="ni">pta_all</span><span class="nt">()</span>
+<span class="g g-Whitespace">     </span><span class="mi">43</span> <span class="n">id_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/detail/(\d+)&quot;</span><span class="p">,</span> <span class="n">link_keluar</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">44</span> <span class="n">pta_id</span> <span class="o">=</span> <span class="n">id_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">id_match</span> <span class="k">else</span> <span class="kc">None</span>
+<span class="ne">---&gt; </span><span class="mi">46</span> <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link_keluar</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">47</span> <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">     </span><span class="mi">48</span> <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/requests/api.py:73,</span> in <span class="ni">get</span><span class="nt">(url, params, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">62</span> <span class="k">def</span><span class="w"> </span><span class="nf">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+<span class="g g-Whitespace">     </span><span class="mi">63</span><span class="w">     </span><span class="sa">r</span><span class="sd">&quot;&quot;&quot;Sends a GET request.</span>
+<span class="g g-Whitespace">     </span><span class="mi">64</span><span class="sd"> </span>
+<span class="g g-Whitespace">     </span><span class="mi">65</span><span class="sd">     :param url: URL for the new :class:`Request` object.</span>
+<span class="sd">   (...)     70     :rtype: requests.Response</span>
+<span class="g g-Whitespace">     </span><span class="mi">71</span><span class="sd">     &quot;&quot;&quot;</span>
+<span class="ne">---&gt; </span><span class="mi">73</span>     <span class="k">return</span> <span class="n">request</span><span class="p">(</span><span class="s2">&quot;get&quot;</span><span class="p">,</span> <span class="n">url</span><span class="p">,</span> <span class="n">params</span><span class="o">=</span><span class="n">params</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/requests/api.py:59,</span> in <span class="ni">request</span><span class="nt">(method, url, **kwargs)</span>
+<span class="g g-Whitespace">     </span><span class="mi">55</span> <span class="c1"># By using the &#39;with&#39; statement we are sure the session is closed, thus we</span>
+<span class="g g-Whitespace">     </span><span class="mi">56</span> <span class="c1"># avoid leaving sockets open which can trigger a ResourceWarning in some</span>
+<span class="g g-Whitespace">     </span><span class="mi">57</span> <span class="c1"># cases, and look like a memory leak in others.</span>
+<span class="g g-Whitespace">     </span><span class="mi">58</span> <span class="k">with</span> <span class="n">sessions</span><span class="o">.</span><span class="n">Session</span><span class="p">()</span> <span class="k">as</span> <span class="n">session</span><span class="p">:</span>
+<span class="ne">---&gt; </span><span class="mi">59</span>     <span class="k">return</span> <span class="n">session</span><span class="o">.</span><span class="n">request</span><span class="p">(</span><span class="n">method</span><span class="o">=</span><span class="n">method</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/requests/sessions.py:589,</span> in <span class="ni">Session.request</span><span class="nt">(self, method, url, params, data, headers, cookies, files, auth, timeout, allow_redirects, proxies, hooks, stream, verify, cert, json)</span>
+<span class="g g-Whitespace">    </span><span class="mi">584</span> <span class="n">send_kwargs</span> <span class="o">=</span> <span class="p">{</span>
+<span class="g g-Whitespace">    </span><span class="mi">585</span>     <span class="s2">&quot;timeout&quot;</span><span class="p">:</span> <span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">586</span>     <span class="s2">&quot;allow_redirects&quot;</span><span class="p">:</span> <span class="n">allow_redirects</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">587</span> <span class="p">}</span>
+<span class="g g-Whitespace">    </span><span class="mi">588</span> <span class="n">send_kwargs</span><span class="o">.</span><span class="n">update</span><span class="p">(</span><span class="n">settings</span><span class="p">)</span>
+<span class="ne">--&gt; </span><span class="mi">589</span> <span class="n">resp</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">prep</span><span class="p">,</span> <span class="o">**</span><span class="n">send_kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">591</span> <span class="k">return</span> <span class="n">resp</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/requests/sessions.py:703,</span> in <span class="ni">Session.send</span><span class="nt">(self, request, **kwargs)</span>
+<span class="g g-Whitespace">    </span><span class="mi">700</span> <span class="n">start</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">702</span> <span class="c1"># Send the request</span>
+<span class="ne">--&gt; </span><span class="mi">703</span> <span class="n">r</span> <span class="o">=</span> <span class="n">adapter</span><span class="o">.</span><span class="n">send</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="c1"># Total elapsed time of the request (approximately)</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span> <span class="n">elapsed</span> <span class="o">=</span> <span class="n">preferred_clock</span><span class="p">()</span> <span class="o">-</span> <span class="n">start</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/requests/adapters.py:667,</span> in <span class="ni">HTTPAdapter.send</span><span class="nt">(self, request, stream, timeout, verify, cert, proxies)</span>
+<span class="g g-Whitespace">    </span><span class="mi">664</span>     <span class="n">timeout</span> <span class="o">=</span> <span class="n">TimeoutSauce</span><span class="p">(</span><span class="n">connect</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span> <span class="n">read</span><span class="o">=</span><span class="n">timeout</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">666</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">667</span>     <span class="n">resp</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">urlopen</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">668</span>         <span class="n">method</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">669</span>         <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">670</span>         <span class="n">body</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">671</span>         <span class="n">headers</span><span class="o">=</span><span class="n">request</span><span class="o">.</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">672</span>         <span class="n">redirect</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">673</span>         <span class="n">assert_same_host</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">674</span>         <span class="n">preload_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">675</span>         <span class="n">decode_content</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">676</span>         <span class="n">retries</span><span class="o">=</span><span class="bp">self</span><span class="o">.</span><span class="n">max_retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">677</span>         <span class="n">timeout</span><span class="o">=</span><span class="n">timeout</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">678</span>         <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">679</span>     <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">681</span> <span class="k">except</span> <span class="p">(</span><span class="n">ProtocolError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">err</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">682</span>     <span class="k">raise</span> <span class="ne">ConnectionError</span><span class="p">(</span><span class="n">err</span><span class="p">,</span> <span class="n">request</span><span class="o">=</span><span class="n">request</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:787,</span> in <span class="ni">HTTPConnectionPool.urlopen</span><span class="nt">(self, method, url, body, headers, retries, redirect, assert_same_host, timeout, pool_timeout, release_conn, chunked, body_pos, preload_content, decode_content, **response_kw)</span>
+<span class="g g-Whitespace">    </span><span class="mi">784</span> <span class="n">response_conn</span> <span class="o">=</span> <span class="n">conn</span> <span class="k">if</span> <span class="ow">not</span> <span class="n">release_conn</span> <span class="k">else</span> <span class="kc">None</span>
+<span class="g g-Whitespace">    </span><span class="mi">786</span> <span class="c1"># Make the request on the HTTPConnection object</span>
+<span class="ne">--&gt; </span><span class="mi">787</span> <span class="n">response</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_make_request</span><span class="p">(</span>
+<span class="g g-Whitespace">    </span><span class="mi">788</span>     <span class="n">conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">789</span>     <span class="n">method</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">790</span>     <span class="n">url</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">791</span>     <span class="n">timeout</span><span class="o">=</span><span class="n">timeout_obj</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">792</span>     <span class="n">body</span><span class="o">=</span><span class="n">body</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">793</span>     <span class="n">headers</span><span class="o">=</span><span class="n">headers</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">794</span>     <span class="n">chunked</span><span class="o">=</span><span class="n">chunked</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">795</span>     <span class="n">retries</span><span class="o">=</span><span class="n">retries</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">796</span>     <span class="n">response_conn</span><span class="o">=</span><span class="n">response_conn</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">797</span>     <span class="n">preload_content</span><span class="o">=</span><span class="n">preload_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">798</span>     <span class="n">decode_content</span><span class="o">=</span><span class="n">decode_content</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">799</span>     <span class="o">**</span><span class="n">response_kw</span><span class="p">,</span>
+<span class="g g-Whitespace">    </span><span class="mi">800</span> <span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">802</span> <span class="c1"># Everything went great!</span>
+<span class="g g-Whitespace">    </span><span class="mi">803</span> <span class="n">clean_exit</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/urllib3/connectionpool.py:534,</span> in <span class="ni">HTTPConnectionPool._make_request</span><span class="nt">(self, conn, method, url, body, headers, retries, timeout, chunked, response_conn, preload_content, decode_content, enforce_content_length)</span>
+<span class="g g-Whitespace">    </span><span class="mi">532</span> <span class="c1"># Receive the response from the server</span>
+<span class="g g-Whitespace">    </span><span class="mi">533</span> <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">534</span>     <span class="n">response</span> <span class="o">=</span> <span class="n">conn</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">535</span> <span class="k">except</span> <span class="p">(</span><span class="n">BaseSSLError</span><span class="p">,</span> <span class="ne">OSError</span><span class="p">)</span> <span class="k">as</span> <span class="n">e</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">536</span>     <span class="bp">self</span><span class="o">.</span><span class="n">_raise_timeout</span><span class="p">(</span><span class="n">err</span><span class="o">=</span><span class="n">e</span><span class="p">,</span> <span class="n">url</span><span class="o">=</span><span class="n">url</span><span class="p">,</span> <span class="n">timeout_value</span><span class="o">=</span><span class="n">read_timeout</span><span class="p">)</span>
+
+<span class="nn">File ~/.local/lib/python3.12/site-packages/urllib3/connection.py:565,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">562</span> <span class="n">_shutdown</span> <span class="o">=</span> <span class="nb">getattr</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">sock</span><span class="p">,</span> <span class="s2">&quot;shutdown&quot;</span><span class="p">,</span> <span class="kc">None</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">564</span> <span class="c1"># Get the response from http.client.HTTPConnection</span>
+<span class="ne">--&gt; </span><span class="mi">565</span> <span class="n">httplib_response</span> <span class="o">=</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">getresponse</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">567</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">568</span>     <span class="n">assert_header_parsing</span><span class="p">(</span><span class="n">httplib_response</span><span class="o">.</span><span class="n">msg</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/http/client.py:1419,</span> in <span class="ni">HTTPConnection.getresponse</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1417</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1418</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1419</span>         <span class="n">response</span><span class="o">.</span><span class="n">begin</span><span class="p">()</span>
+<span class="g g-Whitespace">   </span><span class="mi">1420</span>     <span class="k">except</span> <span class="ne">ConnectionError</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1421</span>         <span class="bp">self</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/http/client.py:331,</span> in <span class="ni">HTTPResponse.begin</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">329</span> <span class="c1"># read until we get a non-100 response</span>
+<span class="g g-Whitespace">    </span><span class="mi">330</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">331</span>     <span class="n">version</span><span class="p">,</span> <span class="n">status</span><span class="p">,</span> <span class="n">reason</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_read_status</span><span class="p">()</span>
+<span class="g g-Whitespace">    </span><span class="mi">332</span>     <span class="k">if</span> <span class="n">status</span> <span class="o">!=</span> <span class="n">CONTINUE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">333</span>         <span class="k">break</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/http/client.py:292,</span> in <span class="ni">HTTPResponse._read_status</span><span class="nt">(self)</span>
+<span class="g g-Whitespace">    </span><span class="mi">291</span> <span class="k">def</span><span class="w"> </span><span class="nf">_read_status</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+<span class="ne">--&gt; </span><span class="mi">292</span>     <span class="n">line</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">fp</span><span class="o">.</span><span class="n">readline</span><span class="p">(</span><span class="n">_MAXLINE</span> <span class="o">+</span> <span class="mi">1</span><span class="p">),</span> <span class="s2">&quot;iso-8859-1&quot;</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">293</span>     <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">line</span><span class="p">)</span> <span class="o">&gt;</span> <span class="n">_MAXLINE</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">294</span>         <span class="k">raise</span> <span class="n">LineTooLong</span><span class="p">(</span><span class="s2">&quot;status line&quot;</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/socket.py:707,</span> in <span class="ni">SocketIO.readinto</span><span class="nt">(self, b)</span>
+<span class="g g-Whitespace">    </span><span class="mi">705</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">706</span>     <span class="k">try</span><span class="p">:</span>
+<span class="ne">--&gt; </span><span class="mi">707</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sock</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">b</span><span class="p">)</span>
+<span class="g g-Whitespace">    </span><span class="mi">708</span>     <span class="k">except</span> <span class="n">timeout</span><span class="p">:</span>
+<span class="g g-Whitespace">    </span><span class="mi">709</span>         <span class="bp">self</span><span class="o">.</span><span class="n">_timeout_occurred</span> <span class="o">=</span> <span class="kc">True</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/ssl.py:1253,</span> in <span class="ni">SSLSocket.recv_into</span><span class="nt">(self, buffer, nbytes, flags)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1249</span>     <span class="k">if</span> <span class="n">flags</span> <span class="o">!=</span> <span class="mi">0</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1250</span>         <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span>
+<span class="g g-Whitespace">   </span><span class="mi">1251</span>           <span class="s2">&quot;non-zero flags not allowed in calls to recv_into() on </span><span class="si">%s</span><span class="s2">&quot;</span> <span class="o">%</span>
+<span class="g g-Whitespace">   </span><span class="mi">1252</span>           <span class="bp">self</span><span class="o">.</span><span class="vm">__class__</span><span class="p">)</span>
+<span class="ne">-&gt; </span><span class="mi">1253</span>     <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="n">nbytes</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1254</span> <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1255</span>     <span class="k">return</span> <span class="nb">super</span><span class="p">()</span><span class="o">.</span><span class="n">recv_into</span><span class="p">(</span><span class="n">buffer</span><span class="p">,</span> <span class="n">nbytes</span><span class="p">,</span> <span class="n">flags</span><span class="p">)</span>
+
+<span class="nn">File /usr/local/python/3.12.1/lib/python3.12/ssl.py:1105,</span> in <span class="ni">SSLSocket.read</span><span class="nt">(self, len, buffer)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1103</span> <span class="k">try</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1104</span>     <span class="k">if</span> <span class="n">buffer</span> <span class="ow">is</span> <span class="ow">not</span> <span class="kc">None</span><span class="p">:</span>
+<span class="ne">-&gt; </span><span class="mi">1105</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">,</span> <span class="n">buffer</span><span class="p">)</span>
+<span class="g g-Whitespace">   </span><span class="mi">1106</span>     <span class="k">else</span><span class="p">:</span>
+<span class="g g-Whitespace">   </span><span class="mi">1107</span>         <span class="k">return</span> <span class="bp">self</span><span class="o">.</span><span class="n">_sslobj</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="nb">len</span><span class="p">)</span>
+
+<span class="ne">KeyboardInterrupt</span>: 
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Function All Data 5 pages</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">[</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">prodi</span><span class="si">}</span><span class="s1"> - Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pta</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># mulai hitung waktu</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;penulis&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak id&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;abstrak en&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;prodi&quot;</span><span class="p">:</span> <span class="p">[],</span>
+    <span class="p">}</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">):</span>  <span class="c1"># jumlah prodi</span>
+        <span class="n">total_pages</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># jumlah page</span>
+        <span class="n">prodi_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_pages</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># loop page</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="n">isii</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#begin&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isii</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prodi_full</span> <span class="o">=</span> <span class="n">isii</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">prodi</span> <span class="o">=</span> <span class="n">prodi_full</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Journal Jurusan &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">prodi_name</span><span class="p">:</span>
+                <span class="n">prodi_name</span> <span class="o">=</span> <span class="n">prodi</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">link</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+                <span class="c1"># ambil ID dari link PTA</span>
+                <span class="n">id_match</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">search</span><span class="p">(</span><span class="sa">r</span><span class="s2">&quot;/detail/(\d+)&quot;</span><span class="p">,</span> <span class="n">link</span><span class="p">)</span>
+                <span class="n">pta_id</span> <span class="o">=</span> <span class="n">id_match</span><span class="o">.</span><span class="n">group</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="k">if</span> <span class="n">id_match</span> <span class="k">else</span> <span class="kc">None</span>
+
+                <span class="n">response</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+                <span class="n">soup1</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+                <span class="n">isi</span> <span class="o">=</span> <span class="n">soup1</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#content_journal&#39;</span><span class="p">)</span>
+
+                <span class="c1"># Judul</span>
+                <span class="n">judul</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.title&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span>
+
+                <span class="c1"># Penulis</span>
+                <span class="n">penulis</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Penulis&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Pembimbing Pertama</span>
+                <span class="n">pembimbing_pertama</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing I&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; : &#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Pembimbing Kedua</span>
+                <span class="n">pembimbing_kedua</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;span:contains(&quot;Dosen Pembimbing II&quot;)&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s1">&#39; :&#39;</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span>
+
+                <span class="c1"># Abstrak</span>
+                <span class="n">paragraf</span> <span class="o">=</span> <span class="n">isi</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;p[align=&quot;justify&quot;]&#39;</span><span class="p">)</span>
+                <span class="n">abstrak</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">0</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+                <span class="n">abstract</span> <span class="o">=</span> <span class="n">paragraf</span><span class="p">[</span><span class="mi">1</span><span class="p">]</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span> <span class="k">if</span> <span class="nb">len</span><span class="p">(</span><span class="n">paragraf</span><span class="p">)</span> <span class="o">&gt;</span> <span class="mi">1</span> <span class="k">else</span> <span class="s2">&quot;N/A&quot;</span>
+
+                <span class="c1"># simpan data</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pta_id</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;penulis&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">penulis</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">judul</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_pertama&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_pertama</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;pembimbing_kedua&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">pembimbing_kedua</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak id&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstrak</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;abstrak en&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">abstract</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;prodi&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">prodi</span><span class="p">)</span>
+
+            <span class="c1"># update progress bar</span>
+            <span class="n">print_progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">prodi_name</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh data berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[2] Teknologi Industri Pertanian - Page 5/5 [████████████████████] 100.00%
+
+[3] Agribisnis - Page 5/5 [████████████████████] 100.00%
+
+[4] Agroteknologi - Page 5/5 [████████████████████] 100.00%
+
+[5] Ilmu Kelautan - Page 5/5 [████████████████████] 100.00%
+
+[6] Ekonomi Pembangunan - Page 5/5 [████████████████████] 100.00%
+
+[7] Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[8] Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[9] Teknik Industri - Page 5/5 [████████████████████] 100.00%
+
+[10] Teknik Informatika - Page 5/5 [████████████████████] 100.00%
+
+[11] Manajemen Informatika - Page 5/5 [████████████████████] 100.00%
+
+[12] Sosiologi - Page 5/5 [████████████████████] 100.00%
+
+[13] Ilmu Komunikasi - Page 5/5 [████████████████████] 100.00%
+
+[14] Psikologi - Page 5/5 [████████████████████] 100.00%
+
+[15] Sastra Inggris - Page 5/5 [████████████████████] 100.00%
+
+[16] Ekonomi Syariah - Page 5/5 [████████████████████] 100.00%
+
+[17] Hukum Bisnis Syariah - Page 5/5 [████████████████████] 100.00%
+
+[18] Pgsd - Page 5/5 [████████████████████] 100.00%
+
+[19] Teknik Multimedia Dan Jaringan - Page 5/5 [████████████████████] 100.00%
+
+[20] Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[21] D3 Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[22] Magister Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[23] Teknik Elektro - Page 5/5 [████████████████████] 100.00%
+
+[24] Magister Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[25] Magister Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[26] D3 Enterpreneurship - Page 5/5 [████████████████████] 100.00%
+
+[27] Pendidikan Bhs Dan Sastra Indonesia - Page 5/5 [████████████████████] 100.00%
+
+[28] Pendidikan Informatika - Page 5/5 [████████████████████] 100.00%
+
+[29] Pendidikan Ipa - Page 5/5 [████████████████████] 100.00%
+
+[30] Pgpaud - Page 5/5 [████████████████████] 100.00%
+
+[31] Sistem Informasi - Page 5/5 [████████████████████] 100.00%
+
+[32] Teknik Mesin - Page 5/5 [████████████████████] 100.00%
+
+[33] Teknik Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[34] Journal Jurusan - Page 5/5 [████████████████████] 100.00%
+
+[35] Manajemen Sumberdaya Perairan - Page 5/5 [████████████████████] 100.00%
+
+[36] Magister Ilmu Ekonomi - Page 5/5 [████████████████████] 100.00%
+
+[37] Magister Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[38] Pendidikan Profesi Guru - Page 5/5 [████████████████████] 100.00%
+
+[39] Magister Pendidikan Dasar - Page 5/5 [████████████████████] 100.00%
+
+[40] Doktor Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[41] Doktor Ilmu Manajemen - Page 5/5 [████████████████████] 100.00%
+
+
+✅ Seluruh data berhasil dikumpulkan!
+📈 Total entri: 781
+⏱️ Waktu eksekusi: 1 jam 25 menit 43 detik
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-e5cfc614-9987-4c3c-999f-06e1acc9f131" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>id</th>
+      <th>penulis</th>
+      <th>judul</th>
+      <th>abstrak id</th>
+      <th>abstrak en</th>
+      <th>pembimbing_pertama</th>
+      <th>pembimbing_kedua</th>
+      <th>prodi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>080111100012</td>
+      <td>Dyah Ayu Citra Seza</td>
+      <td>Implementasi Fungsi Legislasi Dewan Perwakilan...</td>
+      <td>ABSTRAK\r\n\r\n       Implementasi Fungsi Legi...</td>
+      <td>ABSTRACT\r\n       Implementation of Legislati...</td>
+      <td>Yudi Widagdo Harimurti, SH., MH</td>
+      <td>Safi', SH., MH</td>
+      <td>Ilmu Hukum</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>080111100002</td>
+      <td>Maulina Nurlaily</td>
+      <td>Pertanggungjawaban Pidana Direksi BUMN (Perser...</td>
+      <td>Badan Usaha Milik Negara (BUMN) adalah Badan u...</td>
+      <td>State Owned Enterprises (SOEs) are business en...</td>
+      <td>Tolib Effendi, SH., MH.</td>
+      <td>Dr. Eni Suastuti, SH., Mhum.</td>
+      <td>Ilmu Hukum</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>070111100060</td>
+      <td>Moh. Samsul Hidayat</td>
+      <td>Analisis Terhadap Kekosongan Hukum dalam Penga...</td>
+      <td>Kasus narkoba tidak henti-hentinya terdengar d...</td>
+      <td>Drug cases endlessly heard on television, radi...</td>
+      <td>Tolib Effendi, SH., MH.</td>
+      <td>Agus Ramdlany, SH., MH.</td>
+      <td>Ilmu Hukum</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>090111100077</td>
+      <td>TOMMY ADITYA PARLINDUNGAN MARBUN</td>
+      <td>PERLINDUNGAN HUKUM BAGI KONSUMEN ATAS PRODUK E...</td>
+      <td>Produk elektronik adalah suatu benda bergerak ...</td>
+      <td>Electronic products is an object moves through...</td>
+      <td>DR. DJULAEKA, S.H., M.HUM</td>
+      <td>DR.USWATUN HASANAH, S.H., M. HUM</td>
+      <td>Ilmu Hukum</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>070111200007</td>
+      <td>RICA YENA IMADHORA</td>
+      <td>TELAAH  KRITIS TENTANG ALASAN HUKUM YANG DIGUN...</td>
+      <td></td>
+      <td></td>
+      <td>Dr. DENI SBY, S. H., M. S.</td>
+      <td>SAIFUL ABDULLAH, S. H., M. H.</td>
+      <td>Ilmu Hukum</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>776</th>
+      <td>160281100013</td>
+      <td>Lisa Sri rahmatullah, S. Sos. I</td>
+      <td>Dampak Sosial Ekonomi Pariwisata Religi Makam ...</td>
+      <td>Penelitian ini bertujuan untuk mengetahui baga...</td>
+      <td>The purpose of this study is to analyze the so...</td>
+      <td>Dr. Diah Wahyuningsih, S.E., M.Si.</td>
+      <td>Dr. Eni Sri Rahayuningsih, S.E., M.E.</td>
+      <td>Magister Ilmu Ekonomi</td>
+    </tr>
+    <tr>
+      <th>777</th>
+      <td>160281100002</td>
+      <td>Indah Ainun Nikmah</td>
+      <td>Peranan Zakat Produktif Dalam Meningkatkan Eko...</td>
+      <td>Peranan Zakat Produktif dalam Meningkatkan Eko...</td>
+      <td>The Role of Productive Zakat in Improving Must...</td>
+      <td>Dr. Kurniyati Indahsari, M.Si</td>
+      <td>Dr. Abdur Rahman, S.Ag. MEI</td>
+      <td>Magister Ilmu Ekonomi</td>
+    </tr>
+    <tr>
+      <th>778</th>
+      <td>170361100010</td>
+      <td>ahmad syaiful umam</td>
+      <td>KARAKTERISASI DAN KOLEKSI PLASMA NUTFAH UNTUK ...</td>
+      <td>Madura merupakan salah satu wilayah pemasok ko...</td>
+      <td>Madura is one of the regions supplying horticu...</td>
+      <td>Dr. Ir. Gita Pawana, M.Si</td>
+      <td>Dr. Ir. Hj. SIti Fatimah, M.Si</td>
+      <td>Magister Pengelolaan Sumber Daya Alam</td>
+    </tr>
+    <tr>
+      <th>779</th>
+      <td>170361100001</td>
+      <td>Siti Holifah</td>
+      <td>PENGOLAHAN LIMBAH AIR REBUSAN IKAN TERI MENJAD...</td>
+      <td>Ikan Teri perlu penanganan serius pasca panen ...</td>
+      <td>Anchovy needs serious handling after harvest b...</td>
+      <td>Dr.Apri Arisandi,S.Pi.,M.Si.</td>
+      <td>Dr.Ir.H.Asfan,MP.</td>
+      <td>Magister Pengelolaan Sumber Daya Alam</td>
+    </tr>
+    <tr>
+      <th>780</th>
+      <td>170361100003</td>
+      <td>Mohammad Maskur</td>
+      <td>STRATEGI PENGEMBANGAN MAKANAN DAN MINUMAN KHAS...</td>
+      <td>Makanan dan minuman khas merupakan ciri dari k...</td>
+      <td>Typical food and drinks are characteristic of ...</td>
+      <td>Dr. Akhmad Farid, S.Pi., MT</td>
+      <td>Dr. Apri Arisandi, S.Pi., M.Si</td>
+      <td>Magister Pengelolaan Sumber Daya Alam</td>
+    </tr>
+  </tbody>
+</table>
+<p>781 rows × 8 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e5cfc614-9987-4c3c-999f-06e1acc9f131')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-e5cfc614-9987-4c3c-999f-06e1acc9f131 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-e5cfc614-9987-4c3c-999f-06e1acc9f131');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-9506d218-9f17-4021-bd46-0966a9dd4d14">
+      <button class="colab-df-quickchart" onclick="quickchart('df-9506d218-9f17-4021-bd46-0966a9dd4d14')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-9506d218-9f17-4021-bd46-0966a9dd4d14 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Page &amp; Output Link PTA</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">prodi_id</span><span class="p">,</span> <span class="n">prodi</span><span class="p">,</span> <span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">[</span><span class="si">{</span><span class="n">prodi_id</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">prodi</span><span class="si">}</span><span class="s1"> - Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">pta_links</span><span class="p">():</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>  <span class="c1"># mulai hitung waktu</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;no&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;link_keluar&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">no</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># nomor urut</span>
+
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">42</span><span class="p">):</span>  <span class="c1"># jumlah prodi</span>
+        <span class="n">total_pages</span> <span class="o">=</span> <span class="mi">5</span>  <span class="c1"># jumlah page</span>
+        <span class="n">prodi_name</span> <span class="o">=</span> <span class="kc">None</span>
+
+        <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">total_pages</span> <span class="o">+</span> <span class="mi">1</span><span class="p">):</span>  <span class="c1"># loop page</span>
+            <span class="n">url</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;https://pta.trunojoyo.ac.id/c_search/byprod/</span><span class="si">{</span><span class="n">i</span><span class="si">}</span><span class="s2">/</span><span class="si">{</span><span class="n">j</span><span class="si">}</span><span class="s2">&quot;</span>
+            <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>
+            <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">content</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+            <span class="n">jurnals</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s1">&#39;li[data-cat=&quot;#luxury&quot;]&#39;</span><span class="p">)</span>
+
+            <span class="n">isii</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;div#begin&#39;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">isii</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="n">prodi_full</span> <span class="o">=</span> <span class="n">isii</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;h2&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">text</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+            <span class="n">prodi</span> <span class="o">=</span> <span class="n">prodi_full</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot;Journal Jurusan &quot;</span><span class="p">,</span> <span class="s2">&quot;&quot;</span><span class="p">)</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">prodi_name</span><span class="p">:</span>
+                <span class="n">prodi_name</span> <span class="o">=</span> <span class="n">prodi</span>
+
+            <span class="k">for</span> <span class="n">jurnal</span> <span class="ow">in</span> <span class="n">jurnals</span><span class="p">:</span>
+                <span class="n">link</span> <span class="o">=</span> <span class="n">jurnal</span><span class="o">.</span><span class="n">select_one</span><span class="p">(</span><span class="s1">&#39;a.gray.button&#39;</span><span class="p">)[</span><span class="s1">&#39;href&#39;</span><span class="p">]</span>
+
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;no&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">no</span><span class="p">)</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;page&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>          <span class="c1"># link page</span>
+                <span class="n">data</span><span class="p">[</span><span class="s2">&quot;link_keluar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>  <span class="c1"># link detail</span>
+                <span class="n">no</span> <span class="o">+=</span> <span class="mi">1</span>
+
+            <span class="c1"># update progress bar</span>
+            <span class="n">print_progress</span><span class="p">(</span><span class="n">i</span><span class="p">,</span> <span class="n">prodi_name</span><span class="p">,</span> <span class="n">j</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;pta_links.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="c1"># summary</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh link berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📊 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">pta_links</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[1] Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[2] Teknologi Industri Pertanian - Page 5/5 [████████████████████] 100.00%
+
+[3] Agribisnis - Page 5/5 [████████████████████] 100.00%
+
+[4] Agroteknologi - Page 5/5 [████████████████████] 100.00%
+
+[5] Ilmu Kelautan - Page 5/5 [████████████████████] 100.00%
+
+[6] Ekonomi Pembangunan - Page 5/5 [████████████████████] 100.00%
+
+[7] Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[8] Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[9] Teknik Industri - Page 5/5 [████████████████████] 100.00%
+
+[10] Teknik Informatika - Page 5/5 [████████████████████] 100.00%
+
+[11] Manajemen Informatika - Page 5/5 [████████████████████] 100.00%
+
+[12] Sosiologi - Page 5/5 [████████████████████] 100.00%
+
+[13] Ilmu Komunikasi - Page 5/5 [████████████████████] 100.00%
+
+[14] Psikologi - Page 5/5 [████████████████████] 100.00%
+
+[15] Sastra Inggris - Page 5/5 [████████████████████] 100.00%
+
+[16] Ekonomi Syariah - Page 5/5 [████████████████████] 100.00%
+
+[17] Hukum Bisnis Syariah - Page 5/5 [████████████████████] 100.00%
+
+[18] Pgsd - Page 5/5 [████████████████████] 100.00%
+
+[19] Teknik Multimedia Dan Jaringan - Page 5/5 [████████████████████] 100.00%
+
+[20] Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[21] D3 Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[22] Magister Manajemen - Page 5/5 [████████████████████] 100.00%
+
+[23] Teknik Elektro - Page 5/5 [████████████████████] 100.00%
+
+[24] Magister Ilmu Hukum - Page 5/5 [████████████████████] 100.00%
+
+[25] Magister Akuntansi - Page 5/5 [████████████████████] 100.00%
+
+[26] D3 Enterpreneurship - Page 5/5 [████████████████████] 100.00%
+
+[27] Pendidikan Bhs Dan Sastra Indonesia - Page 5/5 [████████████████████] 100.00%
+
+[28] Pendidikan Informatika - Page 5/5 [████████████████████] 100.00%
+
+[29] Pendidikan Ipa - Page 5/5 [████████████████████] 100.00%
+
+[30] Pgpaud - Page 5/5 [████████████████████] 100.00%
+
+[31] Sistem Informasi - Page 5/5 [████████████████████] 100.00%
+
+[32] Teknik Mesin - Page 5/5 [████████████████████] 100.00%
+
+[33] Teknik Mekatronika - Page 5/5 [████████████████████] 100.00%
+
+[34] Journal Jurusan - Page 5/5 [████████████████████] 100.00%
+
+[35] Manajemen Sumberdaya Perairan - Page 5/5 [████████████████████] 100.00%
+
+[36] Magister Ilmu Ekonomi - Page 5/5 [████████████████████] 100.00%
+
+[37] Magister Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[38] Pendidikan Profesi Guru - Page 5/5 [████████████████████] 100.00%
+
+[39] Magister Pendidikan Dasar - Page 5/5 [████████████████████] 100.00%
+
+[40] Doktor Pengelolaan Sumber Daya Alam - Page 5/5 [████████████████████] 100.00%
+
+[41] Doktor Ilmu Manajemen - Page 5/5 [████████████████████] 100.00%
+
+
+✅ Seluruh link berhasil dikumpulkan!
+📊 Total entri: 781
+⏱️ Waktu eksekusi: 0 jam 18 menit 16 detik
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-ed5a2e79-e2ad-46e1-95e3-64ef9f19e92b" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>no</th>
+      <th>page</th>
+      <th>link_keluar</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/1/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/080...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/1/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/080...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/1/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/070...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/1/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/090...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/1/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/070...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>776</th>
+      <td>777</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/36/2</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/160...</td>
+    </tr>
+    <tr>
+      <th>777</th>
+      <td>778</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/36/2</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/160...</td>
+    </tr>
+    <tr>
+      <th>778</th>
+      <td>779</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/37/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/170...</td>
+    </tr>
+    <tr>
+      <th>779</th>
+      <td>780</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/37/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/170...</td>
+    </tr>
+    <tr>
+      <th>780</th>
+      <td>781</td>
+      <td>https://pta.trunojoyo.ac.id/c_search/byprod/37/1</td>
+      <td>https://pta.trunojoyo.ac.id/welcome/detail/170...</td>
+    </tr>
+  </tbody>
+</table>
+<p>781 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ed5a2e79-e2ad-46e1-95e3-64ef9f19e92b')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-ed5a2e79-e2ad-46e1-95e3-64ef9f19e92b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-ed5a2e79-e2ad-46e1-95e3-64ef9f19e92b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-338f451e-38fe-4f2c-8117-3d927cc4bda4">
+      <button class="colab-df-quickchart" onclick="quickchart('df-338f451e-38fe-4f2c-8117-3d927cc4bda4')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-338f451e-38fe-4f2c-8117-3d927cc4bda4 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>2. Crawling Berita <a class="reference external" href="http://www.cnnindonesia.com">www.cnnindonesia.com</a></strong></p>
+<p><strong>Library</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Function</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Progress bar manual</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Ambil isi berita CNN</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_article_content</span><span class="p">(</span><span class="n">url</span><span class="p">):</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0&quot;</span><span class="p">})</span>
+    <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+    <span class="n">paragraphs</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="n">content_div</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">find</span><span class="p">(</span><span class="s2">&quot;div&quot;</span><span class="p">,</span> <span class="n">class_</span><span class="o">=</span><span class="s2">&quot;detail-text&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">content_div</span><span class="p">:</span>
+        <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">content_div</span><span class="o">.</span><span class="n">find_all</span><span class="p">(</span><span class="s2">&quot;p&quot;</span><span class="p">):</span>
+            <span class="n">text</span> <span class="o">=</span> <span class="n">p</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+            <span class="k">if</span> <span class="n">text</span> <span class="ow">and</span> <span class="ow">not</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;baca juga&quot;</span><span class="p">):</span>
+                <span class="n">paragraphs</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">text</span><span class="p">)</span>
+    <span class="k">return</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">paragraphs</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Scraping CNN Indonesia</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">berita_cnn</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.cnnindonesia.com/indeks?page=</span><span class="si">{}</span><span class="s2">&quot;</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;judul_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;isi_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;kategori_berita&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>  <span class="c1"># mulai id dari 1</span>
+
+    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">pages</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">BASE_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0&quot;</span><span class="p">})</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+        <span class="n">articles</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;article a&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+            <span class="n">title</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get_text</span><span class="p">(</span><span class="n">strip</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">title</span><span class="p">:</span>
+                <span class="k">continue</span>
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;https://www.cnnindonesia.com/&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="c1"># Ambil kategori dari URL</span>
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">kategori</span> <span class="o">=</span> <span class="n">link</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot;/&quot;</span><span class="p">)[</span><span class="mi">3</span><span class="p">]</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">kategori</span> <span class="o">=</span> <span class="s2">&quot;unknown&quot;</span>
+
+            <span class="k">try</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="n">get_article_content</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>
+            <span class="k">except</span><span class="p">:</span>
+                <span class="n">content</span> <span class="o">=</span> <span class="s2">&quot;&quot;</span>
+
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;judul_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">title</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;isi_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">content</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;kategori_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">kategori</span><span class="p">)</span>
+
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>  <span class="c1"># naikkan id</span>
+
+        <span class="n">print_progress</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;cnnindonesia_berita4.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh data berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># Contoh pemanggilan</span>
+<span class="n">df_cnn</span> <span class="o">=</span> <span class="n">berita_cnn</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Page 100/100 [████████████████████] 100.00%
+
+
+✅ Seluruh data berhasil dikumpulkan!
+📈 Total entri: 1000
+⏱️ Waktu eksekusi: 0 jam 10 menit 32 detik
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">re</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">berita_path</span> <span class="o">=</span><span class="s2">&quot;/content/drive/MyDrive/PPW/output/cnnindonesia_berita4.csv&quot;</span>
+<span class="n">berita</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">berita_path</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;id_berita&quot;</span><span class="p">)</span>
+
+<span class="n">berita</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-d5b0612f-4dc0-488b-9b23-99231a086e13" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>judul_berita</th>
+      <th>isi_berita</th>
+      <th>kategori_berita</th>
+    </tr>
+    <tr>
+      <th>id_berita</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>Dorong Suporter, Andre Onana Dilempar BotolOla...</td>
+      <td>Kiper Manchester UnitedAndre Onanadilempar bot...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Militer Nepal Batasi Aktivitas Pascademo Gulin...</td>
+      <td>Militer Nepalmengambil kembali kendali atas Ka...</td>
+      <td>internasional</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>Dua Helikopter Disiagakan Selama MotoGP Mandal...</td>
+      <td>Basarnas akan menyiapkan dan menyiagakan dua h...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>Lari, Rahasia Hidup Sehat untuk Tingkatkan Pro...</td>
+      <td>Tingginya tuntutan pekerjaan di era yang serba...</td>
+      <td>gaya-hidup</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>Lokasi Titik Jatuh Helikopter di Mimika Ditemu...</td>
+      <td>Kepala Badan Nasional Pencarian dan Pertolonga...</td>
+      <td>nasional</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>7 FOTOFOTO: Rusia Bombardir Ukraina, Luncurkan...</td>
+      <td>NaN</td>
+      <td>internasional</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>Hasil MotoGP Catalunya: Alex Jadi Pemenang, Ka...</td>
+      <td>Pembalap Gresini Racing Alex Marquez memenangk...</td>
+      <td>olahraga</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>Prabowo: Tuntutan 17+8 Sebagian Masuk Akal, Se...</td>
+      <td>Presiden RIPrabowo Subiantomenyatakan sebagian...</td>
+      <td>nasional</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>00:57VIDEO: PM Jepang Shigeru Ishiba Umumkan M...</td>
+      <td>Perdana Menteri Jepang, Shigeru Ishiba, mengun...</td>
+      <td>internasional</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>Suciwati Munir: Apakah Komnas HAM Sudah Tidak ...</td>
+      <td>Suciwati, istri mendiang aktivis HAM Munir Sai...</td>
+      <td>nasional</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d5b0612f-4dc0-488b-9b23-99231a086e13')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-d5b0612f-4dc0-488b-9b23-99231a086e13 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-d5b0612f-4dc0-488b-9b23-99231a086e13');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-9adf6e03-41f3-4a5e-b5f7-09b21e75283e">
+      <button class="colab-df-quickchart" onclick="quickchart('df-9adf6e03-41f3-4a5e-b5f7-09b21e75283e')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-9adf6e03-41f3-4a5e-b5f7-09b21e75283e button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_4b8248e4-a7dc-46b8-9075-0e1f80b4e18c">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('berita')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_4b8248e4-a7dc-46b8-9075-0e1f80b4e18c button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('berita');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p><strong>Page &amp; Link Output Berita</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">requests</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">bs4</span><span class="w"> </span><span class="kn">import</span> <span class="n">BeautifulSoup</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">time</span><span class="o">,</span><span class="w"> </span><span class="nn">sys</span>
+
+<span class="c1"># progress bar</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">print_progress</span><span class="p">(</span><span class="n">current_page</span><span class="p">,</span> <span class="n">total_pages</span><span class="p">):</span>
+    <span class="n">percent</span> <span class="o">=</span> <span class="p">(</span><span class="n">current_page</span> <span class="o">/</span> <span class="n">total_pages</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span>
+    <span class="n">bar_length</span> <span class="o">=</span> <span class="mi">20</span>
+    <span class="n">filled_length</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">bar_length</span> <span class="o">*</span> <span class="n">current_page</span> <span class="o">//</span> <span class="n">total_pages</span><span class="p">)</span>
+    <span class="n">bar</span> <span class="o">=</span> <span class="s1">&#39;█&#39;</span> <span class="o">*</span> <span class="n">filled_length</span> <span class="o">+</span> <span class="s1">&#39;-&#39;</span> <span class="o">*</span> <span class="p">(</span><span class="n">bar_length</span> <span class="o">-</span> <span class="n">filled_length</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="sa">f</span><span class="s1">&#39;</span><span class="se">\r</span><span class="s1">Page </span><span class="si">{</span><span class="n">current_page</span><span class="si">}</span><span class="s1">/</span><span class="si">{</span><span class="n">total_pages</span><span class="si">}</span><span class="s1"> [</span><span class="si">{</span><span class="n">bar</span><span class="si">}</span><span class="s1">] </span><span class="si">{</span><span class="n">percent</span><span class="si">:</span><span class="s1">.2f</span><span class="si">}</span><span class="s1">%&#39;</span><span class="p">)</span>
+    <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">flush</span><span class="p">()</span>
+    <span class="k">if</span> <span class="n">current_page</span> <span class="o">==</span> <span class="n">total_pages</span><span class="p">:</span>
+        <span class="n">sys</span><span class="o">.</span><span class="n">stdout</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="s1">&#39;</span><span class="se">\n\n</span><span class="s1">&#39;</span><span class="p">)</span>
+
+<span class="c1"># fungsi untuk kumpulkan link berita CNN Indonesia</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">berita_links</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">1</span><span class="p">):</span>
+    <span class="n">start_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+
+    <span class="n">BASE_URL</span> <span class="o">=</span> <span class="s2">&quot;https://www.cnnindonesia.com/indeks?page=</span><span class="si">{}</span><span class="s2">&quot;</span>
+
+    <span class="n">data</span> <span class="o">=</span> <span class="p">{</span>
+        <span class="s2">&quot;id_berita&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;page&quot;</span><span class="p">:</span> <span class="p">[],</span>
+        <span class="s2">&quot;link_keluar&quot;</span><span class="p">:</span> <span class="p">[]</span>
+    <span class="p">}</span>
+
+    <span class="n">counter</span> <span class="o">=</span> <span class="mi">1</span>
+    <span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">pages</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">url</span> <span class="o">=</span> <span class="n">BASE_URL</span><span class="o">.</span><span class="n">format</span><span class="p">(</span><span class="n">page</span><span class="p">)</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">requests</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="n">headers</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;User-Agent&quot;</span><span class="p">:</span> <span class="s2">&quot;Mozilla/5.0&quot;</span><span class="p">})</span>
+        <span class="n">soup</span> <span class="o">=</span> <span class="n">BeautifulSoup</span><span class="p">(</span><span class="n">r</span><span class="o">.</span><span class="n">text</span><span class="p">,</span> <span class="s2">&quot;html.parser&quot;</span><span class="p">)</span>
+
+        <span class="n">articles</span> <span class="o">=</span> <span class="n">soup</span><span class="o">.</span><span class="n">select</span><span class="p">(</span><span class="s2">&quot;article a&quot;</span><span class="p">)</span>
+        <span class="k">for</span> <span class="n">a</span> <span class="ow">in</span> <span class="n">articles</span><span class="p">:</span>
+            <span class="n">link</span> <span class="o">=</span> <span class="n">a</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;href&quot;</span><span class="p">)</span>
+
+            <span class="k">if</span> <span class="ow">not</span> <span class="n">link</span> <span class="ow">or</span> <span class="ow">not</span> <span class="n">link</span><span class="o">.</span><span class="n">startswith</span><span class="p">(</span><span class="s2">&quot;https://www.cnnindonesia.com/&quot;</span><span class="p">):</span>
+                <span class="k">continue</span>
+
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;id_berita&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">counter</span><span class="p">)</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;page&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">url</span><span class="p">)</span>       <span class="c1"># halaman indeks</span>
+            <span class="n">data</span><span class="p">[</span><span class="s2">&quot;link_keluar&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">link</span><span class="p">)</span>  <span class="c1"># link detail berita</span>
+
+            <span class="n">counter</span> <span class="o">+=</span> <span class="mi">1</span>
+
+        <span class="n">print_progress</span><span class="p">(</span><span class="n">page</span><span class="p">,</span> <span class="n">pages</span><span class="p">)</span>
+
+    <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
+    <span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;cnnindonesia_links1.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s2">&quot;utf-8-sig&quot;</span><span class="p">)</span>
+
+    <span class="n">end_time</span> <span class="o">=</span> <span class="n">time</span><span class="o">.</span><span class="n">time</span><span class="p">()</span>
+    <span class="n">elapsed</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">end_time</span> <span class="o">-</span> <span class="n">start_time</span><span class="p">)</span>
+    <span class="n">jam</span><span class="p">,</span> <span class="n">sisa</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">elapsed</span><span class="p">,</span> <span class="mi">3600</span><span class="p">)</span>
+    <span class="n">menit</span><span class="p">,</span> <span class="n">detik</span> <span class="o">=</span> <span class="nb">divmod</span><span class="p">(</span><span class="n">sisa</span><span class="p">,</span> <span class="mi">60</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ Seluruh link berhasil dikumpulkan!&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;📈 Total entri: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;⏱️ Waktu eksekusi: </span><span class="si">{</span><span class="n">jam</span><span class="si">}</span><span class="s2"> jam </span><span class="si">{</span><span class="n">menit</span><span class="si">}</span><span class="s2"> menit </span><span class="si">{</span><span class="n">detik</span><span class="si">}</span><span class="s2"> detik&quot;</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="n">df</span>
+
+<span class="c1"># contoh pemanggilan: ambil 100 halaman pertama</span>
+<span class="n">df_links</span> <span class="o">=</span> <span class="n">berita_links</span><span class="p">(</span><span class="n">pages</span><span class="o">=</span><span class="mi">100</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Page 100/100 [████████████████████] 100.00%
+
+
+✅ Seluruh link berhasil dikumpulkan!
+📈 Total entri: 1000
+⏱️ Waktu eksekusi: 0 jam 1 menit 0 detik
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">link_path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/PPW/output/cnnindonesia_links1.csv&quot;</span>
+<span class="n">link</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">link_path</span><span class="p">,</span> <span class="n">index_col</span><span class="o">=</span><span class="s2">&quot;id_berita&quot;</span><span class="p">)</span>
+
+<span class="n">link</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-6cd3a13c-1526-4f77-9e50-3bf2def1fa8c" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>page</th>
+      <th>link_keluar</th>
+    </tr>
+    <tr>
+      <th>id_berita</th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>1</th>
+      <td>https://www.cnnindonesia.com/indeks?page=1</td>
+      <td>https://www.cnnindonesia.com/nasional/20250911...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>https://www.cnnindonesia.com/indeks?page=1</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250911...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>https://www.cnnindonesia.com/indeks?page=1</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>https://www.cnnindonesia.com/indeks?page=1</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250910...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>https://www.cnnindonesia.com/indeks?page=1</td>
+      <td>https://www.cnnindonesia.com/gaya-hidup/202509...</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>996</th>
+      <td>https://www.cnnindonesia.com/indeks?page=100</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>997</th>
+      <td>https://www.cnnindonesia.com/indeks?page=100</td>
+      <td>https://www.cnnindonesia.com/olahraga/20250907...</td>
+    </tr>
+    <tr>
+      <th>998</th>
+      <td>https://www.cnnindonesia.com/indeks?page=100</td>
+      <td>https://www.cnnindonesia.com/nasional/20250907...</td>
+    </tr>
+    <tr>
+      <th>999</th>
+      <td>https://www.cnnindonesia.com/indeks?page=100</td>
+      <td>https://www.cnnindonesia.com/internasional/202...</td>
+    </tr>
+    <tr>
+      <th>1000</th>
+      <td>https://www.cnnindonesia.com/indeks?page=100</td>
+      <td>https://www.cnnindonesia.com/nasional/20250907...</td>
+    </tr>
+  </tbody>
+</table>
+<p>1000 rows × 2 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-6cd3a13c-1526-4f77-9e50-3bf2def1fa8c')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-6cd3a13c-1526-4f77-9e50-3bf2def1fa8c button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-6cd3a13c-1526-4f77-9e50-3bf2def1fa8c');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-5669d40c-2d5b-421b-81b5-ddfb676c6212">
+      <button class="colab-df-quickchart" onclick="quickchart('df-5669d40c-2d5b-421b-81b5-ddfb676c6212')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-5669d40c-2d5b-421b-81b5-ddfb676c6212 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_4c6346c6-40fa-498f-b982-910a626958aa">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('link')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_4c6346c6-40fa-498f-b982-910a626958aa button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('link');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CrawlingPPW.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Crawling Penambanagan Web</p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
