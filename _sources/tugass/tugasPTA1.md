@@ -1,5 +1,6 @@
-# # Tugas PTA 1
+# **Crawling PTA, Berita, dan Link**
 
+---
 jupyter:
   colab:
     toc_visible: true
@@ -10,6 +11,7 @@ jupyter:
     name: python
   nbformat: 4
   nbformat_minor: 0
+---
 
 
 ::: {.cell .markdown id="jAGryMJp9-XB"}
