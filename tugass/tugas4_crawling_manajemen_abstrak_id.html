@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Tugas 4 &#8212; Penambanagan Web</title>
+    <title>Crawling Manajemen Abstrak Ind &#8212; Penambanagan Web</title>
   
   
   
@@ -186,9 +186,7 @@
 <li class="toctree-l2"><a class="reference internal" href="tugasPTA.html"><strong>Crawling PTA, Berita, dan Link</strong></a></li>
 
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Tugas 4</strong></a></li>
-
-
+<li class="toctree-l2 current active"><a class="current reference internal" href="#">Crawling Manajemen Abstrak Ind</a></li>
 </ul>
 </details></li>
 </ul>
@@ -376,7 +374,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Tugas 4</h1>
+    <h1>Crawling Manajemen Abstrak Ind</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -386,18 +384,13 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 4</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling"><strong>1. Crawling</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>2. Preprocessing</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preprocessing"><strong>Sample Preprocessing</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-keseluruhan"><strong>Preprocessing keseluruhan</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-stemmer-stopword-remover">Inisialisasi stemmer &amp; stopword remover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling"><strong>1. Crawling</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>2. Preprocessing</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preprocessing"><strong>Sample Preprocessing</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-keseluruhan"><strong>Preprocessing keseluruhan</strong></a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
             </nav>
         </div>
     </div>
@@ -408,11 +401,10 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4">
-<h1><strong>Tugas 4</strong><a class="headerlink" href="#tugas-4" title="Link to this heading">#</a></h1>
-</section>
-<section class="tex2jax_ignore mathjax_ignore" id="crawling">
-<h1><strong>1. Crawling</strong><a class="headerlink" href="#crawling" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-manajemen-abstrak-ind">
+<h1>Crawling Manajemen Abstrak Ind<a class="headerlink" href="#crawling-manajemen-abstrak-ind" title="Link to this heading">#</a></h1>
+<section id="crawling">
+<h2><strong>1. Crawling</strong><a class="headerlink" href="#crawling" title="Link to this heading">#</a></h2>
 <p><strong>Library</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -943,8 +935,8 @@ Mau lanjut scraping semua data Manajemen? (y/n): y
 </div></div>
 </div>
 </section>
-<section class="tex2jax_ignore mathjax_ignore" id="preprocessing">
-<h1><strong>2. Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h1>
+<section id="preprocessing">
+<h2><strong>2. Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">Sastrawi</span>
@@ -975,7 +967,7 @@ Successfully installed Sastrawi-1.0.1
 </div>
 </div>
 <section id="sample-preprocessing">
-<h2><strong>Sample Preprocessing</strong><a class="headerlink" href="#sample-preprocessing" title="Link to this heading">#</a></h2>
+<h3><strong>Sample Preprocessing</strong><a class="headerlink" href="#sample-preprocessing" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_text</span> <span class="o">=</span> <span class="n">manajemen</span><span class="p">[</span><span class="s1">&#39;abstrak_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1089,7 +1081,7 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
 </div>
 </section>
 <section id="preprocessing-keseluruhan">
-<h2><strong>Preprocessing keseluruhan</strong><a class="headerlink" href="#preprocessing-keseluruhan" title="Link to this heading">#</a></h2>
+<h3><strong>Preprocessing keseluruhan</strong><a class="headerlink" href="#preprocessing-keseluruhan" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Ambil kolom abstrak ===</span>
@@ -1098,8 +1090,6 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
 </div>
 </div>
 </div>
-<section id="inisialisasi-stemmer-stopword-remover">
-<h3>Inisialisasi stemmer &amp; stopword remover<a class="headerlink" href="#inisialisasi-stemmer-stopword-remover" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
@@ -1448,6 +1438,366 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
 </div>
 </div>
 </div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">preprocess_manajemen_path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/PPW/output/frekuensi_kata_manajemen.csv&quot;</span>
+<span class="n">preprocess_manajemen</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">preprocess_manajemen_path</span><span class="p">)</span>
+
+<span class="n">preprocess_manajemen</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-58632c1e-67af-49f3-8d58-0ff16cd3ced2" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>kata</th>
+      <th>frekuensi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>teliti</td>
+      <td>24</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>x</td>
+      <td>23</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>kerja</td>
+      <td>19</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>variabel</td>
+      <td>18</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>pengaruh</td>
+      <td>15</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>321</th>
+      <td>koefisiensi</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>322</th>
+      <td>semua</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>323</th>
+      <td>sisa</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>324</th>
+      <td>signifikansi</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>325</th>
+      <td>beta</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+<p>326 rows × 2 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-58632c1e-67af-49f3-8d58-0ff16cd3ced2')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-58632c1e-67af-49f3-8d58-0ff16cd3ced2 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-58632c1e-67af-49f3-8d58-0ff16cd3ced2');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-1e30f27c-d89f-45de-9d95-efe251722490">
+      <button class="colab-df-quickchart" onclick="quickchart('df-1e30f27c-d89f-45de-9d95-efe251722490')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-1e30f27c-d89f-45de-9d95-efe251722490 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_5db92a85-9e9e-42af-bb5d-6439343157b2">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('preprocess_manajemen')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_5db92a85-9e9e-42af-bb5d-6439343157b2 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('preprocess_manajemen');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
 </section>
 </section>
 </section>
@@ -1507,18 +1857,13 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 4</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling"><strong>1. Crawling</strong></a></li>
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>2. Preprocessing</strong></a><ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preprocessing"><strong>Sample Preprocessing</strong></a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-keseluruhan"><strong>Preprocessing keseluruhan</strong></a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-stemmer-stopword-remover">Inisialisasi stemmer &amp; stopword remover</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling"><strong>1. Crawling</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>2. Preprocessing</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preprocessing"><strong>Sample Preprocessing</strong></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-keseluruhan"><strong>Preprocessing keseluruhan</strong></a></li>
 </ul>
 </li>
 </ul>
-</li>
-</ul>
-
   </nav></div>
 
 </div></div>
