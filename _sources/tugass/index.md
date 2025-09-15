@@ -1,4 +1,4 @@
-# Tugas
+# **Tugas**
 <div style="text-align: justify">
 Tugas ini berisi materi yang harus dipelajari dan dipahami sebagai bagian dari pembelajaran mata kuliah *Penambangan Web*.  
 Setiap tugas berisi penjelasan teori sekaligus contoh praktik yang perlu dicermati dengan baik.  
