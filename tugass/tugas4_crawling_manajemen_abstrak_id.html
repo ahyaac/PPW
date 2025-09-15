@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>&lt;no title&gt; &#8212; Penambanagan Web</title>
+    <title>Tugas 4 &#8212; Penambanagan Web</title>
   
   
   
@@ -179,11 +179,14 @@
                 </a>
             </li>
         </ul>
-        <ul class="nav bd-sidenav">
-<li class="toctree-l1 has-children"><a class="reference internal" href="index.html">Tugas</a><details><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html">Tugas</a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
 <li class="toctree-l2"><a class="reference internal" href="pengantar.html">Web Mining</a></li>
 <li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html">Crawling Penambanagan Web</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tugasPTA.html"><strong>Crawling PTA, Berita, dan Link</strong></a></li>
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Tugas 4</strong></a></li>
 
 
 </ul>
@@ -373,7 +376,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1><no title></h1>
+    <h1>Tugas 4</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -382,7 +385,17 @@ document.write(`
                 <h2> Contents </h2>
             </div>
             <nav aria-label="Page">
-                <ul class="simple visible nav section-nav flex-column">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 4</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling"><strong>1. Crawling</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>2. Preprocessing</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preprocessing"><strong>Sample Preprocessing</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-keseluruhan"><strong>Preprocessing keseluruhan</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-stemmer-stopword-remover">Inisialisasi stemmer &amp; stopword remover</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
             </nav>
@@ -395,7 +408,11 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <p>#<strong>1. Crawling</strong></p>
+  <section class="tex2jax_ignore mathjax_ignore" id="tugas-4">
+<h1><strong>Tugas 4</strong><a class="headerlink" href="#tugas-4" title="Link to this heading">#</a></h1>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="crawling">
+<h1><strong>1. Crawling</strong><a class="headerlink" href="#crawling" title="Link to this heading">#</a></h1>
 <p><strong>Library</strong></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -925,7 +942,9 @@ Mau lanjut scraping semua data Manajemen? (y/n): y
   </div>
 </div></div>
 </div>
-<p>#<strong>2. Preprocessing</strong></p>
+</section>
+<section class="tex2jax_ignore mathjax_ignore" id="preprocessing">
+<h1><strong>2. Preprocessing</strong><a class="headerlink" href="#preprocessing" title="Link to this heading">#</a></h1>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">Sastrawi</span>
@@ -955,7 +974,8 @@ Successfully installed Sastrawi-1.0.1
 </div>
 </div>
 </div>
-<p>##<strong>Sample Preprocessing</strong></p>
+<section id="sample-preprocessing">
+<h2><strong>Sample Preprocessing</strong><a class="headerlink" href="#sample-preprocessing" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">sample_text</span> <span class="o">=</span> <span class="n">manajemen</span><span class="p">[</span><span class="s1">&#39;abstrak_id&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">dropna</span><span class="p">()</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
@@ -1067,7 +1087,9 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
 </div>
 </div>
 </div>
-<p>##<strong>Preprocessing keseluruhan</strong></p>
+</section>
+<section id="preprocessing-keseluruhan">
+<h2><strong>Preprocessing keseluruhan</strong><a class="headerlink" href="#preprocessing-keseluruhan" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Ambil kolom abstrak ===</span>
@@ -1076,7 +1098,8 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
 </div>
 </div>
 </div>
-<p>###Inisialisasi stemmer &amp; stopword remover</p>
+<section id="inisialisasi-stemmer-stopword-remover">
+<h3>Inisialisasi stemmer &amp; stopword remover<a class="headerlink" href="#inisialisasi-stemmer-stopword-remover" title="Link to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">factory</span> <span class="o">=</span> <span class="n">StemmerFactory</span><span class="p">()</span>
@@ -1425,6 +1448,9 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
 </div>
 </div>
 </div>
+</section>
+</section>
+</section>
 
     <script type="text/x-thebe-config">
     {
@@ -1480,7 +1506,17 @@ kata kunci  dinas kelautan dan perikanan faktorfaktor pelatihan dan pengembangan
     <i class="fa-solid fa-list"></i> Contents
   </div>
   <nav class="bd-toc-nav page-toc">
-    <ul class="simple visible nav section-nav flex-column">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Tugas 4</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#crawling"><strong>1. Crawling</strong></a></li>
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing"><strong>2. Preprocessing</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sample-preprocessing"><strong>Sample Preprocessing</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#preprocessing-keseluruhan"><strong>Preprocessing keseluruhan</strong></a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inisialisasi-stemmer-stopword-remover">Inisialisasi stemmer &amp; stopword remover</a></li>
+</ul>
+</li>
+</ul>
+</li>
 </ul>
 
   </nav></div>
