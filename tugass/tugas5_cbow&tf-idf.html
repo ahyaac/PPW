@@ -8,7 +8,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
-    <title>Pta Manajemen Tf-Idf &amp; Cbow &#8212; Penambanagan Web</title>
+    <title>Manajemen &amp; Berita Tf-idf_Cbow &#8212; Penambanagan Web</title>
   
   
   
@@ -189,7 +189,7 @@
 <li class="toctree-l2"><a class="reference internal" href="CrawlingPTA_Manajemen.html"><strong>Crawling PTA Prodi Manajemen Abstrak Id.</strong></a></li>
 
 
-<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Pta Manajemen Tf-Idf &amp; Cbow</strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Manajemen &amp; Berita Tf-idf_Cbow</strong></a></li>
 
 </ul>
 </details></li>
@@ -378,7 +378,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Pta Manajemen Tf-Idf & Cbow</h1>
+    <h1>Manajemen & Berita Tf-idf_Cbow</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -388,7 +388,7 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pta Manajemen Tf-Idf &amp; Cbow</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Manajemen &amp; Berita Tf-idf_Cbow</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data"><strong>Load Data</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengecek-nilai-yang-null-dan-memebersihkannya"><strong>Mengecek Nilai yang null dan memebersihkannya</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-data"><strong>Cleaning Data</strong></a></li>
@@ -428,8 +428,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="pta-manajemen-tf-idf-cbow">
-<h1><strong>Pta Manajemen Tf-Idf &amp; Cbow</strong><a class="headerlink" href="#pta-manajemen-tf-idf-cbow" title="Link to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="manajemen-berita-tf-idf-cbow">
+<h1><strong>Manajemen &amp; Berita Tf-idf_Cbow</strong><a class="headerlink" href="#manajemen-berita-tf-idf-cbow" title="Link to this heading">#</a></h1>
 <section id="load-data">
 <h2><strong>Load Data</strong><a class="headerlink" href="#load-data" title="Link to this heading">#</a></h2>
 <div class="cell docutils container">
@@ -456,7 +456,7 @@ document.write(`
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
 </pre></div>
 </div>
 </div>
@@ -472,7 +472,7 @@ document.write(`
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-75f56141-e449-448b-802b-d9c88da6ca31" class="colab-df-container">
+  <div id="df-a06687e1-c43e-436d-8c27-95ec191aa58d" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -618,7 +618,7 @@ document.write(`
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-75f56141-e449-448b-802b-d9c88da6ca31')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a06687e1-c43e-436d-8c27-95ec191aa58d')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -670,12 +670,12 @@ document.write(`
 
     <script>
       const buttonEl =
-        document.querySelector('#df-75f56141-e449-448b-802b-d9c88da6ca31 button.colab-df-convert');
+        document.querySelector('#df-a06687e1-c43e-436d-8c27-95ec191aa58d button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-75f56141-e449-448b-802b-d9c88da6ca31');
+        const element = document.querySelector('#df-a06687e1-c43e-436d-8c27-95ec191aa58d');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -695,8 +695,8 @@ document.write(`
   </div>
 
 
-    <div id="df-e01d0258-ffca-421c-b69b-32072ba8a0c1">
-      <button class="colab-df-quickchart" onclick="quickchart('df-e01d0258-ffca-421c-b69b-32072ba8a0c1')"
+    <div id="df-2b78c4d3-09ff-4876-81ae-23c79f539314">
+      <button class="colab-df-quickchart" onclick="quickchart('df-2b78c4d3-09ff-4876-81ae-23c79f539314')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -815,14 +815,14 @@ document.write(`
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-e01d0258-ffca-421c-b69b-32072ba8a0c1 button');
+            document.querySelector('#df-2b78c4d3-09ff-4876-81ae-23c79f539314 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
       </script>
     </div>
 
-  <div id="id_e65beefe-3d6d-4cc9-8a70-0d2d10d9e355">
+  <div id="id_af432b80-03af-433a-9f88-84e010773bc2">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -866,7 +866,7 @@ document.write(`
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_e65beefe-3d6d-4cc9-8a70-0d2d10d9e355 button.colab-df-generate');
+        document.querySelector('#id_af432b80-03af-433a-9f88-84e010773bc2 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -928,7 +928,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5ac495a5-c5d1-4090-8e2c-576445728e7e" class="colab-df-container">
+  <div id="df-3086b731-5814-4b0c-936a-ab56b3879d95" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1074,7 +1074,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5ac495a5-c5d1-4090-8e2c-576445728e7e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-3086b731-5814-4b0c-936a-ab56b3879d95')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1126,12 +1126,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5ac495a5-c5d1-4090-8e2c-576445728e7e button.colab-df-convert');
+        document.querySelector('#df-3086b731-5814-4b0c-936a-ab56b3879d95 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5ac495a5-c5d1-4090-8e2c-576445728e7e');
+        const element = document.querySelector('#df-3086b731-5814-4b0c-936a-ab56b3879d95');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1151,8 +1151,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-27be7b10-64aa-416f-8144-4e18cf746b3a">
-      <button class="colab-df-quickchart" onclick="quickchart('df-27be7b10-64aa-416f-8144-4e18cf746b3a')"
+    <div id="df-4d9fdea7-2f28-4260-a12f-324abf471dab">
+      <button class="colab-df-quickchart" onclick="quickchart('df-4d9fdea7-2f28-4260-a12f-324abf471dab')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -1271,14 +1271,14 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-27be7b10-64aa-416f-8144-4e18cf746b3a button');
+            document.querySelector('#df-4d9fdea7-2f28-4260-a12f-324abf471dab button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
       </script>
     </div>
 
-  <div id="id_2f3b9f75-c877-42ed-8136-d0c95c4aab4c">
+  <div id="id_b0fb37eb-e9e8-4017-af05-b2270a8fe552">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -1322,7 +1322,7 @@ dtype: int64
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_2f3b9f75-c877-42ed-8136-d0c95c4aab4c button.colab-df-generate');
+        document.querySelector('#id_b0fb37eb-e9e8-4017-af05-b2270a8fe552 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -1371,7 +1371,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-0b778b14-09f2-4cbf-9395-e41f37787fc7" class="colab-df-container">
+  <div id="df-7460b318-258e-4135-98dd-6bfb025f3c0d" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1426,7 +1426,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0b778b14-09f2-4cbf-9395-e41f37787fc7')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-7460b318-258e-4135-98dd-6bfb025f3c0d')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1478,12 +1478,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0b778b14-09f2-4cbf-9395-e41f37787fc7 button.colab-df-convert');
+        document.querySelector('#df-7460b318-258e-4135-98dd-6bfb025f3c0d button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0b778b14-09f2-4cbf-9395-e41f37787fc7');
+        const element = document.querySelector('#df-7460b318-258e-4135-98dd-6bfb025f3c0d');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1503,8 +1503,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-53682cd0-7165-4677-acb7-2b50772cddc2">
-      <button class="colab-df-quickchart" onclick="quickchart('df-53682cd0-7165-4677-acb7-2b50772cddc2')"
+    <div id="df-21050f4a-e9a3-468a-9357-ae4c9fa22514">
+      <button class="colab-df-quickchart" onclick="quickchart('df-21050f4a-e9a3-468a-9357-ae4c9fa22514')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -1623,7 +1623,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-53682cd0-7165-4677-acb7-2b50772cddc2 button');
+            document.querySelector('#df-21050f4a-e9a3-468a-9357-ae4c9fa22514 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -1641,7 +1641,12 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: pyspellchecker in /usr/local/lib/python3.12/dist-packages (0.8.3)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pyspellchecker
+  Downloading pyspellchecker-0.8.3-py3-none-any.whl.metadata (9.5 kB)
+Downloading pyspellchecker-0.8.3-py3-none-any.whl (7.2 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">7.2/7.2 MB</span> <span class=" -Color -Color-Red">38.6 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: pyspellchecker
+Successfully installed pyspellchecker-0.8.3
 </pre></div>
 </div>
 </div>
@@ -1658,7 +1663,12 @@ dtype: int64
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: Sastrawi in /usr/local/lib/python3.12/dist-packages (1.0.1)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting Sastrawi
+  Downloading Sastrawi-1.0.1-py2.py3-none-any.whl.metadata (909 bytes)
+Downloading Sastrawi-1.0.1-py2.py3-none-any.whl (209 kB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">209.7/209.7 kB</span> <span class=" -Color -Color-Red">2.2 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: Sastrawi
+Successfully installed Sastrawi-1.0.1
 </pre></div>
 </div>
 </div>
@@ -1689,7 +1699,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-e4dbe2d1-7921-4960-ad55-73bd58d1f14f" class="colab-df-container">
+  <div id="df-f0a967eb-e663-4a91-8785-b2dca3d96fa0" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -1744,7 +1754,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e4dbe2d1-7921-4960-ad55-73bd58d1f14f')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f0a967eb-e663-4a91-8785-b2dca3d96fa0')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -1796,12 +1806,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e4dbe2d1-7921-4960-ad55-73bd58d1f14f button.colab-df-convert');
+        document.querySelector('#df-f0a967eb-e663-4a91-8785-b2dca3d96fa0 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e4dbe2d1-7921-4960-ad55-73bd58d1f14f');
+        const element = document.querySelector('#df-f0a967eb-e663-4a91-8785-b2dca3d96fa0');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -1821,8 +1831,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-ee4a3847-a077-44fc-84e3-7ce979d717ac">
-      <button class="colab-df-quickchart" onclick="quickchart('df-ee4a3847-a077-44fc-84e3-7ce979d717ac')"
+    <div id="df-66099366-e3f7-4039-8727-e343af8c7681">
+      <button class="colab-df-quickchart" onclick="quickchart('df-66099366-e3f7-4039-8727-e343af8c7681')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -1941,7 +1951,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-ee4a3847-a077-44fc-84e3-7ce979d717ac button');
+            document.querySelector('#df-66099366-e3f7-4039-8727-e343af8c7681 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -1981,7 +1991,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-01f4c6d1-29ca-418a-9581-540496fd0c41" class="colab-df-container">
+  <div id="df-9e5ab3d0-690b-477e-bd82-d0bbaaf78e30" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2036,7 +2046,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-01f4c6d1-29ca-418a-9581-540496fd0c41')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-9e5ab3d0-690b-477e-bd82-d0bbaaf78e30')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -2088,12 +2098,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-01f4c6d1-29ca-418a-9581-540496fd0c41 button.colab-df-convert');
+        document.querySelector('#df-9e5ab3d0-690b-477e-bd82-d0bbaaf78e30 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-01f4c6d1-29ca-418a-9581-540496fd0c41');
+        const element = document.querySelector('#df-9e5ab3d0-690b-477e-bd82-d0bbaaf78e30');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2113,8 +2123,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-30711bf8-6631-4810-89e9-9a09d0fdca23">
-      <button class="colab-df-quickchart" onclick="quickchart('df-30711bf8-6631-4810-89e9-9a09d0fdca23')"
+    <div id="df-522c3071-47e6-4596-b9c7-75109068dad2">
+      <button class="colab-df-quickchart" onclick="quickchart('df-522c3071-47e6-4596-b9c7-75109068dad2')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -2233,7 +2243,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-30711bf8-6631-4810-89e9-9a09d0fdca23 button');
+            document.querySelector('#df-522c3071-47e6-4596-b9c7-75109068dad2 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -2273,7 +2283,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-3feff580-1792-4b33-9c81-6db69bfa15f2" class="colab-df-container">
+  <div id="df-b01bc2b1-cd8e-4517-9105-7678e857cbb5" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2328,7 +2338,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-3feff580-1792-4b33-9c81-6db69bfa15f2')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-b01bc2b1-cd8e-4517-9105-7678e857cbb5')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -2380,12 +2390,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-3feff580-1792-4b33-9c81-6db69bfa15f2 button.colab-df-convert');
+        document.querySelector('#df-b01bc2b1-cd8e-4517-9105-7678e857cbb5 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-3feff580-1792-4b33-9c81-6db69bfa15f2');
+        const element = document.querySelector('#df-b01bc2b1-cd8e-4517-9105-7678e857cbb5');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2405,8 +2415,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-d786e29c-4031-4d18-b383-541145ad4eba">
-      <button class="colab-df-quickchart" onclick="quickchart('df-d786e29c-4031-4d18-b383-541145ad4eba')"
+    <div id="df-15c278a0-01c7-45db-8e6f-290f98f34782">
+      <button class="colab-df-quickchart" onclick="quickchart('df-15c278a0-01c7-45db-8e6f-290f98f34782')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -2525,7 +2535,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-d786e29c-4031-4d18-b383-541145ad4eba button');
+            document.querySelector('#df-15c278a0-01c7-45db-8e6f-290f98f34782 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -2586,14 +2596,21 @@ Contoh dokumen: abstrak satiyah pengaruh faktor faktor latih kembang produktivit
     <span class="n">columns</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
 <span class="p">)</span>
 
+<span class="c1"># Simpan hasil ke CSV</span>
+<span class="n">tfidf_df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/PPW/output/tfidf_hasil2.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil disimpan ke CSV!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
 <span class="c1"># Tampilkan 5 baris pertama</span>
 <span class="n">tfidf_df</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil disimpan ke CSV!
+</pre></div>
+</div>
 <div class="output text_html">
-  <div id="df-e4eb3b73-b452-48fe-a857-ed53d91d59ca" class="colab-df-container">
+  <div id="df-48ab5bdf-33ac-4e53-b42e-af1857871894" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -2763,7 +2780,7 @@ Contoh dokumen: abstrak satiyah pengaruh faktor faktor latih kembang produktivit
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e4eb3b73-b452-48fe-a857-ed53d91d59ca')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-48ab5bdf-33ac-4e53-b42e-af1857871894')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -2815,12 +2832,12 @@ Contoh dokumen: abstrak satiyah pengaruh faktor faktor latih kembang produktivit
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e4eb3b73-b452-48fe-a857-ed53d91d59ca button.colab-df-convert');
+        document.querySelector('#df-48ab5bdf-33ac-4e53-b42e-af1857871894 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e4eb3b73-b452-48fe-a857-ed53d91d59ca');
+        const element = document.querySelector('#df-48ab5bdf-33ac-4e53-b42e-af1857871894');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -2840,8 +2857,8 @@ Contoh dokumen: abstrak satiyah pengaruh faktor faktor latih kembang produktivit
   </div>
 
 
-    <div id="df-aa968d73-89f1-4f7e-93fe-5a453acd81bc">
-      <button class="colab-df-quickchart" onclick="quickchart('df-aa968d73-89f1-4f7e-93fe-5a453acd81bc')"
+    <div id="df-efb77004-4712-4a09-ac31-5b56bdc1ff14">
+      <button class="colab-df-quickchart" onclick="quickchart('df-efb77004-4712-4a09-ac31-5b56bdc1ff14')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -2960,7 +2977,7 @@ Contoh dokumen: abstrak satiyah pengaruh faktor faktor latih kembang produktivit
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-aa968d73-89f1-4f7e-93fe-5a453acd81bc button');
+            document.querySelector('#df-efb77004-4712-4a09-ac31-5b56bdc1ff14 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -3023,7 +3040,6 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     <span class="n">word_list</span> <span class="o">=</span> <span class="n">col</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">)</span>
     <span class="n">corpus</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">word_list</span><span class="p">)</span>
 
-<span class="c1"># Tampilkan contoh dokumen pertama</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">corpus</span><span class="p">[</span><span class="mi">0</span><span class="p">][:</span><span class="mi">20</span><span class="p">])</span>
 </pre></div>
 </div>
@@ -3120,43 +3136,43 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>            f1        f2        f3        f4        f5        f6        f7  \
-0    -0.551324  0.388220  0.053571  0.105566  0.338856 -0.632777  0.729009   
-1    -0.371729  0.697712  0.238175 -0.245901  0.106839 -0.615433  0.583872   
-2    -0.371125  0.468522  0.128401 -0.015336  0.227745 -0.550824  0.393297   
-3    -0.456337  1.041008  0.267175  0.502781  0.777465 -0.313021  1.269311   
-4    -0.447965  0.762816  0.211767  0.209391  0.389642 -0.455004  0.891643   
+0    -0.604110  0.601810  0.002295  0.079372  0.459393 -0.667764  0.647536   
+1    -0.407547  0.889265  0.370033 -0.146664  0.072259 -0.723037  0.532797   
+2    -0.393729  0.661485  0.165723  0.022622  0.297205 -0.600596  0.320031   
+3    -0.527969  1.225806  0.151130  0.318914  0.778568 -0.336958  1.332707   
+4    -0.493933  0.959758  0.263732  0.156412  0.414333 -0.523047  0.879891   
 ...        ...       ...       ...       ...       ...       ...       ...   
-1021 -0.107750  0.644889 -0.109320  0.241382  0.397885 -0.079862  0.626408   
-1022 -0.461898  0.783063  0.015679  0.796692  1.093387 -0.200978  1.398537   
-1023 -0.337914  0.933209  0.365587  0.380016  0.636457 -0.329424  0.984034   
-1024 -0.577772  1.091340  0.329223 -0.152980  0.085724 -0.463016  0.364783   
-1025 -0.589364  0.370781  0.077256  0.164916  0.478848 -0.634359  0.661505   
+1021 -0.091734  0.876863 -0.062520  0.216218  0.395602 -0.091359  0.537025   
+1022 -0.473220  1.031010 -0.181029  0.512152  1.295863 -0.163428  1.406860   
+1023 -0.356133  1.139736  0.363296  0.280302  0.649547 -0.355307  1.045351   
+1024 -0.611105  1.254250  0.393739 -0.199842 -0.034729 -0.644291  0.387719   
+1025 -0.608394  0.550723  0.000963  0.105905  0.657768 -0.669823  0.613910   
 
             f8        f9       f10  ...       f47       f48       f49  \
-0    -0.411126 -0.219308 -0.406394  ...  0.135800  0.983531 -0.016429   
-1    -0.431262 -0.067639 -0.431545  ...  0.021505  0.152169 -0.042778   
-2    -0.335645 -0.097965 -0.384134  ...  0.089052  0.351191 -0.005439   
-3    -0.407867 -0.242763 -0.659517  ...  0.256737  1.105825 -0.255982   
-4    -0.557078 -0.263596 -0.636704  ...  0.129219  0.751044 -0.234562   
+0    -0.372226 -0.216750 -0.329751  ...  0.156293  1.106180  0.008137   
+1    -0.278238 -0.065625 -0.275656  ... -0.117989  0.431312  0.024516   
+2    -0.265646 -0.081141 -0.262838  ...  0.027255  0.526340 -0.002028   
+3    -0.299899 -0.102961 -0.516676  ...  0.197457  1.379737 -0.213524   
+4    -0.463371 -0.252314 -0.484654  ...  0.083697  0.967058 -0.198286   
 ...        ...       ...       ...  ...       ...       ...       ...   
-1021 -0.761884 -0.124874 -0.636867  ...  0.234003  0.331126 -0.288512   
-1022 -0.748345 -0.463825 -0.750832  ...  0.522105  1.480213 -0.261435   
-1023 -0.546755 -0.230430 -0.751430  ...  0.309592  0.518240 -0.229606   
-1024 -0.506945  0.005791 -0.701045  ...  0.333828  0.887270 -0.169765   
-1025 -0.341612 -0.162093 -0.334534  ...  0.043729  0.962037 -0.024861   
+1021 -0.664627 -0.109089 -0.482788  ...  0.053127  0.548367 -0.306723   
+1022 -0.758672 -0.244727 -0.690512  ...  0.500637  1.632496 -0.322082   
+1023 -0.427418 -0.101017 -0.603227  ...  0.124325  0.834670 -0.180596   
+1024 -0.322859  0.106902 -0.478996  ...  0.169743  1.262082 -0.170142   
+1025 -0.319266 -0.107445 -0.306296  ...  0.076253  1.056190  0.022730   
 
            f50       f51       f52       f53       f54       f55       f56  
-0     0.420148 -0.057519  0.997285 -0.349098 -0.216298  0.460129 -0.249733  
-1     0.256450 -0.218609  0.805347 -0.449102  0.072762  0.482869 -0.144076  
-2     0.215160 -0.224152  0.747748 -0.281760 -0.100098  0.542154 -0.094177  
-3     0.516595  0.005752  1.491357 -0.332713 -0.241774  0.449496 -0.256919  
-4     0.355774 -0.162276  1.149517 -0.364969 -0.114973  0.483569 -0.322280  
+0     0.566406 -0.049424  1.025979 -0.252113 -0.378402  0.284748 -0.274221  
+1     0.335085 -0.224213  0.772517 -0.470658 -0.099382  0.391731 -0.044709  
+2     0.296957 -0.229636  0.766397 -0.267639 -0.242218  0.464620 -0.064802  
+3     0.722797 -0.066406  1.515525 -0.313497 -0.500740  0.254505 -0.250542  
+4     0.491361 -0.179367  1.185256 -0.313823 -0.357226  0.316788 -0.278904  
 ...        ...       ...       ...       ...       ...       ...       ...  
-1021  0.105752  0.066841  0.926425 -0.306657  0.189142  0.157148  0.164842  
-1022  0.334038  0.315427  1.704503 -0.142412 -0.276465  0.297869 -0.296608  
-1023  0.294014 -0.021526  1.254922 -0.313612 -0.024855  0.372219 -0.062571  
-1024  0.238389 -0.180052  0.889018 -0.244645 -0.155732  0.650621 -0.429813  
-1025  0.498118 -0.128434  1.061617 -0.353104 -0.306683  0.492608 -0.066387  
+1021  0.134827  0.092991  0.935386 -0.252430 -0.023406  0.091227  0.256946  
+1022  0.567944  0.274575  1.761353 -0.018669 -0.597444  0.165465 -0.350276  
+1023  0.423346 -0.092497  1.301476 -0.315845 -0.255158  0.272079  0.052127  
+1024  0.342091 -0.150756  0.899229 -0.255359 -0.366396  0.499736 -0.280610  
+1025  0.673693 -0.176938  1.117408 -0.270079 -0.440089  0.333223 -0.143601  
 
 [1026 rows x 56 columns]
 </pre></div>
@@ -3178,7 +3194,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-d6c0a1d9-0ad2-4448-921e-5df804d50c31" class="colab-df-container">
+  <div id="df-69f5a7af-89ee-45a5-abfb-fac8b25bf70e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -3223,122 +3239,122 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.551324</td>
-      <td>0.388220</td>
-      <td>0.053571</td>
-      <td>0.105566</td>
-      <td>0.338856</td>
-      <td>-0.632777</td>
-      <td>0.729009</td>
-      <td>-0.411126</td>
-      <td>-0.219308</td>
-      <td>-0.406394</td>
+      <td>-0.604110</td>
+      <td>0.601810</td>
+      <td>0.002295</td>
+      <td>0.079372</td>
+      <td>0.459393</td>
+      <td>-0.667764</td>
+      <td>0.647536</td>
+      <td>-0.372226</td>
+      <td>-0.216750</td>
+      <td>-0.329751</td>
       <td>...</td>
-      <td>0.983531</td>
-      <td>-0.016429</td>
-      <td>0.420148</td>
-      <td>-0.057519</td>
-      <td>0.997285</td>
-      <td>-0.349098</td>
-      <td>-0.216298</td>
-      <td>0.460129</td>
-      <td>-0.249733</td>
+      <td>1.106180</td>
+      <td>0.008137</td>
+      <td>0.566406</td>
+      <td>-0.049424</td>
+      <td>1.025979</td>
+      <td>-0.252113</td>
+      <td>-0.378402</td>
+      <td>0.284748</td>
+      <td>-0.274221</td>
       <td>ABSTRAK\r\nSatiyah, Pengaruh Faktor-faktor Pel...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.371729</td>
-      <td>0.697712</td>
-      <td>0.238175</td>
-      <td>-0.245901</td>
-      <td>0.106839</td>
-      <td>-0.615433</td>
-      <td>0.583872</td>
-      <td>-0.431262</td>
-      <td>-0.067639</td>
-      <td>-0.431545</td>
+      <td>-0.407547</td>
+      <td>0.889265</td>
+      <td>0.370033</td>
+      <td>-0.146664</td>
+      <td>0.072259</td>
+      <td>-0.723037</td>
+      <td>0.532797</td>
+      <td>-0.278238</td>
+      <td>-0.065625</td>
+      <td>-0.275656</td>
       <td>...</td>
-      <td>0.152169</td>
-      <td>-0.042778</td>
-      <td>0.256450</td>
-      <td>-0.218609</td>
-      <td>0.805347</td>
-      <td>-0.449102</td>
-      <td>0.072762</td>
-      <td>0.482869</td>
-      <td>-0.144076</td>
+      <td>0.431312</td>
+      <td>0.024516</td>
+      <td>0.335085</td>
+      <td>-0.224213</td>
+      <td>0.772517</td>
+      <td>-0.470658</td>
+      <td>-0.099382</td>
+      <td>0.391731</td>
+      <td>-0.044709</td>
       <td>Tujuan penelitian ini adalah untuk mengetahui ...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.371125</td>
-      <td>0.468522</td>
-      <td>0.128401</td>
-      <td>-0.015336</td>
-      <td>0.227745</td>
-      <td>-0.550824</td>
-      <td>0.393297</td>
-      <td>-0.335645</td>
-      <td>-0.097965</td>
-      <td>-0.384134</td>
+      <td>-0.393729</td>
+      <td>0.661485</td>
+      <td>0.165723</td>
+      <td>0.022622</td>
+      <td>0.297205</td>
+      <td>-0.600596</td>
+      <td>0.320031</td>
+      <td>-0.265646</td>
+      <td>-0.081141</td>
+      <td>-0.262838</td>
       <td>...</td>
-      <td>0.351191</td>
-      <td>-0.005439</td>
-      <td>0.215160</td>
-      <td>-0.224152</td>
-      <td>0.747748</td>
-      <td>-0.281760</td>
-      <td>-0.100098</td>
-      <td>0.542154</td>
-      <td>-0.094177</td>
+      <td>0.526340</td>
+      <td>-0.002028</td>
+      <td>0.296957</td>
+      <td>-0.229636</td>
+      <td>0.766397</td>
+      <td>-0.267639</td>
+      <td>-0.242218</td>
+      <td>0.464620</td>
+      <td>-0.064802</td>
       <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.456337</td>
-      <td>1.041008</td>
-      <td>0.267175</td>
-      <td>0.502781</td>
-      <td>0.777465</td>
-      <td>-0.313021</td>
-      <td>1.269311</td>
-      <td>-0.407867</td>
-      <td>-0.242763</td>
-      <td>-0.659517</td>
+      <td>-0.527969</td>
+      <td>1.225806</td>
+      <td>0.151130</td>
+      <td>0.318914</td>
+      <td>0.778568</td>
+      <td>-0.336958</td>
+      <td>1.332707</td>
+      <td>-0.299899</td>
+      <td>-0.102961</td>
+      <td>-0.516676</td>
       <td>...</td>
-      <td>1.105825</td>
-      <td>-0.255982</td>
-      <td>0.516595</td>
-      <td>0.005752</td>
-      <td>1.491357</td>
-      <td>-0.332713</td>
-      <td>-0.241774</td>
-      <td>0.449496</td>
-      <td>-0.256919</td>
+      <td>1.379737</td>
+      <td>-0.213524</td>
+      <td>0.722797</td>
+      <td>-0.066406</td>
+      <td>1.515525</td>
+      <td>-0.313497</td>
+      <td>-0.500740</td>
+      <td>0.254505</td>
+      <td>-0.250542</td>
       <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.447965</td>
-      <td>0.762816</td>
-      <td>0.211767</td>
-      <td>0.209391</td>
-      <td>0.389642</td>
-      <td>-0.455004</td>
-      <td>0.891643</td>
-      <td>-0.557078</td>
-      <td>-0.263596</td>
-      <td>-0.636704</td>
+      <td>-0.493933</td>
+      <td>0.959758</td>
+      <td>0.263732</td>
+      <td>0.156412</td>
+      <td>0.414333</td>
+      <td>-0.523047</td>
+      <td>0.879891</td>
+      <td>-0.463371</td>
+      <td>-0.252314</td>
+      <td>-0.484654</td>
       <td>...</td>
-      <td>0.751044</td>
-      <td>-0.234562</td>
-      <td>0.355774</td>
-      <td>-0.162276</td>
-      <td>1.149517</td>
-      <td>-0.364969</td>
-      <td>-0.114973</td>
-      <td>0.483569</td>
-      <td>-0.322280</td>
+      <td>0.967058</td>
+      <td>-0.198286</td>
+      <td>0.491361</td>
+      <td>-0.179367</td>
+      <td>1.185256</td>
+      <td>-0.313823</td>
+      <td>-0.357226</td>
+      <td>0.316788</td>
+      <td>-0.278904</td>
       <td>Abstrak\r\n\r\nAththaariq, Pengaruh Kompetensi...</td>
     </tr>
     <tr>
@@ -3367,122 +3383,122 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     </tr>
     <tr>
       <th>1021</th>
-      <td>-0.107750</td>
-      <td>0.644889</td>
-      <td>-0.109320</td>
-      <td>0.241382</td>
-      <td>0.397885</td>
-      <td>-0.079862</td>
-      <td>0.626408</td>
-      <td>-0.761884</td>
-      <td>-0.124874</td>
-      <td>-0.636867</td>
+      <td>-0.091734</td>
+      <td>0.876863</td>
+      <td>-0.062520</td>
+      <td>0.216218</td>
+      <td>0.395602</td>
+      <td>-0.091359</td>
+      <td>0.537025</td>
+      <td>-0.664627</td>
+      <td>-0.109089</td>
+      <td>-0.482788</td>
       <td>...</td>
-      <td>0.331126</td>
-      <td>-0.288512</td>
-      <td>0.105752</td>
-      <td>0.066841</td>
-      <td>0.926425</td>
-      <td>-0.306657</td>
-      <td>0.189142</td>
-      <td>0.157148</td>
-      <td>0.164842</td>
+      <td>0.548367</td>
+      <td>-0.306723</td>
+      <td>0.134827</td>
+      <td>0.092991</td>
+      <td>0.935386</td>
+      <td>-0.252430</td>
+      <td>-0.023406</td>
+      <td>0.091227</td>
+      <td>0.256946</td>
       <td>ABSTRAK\nPenelitian ini bertujuan untuk menget...</td>
     </tr>
     <tr>
       <th>1022</th>
-      <td>-0.461898</td>
-      <td>0.783063</td>
-      <td>0.015679</td>
-      <td>0.796692</td>
-      <td>1.093387</td>
-      <td>-0.200978</td>
-      <td>1.398537</td>
-      <td>-0.748345</td>
-      <td>-0.463825</td>
-      <td>-0.750832</td>
+      <td>-0.473220</td>
+      <td>1.031010</td>
+      <td>-0.181029</td>
+      <td>0.512152</td>
+      <td>1.295863</td>
+      <td>-0.163428</td>
+      <td>1.406860</td>
+      <td>-0.758672</td>
+      <td>-0.244727</td>
+      <td>-0.690512</td>
       <td>...</td>
-      <td>1.480213</td>
-      <td>-0.261435</td>
-      <td>0.334038</td>
-      <td>0.315427</td>
-      <td>1.704503</td>
-      <td>-0.142412</td>
-      <td>-0.276465</td>
-      <td>0.297869</td>
-      <td>-0.296608</td>
+      <td>1.632496</td>
+      <td>-0.322082</td>
+      <td>0.567944</td>
+      <td>0.274575</td>
+      <td>1.761353</td>
+      <td>-0.018669</td>
+      <td>-0.597444</td>
+      <td>0.165465</td>
+      <td>-0.350276</td>
       <td>ABSTRAK\nUswatun Hasanah, 160211100291, Pengar...</td>
     </tr>
     <tr>
       <th>1023</th>
-      <td>-0.337914</td>
-      <td>0.933209</td>
-      <td>0.365587</td>
-      <td>0.380016</td>
-      <td>0.636457</td>
-      <td>-0.329424</td>
-      <td>0.984034</td>
-      <td>-0.546755</td>
-      <td>-0.230430</td>
-      <td>-0.751430</td>
+      <td>-0.356133</td>
+      <td>1.139736</td>
+      <td>0.363296</td>
+      <td>0.280302</td>
+      <td>0.649547</td>
+      <td>-0.355307</td>
+      <td>1.045351</td>
+      <td>-0.427418</td>
+      <td>-0.101017</td>
+      <td>-0.603227</td>
       <td>...</td>
-      <td>0.518240</td>
-      <td>-0.229606</td>
-      <td>0.294014</td>
-      <td>-0.021526</td>
-      <td>1.254922</td>
-      <td>-0.313612</td>
-      <td>-0.024855</td>
-      <td>0.372219</td>
-      <td>-0.062571</td>
+      <td>0.834670</td>
+      <td>-0.180596</td>
+      <td>0.423346</td>
+      <td>-0.092497</td>
+      <td>1.301476</td>
+      <td>-0.315845</td>
+      <td>-0.255158</td>
+      <td>0.272079</td>
+      <td>0.052127</td>
       <td>ABSTRAK\nTujuan dari penelitian ini adalah unt...</td>
     </tr>
     <tr>
       <th>1024</th>
-      <td>-0.577772</td>
-      <td>1.091340</td>
-      <td>0.329223</td>
-      <td>-0.152980</td>
-      <td>0.085724</td>
-      <td>-0.463016</td>
-      <td>0.364783</td>
-      <td>-0.506945</td>
-      <td>0.005791</td>
-      <td>-0.701045</td>
+      <td>-0.611105</td>
+      <td>1.254250</td>
+      <td>0.393739</td>
+      <td>-0.199842</td>
+      <td>-0.034729</td>
+      <td>-0.644291</td>
+      <td>0.387719</td>
+      <td>-0.322859</td>
+      <td>0.106902</td>
+      <td>-0.478996</td>
       <td>...</td>
-      <td>0.887270</td>
-      <td>-0.169765</td>
-      <td>0.238389</td>
-      <td>-0.180052</td>
-      <td>0.889018</td>
-      <td>-0.244645</td>
-      <td>-0.155732</td>
-      <td>0.650621</td>
-      <td>-0.429813</td>
+      <td>1.262082</td>
+      <td>-0.170142</td>
+      <td>0.342091</td>
+      <td>-0.150756</td>
+      <td>0.899229</td>
+      <td>-0.255359</td>
+      <td>-0.366396</td>
+      <td>0.499736</td>
+      <td>-0.280610</td>
       <td>ABSTRAK\nPenelitian ini bertujuan: (1) Untuk m...</td>
     </tr>
     <tr>
       <th>1025</th>
-      <td>-0.589364</td>
-      <td>0.370781</td>
-      <td>0.077256</td>
-      <td>0.164916</td>
-      <td>0.478848</td>
-      <td>-0.634359</td>
-      <td>0.661505</td>
-      <td>-0.341612</td>
-      <td>-0.162093</td>
-      <td>-0.334534</td>
+      <td>-0.608394</td>
+      <td>0.550723</td>
+      <td>0.000963</td>
+      <td>0.105905</td>
+      <td>0.657768</td>
+      <td>-0.669823</td>
+      <td>0.613910</td>
+      <td>-0.319266</td>
+      <td>-0.107445</td>
+      <td>-0.306296</td>
       <td>...</td>
-      <td>0.962037</td>
-      <td>-0.024861</td>
-      <td>0.498118</td>
-      <td>-0.128434</td>
-      <td>1.061617</td>
-      <td>-0.353104</td>
-      <td>-0.306683</td>
-      <td>0.492608</td>
-      <td>-0.066387</td>
+      <td>1.056190</td>
+      <td>0.022730</td>
+      <td>0.673693</td>
+      <td>-0.176938</td>
+      <td>1.117408</td>
+      <td>-0.270079</td>
+      <td>-0.440089</td>
+      <td>0.333223</td>
+      <td>-0.143601</td>
       <td>Penelitian ini bertujuan untuk dapat mengetahu...</td>
     </tr>
   </tbody>
@@ -3492,7 +3508,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-d6c0a1d9-0ad2-4448-921e-5df804d50c31')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-69f5a7af-89ee-45a5-abfb-fac8b25bf70e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -3544,12 +3560,12 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 
     <script>
       const buttonEl =
-        document.querySelector('#df-d6c0a1d9-0ad2-4448-921e-5df804d50c31 button.colab-df-convert');
+        document.querySelector('#df-69f5a7af-89ee-45a5-abfb-fac8b25bf70e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-d6c0a1d9-0ad2-4448-921e-5df804d50c31');
+        const element = document.querySelector('#df-69f5a7af-89ee-45a5-abfb-fac8b25bf70e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -3569,8 +3585,8 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
   </div>
 
 
-    <div id="df-6d054fc7-0b2a-4adc-abdc-1581c3d436ec">
-      <button class="colab-df-quickchart" onclick="quickchart('df-6d054fc7-0b2a-4adc-abdc-1581c3d436ec')"
+    <div id="df-fa0ba48c-c5b9-407d-9a1d-35b5768987ed">
+      <button class="colab-df-quickchart" onclick="quickchart('df-fa0ba48c-c5b9-407d-9a1d-35b5768987ed')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -3689,14 +3705,14 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-6d054fc7-0b2a-4adc-abdc-1581c3d436ec button');
+            document.querySelector('#df-fa0ba48c-c5b9-407d-9a1d-35b5768987ed button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
       </script>
     </div>
 
-  <div id="id_e51e47cd-bc8a-40d4-a2b7-08f77aff6b46">
+  <div id="id_e97e2bb0-2576-4273-9efa-53ffcafa827d">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -3740,7 +3756,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_e51e47cd-bc8a-40d4-a2b7-08f77aff6b46 button.colab-df-generate');
+        document.querySelector('#id_e97e2bb0-2576-4273-9efa-53ffcafa827d button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -3813,7 +3829,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-1399ab59-ec54-4d97-a09d-1468b88a704e" class="colab-df-container">
+  <div id="df-2cd38457-7641-499c-88e5-0bbaa964426e" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -3923,7 +3939,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-1399ab59-ec54-4d97-a09d-1468b88a704e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-2cd38457-7641-499c-88e5-0bbaa964426e')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -3975,12 +3991,12 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 
     <script>
       const buttonEl =
-        document.querySelector('#df-1399ab59-ec54-4d97-a09d-1468b88a704e button.colab-df-convert');
+        document.querySelector('#df-2cd38457-7641-499c-88e5-0bbaa964426e button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-1399ab59-ec54-4d97-a09d-1468b88a704e');
+        const element = document.querySelector('#df-2cd38457-7641-499c-88e5-0bbaa964426e');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -4000,8 +4016,8 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
   </div>
 
 
-    <div id="df-c1ca1ab2-2af3-4782-8588-c497805b7487">
-      <button class="colab-df-quickchart" onclick="quickchart('df-c1ca1ab2-2af3-4782-8588-c497805b7487')"
+    <div id="df-1ba985e3-6a38-43d0-a901-6fee8c6168fb">
+      <button class="colab-df-quickchart" onclick="quickchart('df-1ba985e3-6a38-43d0-a901-6fee8c6168fb')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -4120,14 +4136,14 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-c1ca1ab2-2af3-4782-8588-c497805b7487 button');
+            document.querySelector('#df-1ba985e3-6a38-43d0-a901-6fee8c6168fb button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
       </script>
     </div>
 
-  <div id="id_caf9cc30-ef19-4ee0-a4eb-916b94c6f35f">
+  <div id="id_cf22460f-37f3-40fd-a0c3-886383cd6ebd">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -4171,7 +4187,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_caf9cc30-ef19-4ee0-a4eb-916b94c6f35f button.colab-df-generate');
+        document.querySelector('#id_cf22460f-37f3-40fd-a0c3-886383cd6ebd button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -4185,6 +4201,39 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     </div>
   </div>
 </div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Melihat daftar kategori unik</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">berita_cnn</span><span class="p">[</span><span class="s1">&#39;kategori_berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+
+<span class="c1"># Menghitung jumlah kategori unik</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kategori:&quot;</span><span class="p">,</span> <span class="n">berita_cnn</span><span class="p">[</span><span class="s1">&#39;kategori_berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">nunique</span><span class="p">())</span>
+
+<span class="c1"># Kalau mau lihat jumlah data per kategori</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">berita_cnn</span><span class="p">[</span><span class="s1">&#39;kategori_berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;olahraga&#39; &#39;internasional&#39; &#39;gaya-hidup&#39; &#39;nasional&#39; &#39;tv&#39; &#39;ekonomi&#39;
+ &#39;hiburan&#39; &#39;otomotif&#39; &#39;edukasi&#39; &#39;teknologi&#39;]
+Jumlah kategori: 10
+kategori_berita
+nasional         259
+ekonomi          169
+olahraga         167
+internasional    119
+tv                76
+gaya-hidup        67
+hiburan           51
+edukasi           35
+teknologi         33
+otomotif          24
+Name: count, dtype: int64
+</pre></div>
+</div>
+</div>
 </div>
 </section>
 <section id="id2">
@@ -4230,7 +4279,7 @@ dtype: int64
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-2ede3de5-e2e7-4712-8031-33a4ac9c816d" class="colab-df-container">
+  <div id="df-e212f915-dc0a-4281-9506-1bc96c214b91" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -4340,7 +4389,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-2ede3de5-e2e7-4712-8031-33a4ac9c816d')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e212f915-dc0a-4281-9506-1bc96c214b91')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -4392,12 +4441,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-2ede3de5-e2e7-4712-8031-33a4ac9c816d button.colab-df-convert');
+        document.querySelector('#df-e212f915-dc0a-4281-9506-1bc96c214b91 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-2ede3de5-e2e7-4712-8031-33a4ac9c816d');
+        const element = document.querySelector('#df-e212f915-dc0a-4281-9506-1bc96c214b91');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -4417,8 +4466,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-d2d2dd04-c225-4882-b5bc-ae56c1a20061">
-      <button class="colab-df-quickchart" onclick="quickchart('df-d2d2dd04-c225-4882-b5bc-ae56c1a20061')"
+    <div id="df-bf17a525-1e47-4149-86a0-04c39e99b152">
+      <button class="colab-df-quickchart" onclick="quickchart('df-bf17a525-1e47-4149-86a0-04c39e99b152')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -4537,14 +4586,14 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-d2d2dd04-c225-4882-b5bc-ae56c1a20061 button');
+            document.querySelector('#df-bf17a525-1e47-4149-86a0-04c39e99b152 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
       </script>
     </div>
 
-  <div id="id_5eba0678-6764-4d24-8750-5e1863d7bda6">
+  <div id="id_bb8849a2-9f37-4101-aba5-0031907c6c30">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -4588,7 +4637,7 @@ dtype: int64
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_5eba0678-6764-4d24-8750-5e1863d7bda6 button.colab-df-generate');
+        document.querySelector('#id_bb8849a2-9f37-4101-aba5-0031907c6c30 button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
@@ -4635,7 +4684,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-ea8f2bdf-e0c7-4f33-b2b2-0b0ac98fa22e" class="colab-df-container">
+  <div id="df-93080085-c372-4d49-b4dc-31edf7f5c92c" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -4690,7 +4739,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-ea8f2bdf-e0c7-4f33-b2b2-0b0ac98fa22e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-93080085-c372-4d49-b4dc-31edf7f5c92c')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -4742,12 +4791,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-ea8f2bdf-e0c7-4f33-b2b2-0b0ac98fa22e button.colab-df-convert');
+        document.querySelector('#df-93080085-c372-4d49-b4dc-31edf7f5c92c button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-ea8f2bdf-e0c7-4f33-b2b2-0b0ac98fa22e');
+        const element = document.querySelector('#df-93080085-c372-4d49-b4dc-31edf7f5c92c');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -4767,8 +4816,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-eca86dca-86a7-4520-b440-1e265164ba5c">
-      <button class="colab-df-quickchart" onclick="quickchart('df-eca86dca-86a7-4520-b440-1e265164ba5c')"
+    <div id="df-6491349e-770f-488e-8d5d-8bb5ae253a73">
+      <button class="colab-df-quickchart" onclick="quickchart('df-6491349e-770f-488e-8d5d-8bb5ae253a73')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -4887,7 +4936,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-eca86dca-86a7-4520-b440-1e265164ba5c button');
+            document.querySelector('#df-6491349e-770f-488e-8d5d-8bb5ae253a73 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -4951,7 +5000,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-0d3964d7-bb11-4078-bbd9-4fa47ff35d64" class="colab-df-container">
+  <div id="df-ec1713e5-780a-4125-94cc-735401ee9f7d" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -5006,7 +5055,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-0d3964d7-bb11-4078-bbd9-4fa47ff35d64')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ec1713e5-780a-4125-94cc-735401ee9f7d')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -5058,12 +5107,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-0d3964d7-bb11-4078-bbd9-4fa47ff35d64 button.colab-df-convert');
+        document.querySelector('#df-ec1713e5-780a-4125-94cc-735401ee9f7d button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-0d3964d7-bb11-4078-bbd9-4fa47ff35d64');
+        const element = document.querySelector('#df-ec1713e5-780a-4125-94cc-735401ee9f7d');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -5083,8 +5132,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-4abe3e73-9831-47a2-870e-5e2d31717500">
-      <button class="colab-df-quickchart" onclick="quickchart('df-4abe3e73-9831-47a2-870e-5e2d31717500')"
+    <div id="df-9623d7f4-e816-4b4e-a6e5-595120518745">
+      <button class="colab-df-quickchart" onclick="quickchart('df-9623d7f4-e816-4b4e-a6e5-595120518745')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -5203,7 +5252,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-4abe3e73-9831-47a2-870e-5e2d31717500 button');
+            document.querySelector('#df-9623d7f4-e816-4b4e-a6e5-595120518745 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -5242,7 +5291,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-15382b09-e0cf-4a19-b962-884f250707a9" class="colab-df-container">
+  <div id="df-4bb489ff-0de0-432a-8569-efa0e1b96546" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -5297,7 +5346,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-15382b09-e0cf-4a19-b962-884f250707a9')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-4bb489ff-0de0-432a-8569-efa0e1b96546')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -5349,12 +5398,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-15382b09-e0cf-4a19-b962-884f250707a9 button.colab-df-convert');
+        document.querySelector('#df-4bb489ff-0de0-432a-8569-efa0e1b96546 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-15382b09-e0cf-4a19-b962-884f250707a9');
+        const element = document.querySelector('#df-4bb489ff-0de0-432a-8569-efa0e1b96546');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -5374,8 +5423,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-532d68b8-5f2a-49d6-82e2-b0be659e77fb">
-      <button class="colab-df-quickchart" onclick="quickchart('df-532d68b8-5f2a-49d6-82e2-b0be659e77fb')"
+    <div id="df-25f0fb53-f0f3-41f8-8a36-1c3497229957">
+      <button class="colab-df-quickchart" onclick="quickchart('df-25f0fb53-f0f3-41f8-8a36-1c3497229957')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -5494,7 +5543,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-532d68b8-5f2a-49d6-82e2-b0be659e77fb button');
+            document.querySelector('#df-25f0fb53-f0f3-41f8-8a36-1c3497229957 button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -5533,7 +5582,7 @@ dtype: int64
 </pre></div>
 </div>
 <div class="output text_html">
-  <div id="df-a9f79d3b-8ad9-45ad-9268-9c4f69ba055e" class="colab-df-container">
+  <div id="df-743ac213-3aa3-41cc-b23f-70cf5ac9443c" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -5588,7 +5637,7 @@ dtype: int64
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-a9f79d3b-8ad9-45ad-9268-9c4f69ba055e')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-743ac213-3aa3-41cc-b23f-70cf5ac9443c')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -5640,12 +5689,12 @@ dtype: int64
 
     <script>
       const buttonEl =
-        document.querySelector('#df-a9f79d3b-8ad9-45ad-9268-9c4f69ba055e button.colab-df-convert');
+        document.querySelector('#df-743ac213-3aa3-41cc-b23f-70cf5ac9443c button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-a9f79d3b-8ad9-45ad-9268-9c4f69ba055e');
+        const element = document.querySelector('#df-743ac213-3aa3-41cc-b23f-70cf5ac9443c');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -5665,8 +5714,8 @@ dtype: int64
   </div>
 
 
-    <div id="df-a0ee68ef-c2fa-4e83-92d0-5125272da10b">
-      <button class="colab-df-quickchart" onclick="quickchart('df-a0ee68ef-c2fa-4e83-92d0-5125272da10b')"
+    <div id="df-f887f517-c198-4617-833e-43edf4e61b3b">
+      <button class="colab-df-quickchart" onclick="quickchart('df-f887f517-c198-4617-833e-43edf4e61b3b')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -5785,7 +5834,7 @@ dtype: int64
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-a0ee68ef-c2fa-4e83-92d0-5125272da10b button');
+            document.querySelector('#df-f887f517-c198-4617-833e-43edf4e61b3b button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -5846,14 +5895,21 @@ Contoh dokumen: kiper manchester unitedandre onanadilempar botol orang suporter 
     <span class="n">columns</span><span class="o">=</span><span class="n">vectorizer</span><span class="o">.</span><span class="n">get_feature_names_out</span><span class="p">()</span>
 <span class="p">)</span>
 
+<span class="c1"># Simpan hasil ke CSV</span>
+<span class="n">tfidf_data</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/PPW/output/tfidf_hasilberita.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data berhasil disimpan ke CSV!</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+
 <span class="c1"># Tampilkan 5 baris pertama</span>
 <span class="n">tfidf_data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data berhasil disimpan ke CSV!
+</pre></div>
+</div>
 <div class="output text_html">
-  <div id="df-e685b1c6-c72f-492b-a1f4-dfc8ff8a9d2a" class="colab-df-container">
+  <div id="df-a2a3016f-3a6b-4496-843e-b98be79f9258" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -6023,7 +6079,7 @@ Contoh dokumen: kiper manchester unitedandre onanadilempar botol orang suporter 
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-e685b1c6-c72f-492b-a1f4-dfc8ff8a9d2a')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-a2a3016f-3a6b-4496-843e-b98be79f9258')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -6075,12 +6131,12 @@ Contoh dokumen: kiper manchester unitedandre onanadilempar botol orang suporter 
 
     <script>
       const buttonEl =
-        document.querySelector('#df-e685b1c6-c72f-492b-a1f4-dfc8ff8a9d2a button.colab-df-convert');
+        document.querySelector('#df-a2a3016f-3a6b-4496-843e-b98be79f9258 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-e685b1c6-c72f-492b-a1f4-dfc8ff8a9d2a');
+        const element = document.querySelector('#df-a2a3016f-3a6b-4496-843e-b98be79f9258');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -6100,8 +6156,8 @@ Contoh dokumen: kiper manchester unitedandre onanadilempar botol orang suporter 
   </div>
 
 
-    <div id="df-4de30e1a-9608-42a0-a334-6438c1e408ab">
-      <button class="colab-df-quickchart" onclick="quickchart('df-4de30e1a-9608-42a0-a334-6438c1e408ab')"
+    <div id="df-dc2ccc7a-7574-4815-958b-7617284c039f">
+      <button class="colab-df-quickchart" onclick="quickchart('df-dc2ccc7a-7574-4815-958b-7617284c039f')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -6220,7 +6276,7 @@ Contoh dokumen: kiper manchester unitedandre onanadilempar botol orang suporter 
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-4de30e1a-9608-42a0-a334-6438c1e408ab button');
+            document.querySelector('#df-dc2ccc7a-7574-4815-958b-7617284c039f button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
@@ -6380,43 +6436,43 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>           f1        f2        f3        f4        f5        f6        f7  \
-0    0.015805  0.078153  0.031304  0.273816  0.141146 -0.418170  0.215712   
-1   -0.318140  0.350688  0.064525  0.665055  0.021875 -0.620204  0.426321   
-2   -0.121108  0.224699  0.012973  0.455068  0.021197 -0.506407  0.302092   
-3   -0.155892  0.261657 -0.148145  0.583418 -0.125936 -0.494935  0.325015   
-4   -0.164881  0.318904  0.060816  0.525285 -0.007063 -0.522908  0.290415   
+0   -0.043040  0.134250  0.066879  0.233033  0.055386 -0.437548  0.221575   
+1   -0.325521  0.431703  0.022321  0.584841 -0.097776 -0.588445  0.462229   
+2   -0.143116  0.268807  0.017777  0.380797 -0.067898 -0.513197  0.330286   
+3   -0.131251  0.271456 -0.163505  0.467549 -0.210462 -0.494212  0.364010   
+4   -0.177898  0.369744  0.079186  0.447666 -0.092382 -0.519650  0.333601   
 ..        ...       ...       ...       ...       ...       ...       ...   
-954 -0.114590  0.302395 -0.020169  0.522007 -0.036546 -0.549172  0.349638   
-955 -0.061596  0.118304  0.010893  0.284883  0.119023 -0.442900  0.262807   
-956 -0.294120  0.354274  0.001901  0.683763 -0.063012 -0.605023  0.387131   
-957 -0.459340  0.288047 -0.021028  0.785117 -0.042519 -0.769143  0.609433   
-958 -0.242707  0.311082  0.001550  0.594824 -0.044767 -0.532369  0.352097   
+954 -0.094745  0.314864 -0.001110  0.441133 -0.120885 -0.546837  0.391255   
+955 -0.112289  0.185256  0.020707  0.246692  0.035334 -0.451383  0.262686   
+956 -0.296370  0.399938  0.005976  0.571427 -0.161413 -0.597700  0.434890   
+957 -0.478431  0.374611 -0.137550  0.665012 -0.246625 -0.732426  0.643991   
+958 -0.241289  0.348417  0.009849  0.495396 -0.135717 -0.519798  0.397390   
 
            f8        f9       f10  ...       f47       f48       f49  \
-0   -0.898273 -0.277892 -0.256076  ...  0.315626  0.382826  0.124160   
-1   -0.839105 -0.279370 -0.482682  ...  0.382890  0.710522  0.008770   
-2   -0.851544 -0.233364 -0.292664  ...  0.373394  0.557896  0.000700   
-3   -0.924743 -0.135319 -0.111294  ...  0.411939  0.736591 -0.114775   
-4   -0.868170 -0.233590 -0.403239  ...  0.403047  0.596291 -0.011253   
+0   -0.918964 -0.287134 -0.353031  ...  0.337271  0.377630  0.146114   
+1   -0.976615 -0.355678 -0.406668  ...  0.386534  0.734137  0.031134   
+2   -0.912359 -0.259447 -0.304721  ...  0.371378  0.558514  0.039529   
+3   -1.002274 -0.158388 -0.100765  ...  0.403131  0.702717 -0.053635   
+4   -0.950788 -0.275748 -0.389508  ...  0.386918  0.591208  0.045537   
 ..        ...       ...       ...  ...       ...       ...       ...   
-954 -0.998281 -0.189772 -0.277894  ...  0.465164  0.664277 -0.019374   
-955 -0.840908 -0.306004 -0.259832  ...  0.303148  0.335769  0.099853   
-956 -1.014750 -0.218154 -0.455530  ...  0.458354  0.812673 -0.087004   
-957 -1.010290 -0.334595 -0.484475  ...  0.398232  0.816966 -0.090808   
-958 -0.919298 -0.206988 -0.402240  ...  0.392022  0.683631 -0.045946   
+954 -1.097195 -0.227641 -0.316176  ...  0.431131  0.626422  0.043689   
+955 -0.873857 -0.337155 -0.337484  ...  0.335495  0.342770  0.121936   
+956 -1.127918 -0.274221 -0.393258  ...  0.432237  0.809849 -0.028652   
+957 -1.171741 -0.394689 -0.363042  ...  0.437718  0.906593 -0.098149   
+958 -1.014780 -0.251413 -0.363061  ...  0.377871  0.684908  0.000839   
 
           f50       f51       f52       f53       f54       f55       f56  
-0    0.074883  0.065928  0.264620 -0.098876  0.034924  0.089626 -0.653831  
-1    0.042736  0.131326  0.623982 -0.195069  0.188336  0.065710 -0.419156  
-2    0.034153  0.084784  0.411947 -0.170703  0.042724  0.031688 -0.513306  
-3   -0.002087  0.084836  0.489962 -0.100688 -0.028996  0.063594 -0.526847  
-4    0.044071  0.092558  0.434954 -0.240880  0.063977 -0.067079 -0.439700  
+0    0.078160  0.140607  0.224496 -0.168424  0.073228  0.167214 -0.605861  
+1    0.023396  0.213832  0.578409 -0.213557  0.095616  0.173846 -0.375525  
+2    0.023762  0.169546  0.371774 -0.212224  0.030863  0.129127 -0.476111  
+3   -0.014211  0.172166  0.424065 -0.140338 -0.043736  0.179152 -0.518641  
+4    0.044788  0.179191  0.398439 -0.290352  0.024083  0.016249 -0.412154  
 ..        ...       ...       ...       ...       ...       ...       ...  
-954  0.142714  0.083821  0.494850 -0.197889  0.032686 -0.035198 -0.598059  
-955  0.127463  0.058784  0.336861 -0.096686  0.088334  0.060964 -0.613698  
-956 -0.109874  0.134072  0.623815 -0.259962  0.076648 -0.036434 -0.497707  
-957 -0.103975  0.168283  0.865975 -0.176204  0.194600  0.181225 -0.550002  
-958 -0.046151  0.116077  0.534317 -0.201376  0.072744  0.010216 -0.476621  
+954  0.128500  0.187164  0.451523 -0.234786  0.049748  0.071112 -0.594186  
+955  0.125755  0.120497  0.278069 -0.160711  0.117937  0.136676 -0.559937  
+956 -0.123731  0.236669  0.573613 -0.275756 -0.012594  0.103562 -0.469039  
+957 -0.170272  0.268817  0.787656 -0.165463  0.063955  0.354915 -0.467763  
+958 -0.063637  0.214605  0.487631 -0.222974  0.014729  0.115738 -0.442976  
 
 [959 rows x 56 columns]
 </pre></div>
@@ -6432,13 +6488,13 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">embedding_df</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">embedding_data</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
 <div class="output text_html">
-  <div id="df-5cbe8f27-148b-4bd9-b248-0c5e64292cbe" class="colab-df-container">
+  <div id="df-1fc990c9-5b5c-42f3-8af3-30210e17d993" class="colab-df-container">
     <div>
 <style scoped>
     .dataframe tbody tr th:only-of-type {
@@ -6477,129 +6533,129 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
       <th>f54</th>
       <th>f55</th>
       <th>f56</th>
-      <th>abstrak_id</th>
+      <th>isi_berita</th>
     </tr>
   </thead>
   <tbody>
     <tr>
       <th>0</th>
-      <td>-0.551324</td>
-      <td>0.388220</td>
-      <td>0.053571</td>
-      <td>0.105566</td>
-      <td>0.338856</td>
-      <td>-0.632777</td>
-      <td>0.729009</td>
-      <td>-0.411126</td>
-      <td>-0.219308</td>
-      <td>-0.406394</td>
+      <td>-0.043040</td>
+      <td>0.134250</td>
+      <td>0.066879</td>
+      <td>0.233033</td>
+      <td>0.055386</td>
+      <td>-0.437548</td>
+      <td>0.221575</td>
+      <td>-0.918964</td>
+      <td>-0.287134</td>
+      <td>-0.353031</td>
       <td>...</td>
-      <td>0.983531</td>
-      <td>-0.016429</td>
-      <td>0.420148</td>
-      <td>-0.057519</td>
-      <td>0.997285</td>
-      <td>-0.349098</td>
-      <td>-0.216298</td>
-      <td>0.460129</td>
-      <td>-0.249733</td>
-      <td>ABSTRAK\r\nSatiyah, Pengaruh Faktor-faktor Pel...</td>
+      <td>0.377630</td>
+      <td>0.146114</td>
+      <td>0.078160</td>
+      <td>0.140607</td>
+      <td>0.224496</td>
+      <td>-0.168424</td>
+      <td>0.073228</td>
+      <td>0.167214</td>
+      <td>-0.605861</td>
+      <td>Kiper Manchester UnitedAndre Onanadilempar bot...</td>
     </tr>
     <tr>
       <th>1</th>
-      <td>-0.371729</td>
-      <td>0.697712</td>
-      <td>0.238175</td>
-      <td>-0.245901</td>
-      <td>0.106839</td>
-      <td>-0.615433</td>
-      <td>0.583872</td>
-      <td>-0.431262</td>
-      <td>-0.067639</td>
-      <td>-0.431545</td>
+      <td>-0.325521</td>
+      <td>0.431703</td>
+      <td>0.022321</td>
+      <td>0.584841</td>
+      <td>-0.097776</td>
+      <td>-0.588445</td>
+      <td>0.462229</td>
+      <td>-0.976615</td>
+      <td>-0.355678</td>
+      <td>-0.406668</td>
       <td>...</td>
-      <td>0.152169</td>
-      <td>-0.042778</td>
-      <td>0.256450</td>
-      <td>-0.218609</td>
-      <td>0.805347</td>
-      <td>-0.449102</td>
-      <td>0.072762</td>
-      <td>0.482869</td>
-      <td>-0.144076</td>
-      <td>Tujuan penelitian ini adalah untuk mengetahui ...</td>
+      <td>0.734137</td>
+      <td>0.031134</td>
+      <td>0.023396</td>
+      <td>0.213832</td>
+      <td>0.578409</td>
+      <td>-0.213557</td>
+      <td>0.095616</td>
+      <td>0.173846</td>
+      <td>-0.375525</td>
+      <td>Militer Nepalmengambil kembali kendali atas Ka...</td>
     </tr>
     <tr>
       <th>2</th>
-      <td>-0.371125</td>
-      <td>0.468522</td>
-      <td>0.128401</td>
-      <td>-0.015336</td>
-      <td>0.227745</td>
-      <td>-0.550824</td>
-      <td>0.393297</td>
-      <td>-0.335645</td>
-      <td>-0.097965</td>
-      <td>-0.384134</td>
+      <td>-0.143116</td>
+      <td>0.268807</td>
+      <td>0.017777</td>
+      <td>0.380797</td>
+      <td>-0.067898</td>
+      <td>-0.513197</td>
+      <td>0.330286</td>
+      <td>-0.912359</td>
+      <td>-0.259447</td>
+      <td>-0.304721</td>
       <td>...</td>
-      <td>0.351191</td>
-      <td>-0.005439</td>
-      <td>0.215160</td>
-      <td>-0.224152</td>
-      <td>0.747748</td>
-      <td>-0.281760</td>
-      <td>-0.100098</td>
-      <td>0.542154</td>
-      <td>-0.094177</td>
-      <td>Aplikasi nyata pemanfaatan teknologi informasi...</td>
+      <td>0.558514</td>
+      <td>0.039529</td>
+      <td>0.023762</td>
+      <td>0.169546</td>
+      <td>0.371774</td>
+      <td>-0.212224</td>
+      <td>0.030863</td>
+      <td>0.129127</td>
+      <td>-0.476111</td>
+      <td>Basarnas akan menyiapkan dan menyiagakan dua h...</td>
     </tr>
     <tr>
       <th>3</th>
-      <td>-0.456337</td>
-      <td>1.041008</td>
-      <td>0.267175</td>
-      <td>0.502781</td>
-      <td>0.777465</td>
-      <td>-0.313021</td>
-      <td>1.269311</td>
-      <td>-0.407867</td>
-      <td>-0.242763</td>
-      <td>-0.659517</td>
+      <td>-0.131251</td>
+      <td>0.271456</td>
+      <td>-0.163505</td>
+      <td>0.467549</td>
+      <td>-0.210462</td>
+      <td>-0.494212</td>
+      <td>0.364010</td>
+      <td>-1.002274</td>
+      <td>-0.158388</td>
+      <td>-0.100765</td>
       <td>...</td>
-      <td>1.105825</td>
-      <td>-0.255982</td>
-      <td>0.516595</td>
-      <td>0.005752</td>
-      <td>1.491357</td>
-      <td>-0.332713</td>
-      <td>-0.241774</td>
-      <td>0.449496</td>
-      <td>-0.256919</td>
-      <td>Abstrak\r\nPenelitian ini menggunakan metode k...</td>
+      <td>0.702717</td>
+      <td>-0.053635</td>
+      <td>-0.014211</td>
+      <td>0.172166</td>
+      <td>0.424065</td>
+      <td>-0.140338</td>
+      <td>-0.043736</td>
+      <td>0.179152</td>
+      <td>-0.518641</td>
+      <td>Tingginya tuntutan pekerjaan di era yang serba...</td>
     </tr>
     <tr>
       <th>4</th>
-      <td>-0.447965</td>
-      <td>0.762816</td>
-      <td>0.211767</td>
-      <td>0.209391</td>
-      <td>0.389642</td>
-      <td>-0.455004</td>
-      <td>0.891643</td>
-      <td>-0.557078</td>
-      <td>-0.263596</td>
-      <td>-0.636704</td>
+      <td>-0.177898</td>
+      <td>0.369744</td>
+      <td>0.079186</td>
+      <td>0.447666</td>
+      <td>-0.092382</td>
+      <td>-0.519650</td>
+      <td>0.333601</td>
+      <td>-0.950788</td>
+      <td>-0.275748</td>
+      <td>-0.389508</td>
       <td>...</td>
-      <td>0.751044</td>
-      <td>-0.234562</td>
-      <td>0.355774</td>
-      <td>-0.162276</td>
-      <td>1.149517</td>
-      <td>-0.364969</td>
-      <td>-0.114973</td>
-      <td>0.483569</td>
-      <td>-0.322280</td>
-      <td>Abstrak\r\n\r\nAththaariq, Pengaruh Kompetensi...</td>
+      <td>0.591208</td>
+      <td>0.045537</td>
+      <td>0.044788</td>
+      <td>0.179191</td>
+      <td>0.398439</td>
+      <td>-0.290352</td>
+      <td>0.024083</td>
+      <td>0.016249</td>
+      <td>-0.412154</td>
+      <td>Kepala Badan Nasional Pencarian dan Pertolonga...</td>
     </tr>
     <tr>
       <th>...</th>
@@ -6626,133 +6682,133 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
       <td>...</td>
     </tr>
     <tr>
-      <th>1021</th>
-      <td>-0.107750</td>
-      <td>0.644889</td>
-      <td>-0.109320</td>
-      <td>0.241382</td>
-      <td>0.397885</td>
-      <td>-0.079862</td>
-      <td>0.626408</td>
-      <td>-0.761884</td>
-      <td>-0.124874</td>
-      <td>-0.636867</td>
+      <th>954</th>
+      <td>-0.094745</td>
+      <td>0.314864</td>
+      <td>-0.001110</td>
+      <td>0.441133</td>
+      <td>-0.120885</td>
+      <td>-0.546837</td>
+      <td>0.391255</td>
+      <td>-1.097195</td>
+      <td>-0.227641</td>
+      <td>-0.316176</td>
       <td>...</td>
-      <td>0.331126</td>
-      <td>-0.288512</td>
-      <td>0.105752</td>
-      <td>0.066841</td>
-      <td>0.926425</td>
-      <td>-0.306657</td>
-      <td>0.189142</td>
-      <td>0.157148</td>
-      <td>0.164842</td>
-      <td>ABSTRAK\nPenelitian ini bertujuan untuk menget...</td>
+      <td>0.626422</td>
+      <td>0.043689</td>
+      <td>0.128500</td>
+      <td>0.187164</td>
+      <td>0.451523</td>
+      <td>-0.234786</td>
+      <td>0.049748</td>
+      <td>0.071112</td>
+      <td>-0.594186</td>
+      <td>Kokichi Akuzawa, pria asalJepang, berhasil pec...</td>
     </tr>
     <tr>
-      <th>1022</th>
-      <td>-0.461898</td>
-      <td>0.783063</td>
-      <td>0.015679</td>
-      <td>0.796692</td>
-      <td>1.093387</td>
-      <td>-0.200978</td>
-      <td>1.398537</td>
-      <td>-0.748345</td>
-      <td>-0.463825</td>
-      <td>-0.750832</td>
+      <th>955</th>
+      <td>-0.112289</td>
+      <td>0.185256</td>
+      <td>0.020707</td>
+      <td>0.246692</td>
+      <td>0.035334</td>
+      <td>-0.451383</td>
+      <td>0.262686</td>
+      <td>-0.873857</td>
+      <td>-0.337155</td>
+      <td>-0.337484</td>
       <td>...</td>
-      <td>1.480213</td>
-      <td>-0.261435</td>
-      <td>0.334038</td>
-      <td>0.315427</td>
-      <td>1.704503</td>
-      <td>-0.142412</td>
-      <td>-0.276465</td>
-      <td>0.297869</td>
-      <td>-0.296608</td>
-      <td>ABSTRAK\nUswatun Hasanah, 160211100291, Pengar...</td>
+      <td>0.342770</td>
+      <td>0.121936</td>
+      <td>0.125755</td>
+      <td>0.120497</td>
+      <td>0.278069</td>
+      <td>-0.160711</td>
+      <td>0.117937</td>
+      <td>0.136676</td>
+      <td>-0.559937</td>
+      <td>Pembalap Gresini Racing Alex Marquez memenangk...</td>
     </tr>
     <tr>
-      <th>1023</th>
-      <td>-0.337914</td>
-      <td>0.933209</td>
-      <td>0.365587</td>
-      <td>0.380016</td>
-      <td>0.636457</td>
-      <td>-0.329424</td>
-      <td>0.984034</td>
-      <td>-0.546755</td>
-      <td>-0.230430</td>
-      <td>-0.751430</td>
+      <th>956</th>
+      <td>-0.296370</td>
+      <td>0.399938</td>
+      <td>0.005976</td>
+      <td>0.571427</td>
+      <td>-0.161413</td>
+      <td>-0.597700</td>
+      <td>0.434890</td>
+      <td>-1.127918</td>
+      <td>-0.274221</td>
+      <td>-0.393258</td>
       <td>...</td>
-      <td>0.518240</td>
-      <td>-0.229606</td>
-      <td>0.294014</td>
-      <td>-0.021526</td>
-      <td>1.254922</td>
-      <td>-0.313612</td>
-      <td>-0.024855</td>
-      <td>0.372219</td>
-      <td>-0.062571</td>
-      <td>ABSTRAK\nTujuan dari penelitian ini adalah unt...</td>
+      <td>0.809849</td>
+      <td>-0.028652</td>
+      <td>-0.123731</td>
+      <td>0.236669</td>
+      <td>0.573613</td>
+      <td>-0.275756</td>
+      <td>-0.012594</td>
+      <td>0.103562</td>
+      <td>-0.469039</td>
+      <td>Presiden RIPrabowo Subiantomenyatakan sebagian...</td>
     </tr>
     <tr>
-      <th>1024</th>
-      <td>-0.577772</td>
-      <td>1.091340</td>
-      <td>0.329223</td>
-      <td>-0.152980</td>
-      <td>0.085724</td>
-      <td>-0.463016</td>
-      <td>0.364783</td>
-      <td>-0.506945</td>
-      <td>0.005791</td>
-      <td>-0.701045</td>
+      <th>957</th>
+      <td>-0.478431</td>
+      <td>0.374611</td>
+      <td>-0.137550</td>
+      <td>0.665012</td>
+      <td>-0.246625</td>
+      <td>-0.732426</td>
+      <td>0.643991</td>
+      <td>-1.171741</td>
+      <td>-0.394689</td>
+      <td>-0.363042</td>
       <td>...</td>
-      <td>0.887270</td>
-      <td>-0.169765</td>
-      <td>0.238389</td>
-      <td>-0.180052</td>
-      <td>0.889018</td>
-      <td>-0.244645</td>
-      <td>-0.155732</td>
-      <td>0.650621</td>
-      <td>-0.429813</td>
-      <td>ABSTRAK\nPenelitian ini bertujuan: (1) Untuk m...</td>
+      <td>0.906593</td>
+      <td>-0.098149</td>
+      <td>-0.170272</td>
+      <td>0.268817</td>
+      <td>0.787656</td>
+      <td>-0.165463</td>
+      <td>0.063955</td>
+      <td>0.354915</td>
+      <td>-0.467763</td>
+      <td>Perdana Menteri Jepang, Shigeru Ishiba, mengun...</td>
     </tr>
     <tr>
-      <th>1025</th>
-      <td>-0.589364</td>
-      <td>0.370781</td>
-      <td>0.077256</td>
-      <td>0.164916</td>
-      <td>0.478848</td>
-      <td>-0.634359</td>
-      <td>0.661505</td>
-      <td>-0.341612</td>
-      <td>-0.162093</td>
-      <td>-0.334534</td>
+      <th>958</th>
+      <td>-0.241289</td>
+      <td>0.348417</td>
+      <td>0.009849</td>
+      <td>0.495396</td>
+      <td>-0.135717</td>
+      <td>-0.519798</td>
+      <td>0.397390</td>
+      <td>-1.014780</td>
+      <td>-0.251413</td>
+      <td>-0.363061</td>
       <td>...</td>
-      <td>0.962037</td>
-      <td>-0.024861</td>
-      <td>0.498118</td>
-      <td>-0.128434</td>
-      <td>1.061617</td>
-      <td>-0.353104</td>
-      <td>-0.306683</td>
-      <td>0.492608</td>
-      <td>-0.066387</td>
-      <td>Penelitian ini bertujuan untuk dapat mengetahu...</td>
+      <td>0.684908</td>
+      <td>0.000839</td>
+      <td>-0.063637</td>
+      <td>0.214605</td>
+      <td>0.487631</td>
+      <td>-0.222974</td>
+      <td>0.014729</td>
+      <td>0.115738</td>
+      <td>-0.442976</td>
+      <td>Suciwati, istri mendiang aktivis HAM Munir Sai...</td>
     </tr>
   </tbody>
 </table>
-<p>1026 rows × 57 columns</p>
+<p>959 rows × 57 columns</p>
 </div>
     <div class="colab-df-buttons">
 
   <div class="colab-df-container">
-    <button class="colab-df-convert" onclick="convertToInteractive('df-5cbe8f27-148b-4bd9-b248-0c5e64292cbe')"
+    <button class="colab-df-convert" onclick="convertToInteractive('df-1fc990c9-5b5c-42f3-8af3-30210e17d993')"
             title="Convert this dataframe to an interactive table."
             style="display:none;">
 
@@ -6804,12 +6860,12 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 
     <script>
       const buttonEl =
-        document.querySelector('#df-5cbe8f27-148b-4bd9-b248-0c5e64292cbe button.colab-df-convert');
+        document.querySelector('#df-1fc990c9-5b5c-42f3-8af3-30210e17d993 button.colab-df-convert');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       async function convertToInteractive(key) {
-        const element = document.querySelector('#df-5cbe8f27-148b-4bd9-b248-0c5e64292cbe');
+        const element = document.querySelector('#df-1fc990c9-5b5c-42f3-8af3-30210e17d993');
         const dataTable =
           await google.colab.kernel.invokeFunction('convertToInteractive',
                                                     [key], {});
@@ -6829,8 +6885,8 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
   </div>
 
 
-    <div id="df-7e0f1f40-1cd7-4934-83f3-58172329a2e5">
-      <button class="colab-df-quickchart" onclick="quickchart('df-7e0f1f40-1cd7-4934-83f3-58172329a2e5')"
+    <div id="df-2786f58a-bef8-4a37-8483-51edb4498b3c">
+      <button class="colab-df-quickchart" onclick="quickchart('df-2786f58a-bef8-4a37-8483-51edb4498b3c')"
                 title="Suggest charts"
                 style="display:none;">
 
@@ -6949,14 +7005,14 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
         }
         (() => {
           let quickchartButtonEl =
-            document.querySelector('#df-7e0f1f40-1cd7-4934-83f3-58172329a2e5 button');
+            document.querySelector('#df-2786f58a-bef8-4a37-8483-51edb4498b3c button');
           quickchartButtonEl.style.display =
             google.colab.kernel.accessAllowed ? 'block' : 'none';
         })();
       </script>
     </div>
 
-  <div id="id_51b5daaa-b553-4d29-a315-facb10ddcbed">
+  <div id="id_19f7c474-30fb-40f6-a693-fd11bcfa337b">
     <style>
       .colab-df-generate {
         background-color: #E8F0FE;
@@ -6988,7 +7044,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
         fill: #FFFFFF;
       }
     </style>
-    <button class="colab-df-generate" onclick="generateWithVariable('embedding_df')"
+    <button class="colab-df-generate" onclick="generateWithVariable('embedding_data')"
             title="Generate code using this dataframe."
             style="display:none;">
 
@@ -7000,12 +7056,12 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
     <script>
       (() => {
       const buttonEl =
-        document.querySelector('#id_51b5daaa-b553-4d29-a315-facb10ddcbed button.colab-df-generate');
+        document.querySelector('#id_19f7c474-30fb-40f6-a693-fd11bcfa337b button.colab-df-generate');
       buttonEl.style.display =
         google.colab.kernel.accessAllowed ? 'block' : 'none';
 
       buttonEl.onclick = () => {
-        google.colab.notebook.generateWithVariable('embedding_df');
+        google.colab.notebook.generateWithVariable('embedding_data');
       }
       })();
     </script>
@@ -7017,12 +7073,12 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">embedding_df</span><span class="o">.</span><span class="n">shape</span>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">embedding_data</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(1026, 57)
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(959, 57)
 </pre></div>
 </div>
 </div>
@@ -7085,7 +7141,7 @@ Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages 
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Pta Manajemen Tf-Idf &amp; Cbow</strong></a><ul class="visible nav section-nav flex-column">
+<li class="toc-h1 nav-item toc-entry"><a class="reference internal nav-link" href="#"><strong>Manajemen &amp; Berita Tf-idf_Cbow</strong></a><ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#load-data"><strong>Load Data</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mengecek-nilai-yang-null-dan-memebersihkannya"><strong>Mengecek Nilai yang null dan memebersihkannya</strong></a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cleaning-data"><strong>Cleaning Data</strong></a></li>
