@@ -1,0 +1,2603 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Word Graph Paper:svm &#8212; Penambanagan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/word_graph_svm';</script>
+    <link rel="canonical" href="/ppw/tugass/word_graph_svm.html" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="Crawling Data X" href="CrawlDataX.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambanagan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambanagan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><strong>Tugas</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="WebMining.html"><strong>Web Mining</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html"><strong>Crawling Penambangan Web</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA-Berita.html"><strong>Crawling PTA, Berita, dan Link Page Output</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA_Manajemen.html"><strong>Crawling PTA Prodi Manajemen Abstrak Id.</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="tugas5%20cbow%20dan%20tf%20idf.html"><strong>Manajemen &amp; Berita Tf idf Dan Cbow</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="ektraksi_LDA.html"><strong>Klasifikasi dengan ektraksi fitur menggunakan  Latent Dirichlet Allocation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Klasifikasi.html"><strong>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Clustering.html"><strong>Clustering Data Email</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="PageRank_%28Link_dlm_Page%29.html"><strong>PageRank (Link dlm Page)</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="WebGoogle_10txt.html"><strong>WebGoogle-10txt</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="WebUsage.html"><strong>Web Usage</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NASA.html"><strong>Data Nasa</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nasa2.html"><strong>Data Nasa New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebusageNew.html"><strong>Web Usage New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="facebook_ppw.html"><strong>Facebook</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlDataX.html"><strong>Crawling Data X</strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Word Graph Paper:svm</strong></a></li>
+</ul>
+</details></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppw/issues/new?title=Issue%20on%20page%20%2Ftugass/word_graph_svm.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/word_graph_svm.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Word Graph Paper:svm</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="word-graph-paper-svm">
+<h1><strong>Word Graph Paper:svm</strong><a class="headerlink" href="#word-graph-paper-svm" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">pip</span> <span class="n">install</span> <span class="o">--</span><span class="n">upgrade</span> <span class="n">pymupdf</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Collecting pymupdf
+  Downloading pymupdf-1.26.6-cp310-abi3-manylinux_2_28_x86_64.whl.metadata (3.4 kB)
+Downloading pymupdf-1.26.6-cp310-abi3-manylinux_2_28_x86_64.whl (24.1 MB)
+   ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ <span class=" -Color -Color-Green">24.1/24.1 MB</span> <span class=" -Color -Color-Red">75.7 MB/s</span> eta <span class=" -Color -Color-Cyan">0:00:00</span>
+?25hInstalling collected packages: pymupdf
+Successfully installed pymupdf-1.26.6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%</span><span class="n">cd</span> <span class="o">/</span><span class="n">content</span><span class="o">/</span><span class="n">drive</span><span class="o">/</span><span class="n">MyDrive</span><span class="o">/</span><span class="n">PPW</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>/content/drive/MyDrive/PPW
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pymupdf</span>
+
+<span class="n">doc</span> <span class="o">=</span> <span class="n">pymupdf</span><span class="o">.</span><span class="n">open</span><span class="p">(</span><span class="s2">&quot;svm.pdf&quot;</span><span class="p">)</span> <span class="c1"># open a document</span>
+<span class="n">out</span> <span class="o">=</span> <span class="nb">open</span><span class="p">(</span><span class="s2">&quot;output.txt&quot;</span><span class="p">,</span> <span class="s2">&quot;wb&quot;</span><span class="p">)</span> <span class="c1"># create a text output</span>
+<span class="k">for</span> <span class="n">page</span> <span class="ow">in</span> <span class="n">doc</span><span class="p">:</span> <span class="c1"># iterate the document pages</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">page</span><span class="o">.</span><span class="n">get_text</span><span class="p">()</span><span class="o">.</span><span class="n">encode</span><span class="p">(</span><span class="s2">&quot;utf8&quot;</span><span class="p">)</span> <span class="c1"># get plain text (is in UTF-8)</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="c1"># write text of page</span>
+    <span class="n">out</span><span class="o">.</span><span class="n">write</span><span class="p">(</span><span class="nb">bytes</span><span class="p">((</span><span class="mi">12</span><span class="p">,)))</span> <span class="c1"># write page delimiter (form feed 0x0C)</span>
+<span class="n">out</span><span class="o">.</span><span class="n">close</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">capture</span>
+<span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">nltk</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>  <span class="c1"># hanya perlu sekali</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt_tab&#39;</span><span class="p">)</span>  <span class="c1"># opsional, untuk versi terbaru NLTK (≥3.8.2)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt.zip.
+[nltk_data] Downloading package punkt_tab to /root/nltk_data...
+[nltk_data]   Unzipping tokenizers/punkt_tab.zip.
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">with</span> <span class="nb">open</span><span class="p">(</span><span class="s1">&#39;output.txt&#39;</span><span class="p">,</span> <span class="s1">&#39;r&#39;</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span> <span class="k">as</span> <span class="n">file</span><span class="p">:</span>
+    <span class="n">teks</span> <span class="o">=</span> <span class="n">file</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">teks</span><span class="p">[:</span><span class="mi">200</span><span class="p">])</span>  <span class="c1"># tampilkan 200 karakter pertama</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/220785878
+Support Vector Machine Ensemble with Bagging
+Conference Paper  in  Lecture Notes
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Install: pip install nltk</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+
+
+<span class="c1">#text = &quot;Ini adalah kalimat pertama. Ini kalimat kedua? Ya!&quot;</span>
+<span class="n">sentences</span> <span class="o">=</span> <span class="n">nltk</span><span class="o">.</span><span class="n">sent_tokenize</span><span class="p">(</span><span class="n">teks</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">sentences</span><span class="p">)</span>
+<span class="c1"># Output: [&#39;Ini adalah kalimat pertama.&#39;, &#39;Ini kalimat kedua?&#39;, &#39;Ya!&#39;]</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;See discussions, stats, and author profiles for this publication at: https://www.researchgate.net/publication/220785878\nSupport Vector Machine Ensemble with Bagging\nConference Paper\xa0\xa0in\xa0\xa0Lecture Notes in Computer Science · January 2002\nDOI: 10.1007/3-540-45665-1_31\xa0·\xa0Source: DBLP\nCITATIONS\n112\nREADS\n5,212\n5 authors, including:\nS. Pang\nUnitec Institute of Technology\n69 PUBLICATIONS\xa0\xa0\xa02,075 CITATIONS\xa0\xa0\xa0\nSEE PROFILE\nHong-Mo Je\nPohang University of Science and Technology\n18 PUBLICATIONS\xa0\xa0\xa0954 CITATIONS\xa0\xa0\xa0\nSEE PROFILE\nDaijin Kim\nPohang University of Science and Technology\n301 PUBLICATIONS\xa0\xa0\xa010,656 CITATIONS\xa0\xa0\xa0\nSEE PROFILE\nAll content following this page was uploaded by Hong-Mo Je on 30 May 2014.&#39;, &#39;The user has requested enhancement of the downloaded file.&#39;, &#39;Support Vector Machine Ensemble with Bagging\nHyun-Chul Kim, Shaoning Pang, Hong-Mo Je,\nDaijin Kim, and Sung-Yang Bang\nDepartment of Computer Science and Engineering\nPohang University of Science and Technology\nSan 31, Hyoja-Dong, Nam-Gu, Pohang, 790-784, Korea\n{grass,invu71,dkim,sybang}@postech.ac.kr\nAbstract.&#39;, &#39;Even the support vector machine (SVM) has been proposed\nto provide a good generalization performance, the classiﬁcation result\nof the practically implemented SVM is often far from the theoretically\nexpected level because their implementations are based on the approx-\nimated algorithms due to the high complexity of time and space.&#39;, &#39;To\nimprove the limited classiﬁcation performance of the real SVM, we pro-\npose to use the SVM ensembles with bagging (bootstrap aggregating).&#39;, &#39;Each individual SVM is trained independently using the randomly chosen\ntraining samples via a bootstrap technique.&#39;, &#39;Then, they are aggregated\ninto to make a collective decision in several ways such as the major-\nity voting, the LSE(least squares estimation)-based weighting, and the\ndouble-layer hierarchical combining.&#39;, &#39;Various simulation results for the\nIRIS data classiﬁcation and the hand-written digit recognitionshow that\nthe proposed SVM ensembles with bagging outperforms a single SVM in\nterms of classiﬁcation accuracy greatly.&#39;, &#39;1\nIntroduction\nThe support vector machine is a new and promising classiﬁcation and regression\ntechnique proposed by Vapnik and his group at AT&amp;T Bell Laboratories [1].&#39;, &#39;The\nSVM learns a separating hyperplane to maximize the margin and to produce a\ngood generalization ability [2].&#39;, &#39;Recent theoretical research work has solved the\nexisting diﬃculties of using the SVM in practical applications [3, 4].&#39;, &#39;By now,\nit has been successfully applied in many areas, such as the face detection, the\nhand-writing digital character recognition, and the data mining, etc.&#39;, &#39;However, the SVM has two drawbacks.&#39;, &#39;First, since it is originally a model\nfor the binary-class classiﬁcation, we should use a combination of SVMs for the\nmulti-class classiﬁcation.&#39;, &#39;There are methods for combining binary classiﬁers for\nthe multi-class classiﬁcation [6, 7], but when it has been applied to SVM, the\nperformance has not seemed to improve as much as in the binary classiﬁcation.&#39;, &#39;Second, since learning SVM is time-consuming for a large scale of data, we\nshould use some approximate algorithms [2].&#39;, &#39;Using the approximate algorithms\ncan reduce the computation time, but degrade the classiﬁcation performance.&#39;, &#39;To overcome the above drawbacks, we propose to use the SVM ensembles.&#39;, &#39;We expect that the SVM ensemble can improve the classiﬁcation performance\nS.-W. Lee and A. Verri (Eds.&#39;, &#39;): SVM 2002, LNCS 2388, pp.&#39;, &#39;397–408, 2002.\nc\n⃝Springer-Verlag Berlin Heidelberg 2002\n\x0c398\nHyun-Chul Kim et al.&#39;, &#39;greatly than using a single SVM by the following fact.&#39;, &#39;Each individual SVM has\nbeen trained independently from the randomly chosen training samples and the\ncorrectly- classiﬁed area in the space of data samples of each SVM becomes lim-\nited to a certain area.&#39;, &#39;We can imagine that a combination of several SVMs will\nexpand the correctly-classiﬁed area incrementally.&#39;, &#39;This implies the improvement\nof classiﬁcation performance by using the SVM ensemble.&#39;, &#39;Likewise, we also ex-\npect that the SVM ensemble will improve the classiﬁcation performance in case\nof the multi-class classiﬁcation.&#39;, &#39;The idea of the SVM ensemble has been proposed in [8].&#39;, &#39;They used the\nboosting technique to train each individual SVM and took another SVM for\ncombining several SVMs.&#39;, &#39;In this paper, we propose to use the SVM ensemble\nbased on the bagging technique where each individual SVM is trained over the\nrandomly chosen training samples via a bootstrap technique and the indepen-\ndently trained several SVMs are aggregated in various ways such as the majority\nvoting, the LSE-based weighting, and the double-layer hierarchical combining.&#39;, &#39;This paper is organized as follows.&#39;, &#39;Section 2 describes the theoretical back-\nground of the SVM.&#39;, &#39;Section 3 describes the SVM ensembles, the bagging method\nand three diﬀerent combination methods.&#39;, &#39;Section 4 shows the simulation results\nwhen the proposed SVM ensemble are applied to the classiﬁcation problems such\nas the IRIS data classiﬁcation and the hand-written digit recognition.Finally, a\nconclusion is drawn.&#39;, &#39;2\nSupport Vector Machines\nThe classical emprical risk minimization approach, which determines the classi-\nﬁcation decision function by minimizing the empirical risk as\nR = 1\nl\nL\n\x01\ni=1\n|f(xi) −yi|,\n(1)\nwhere L and f are the size of examples and the classiﬁcation decision func-\ntion, respectively.&#39;, &#39;For SVM, determining an optimal separating hyperplane that\ngives low generalization error is the primary concern.&#39;, &#39;Usually, the classiﬁcation\ndecision function in the linearly separable problem is represented by\nfw,b = sign(w · x + b).&#39;, &#39;(2)\nIn SVM, the optimal separating hyperplane is determined by giving the largest\nmargin of separation between diﬀerent classes.&#39;, &#39;This optimal hyperplane bisects\nthe shortest line between the convex hulls of the two classes.&#39;, &#39;The optimal hy-\nperplane is required to satisfy the following constrained minimization as\nMin : 1\n2wT w,\nyi(w · xi + b) ≥1.&#39;, &#39;(3)\n\x0cSupport Vector Machine Ensemble with Bagging\n399\nFor the linearly non-separable case, the minimization problem needs to be mod-\niﬁed to allow the misclassiﬁed data points.&#39;, &#39;This modiﬁcation results in a soft\nmargin classiﬁer that allows but penalizes errors by introducing a new set of\nvariables ξl\ni=1 as the measurement of violation of the constraints.&#39;, &#39;Min : 1\n2wT w + C(\nL\n\x01\ni=1\nξi)k,\nyi(wT ϕ(xi) + b) ≥1 −ξi,\n(4)\nwhere C and k are used to weight the penalizing variables ξi, ϕ(·) is a nonlinear\nfunction which maps the input space into a higher dimensional space.&#39;, &#39;Minimizing\nthe ﬁrst term in Eq.&#39;, &#39;(4) is corresponding to minimizing the VC-dimension of\nthe learning machine and minimizing the second term in Eq.&#39;, &#39;(4) controls the\nempirical risk.&#39;, &#39;Therefore, in order to solve problem Eq.&#39;, &#39;(4), we need to construct\na set of functions, and implement the classical risk minimization on the set of\nfunctions.&#39;, &#39;Here, a Lagrangian method is used to solve the above problem.&#39;, &#39;Then,\nEq.&#39;, &#39;(4) can be written as\nMax : F(∧) = ∧· 1 −1\n2 ∧·D∧,\n∧· y = 0; ∧≤C; ∧≥0,\n(5)\nwhere ∧= (λ1, ..., λL),D = yiyjxi · xj.&#39;, &#39;For the binary classiﬁcation, the decision\nfunction Eq.&#39;, &#39;(2) can be rewritten as\nf(x) = sign(\nl\n\x01\ni=1\nyiλ∗\ni (x) + b∗)).&#39;, &#39;(6)\nwhere λ∗\ni (x) = λiyiK(x, xi), and K(x, xi) = φ(x)φ(xi).&#39;, &#39;( K(x, xi) can be sim-\nplifed by the kernel trick [9]. )&#39;, &#39;For the multi-class classiﬁcation, we can extend the SVM in the following two\nways.&#39;, &#39;One method is called the “one-against-all” method [6], where we have as\nmany SVMs as the number of classes.&#39;, &#39;The ith SVM is trained from the training\nsamples where some examples contained in the ith class have ”+1” labels, and\nother examples contained in the other classes have ”-1” labels.&#39;, &#39;Then, Eq.&#39;, &#39;(4) is\nmodiﬁed into\nMin : F(∧) = 1\n2(wi)T wi + C(\nL\n\x01\nt=1\n(ξi)t)k\nyi((wi)T ϕ(xt) + bi) ≥1 −(ξi)t, if xi ∈Ci,\nyi((wi)T ϕ(xt) + bi) ≤1 −(ξi)t, if xi ∈¯Ci,\n(ξi)t &gt; 0, i = 1, ..., L,\n(7)\n\x0c400\nHyun-Chul Kim et al.&#39;, &#39;where Ci is the set of data of class i.&#39;, &#39;The decision function of (7) becomes\nf(x) = sign( Max\nj∈1,2,...,C((wj)T · ϕ(xj) + bj)),\n(8)\nwhere C is the number of the classes.&#39;, &#39;Another method is called the one-against-one method [7].&#39;, &#39;When the number\nof classes is C, this method constructs C(C −1)/2 SVM classiﬁers.&#39;, &#39;The ijth\nSVM is trained from the training samples where some examples contained in\nthe ith class have ”+1” labels and other examples contained in the jth class\nhave ”-1” labels.&#39;, &#39;Then, Eq.&#39;, &#39;(4) is modiﬁed into\nMin : F(∧) = 1\n2(wij)T wij + C(\nL\n\x01\nt=1\n(ξij)t)k\nyt((wij)T ϕ(xt) + bij) ≥1 −(ξij)t, if xt ∈Ci,\nyt((wij)T ϕ(xt) + bij) ≤1 −(ξij)t, if xt ∈Cj,\n(ξij)t &gt; 0, t = 1, ..., L.\n(9)\nThe class decision in this type of multi-class classiﬁer can be performed in the\nfollowing two ways.&#39;, &#39;The ﬁrst decision is based on the “Max Wins” voting strat-\negy, in which C(C −1)/2 binary SVM classiﬁers will vote for each class, and the\nwinner class having the maximum votes is the last classiﬁcation decision.&#39;, &#39;The\nsecond method uses the tournament match, which reduces the classiﬁcation time\nto the log scale.&#39;, &#39;3\nSupport Vector Machine Ensemble\nAn ensemble of classiﬁers is a collection of several classiﬁers whose individual\ndecisions are combined in some way to classify the test examples [10].&#39;, &#39;It is known\nthat an ensemble often shows much better performance than the individual clas-\nsiﬁers that make it up.&#39;, &#39;Hansen et.&#39;, &#39;al.&#39;, &#39;[11] shows why the ensemble shows better\nperformance than individual classiﬁers as follows.&#39;, &#39;Assume that there are an en-\nsemble of n classiﬁers: {f1, f2, .&#39;, &#39;.&#39;, &#39;.&#39;, &#39;, fn} and consider a test data x.&#39;, &#39;If all the classi-\nﬁers are identical, they are wrong at the same data, where an ensemble will show\nthe same performance as individual classiﬁers.&#39;, &#39;However, if classiﬁers are diﬀerent\nand their errors are uncorrelated, then when fi(x) is wrong, most of other classi-\nﬁers except for fi(x) may be correct.&#39;, &#39;Then, the result of majority voting can be\ncorrect.&#39;, &#39;More precisely, if the error of individual classiﬁer is p &lt; 1/2 and the er-\nrors are independent, then the probability pE that the result of majority voting is\nincorrect is \x02n\nk=⌈n/2⌉pk(1−p)(n−k) (&lt; \x02n\nk=⌈n/2⌉( 1\n2)k( 1\n2)(n−k) = \x02n\nk=⌈n/2⌉( 1\n2)n).&#39;, &#39;When the size of classiﬁers n is large, the probability pE becomes very small.&#39;, &#39;The SVM has been known to show a good generalization performance and\nis easy to learn exact parameters for the global optimum[2].&#39;, &#39;Because of these\n\x0cSupport Vector Machine Ensemble with Bagging\n401\nadvantages, their ensemble may not be considered as a method for improving\nthe classiﬁcation performance greatly.&#39;, &#39;However, since the practical SVM has\nbeen implemented using the approximated algorithms in order to reduce the\ncomputation complexity of time and space, a single SVM may not learn exact\nparameters for the global optimum.&#39;, &#39;Sometimes, the support vectors obtained\nfrom the learning is not suﬃcient to classify all unknown test examples com-\npletely.&#39;, &#39;So, we can not guarantee that a single SVM always provides the global\noptimal classiﬁcation performance over all test examples.&#39;, &#39;To overcome this limitation, we propose to use an ensemble of support vec-\ntor machines.&#39;, &#39;Similar arguments mentioned above about the general ensemble\nof classiﬁers can also be applied to the ensemble of support vector machines.&#39;, &#39;Figure 1 shows a general architecture of the proposed SVM ensemble.&#39;, &#39;During\nthe training phase, each individual SVM is trained independently by its own\nreplicated training data set via a bootstrap method explained in the Section\n3.1.&#39;, &#39;All constituent SVMs will be aggregated by various combination strategies\nexplained in the Section 3.2.&#39;, &#39;During the testing phase, a test example is applied\nto all SVMs simultaneously and a collective decision is obtained based on the\naggregation strategy.&#39;, &#39;On the other hand, the advantage of using the SVM ensemble over a single\nSVM can be achieved equally in the case of multi-class classiﬁcation.&#39;, &#39;Since the\nSVM is originally a binary classiﬁer, many SVMs should be combined for the\nmulti-class classiﬁcation as mentioned in 2.2.&#39;, &#39;The SVM classiﬁer for the multi-\nFig.&#39;, &#39;1.&#39;, &#39;A general architecture of the SVM ensemble\n\x0c402\nHyun-Chul Kim et al.&#39;, &#39;class classiﬁcation does not show as good performance as that for the binary-\nclass classiﬁcation.&#39;, &#39;So, we can also improve the classiﬁcation performance in the\nmulti-class classiﬁcation by taking the SVM ensemble where each SVM classiﬁer\nis designed for the multi-class classiﬁcation.&#39;, &#39;3.1\nConstructing the SVM Ensembles Using Bagging\nIn this work, we adopt a bagging technique [12] to construct the SVM ensemble.&#39;, &#39;In bagging, several SVMs are trained independently via a bootstrap method and\nthen they are aggregated via an appropriate combination technique.&#39;, &#39;Usually, we have a single training set Usually, we have a single training set\nT R = {(xi; yi)|i = 1, 2, .&#39;, &#39;.&#39;, &#39;.&#39;, &#39;, l}.&#39;, &#39;But we need K training samples sets to construct\nthe SVM ensemble with K independent SVMs.&#39;, &#39;From the statistical fact, we need\nto make the training sample sets diﬀerent as much as possible in order to obtain\nhigher improvement of the aggregation result.&#39;, &#39;For doing this, we often use the\nbootstrap technique as follows.&#39;, &#39;Bootstrapping builds K replicate training data sets {T RB\nk |k = 1, 2, .&#39;, &#39;.&#39;, &#39;., K}\nby randomly resampling, but with replacement, from the given training data\nset T R repeatedly.&#39;, &#39;Each example xi in the given training set T R may appear\nrepeated times or not at all in any particular replicate training data set.&#39;, &#39;Each\nreplicate training set will be used to train a certain SVM.&#39;, &#39;3.2\nAggregating Support Vector Machines\nAfter training, we need to aggregate several independently trained SVMs in an\nappropriate combination manner.&#39;, &#39;We consider two types of combination tech-\nniques such as the linear and nonlinear combination method.&#39;, &#39;The linear combi-\nnation method, as a linear combination of several SVMs, includes the majority\nvoting and the LSE-based weighting.&#39;, &#39;The majority voting and the LSE-based\nweighting are often used for the bagging and the boosting, respectively.&#39;, &#39;A non-\nlinear method, as a nonlinear combination of several SVMs, includes the double-\nlayer hierarchical combining that use another upper-layer SVM to combine sev-\neral lower-layer SVMs.&#39;, &#39;Majority Voting Majority voting is the simplest method for combining several\nSVMs.&#39;, &#39;Let fk(k = 1, 2, .&#39;, &#39;.&#39;, &#39;.&#39;, &#39;, K) be a decision function of the kth SVM in the\nSVM ensemble and Cj(j = 1, 2, .&#39;, &#39;.&#39;, &#39;., C) denote a label of the j-th class.&#39;, &#39;Then,\nlet Nj = #{k|fk(x) = Cj}, i.e.&#39;, &#39;the number of SVMs whose decisions are known\nto the jth class.&#39;, &#39;Then, the ﬁnal decision of the SVM ensemble fmv(x) for a given\ntest vector x due to the majority voting is determined by\nfmv(x) = argmax\nj\nNj.&#39;, &#39;(10)\n\x0cSupport Vector Machine Ensemble with Bagging\n403\nThe LSE-Based Weighting The LSE-based weighting treats several SVMs\nin the SVM ensemble with diﬀerent weights.&#39;, &#39;Often, the weights of several SVMs\nare determined in proportional to their accuracies of classiﬁcations [13].&#39;, &#39;Here,\nwe propose to learn the weights using the LSE method as follows.&#39;, &#39;Let fk(k = 1, 2, .&#39;, &#39;.&#39;, &#39;., K) be a decision function of the kth SVM in the SVM\nensemble that is trained by a replicate training data set T hauB\nk = {(x′\ni; y′\ni)|i =\n1, 2, .&#39;, &#39;.&#39;, &#39;.&#39;, &#39;, L}.&#39;, &#39;The weight vector w can be obtained by wE = A−1y, where\nA = (fi(xj))K×L, and y = (yj)1×L.&#39;, &#39;Then, the ﬁnal decision of the SVM ensem-\nble fmv(x) for a given test vector x due to the LSE-based weighting is determined\nby\nfLSE(x) = sign(w · [(fi(x))K×1])\n(11)\nThe Double-Layer Hierarchical Combining We can use another SVM to\naggregate the outputs of several SVMs in the SVM ensemble.&#39;, &#39;So, this combi-\nnation consists of a double-layer of SVMs hierarchically where the outputs of\nseveral SVMs in the lower layer feed into a super SVM in the upper layer.&#39;, &#39;This\ntype of combination looks similar of the mixture of experts introduced by M.\nJordan et.&#39;, &#39;al.&#39;, &#39;[14].&#39;, &#39;Let fk(k = 1, 2, .&#39;, &#39;.&#39;, &#39;., K) be a decision function of the kth SVM in the SVM\nensemble and F be a decision function of the super SVM in the upper layer.&#39;, &#39;Then, the ﬁnal decision of the SVM ensemble fSV M(x) for a given test vector x\ndue to the double-layer hierarchical combining is determined by\nfSV M(x) = F((f1(x), f2(x), .&#39;, &#39;.&#39;, &#39;.&#39;, &#39;, fK(x))),\n(12)\nwhere K is the number of SVMs in the SVM ensemble.&#39;, &#39;3.3\nExtension of the SVM Ensemlbe to the Multi-class\nClassiﬁcation\nIn section 2, we explained two kinds of extension methods such as ”one-against-\nall and one-against-one methods” in order to apply the SVM to the multi-class\nclassiﬁcation problem.&#39;, &#39;We can use these extension methods equally in the case of\nthe SVM ensemble for the multi-class classiﬁcation.&#39;, &#39;For the C-class classiﬁcation\nproblem, we can have two types of extensions according to the insertion level\nof the SVM ensemble: (1) the binary-classiﬁer-level SVM ensemble and (2) the\nmulti-classiﬁer-level SVM ensemble.&#39;, &#39;The binary-classiﬁer-level SVM ensemble consists of C SVM ensembles in the\ncase of “one-against-all” method or C(C −1)/2 SVM ensembles in the case of\n“one-against-one” method.&#39;, &#39;And, each SVM ensemble consists of K independent\nSVMs.&#39;, &#39;So, the SVM ensemble is built in the level of binary classiﬁers.&#39;, &#39;We obtain\nthe ﬁnal decision from the decision results of many SVM ensembles via either\nthe “Max Wins” voting strategy or the tournament match.&#39;, &#39;The multi-classiﬁer-level SVM ensemble consists of K multi-class classiﬁers.&#39;, &#39;And each multi-class classiﬁer consists of C binary classiﬁers in the case of\n\x0c404\nHyun-Chul Kim et al.&#39;, &#39;“one-against-all” method or for C(C −1)/2 binary classiﬁers in the case of “one-\nagainst-one” method.&#39;, &#39;So, the SVM ensemble is built in the level of multi-class\nclassiﬁers.&#39;, &#39;We obtain the ﬁnal decision from the decision results of many multi-\nclass classiﬁers via an appropriate aggregating strategy of the SVM ensemble.&#39;, &#39;4\nSimulation Results\nTo evaluate the eﬃcacy of the proposed SVM ensemble using the bagging tech-\nnique, we have performed three diﬀerent classiﬁcation problems such as the IRIS\ndata classiﬁcation, the UCI hand-written digit recognition.We used four diﬀerent\nclassiﬁcation methods such as a single SVM, and three diﬀerent SVM ensem-\nbles with diﬀerent aggregating strategies like the majority voting, the LSE-based\nweighting, and the double-layer hierarchical combining.&#39;, &#39;4.1\nIRIS Data Classiﬁcation\nThe IRIS data set[15, 16] is one of the best known databases to be found in\nthe pattern recognition literature.&#39;, &#39;The IRIS data set contains 3 classes where\neach class consists of 50 instances.&#39;, &#39;Each class refers to a type of IRIS planet.&#39;, &#39;One class is linearly separable from the other classes but they are not linearly\nseparable from each other.&#39;, &#39;We used the one-against-one method for the multi-class extension and took\nthe binary-classiﬁer-level SVM ensemble for the classiﬁcation.&#39;, &#39;So, for the 3-class\nclassiﬁcation problem and one-against-one extension method, there are three\nbinary-classiﬁer-level\nSVM\nensembles\n(SV MC1,C1, SV MC1,C2, SV MC1,C3)\nwhere each SVM ensemble consists of 5 independent SVMs.&#39;, &#39;The ﬁnal decision\nare obtained from the decision results of three SVM ensembles via a tournament\nmatching scheme.&#39;, &#39;Each SVM used 2-d polynomial kernel function.&#39;, &#39;We selected randomly 90 data samples for the training set.&#39;, &#39;For bootstrap-\nping, we re-sampled randomly 60 data samples with replacement from the train-\ning data set.&#39;, &#39;We trained each SVM independently over the replicated training\ndata set and aggregated several trained SVMs via three diﬀerent combination\nmethods.&#39;, &#39;We test four diﬀerent classiﬁcation methods using the test data set con-\nsisting of 60 IRIS data.&#39;, &#39;Table 1 shows the classiﬁcation results of four diﬀerent\nclassiﬁcation methods for the IRIS data classiﬁcation.&#39;, &#39;Table 1.&#39;, &#39;The classiﬁcation results of IRIS data classiﬁcation\nMethod\nClassiﬁcation rate\nSingle SVM\n96.73%\nMajoirity voting\n98.0%\nLSE-based weighting\n98.66%\nHierarchical SVM\n98.66%\n\x0cSupport Vector Machine Ensemble with Bagging\n405\n4.2\nUCI Hand-Written Digit Recognition\nWe used the UCI hand-written digit data [16].&#39;, &#39;Some digits in the database are\nshown in Figure 2.&#39;, &#39;Among the UCI hand-written digits, we chose randomly 3,828\ndigits as a training data set and the remaining 1,797 digits as a test data set.&#39;, &#39;The original image of each digit has the size of 32 × 32 pixels.&#39;, &#39;It is reduced to\nthe size of 8×8 pixels where each pixel is obtained from the average of the block\nof 4 × 4 pixels in the original image.&#39;, &#39;So each digit is represented by a feature\nvector with the size of 64 × 1.&#39;, &#39;Fig.&#39;, &#39;2.&#39;, &#39;Examples of hand-written digits in UCI database\nWe used one-against-one methods.&#39;, &#39;We constructed a SVM ensemble, con-\nsiting of 11 SVMs, for one-against-one classiﬁcation, and used the tournament\nscheme for decision.&#39;, &#39;Each SVM used 2-d polynomial kernel function.&#39;, &#39;For bag-\nging, we sampled 2000 data randomly for an individual SVM.&#39;, &#39;We trained each\nSVM and combined three methods, such as unweighted voting, weighted voting\n(using LSE), and a combining SVM.&#39;, &#39;We applied a single SVM for the compar-\nison.&#39;, &#39;Table 2 shows the performance of a single SVM and bagging SVMs with\nthree combining methods for the IRIS data classiﬁcation.&#39;, &#39;We used the one-against-one method for the multi-class extension and took\nthe binary-classiﬁer-level SVM ensemble for the classiﬁcation.&#39;, &#39;So, for the 10-\nclass classiﬁcation problem and one-against-one extension method, there are 45\nbinary-classiﬁer-level SVM ensembles (SV MC0,C1, SV MC0,C2, .&#39;, &#39;.&#39;, &#39;.&#39;, &#39;, SV MC8,C9)\nwhere each SVM ensemble consists of 11 independent SVMs.&#39;, &#39;The ﬁnal decision\nare obtained from the decision results of three SVM ensembles via a tournament\nmatching scheme.&#39;, &#39;Each SVM used 2-d polynomial kernel function.&#39;, &#39;For bootstrapping, we re-sampled randomly 2,000 digits samples with re-\nplacement from the training data set consisting of 3,828 digit samples.&#39;, &#39;We trained\neach SVM independently over the replicated training data set and aggregated\nseveral trained SVMs via three diﬀerent combination methods.&#39;, &#39;We test four dif-\nferent classiﬁcation methods using the test data set consisting of 1,797 digits.&#39;, &#39;406\nHyun-Chul Kim et al.&#39;, &#39;Table 2 shows the classiﬁcation results of four diﬀerent classiﬁcation methods\nfor the hand-written digit data classiﬁcation.&#39;, &#39;Table 2.&#39;, &#39;The classiﬁcation results of UCI hand-written digit recognition\nMethod\nClassiﬁcation rate\nSingle SVM\n96.99%\nMajority voting\n97.55%\nLSE-based weighting\n97.82%\nHierarchical SVM\n98.01%\n5\nConclusion\nUsually, the practical SVM has been implemented based on the approximation\nalgorithm to reduce the cost of time and space.&#39;, &#39;So, the obtained classiﬁcation\nperformance is far from the theoretically expected level of it.&#39;, &#39;To overcome this\nlimitation, we addressed the SVM ensemble that consists of several indepen-\ndently trained SVMs.&#39;, &#39;For training each SVM, we generated many replicated\ntraining sample sets via the bootstrapping technique.&#39;, &#39;Then, all independently\ntrained SVMs over the replicated training sample sets were aggregated by three\ncombination techniques such as the majority voting, the LSE-based weighting,\nand the double-layer hierarchical combining.&#39;, &#39;We also extended the SVM ensemble to the multi-class classiﬁcation problem:\nthe binary-classiﬁer-level SVM ensemble and the multi-classiﬁer-level SVM en-\nsemble.&#39;, &#39;The former did build the SVM ensemble in the level of binary classiﬁers\nand the latter did build the SVM ensemble in the level of multi-class classiﬁers.&#39;, &#39;The former had C SVM ensembles in the case of “one-against-all” method or\nC(C −1)/2 SVM ensembles in the case of “one-against-one” method.&#39;, &#39;And, each\nSVM ensemble consisted of K independent SVMs.&#39;, &#39;The latter consisted of K\nmulti-class classiﬁers.&#39;, &#39;And each multi-class classiﬁer consists of C binary classi-\nﬁers in the case of “one-against-all” method or for C(C −1)/2 binary classiﬁers\nin the case of “one-against-one” method.&#39;, &#39;We evaluated the classiﬁcation performance of the proposed SVM ensemble\nover three diﬀerent multi-class classiﬁcation problems such as the IRIS data clas-\nsiﬁcation, the hand-written digit recognition.&#39;, &#39;The SVM ensembles outperform\na single SVM for all applications in terms of classiﬁcation accuracy.&#39;, &#39;For three\ndiﬀerent aggregation methods, the classiﬁcation performance is superior in the\norder of the double-layer hierarchical combining, the LSE-based weighting, and\nthe majority voting.&#39;, &#39;In the future, we will consider other aggregation scheme\nlike boosting for constructing the SVM ensemble.&#39;, &#39;Support Vector Machine Ensemble with Bagging\n407\nAcknowledgements\nThe authors would like to thank the Ministry of Education of Korea for its ﬁ-\nnancial support toward the Electrical and Computer Engineering Division at\nPOSTECH through its BK21 program.&#39;, &#39;This research was also partially sup-\nported by the Brain Science and Engineering Research Program of the Ministry\nof Science and Technology, Korea, and by the Basic Research Institute Support\nProgram of the Korea Research Foundation.&#39;, &#39;References\n[1] Cortes, C., Vapnik, V.: Support vector network.&#39;, &#39;Machine Learning.&#39;, &#39;20 (1995)\n273–297\n397\n[2] Burges, C.: A Tutorial on Support Vector Machines for Pattern Recognition.&#39;, &#39;Data\nMining and Knowledge Discovery.&#39;, &#39;2(2) (1998) 121–167\n397, 400\n[3] Joachims, T.: Making large-scale support vector machine learning practical.&#39;, &#39;Ad-\nvances in Kernel Methods: Support Vector Machines, MIT Press, Cambridge, MA\n(1999)\n397\n[4] Platt, J.: Fast training of support vector machines using sequential minimal op-\ntimization.&#39;, &#39;Advances in Kernel Methods: Support Vector Machines, MIT Press,\nCambridge, MA (1999)\n397\n[5] Weston, J., Watkins, C.: Support Vector Machines for Multi-Class Pattern Recog-\nnition.&#39;, &#39;Proceedings of the 7th European Symposium on Artiﬁcial Neural Networks\n(1999)\n[6] Bottou, L., Cortes, C., Denker, J., Drucker, H., Guyon, I., Jackel, Lawrence D.,\nLeCun, Y., M¨uller U., S¨ackinger E., Simard, P., Vapnik, V.: Comparison of clas-\nsiﬁer methods: a case study in handwriting digit recognition.&#39;, &#39;Proceedings of the\n13th International Conference on Pattern Recognition.&#39;, &#39;IEEE Computer Society\nPress (1994) 77–87\n397, 399\n[7] Knerrm, S., Personnaz, L., Dreyfus, G.: Single-layer learning revisited: a stepwise\nprocedure for building and training a neural network.&#39;, &#39;In: Fogelman, J.(eds.&#39;, &#39;): Neu-\nrocomputing: Algorithms, Architechtures and Application, Springer-Verlag (1990)\n397, 400\n[8] Vapnik, V.: The Nature of Statistical Learning Theory.&#39;, &#39;Springer, New York, 1999\n398\n[9] Sch¨olkopf, B., Smola A., and Muller K.: Nonlinear component analysis as a kernel\neigenvalue problem.&#39;, &#39;Neural Computation, 10(5) (1998) 1299-1319\n399\n[10] Dietterich, T.: Machine Learning Research: Four Current Directions.&#39;, &#39;The AI Mag-\nazine, 18(4) (1998) 97–136\n400\n[11] Hansen, L., Salamon, P.: Neural network ensembles.&#39;, &#39;IEEE Transactions on Pat-\ntern Analysis and Machine Intelligence, 12 (1990) 993–1001\n400\n[12] Breiman, L.: Bagging predictors.&#39;, &#39;Machine Learning, 24(2) (1996) 123–140, 1996\n402\n[13] Kim, D., Kim, C.: Forecasting time series with genetic fuzzy predictor ensemble.&#39;, &#39;IEEE Transaction on Fuzzy Systems, 5(4) (1997) 523–535\n403\n[14] Jordan, M., Jacobs, R., Hierarchical mixtures of experts and the EM algorithm.&#39;, &#39;Neural Computation 6(5) (1994) 181–214\n403\n[15] Fisher, R.: The use of multiple measurements in taxonomic problems.&#39;, &#39;Annual\nEugenics, 7, Part II (1936) 179–188\n404\n\x0c408\nHyun-Chul Kim et al.&#39;, &#39;[16] Bay, B.: The UCI KDD Archive [http://kdd.ics.uci.edu].&#39;, &#39;Irvine, CA: University\nof California, Department of Information and Computer Science (1999) 404, 405\nView publication stats&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">sentences</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">])</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                               kalimat
+0    See discussions, stats, and author profiles fo...
+1    The user has requested enhancement of the down...
+2    Support Vector Machine Ensemble with Bagging\n...
+3    Even the support vector machine (SVM) has been...
+4    To\nimprove the limited classiﬁcation performa...
+..                                                 ...
+240  IEEE Transaction on Fuzzy Systems, 5(4) (1997)...
+241  Neural Computation 6(5) (1994) 181–214\n403\n[...
+242  Annual\nEugenics, 7, Part II (1936) 179–188\n4...
+243  [16] Bay, B.: The UCI KDD Archive [http://kdd....
+244  Irvine, CA: University\nof California, Departm...
+
+[245 rows x 1 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;kalimat_svm.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">encoding</span><span class="o">=</span><span class="s1">&#39;utf-8&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Untuk membuat word graph</p>
+<p>Lanjutkan dengan menggunakan <a class="reference external" href="https://www.geeksforgeeks.org/nlp/co-occurence-matrix-in-nlp/">https://www.geeksforgeeks.org/nlp/co-occurence-matrix-in-nlp/</a></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/PPW/kalimat_svm.csv&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>      <span class="c1"># lihat isi awal</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">)</span>     <span class="c1"># lihat nama kolom</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>                                             kalimat
+0  See discussions, stats, and author profiles fo...
+1  The user has requested enhancement of the down...
+2  Support Vector Machine Ensemble with Bagging\n...
+3  Even the support vector machine (SVM) has been...
+4  To\nimprove the limited classiﬁcation performa...
+Index([&#39;kalimat&#39;], dtype=&#39;object&#39;)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.tokenize</span><span class="w"> </span><span class="kn">import</span> <span class="n">word_tokenize</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">collections</span><span class="w"> </span><span class="kn">import</span> <span class="n">defaultdict</span><span class="p">,</span> <span class="n">Counter</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Download NLTK resources</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;punkt&#39;</span><span class="p">)</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+
+<span class="c1"># Load CSV</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;/content/drive/MyDrive/PPW/kalimat_svm.csv&quot;</span><span class="p">)</span>
+
+<span class="c1"># Gabungkan semua teks di kolom &#39;kalimat&#39; menjadi 1 teks panjang</span>
+<span class="n">text</span> <span class="o">=</span> <span class="s2">&quot; &quot;</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;kalimat&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+
+<span class="c1"># Preprocess the text</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="nb">set</span><span class="p">(</span><span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;english&#39;</span><span class="p">))</span>
+<span class="n">words</span> <span class="o">=</span> <span class="n">word_tokenize</span><span class="p">(</span><span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">())</span>
+<span class="n">words</span> <span class="o">=</span> <span class="p">[</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">words</span> <span class="k">if</span> <span class="n">word</span><span class="o">.</span><span class="n">isalnum</span><span class="p">()</span> <span class="ow">and</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">]</span>
+
+<span class="c1"># Define the window size for co-occurrence</span>
+<span class="n">window_size</span> <span class="o">=</span> <span class="mi">2</span>
+
+<span class="c1"># Create a list of co-occurring word pairs</span>
+<span class="n">co_occurrences</span> <span class="o">=</span> <span class="n">defaultdict</span><span class="p">(</span><span class="n">Counter</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">words</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="nb">max</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">i</span> <span class="o">-</span> <span class="n">window_size</span><span class="p">),</span> <span class="nb">min</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">words</span><span class="p">),</span> <span class="n">i</span> <span class="o">+</span> <span class="n">window_size</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)):</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">!=</span> <span class="n">j</span><span class="p">:</span>
+            <span class="n">co_occurrences</span><span class="p">[</span><span class="n">word</span><span class="p">][</span><span class="n">words</span><span class="p">[</span><span class="n">j</span><span class="p">]]</span> <span class="o">+=</span> <span class="mi">1</span>
+
+<span class="c1"># Create a list of unique words</span>
+<span class="n">unique_words</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="n">words</span><span class="p">))</span>
+
+<span class="c1"># Initialize the co-occurrence matrix</span>
+<span class="n">co_matrix</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">zeros</span><span class="p">((</span><span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)),</span> <span class="n">dtype</span><span class="o">=</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># Populate the co-occurrence matrix</span>
+<span class="n">word_index</span> <span class="o">=</span> <span class="p">{</span><span class="n">word</span><span class="p">:</span> <span class="n">idx</span> <span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">word</span> <span class="ow">in</span> <span class="nb">enumerate</span><span class="p">(</span><span class="n">unique_words</span><span class="p">)}</span>
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">neighbors</span> <span class="ow">in</span> <span class="n">co_occurrences</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">neighbor</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="n">co_matrix</span><span class="p">[</span><span class="n">word_index</span><span class="p">[</span><span class="n">word</span><span class="p">]][</span><span class="n">word_index</span><span class="p">[</span><span class="n">neighbor</span><span class="p">]]</span> <span class="o">=</span> <span class="n">count</span>
+
+<span class="c1"># Create a DataFrame for better readability</span>
+<span class="n">co_matrix_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">co_matrix</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="n">unique_words</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">unique_words</span><span class="p">)</span>
+
+<span class="c1"># Display the co-occurrence matrix</span>
+<span class="n">co_matrix_df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package punkt to /root/nltk_data...
+[nltk_data]   Package punkt is already up-to-date!
+[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-8aba0351-608b-4dfa-871b-33ce58491bf4" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>practical</th>
+      <th>linearly</th>
+      <th>need</th>
+      <th>postech</th>
+      <th>69</th>
+      <th>399</th>
+      <th>ξi</th>
+      <th>lawrence</th>
+      <th>much</th>
+      <th>nature</th>
+      <th>...</th>
+      <th>experts</th>
+      <th>denker</th>
+      <th>contains</th>
+      <th>personnaz</th>
+      <th>xi</th>
+      <th>input</th>
+      <th>wij</th>
+      <th>part</th>
+      <th>designed</th>
+      <th>let</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>practical</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>linearly</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>1</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>need</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>postech</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>69</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>input</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>wij</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>2</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>part</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>designed</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>let</th>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>...</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>776 rows × 776 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-8aba0351-608b-4dfa-871b-33ce58491bf4')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-8aba0351-608b-4dfa-871b-33ce58491bf4 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-8aba0351-608b-4dfa-871b-33ce58491bf4');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-797fb679-8983-42c4-8767-847341dae77d">
+      <button class="colab-df-quickchart" onclick="quickchart('df-797fb679-8983-42c4-8767-847341dae77d')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-797fb679-8983-42c4-8767-847341dae77d button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_19b43c00-4386-43bb-84ff-38836217484e">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('co_matrix_df')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_19b43c00-4386-43bb-84ff-38836217484e button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('co_matrix_df');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+
+<span class="c1"># Buat graph kosong</span>
+<span class="n">G</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">Graph</span><span class="p">()</span>
+
+<span class="c1"># Tambahkan edge berdasarkan nilai co-occurrence</span>
+<span class="k">for</span> <span class="n">word</span><span class="p">,</span> <span class="n">neighbors</span> <span class="ow">in</span> <span class="n">co_occurrences</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+    <span class="k">for</span> <span class="n">neighbor</span><span class="p">,</span> <span class="n">count</span> <span class="ow">in</span> <span class="n">neighbors</span><span class="o">.</span><span class="n">items</span><span class="p">():</span>
+        <span class="k">if</span> <span class="n">count</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+            <span class="n">G</span><span class="o">.</span><span class="n">add_edge</span><span class="p">(</span><span class="n">word</span><span class="p">,</span> <span class="n">neighbor</span><span class="p">,</span> <span class="n">weight</span><span class="o">=</span><span class="n">count</span><span class="p">)</span>
+
+<span class="c1"># Ukuran node berdasarkan jumlah koneksi</span>
+<span class="n">node_sizes</span> <span class="o">=</span> <span class="p">[</span><span class="n">G</span><span class="o">.</span><span class="n">degree</span><span class="p">(</span><span class="n">node</span><span class="p">)</span> <span class="o">*</span> <span class="mi">200</span> <span class="k">for</span> <span class="n">node</span> <span class="ow">in</span> <span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">()]</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">14</span><span class="p">,</span> <span class="mi">10</span><span class="p">))</span>
+
+<span class="c1"># Posisi node</span>
+<span class="n">pos</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">spring_layout</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">k</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+
+<span class="c1"># Gambar nodes dan edges</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_nodes</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="n">node_sizes</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.7</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_edges</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">width</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.5</span><span class="p">)</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw_networkx_labels</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">pos</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">8</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Word Co-Occurrence Network Graph&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">axis</span><span class="p">(</span><span class="s2">&quot;off&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/7b179682a9446c70c92e7315fe8510d1e86cbf312e9e81c438ec248f862a61cf.png" src="../_images/7b179682a9446c70c92e7315fe8510d1e86cbf312e9e81c438ec248f862a61cf.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung jumlah kata dalam graph</span>
+<span class="n">jumlah_kata</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_nodes</span><span class="p">()</span>
+
+<span class="n">jumlah_kata</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>776
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">list</span><span class="p">(</span><span class="n">G</span><span class="o">.</span><span class="n">nodes</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[&#39;see&#39;,
+ &#39;discussions&#39;,
+ &#39;stats&#39;,
+ &#39;publications&#39;,
+ &#39;citations&#39;,
+ &#39;profile&#39;,
+ &#39;je&#39;,
+ &#39;954&#39;,
+ &#39;daijin&#39;,
+ &#39;content&#39;,
+ &#39;author&#39;,
+ &#39;profiles&#39;,
+ &#39;view&#39;,
+ &#39;publication&#39;,
+ &#39;https&#39;,
+ &#39;support&#39;,
+ &#39;405&#39;,
+ &#39;vector&#39;,
+ &#39;machine&#39;,
+ &#39;downloaded&#39;,
+ &#39;file&#39;,
+ &#39;abstract&#39;,
+ &#39;even&#39;,
+ &#39;1&#39;,
+ &#39;introduction&#39;,
+ &#39;drawn&#39;,
+ &#39;2&#39;,
+ &#39;machines&#39;,
+ &#39;b&#39;,
+ &#39;3&#39;,
+ &#39;scale&#39;,
+ &#39;optimum&#39;,
+ &#39;sometimes&#39;,
+ &#39;vectors&#39;,
+ &#39;obtained&#39;,
+ &#39;use&#39;,
+ &#39;ensemble&#39;,
+ &#39;tor&#39;,
+ &#39;applied&#39;,
+ &#39;svm&#39;,
+ &#39;aggregating&#39;,
+ &#39;nj&#39;,
+ &#39;10&#39;,
+ &#39;hierarchical&#39;,
+ &#39;korea&#39;,
+ &#39;nancial&#39;,
+ &#39;toward&#39;,
+ &#39;electrical&#39;,
+ &#39;research&#39;,
+ &#39;institute&#39;,
+ &#39;program&#39;,
+ &#39;cortes&#39;,
+ &#39;vapnik&#39;,
+ &#39;network&#39;,
+ &#39;burges&#39;,
+ &#39;tutorial&#39;,
+ &#39;joachims&#39;,
+ &#39;making&#39;,
+ &#39;kernel&#39;,
+ &#39;methods&#39;,
+ &#39;fast&#39;,
+ &#39;training&#39;,
+ &#39;weston&#39;,
+ &#39;watkins&#39;,
+ &#39;new&#39;,
+ &#39;classical&#39;,
+ &#39;figure&#39;,
+ &#39;given&#39;,
+ &#39;test&#39;,
+ &#39;x&#39;,
+ &#39;due&#39;,
+ &#39;l&#39;,
+ &#39;weight&#39;,
+ &#39;w&#39;,
+ &#39;represented&#39;,
+ &#39;feature&#39;,
+ &#39;size&#39;,
+ &#39;64&#39;,
+ &#39;pattern&#39;,
+ &#39;learning&#39;,
+ &#39;mit&#39;,
+ &#39;using&#39;,
+ &#39;bagging&#39;,
+ &#39;proposed&#39;,
+ &#39;promising&#39;,
+ &#39;minimizing&#39;,
+ &#39;second&#39;,
+ &#39;20&#39;,
+ &#39;practical&#39;,
+ &#39;dietterich&#39;,
+ &#39;tern&#39;,
+ &#39;analysis&#39;,
+ &#39;intelligence&#39;,
+ &#39;12&#39;,
+ &#39;predictors&#39;,
+ &#39;24&#39;,
+ &#39;conference&#39;,
+ &#39;kim&#39;,
+ &#39;expect&#39;,
+ &#39;improve&#39;,
+ &#39;classiﬁcation&#39;,
+ &#39;likewise&#39;,
+ &#39;also&#39;,
+ &#39;pect&#39;,
+ &#39;idea&#39;,
+ &#39;8&#39;,
+ &#39;based&#39;,
+ &#39;399&#39;,
+ &#39;classiﬁers&#39;,
+ &#39;collection&#39;,
+ &#39;known&#39;,
+ &#39;often&#39;,
+ &#39;shows&#39;,
+ &#39;11&#39;,
+ &#39;better&#39;,
+ &#39;wrong&#39;,
+ &#39;data&#39;,
+ &#39;show&#39;,
+ &#39;performance&#39;,
+ &#39;401&#39;,
+ &#39;advantages&#39;,
+ &#39;may&#39;,
+ &#39;considered&#39;,
+ &#39;propose&#39;,
+ &#39;mentioned&#39;,
+ &#39;general&#39;,
+ &#39;phase&#39;,
+ &#39;single&#39;,
+ &#39;architecture&#39;,
+ &#39;402&#39;,
+ &#39;taking&#39;,
+ &#39;classiﬁer&#39;,
+ &#39;construct&#39;,
+ &#39;several&#39;,
+ &#39;k&#39;,
+ &#39;independent&#39;,
+ &#39;cj&#39;,
+ &#39;j&#39;,
+ &#39;decision&#39;,
+ &#39;fmv&#39;,
+ &#39;403&#39;,
+ &#39;svms&#39;,
+ &#39;diﬀerent&#39;,
+ &#39;weights&#39;,
+ &#39;trained&#39;,
+ &#39;replicate&#39;,
+ &#39;nation&#39;,
+ &#39;consists&#39;,
+ &#39;f&#39;,
+ &#39;fsv&#39;,
+ &#39;extension&#39;,
+ &#39;case&#39;,
+ &#39;level&#39;,
+ &#39;c&#39;,
+ &#39;method&#39;,
+ &#39;built&#39;,
+ &#39;match&#39;,
+ &#39;strategy&#39;,
+ &#39;4&#39;,
+ &#39;simulation&#39;,
+ &#39;took&#39;,
+ &#39;c3&#39;,
+ &#39;5&#39;,
+ &#39;constructed&#39;,
+ &#39;siting&#39;,
+ &#39;class&#39;,
+ &#39;c9&#39;,
+ &#39;addressed&#39;,
+ &#39;extended&#39;,
+ &#39;problem&#39;,
+ &#39;semble&#39;,
+ &#39;build&#39;,
+ &#39;binary&#39;,
+ &#39;consisted&#39;,
+ &#39;three&#39;,
+ &#39;constructing&#39;,
+ &#39;407&#39;,
+ &#39;fuzzy&#39;,
+ &#39;predictor&#39;,
+ &#39;ieee&#39;,
+ &#39;transaction&#39;,
+ &#39;paper&#39;,
+ &#39;shaoning&#39;,
+ &#39;ensembles&#39;,
+ &#39;bootstrap&#39;,
+ &#39;outperforms&#39;,
+ &#39;technique&#39;,
+ &#39;individual&#39;,
+ &#39;linearly&#39;,
+ &#39;work&#39;,
+ &#39;adopt&#39;,
+ &#39;used&#39;,
+ &#39;boosting&#39;,
+ &#39;respectively&#39;,
+ &#39;weighting&#39;,
+ &#39;nique&#39;,
+ &#39;performed&#39;,
+ &#39;uci&#39;,
+ &#39;acknowledgements&#39;,
+ &#39;breiman&#39;,
+ &#39;lecture&#39;,
+ &#39;13th&#39;,
+ &#39;international&#39;,
+ &#39;recognition&#39;,
+ &#39;notes&#39;,
+ &#39;combining&#39;,
+ &#39;organized&#39;,
+ &#39;follows&#39;,
+ &#39;computer&#39;,
+ &#39;science&#39;,
+ &#39;january&#39;,
+ &#39;bang&#39;,
+ &#39;department&#39;,
+ &#39;engineering&#39;,
+ &#39;division&#39;,
+ &#39;society&#39;,
+ &#39;press&#39;,
+ &#39;information&#39;,
+ &#39;1999&#39;,
+ &#39;2002&#39;,
+ &#39;pohang&#39;,
+ &#39;university&#39;,
+ &#39;technology&#39;,
+ &#39;18&#39;,
+ &#39;301&#39;,
+ &#39;san&#39;,
+ &#39;ported&#39;,
+ &#39;brain&#39;,
+ &#39;ministry&#39;,
+ &#39;404&#39;,
+ &#39;doi&#39;,
+ &#39;source&#39;,
+ &#39;eds&#39;,
+ &#39;lncs&#39;,
+ &#39;2388&#39;,
+ &#39;berlin&#39;,
+ &#39;heidelberg&#39;,
+ &#39;398&#39;,
+ &#39;dblp&#39;,
+ &#39;112&#39;,
+ &#39;reads&#39;,
+ &#39;69&#39;,
+ &#39;authors&#39;,
+ &#39;including&#39;,
+ &#39;0&#39;,
+ &#39;λ1&#39;,
+ &#39;λl&#39;,
+ &#39;conclusion&#39;,
+ &#39;usually&#39;,
+ &#39;397&#39;,
+ &#39;computation&#39;,
+ &#39;1998&#39;,
+ &#39;systems&#39;,
+ &#39;1997&#39;,
+ &#39;6&#39;,
+ &#39;1994&#39;,
+ &#39;pang&#39;,
+ &#39;would&#39;,
+ &#39;like&#39;,
+ &#39;unitec&#39;,
+ &#39;basic&#39;,
+ &#39;31&#39;,
+ &#39;following&#39;,
+ &#39;page&#39;,
+ &#39;uploaded&#39;,
+ &#39;30&#39;,
+ &#39;grass&#39;,
+ &#39;irvine&#39;,
+ &#39;ca&#39;,
+ &#39;california&#39;,
+ &#39;ai&#39;,
+ &#39;azine&#39;,
+ &#39;et&#39;,
+ &#39;al&#39;,
+ &#39;7&#39;,
+ &#39;400&#39;,
+ &#39;digits&#39;,
+ &#39;406&#39;,
+ &#39;13&#39;,
+ &#39;forecasting&#39;,
+ &#39;time&#39;,
+ &#39;408&#39;,
+ &#39;fact&#39;,
+ &#39;required&#39;,
+ &#39;satisfy&#39;,
+ &#39;constrained&#39;,
+ &#39;minimization&#39;,
+ &#39;extend&#39;,
+ &#39;two&#39;,
+ &#39;ways&#39;,
+ &#39;user&#39;,
+ &#39;requested&#39;,
+ &#39;fi&#39;,
+ &#39;correct&#39;,
+ &#39;result&#39;,
+ &#39;learn&#39;,
+ &#39;exact&#39;,
+ &#39;set&#39;,
+ &#39;r&#39;,
+ &#39;appear&#39;,
+ &#39;repeated&#39;,
+ &#39;enhancement&#39;,
+ &#39;postech&#39;,
+ &#39;invu71&#39;,
+ &#39;education&#39;,
+ &#39;foundation&#39;,
+ &#39;dkim&#39;,
+ &#39;sybang&#39;,
+ &#39;provide&#39;,
+ &#39;practically&#39;,
+ &#39;implemented&#39;,
+ &#39;far&#39;,
+ &#39;real&#39;,
+ &#39;pose&#39;,
+ &#39;independently&#39;,
+ &#39;recognitionshow&#39;,
+ &#39;terms&#39;,
+ &#39;laboratories&#39;,
+ &#39;learns&#39;,
+ &#39;separating&#39;,
+ &#39;diﬃculties&#39;,
+ &#39;applications&#39;,
+ &#39;etc&#39;,
+ &#39;however&#39;,
+ &#39;drawbacks&#39;,
+ &#39;seemed&#39;,
+ &#39;since&#39;,
+ &#39;large&#39;,
+ &#39;verri&#39;,
+ &#39;samples&#39;,
+ &#39;becomes&#39;,
+ &#39;ited&#39;,
+ &#39;train&#39;,
+ &#39;another&#39;,
+ &#39;randomly&#39;,
+ &#39;theoretical&#39;,
+ &#39;ground&#39;,
+ &#39;section&#39;,
+ &#39;describes&#39;,
+ &#39;results&#39;,
+ &#39;tion&#39;,
+ &#39;determining&#39;,
+ &#39;optimal&#39;,
+ &#39;classes&#39;,
+ &#39;ith&#39;,
+ &#39;ijth&#39;,
+ &#39;vote&#39;,
+ &#39;small&#39;,
+ &#39;space&#39;,
+ &#39;guarantee&#39;,
+ &#39;always&#39;,
+ &#39;provides&#39;,
+ &#39;advantage&#39;,
+ &#39;achieved&#39;,
+ &#39;equally&#39;,
+ &#39;originally&#39;,
+ &#39;fig&#39;,
+ &#39;designed&#39;,
+ &#39;sets&#39;,
+ &#39;certain&#39;,
+ &#39;combine&#39;,
+ &#39;eral&#39;,
+ &#39;function&#39;,
+ &#39;kth&#39;,
+ &#39;ﬁnal&#39;,
+ &#39;ble&#39;,
+ &#39;aggregate&#39;,
+ &#39;outputs&#39;,
+ &#39;feed&#39;,
+ &#39;super&#39;,
+ &#39;upper&#39;,
+ &#39;layer&#39;,
+ &#39;number&#39;,
+ &#39;ensemlbe&#39;,
+ &#39;order&#39;,
+ &#39;apply&#39;,
+ &#39;insertion&#39;,
+ &#39;many&#39;,
+ &#39;via&#39;,
+ &#39;tournament&#39;,
+ &#39;eﬃcacy&#39;,
+ &#39;bles&#39;,
+ &#39;sv&#39;,
+ &#39;mc1&#39;,
+ &#39;matching&#39;,
+ &#39;scheme&#39;,
+ &#39;polynomial&#39;,
+ &#39;replicated&#39;,
+ &#39;rate&#39;,
+ &#39;majoirity&#39;,
+ &#39;voting&#39;,
+ &#39;combined&#39;,
+ &#39;lse&#39;,
+ &#39;ison&#39;,
+ &#39;table&#39;,
+ &#39;45&#39;,
+ &#39;mc8&#39;,
+ &#39;majority&#39;,
+ &#39;limitation&#39;,
+ &#39;generated&#39;,
+ &#39;former&#39;,
+ &#39;latter&#39;,
+ &#39;digit&#39;,
+ &#39;outperform&#39;,
+ &#39;good&#39;,
+ &#39;regression&#39;,
+ &#39;group&#39;,
+ &#39;evaluate&#39;,
+ &#39;generalization&#39;,
+ &#39;margin&#39;,
+ &#39;produce&#39;,
+ &#39;ability&#39;,
+ &#39;gives&#39;,
+ &#39;low&#39;,
+ &#39;error&#39;,
+ &#39;primary&#39;,
+ &#39;easy&#39;,
+ &#39;limited&#39;,
+ &#39;degrade&#39;,
+ &#39;overcome&#39;,
+ &#39;lee&#39;,
+ &#39;improvement&#39;,
+ &#39;much&#39;,
+ &#39;siﬁers&#39;,
+ &#39;improving&#39;,
+ &#39;greatly&#39;,
+ &#39;examples&#39;,
+ &#39;theoretically&#39;,
+ &#39;evaluated&#39;,
+ &#39;superior&#39;,
+ &#39;iris&#39;,
+ &#39;accuracy&#39;,
+ &#39;model&#39;,
+ &#39;combination&#39;,
+ &#39;implies&#39;,
+ &#39;problems&#39;,
+ &#39;concern&#39;,
+ &#39;xj&#39;,
+ &#39;trick&#39;,
+ &#39;9&#39;,
+ &#39;votes&#39;,
+ &#39;last&#39;,
+ &#39;reduces&#39;,
+ &#39;log&#39;,
+ &#39;global&#39;,
+ &#39;four&#39;,
+ &#39;ferent&#39;,
+ &#39;aggregation&#39;,
+ &#39;probability&#39;,
+ &#39;pe&#39;,
+ &#39;approximated&#39;,
+ &#39;approximation&#39;,
+ &#39;expected&#39;,
+ &#39;implementations&#39;,
+ &#39;according&#39;,
+ &#39;obtain&#39;,
+ &#39;imated&#39;,
+ &#39;algorithms&#39;,
+ &#39;ﬁrst&#39;,
+ &#39;max&#39;,
+ &#39;wins&#39;,
+ &#39;algorithm&#39;,
+ &#39;high&#39;,
+ &#39;approximate&#39;,
+ &#39;reduce&#39;,
+ &#39;rocomputing&#39;,
+ &#39;architechtures&#39;,
+ &#39;application&#39;,
+ &#39;complexity&#39;,
+ &#39;determined&#39;,
+ &#39;cost&#39;,
+ &#39;series&#39;,
+ &#39;genetic&#39;,
+ &#39;classiﬁed&#39;,
+ &#39;area&#39;,
+ &#39;maps&#39;,
+ &#39;input&#39;,
+ &#39;higher&#39;,
+ &#39;dimensional&#39;,
+ &#39;15&#39;,
+ &#39;fisher&#39;,
+ &#39;multiple&#39;,
+ &#39;measurements&#39;,
+ &#39;either&#39;,
+ &#39;mc0&#39;,
+ &#39;neural&#39;,
+ &#39;transactions&#39;,
+ &#39;aggregated&#39;,
+ &#39;dently&#39;,
+ &#39;explained&#39;,
+ &#39;appropriate&#39;,
+ &#39;strategies&#39;,
+ &#39;whose&#39;,
+ &#39;decisions&#39;,
+ &#39;make&#39;,
+ &#39;precisely&#39;,
+ &#39;p&#39;,
+ &#39;chosen&#39;,
+ &#39;bootstrapping&#39;,
+ &#39;existing&#39;,
+ &#39;hand&#39;,
+ &#39;weighted&#39;,
+ &#39;sequential&#39;,
+ &#39;minimal&#39;,
+ &#39;resampling&#39;,
+ &#39;replacement&#39;,
+ &#39;selected&#39;,
+ &#39;90&#39;,
+ &#39;ping&#39;,
+ &#39;60&#39;,
+ &#39;chose&#39;,
+ &#39;2000&#39;,
+ &#39;need&#39;,
+ &#39;sample&#39;,
+ &#39;xi&#39;,
+ &#39;particular&#39;,
+ &#39;placement&#39;,
+ &#39;platt&#39;,
+ &#39;procedure&#39;,
+ &#39;building&#39;,
+ &#39;contained&#39;,
+ &#39;ing&#39;,
+ &#39;consisting&#39;,
+ &#39;collective&#39;,
+ &#39;various&#39;,
+ &#39;constituent&#39;,
+ &#39;hansen&#39;,
+ &#39;simultaneously&#39;,
+ &#39;determines&#39;,
+ &#39;ﬁcation&#39;,
+ &#39;eq&#39;,
+ &#39;type&#39;,
+ &#39;yj&#39;,
+ &#39;ity&#39;,
+ &#39;imagine&#39;,
+ &#39;expand&#39;,
+ &#39;linear&#39;,
+ &#39;includes&#39;,
+ &#39;nonlinear&#39;,
+ &#39;let&#39;,
+ &#39;treats&#39;,
+ &#39;hierarchically&#39;,
+ &#39;lower&#39;,
+ &#39;one&#39;,
+ &#39;least&#39;,
+ &#39;egy&#39;,
+ &#39;incorrect&#39;,
+ &#39;simplest&#39;,
+ &#39;unweighted&#39;,
+ &#39;techniques&#39;,
+ &#39;future&#39;,
+ &#39;consider&#39;,
+ &#39;squares&#39;,
+ &#39;estimation&#39;,
+ &#39;flse&#39;,
+ &#39;jordan&#39;,
+ &#39;jacobs&#39;,
+ &#39;mixtures&#39;,
+ &#39;experts&#39;,
+ &#39;points&#39;,
+ &#39;modiﬁcation&#39;,
+ &#39;soft&#39;,
+ &#39;literature&#39;,
+ &#39;refers&#39;,
+ &#39;planet&#39;,
+ &#39;sisting&#39;,
+ &#39;siﬁcation&#39;,
+ &#39;character&#39;,
+ &#39;mining&#39;,
+ &#39;allow&#39;,
+ &#39;misclassiﬁed&#39;,
+ &#39;ci&#39;,
+ &#39;ﬁers&#39;,
+ &#39;identical&#39;,
+ &#39;rb&#39;,
+ &#39;haub&#39;,
+ &#39;contains&#39;,
+ &#39;16&#39;,
+ &#39;remaining&#39;,
+ &#39;original&#39;,
+ &#39;sampled&#39;,
+ &#39;knowledge&#39;,
+ &#39;image&#39;,
+ &#39;32&#39;,
+ &#39;study&#39;,
+ &#39;handwriting&#39;,
+ &#39;proceedings&#39;,
+ &#39;pletely&#39;,
+ &#39;bell&#39;,
+ &#39;risk&#39;,
+ &#39;min&#39;,
+ &#39;2wt&#39;,
+ &#39;constraints&#39;,
+ &#39;wi&#39;,
+ &#39;ξi&#39;,
+ &#39;wij&#39;,
+ &#39;ξij&#39;,
+ &#39;n&#39;,
+ &#39;yi&#39;,
+ &#39;fk&#39;,
+ &#39;references&#39;,
+ &#39;errors&#39;,
+ &#39;introducing&#39;,
+ &#39;variables&#39;,
+ &#39;theory&#39;,
+ &#39;springer&#39;,
+ &#39;york&#39;,
+ &#39;lecun&#39;,
+ &#39;simard&#39;,
+ &#39;comparison&#39;,
+ &#39;siﬁer&#39;,
+ &#39;nature&#39;,
+ &#39;statistical&#39;,
+ &#39;hyperplane&#39;,
+ &#39;maximize&#39;,
+ &#39;giving&#39;,
+ &#39;bisects&#39;,
+ &#39;shortest&#39;,
+ &#39;largest&#39;,
+ &#39;separation&#39;,
+ &#39;allows&#39;,
+ &#39;recent&#39;,
+ &#39;rewritten&#39;,
+ &#39;denote&#39;,
+ &#39;1995&#39;,
+ &#39;discovery&#39;,
+ &#39;1996&#39;,
+ &#39;solved&#39;,
+ &#39;bk21&#39;,
+ &#39;partially&#39;,
+ &#39;current&#39;,
+ &#39;vances&#39;,
+ &#39;successfully&#39;,
+ &#39;term&#39;,
+ &#39;corresponding&#39;,
+ &#39;controls&#39;,
+ &#39;empirical&#39;,
+ &#39;written&#39;,
+ &#39;labels&#39;,
+ &#39;modiﬁed&#39;,
+ &#39;average&#39;,
+ &#39;block&#39;,
+ &#39;pixels&#39;,
+ &#39;areas&#39;,
+ &#39;example&#39;,
+ &#39;face&#39;,
+ &#39;detection&#39;,
+ &#39;digital&#39;,
+ &#39;found&#39;,
+ &#39;first&#39;,
+ &#39;convex&#39;,
+ &#39;hulls&#39;,
+ &#39;manner&#39;,
+ &#39;types&#39;,
+ &#39;kinds&#39;,
+ &#39;extensions&#39;,
+ &#39;niques&#39;,
+ &#39;looks&#39;,
+ &#39;similar&#39;,
+ &#39;proportional&#39;,
+ &#39;database&#39;,
+ &#39;advances&#39;,
+ &#39;yiyjxi&#39;,
+ &#39;assume&#39;,
+ &#39;f1&#39;,
+ &#39;f2&#39;,
+ &#39;λiyik&#39;,
+ &#39;called&#39;,
+ &#39;networks&#39;,
+ &#39;bottou&#39;,
+ &#39;knerrm&#39;,
+ &#39;personnaz&#39;,
+ &#39;annual&#39;,
+ &#39;eugenics&#39;,
+ &#39;part&#39;,
+ &#39;ii&#39;,
+ &#39;possible&#39;,
+ &#39;uses&#39;,
+ &#39;suﬃcient&#39;,
+ &#39;classify&#39;,
+ &#39;dreyfus&#39;,
+ &#39;revisited&#39;,
+ &#39;stepwise&#39;,
+ &#39;classiﬁcations&#39;,
+ &#39;fogelman&#39;,
+ &#39;pp&#39;,
+ &#39;sign&#39;,
+ &#39;wj&#39;,
+ &#39;ϕ&#39;,
+ &#39;bj&#39;,
+ &#39;constructs&#39;,
+ &#39;label&#39;,
+ &#39;smola&#39;,
+ &#39;introduced&#39;,
+ &#39;14&#39;,
+ &#39;bay&#39;,
+ &#39;incrementally&#39;,
+ &#39;penalizing&#39;,
+ &#39;lagrangian&#39;,
+ &#39;solve&#39;,
+ &#39;separable&#39;,
+ &#39;builds&#39;,
+ &#39;testing&#39;,
+ &#39;functions&#39;,
+ &#39;uncorrelated&#39;,
+ &#39;taxonomic&#39;,
+ &#39;emprical&#39;,
+ &#39;arguments&#39;,
+ &#39;nition&#39;,
+ &#39;implement&#39;,
+ &#39;approach&#39;,
+ &#39;therefore&#39;,
+ &#39;needs&#39;,
+ &#39;ging&#39;,
+ &#39;repeatedly&#39;,
+ &#39;wt&#39;,
+ &#39;φ&#39;,
+ &#39;plifed&#39;,
+ &#39;bi&#39;,
+ &#39;reduced&#39;,
+ &#39;pixel&#39;,
+ &#39;jth&#39;,
+ &#39;unknown&#39;,
+ &#39;perplane&#39;,
+ &#39;fw&#39;,
+ &#39;iﬁed&#39;,
+ &#39;eigenvalue&#39;,
+ &#39;except&#39;,
+ &#39;argmax&#39;,
+ &#39;accuracies&#39;,
+ &#39;line&#39;,
+ &#39;violation&#39;,
+ &#39;penalizes&#39;,
+ &#39;rors&#39;,
+ &#39;ξl&#39;,
+ &#39;measurement&#39;,
+ &#39;xt&#39;,
+ &#39;yt&#39;,
+ &#39;bij&#39;,
+ &#39;muller&#39;,
+ &#39;component&#39;,
+ &#39;timization&#39;,
+ &#39;best&#39;,
+ &#39;winner&#39;,
+ &#39;maximum&#39;,
+ &#39;50&#39;,
+ &#39;instances&#39;,
+ &#39;1990&#39;,
+ &#39;way&#39;,
+ &#39;fn&#39;,
+ &#39;databases&#39;,
+ &#39;salamon&#39;,
+ &#39;parameters&#39;,
+ &#39;mixture&#39;,
+ &#39;shown&#39;,
+ &#39;among&#39;,
+ &#39;times&#39;,
+ &#39;em&#39;,
+ &#39;1936&#39;,
+ &#39;kdd&#39;,
+ &#39;archive&#39;,
+ &#39;directions&#39;,
+ &#39;thank&#39;,
+ &#39;c1&#39;,
+ &#39;c2&#39;,
+ &#39;denker&#39;,
+ &#39;drucker&#39;,
+ &#39;cambridge&#39;,
+ &#39;7th&#39;,
+ &#39;european&#39;,
+ &#39;symposium&#39;,
+ &#39;artiﬁcial&#39;,
+ &#39;guyon&#39;,
+ &#39;jackel&#39;,
+ &#39;lawrence&#39;,
+ &#39;http&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">jumlah_edges</span> <span class="o">=</span> <span class="n">G</span><span class="o">.</span><span class="n">number_of_edges</span><span class="p">()</span>
+
+<span class="n">jumlah_kata</span><span class="p">,</span> <span class="n">jumlah_edges</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>(776, 3601)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Hitung PageRank</span>
+<span class="n">pagerank_scores</span> <span class="o">=</span> <span class="n">nx</span><span class="o">.</span><span class="n">pagerank</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">alpha</span><span class="o">=</span><span class="mf">0.85</span><span class="p">)</span>
+
+<span class="c1"># Konversi ke DataFrame biar rapi</span>
+<span class="n">pagerank_df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span>
+    <span class="nb">sorted</span><span class="p">(</span><span class="n">pagerank_scores</span><span class="o">.</span><span class="n">items</span><span class="p">(),</span> <span class="n">key</span><span class="o">=</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="p">[</span><span class="mi">1</span><span class="p">],</span> <span class="n">reverse</span><span class="o">=</span><span class="kc">True</span><span class="p">),</span>
+    <span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">,</span> <span class="s2">&quot;pagerank&quot;</span><span class="p">]</span>
+<span class="p">)</span>
+
+<span class="c1"># Tampilkan 20 kata paling penting</span>
+<span class="n">pagerank_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-c772f9ff-7dda-4c92-9fc4-2a0b45e0589a" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>word</th>
+      <th>pagerank</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>svm</td>
+      <td>0.036170</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>classiﬁcation</td>
+      <td>0.018764</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>ensemble</td>
+      <td>0.017598</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>data</td>
+      <td>0.011390</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>svms</td>
+      <td>0.009140</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>2</td>
+      <td>0.008694</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>method</td>
+      <td>0.008594</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>support</td>
+      <td>0.008510</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>training</td>
+      <td>0.008100</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>vector</td>
+      <td>0.007946</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>1</td>
+      <td>0.007638</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>x</td>
+      <td>0.007616</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>decision</td>
+      <td>0.007596</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>c</td>
+      <td>0.007270</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>set</td>
+      <td>0.007090</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>k</td>
+      <td>0.006721</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>classiﬁers</td>
+      <td>0.006166</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>performance</td>
+      <td>0.005965</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>methods</td>
+      <td>0.005710</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>bagging</td>
+      <td>0.005710</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-c772f9ff-7dda-4c92-9fc4-2a0b45e0589a')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-c772f9ff-7dda-4c92-9fc4-2a0b45e0589a button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-c772f9ff-7dda-4c92-9fc4-2a0b45e0589a');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-66dfa252-1639-48f9-b2ea-5ec8a394da71">
+      <button class="colab-df-quickchart" onclick="quickchart('df-66dfa252-1639-48f9-b2ea-5ec8a394da71')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-66dfa252-1639-48f9-b2ea-5ec8a394da71 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">top_n</span> <span class="o">=</span> <span class="mi">20</span>
+<span class="n">top_words</span> <span class="o">=</span> <span class="n">pagerank_df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="n">top_n</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">10</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">barh</span><span class="p">(</span><span class="n">top_words</span><span class="p">[</span><span class="s2">&quot;word&quot;</span><span class="p">],</span> <span class="n">top_words</span><span class="p">[</span><span class="s2">&quot;pagerank&quot;</span><span class="p">])</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">gca</span><span class="p">()</span><span class="o">.</span><span class="n">invert_yaxis</span><span class="p">()</span>  <span class="c1"># Supaya ranking 1 di atas</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s2">&quot;PageRank Score&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Top </span><span class="si">{</span><span class="n">top_n</span><span class="si">}</span><span class="s2"> Words by PageRank&quot;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/d546160b38c17d8f7dab40c649b19873c238d0360cb07c391a98672d6ea1d626.png" src="../_images/d546160b38c17d8f7dab40c649b19873c238d0360cb07c391a98672d6ea1d626.png" />
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="o">%%</span><span class="n">capture</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">networkx</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="n">arr</span> <span class="o">=</span> <span class="n">co_matrix_df</span><span class="o">.</span><span class="n">to_numpy</span><span class="p">()</span>
+<span class="n">G</span><span class="o">=</span><span class="n">nx</span><span class="o">.</span><span class="n">from_numpy_array</span><span class="p">(</span><span class="n">arr</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">6</span><span class="p">))</span>
+<span class="n">nx</span><span class="o">.</span><span class="n">draw</span><span class="p">(</span><span class="n">G</span><span class="p">,</span> <span class="n">with_labels</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">node_color</span><span class="o">=</span><span class="s1">&#39;lightblue&#39;</span><span class="p">,</span> <span class="n">node_size</span><span class="o">=</span><span class="mi">2000</span><span class="p">,</span> <span class="n">font_size</span><span class="o">=</span><span class="mi">12</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;Graf co-occurence (Dasar)&quot;</span><span class="p">,</span> <span class="n">fontsize</span><span class="o">=</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<img alt="../_images/b395ac6546f928e6a50c440e115b5fa6e16c59cf947a96698fc2824685208bf4.png" src="../_images/b395ac6546f928e6a50c440e115b5fa6e16c59cf947a96698fc2824685208bf4.png" />
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="CrawlDataX.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Crawling Data X</strong></p>
+      </div>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
