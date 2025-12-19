@@ -1,0 +1,4117 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Web Usage &#8212; Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/WebUsage';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Data Nasa" href="NASA.html" />
+    <link rel="prev" title="WebGoogle-10txt" href="WebGoogle_10txt.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambangan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambangan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><strong>Tugas</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="WebMining.html"><strong>Web Mining</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html"><strong>Crawling Penambangan Web</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA-Berita.html"><strong>Crawling PTA, Berita, dan Link Page Output</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA_Manajemen.html"><strong>Crawling PTA Prodi Manajemen Abstrak Id.</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="ektraksi_LDA.html"><strong>Klasifikasi dengan ektraksi fitur menggunakan  Latent Dirichlet Allocation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Klasifikasi.html"><strong>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Clustering.html"><strong>Clustering Data Email</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="WebGoogle_10txt.html"><strong>WebGoogle-10txt</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Web Usage</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NASA.html"><strong>Data Nasa</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nasa2.html"><strong>Data Nasa New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebusageNew.html"><strong>Web Usage New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="facebook_ppw.html"><strong>Facebook</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlDataX.html"><strong>Crawling Data X</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_graph_svm.html"><strong>Word Graph Paper:svm</strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../UAS_PPW_FINAL.html"><strong>Word Graph - UAS</strong></a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter/issues/new?title=Issue%20on%20page%20%2Ftugass/WebUsage.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/WebUsage.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Web Usage</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-nama-kolom-agar-mudah-diakses"><strong>1. Normalisasi nama kolom agar mudah diakses</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><strong>2. Filter</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cek-duplikasi"><strong>3. Cek Duplikasi</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-lengkap-yang-mengandung-duplikasi"><strong>4. Data lengkap yang mengandung duplikasi</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-ip-yang-sering-muncul-lebih-dari-sekali"><strong>5. Mencari IP yang sering muncul lebih dari sekali</strong></a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="web-usage">
+<h1><strong>Web Usage</strong><a class="headerlink" href="#web-usage" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">networkx</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">nx</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">matplotlib.pyplot</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">plt</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">IPython.display</span><span class="w"> </span><span class="kn">import</span> <span class="n">display</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Mounted at /content/drive
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nama_file</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/PPW/webuage.csv&#39;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">nama_file</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-e4a435b6-0f3c-4f03-bdf8-2f3602ff3808" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Remote host</th>
+      <th>Remote logname</th>
+      <th>Remote user</th>
+      <th>Request time</th>
+      <th>Request method</th>
+      <th>Request URI</th>
+      <th>Request Protocol</th>
+      <th>Status</th>
+      <th>Size of response (incl. headers)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>65.55.147.227</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:00:24Z</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>21878</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>65.55.86.34</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:00:58Z</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1416</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>148.188.55.88</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:01:41Z</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>10946</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>72.30.57.238</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:01:59Z</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>39943</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>66.249.139.233</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:02:09Z</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>17247</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>132253</th>
+      <td>66.249.196.230</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-22T01:58:21Z</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>16569</td>
+    </tr>
+    <tr>
+      <th>132254</th>
+      <td>66.249.41.85</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-22T01:58:22Z</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>380</td>
+    </tr>
+    <tr>
+      <th>132255</th>
+      <td>65.55.236.245</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-22T01:59:33Z</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>6695</td>
+    </tr>
+    <tr>
+      <th>132256</th>
+      <td>65.55.198.69</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-22T01:59:34Z</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>47672</td>
+    </tr>
+    <tr>
+      <th>132257</th>
+      <td>65.55.75.208</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-22T01:59:36Z</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>6265</td>
+    </tr>
+  </tbody>
+</table>
+<p>132258 rows × 9 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-e4a435b6-0f3c-4f03-bdf8-2f3602ff3808')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-e4a435b6-0f3c-4f03-bdf8-2f3602ff3808 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-e4a435b6-0f3c-4f03-bdf8-2f3602ff3808');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-61a85602-21aa-404c-b94e-1cb4e7cb517f">
+      <button class="colab-df-quickchart" onclick="quickchart('df-61a85602-21aa-404c-b94e-1cb4e7cb517f')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-61a85602-21aa-404c-b94e-1cb4e7cb517f button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_a94de2a5-0d0a-4eec-a3d8-55c039f715ec">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('df')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_a94de2a5-0d0a-4eec-a3d8-55c039f715ec button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('df');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<section id="normalisasi-nama-kolom-agar-mudah-diakses">
+<h2><strong>1. Normalisasi nama kolom agar mudah diakses</strong><a class="headerlink" href="#normalisasi-nama-kolom-agar-mudah-diakses" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kolom yang tersedia:&quot;</span><span class="p">,</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">tolist</span><span class="p">())</span>
+
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Kolom yang tersedia: [&#39;remote_host&#39;, &#39;remote_logname&#39;, &#39;remote_user&#39;, &#39;request_time&#39;, &#39;request_method&#39;, &#39;request_uri&#39;, &#39;request_protocol&#39;, &#39;status&#39;, &#39;size_of_response_(incl._headers)&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="filter">
+<h2><strong>2. Filter</strong><a class="headerlink" href="#filter" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_method&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GET&quot;</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_uri&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;/faq.html&quot;</span><span class="p">,</span> <span class="s2">&quot;/index.html&quot;</span><span class="p">]))</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah data hasil filter: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">filtered</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah data hasil filter: 75656
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-c8bf3e16-1d09-429c-a6a8-71c6e852b3b2" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>remote_host</th>
+      <th>remote_logname</th>
+      <th>remote_user</th>
+      <th>request_time</th>
+      <th>request_method</th>
+      <th>request_uri</th>
+      <th>request_protocol</th>
+      <th>status</th>
+      <th>size_of_response_(incl._headers)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>65.55.147.227</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:00:24Z</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>21878</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>65.55.86.34</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:00:58Z</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1416</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>148.188.55.88</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:01:41Z</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>10946</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>66.249.139.233</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:02:09Z</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>17247</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>72.30.50.248</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15T02:02:13Z</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.0</td>
+      <td>200</td>
+      <td>7883</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-c8bf3e16-1d09-429c-a6a8-71c6e852b3b2')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-c8bf3e16-1d09-429c-a6a8-71c6e852b3b2 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-c8bf3e16-1d09-429c-a6a8-71c6e852b3b2');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-a653d213-94af-4eaa-86e5-bcffaaa87ac8">
+      <button class="colab-df-quickchart" onclick="quickchart('df-a653d213-94af-4eaa-86e5-bcffaaa87ac8')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-a653d213-94af-4eaa-86e5-bcffaaa87ac8 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;hasil_filtered_webuage.csv&quot;</span>
+<span class="n">filtered</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="cek-duplikasi">
+<h2><strong>3. Cek Duplikasi</strong><a class="headerlink" href="#cek-duplikasi" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+
+<span class="c1">#Tampilkan jumlah duplikasi berdasarkan IP</span>
+<span class="n">dupe_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;remote_host&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah kemunculan setiap IP:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dupe_count</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># tampilkan 10 IP teratas</span>
+
+<span class="c1">#Tampilkan hanya IP yang muncul lebih dari 1 kali</span>
+<span class="n">dupe_ips</span> <span class="o">=</span> <span class="n">dupe_count</span><span class="p">[</span><span class="n">dupe_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah IP yang duplikat: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah kemunculan setiap IP:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>remote_host</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>66.249.63.228</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>66.249.213.145</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.242.12</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.149.62</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.127.53</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>134.34.81.143</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>65.55.203.175</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.102.3</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>65.55.22.206</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.109.88</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div><br><label><b>dtype:</b> int64</label></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah IP yang duplikat: 2306
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>remote_host</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>66.249.63.228</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>66.249.213.145</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.242.12</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.149.62</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.127.53</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>66.249.129.145</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>212.126.198.72</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>66.249.159.29</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>65.55.8.138</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>65.55.250.252</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>2306 rows × 1 columns</p>
+</div><br><label><b>dtype:</b> int64</label></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Konversi kolom waktu menjadi datetime agar bisa diurutkan ===</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_time&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+
+<span class="c1"># === Urutkan berdasarkan IP dan waktu ===</span>
+<span class="n">df_sorted</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;remote_host&quot;</span><span class="p">,</span> <span class="s2">&quot;request_time&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># === Filter sesuai kriteria ===</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="n">df_sorted</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df_sorted</span><span class="p">[</span><span class="s2">&quot;request_method&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GET&quot;</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df_sorted</span><span class="p">[</span><span class="s2">&quot;request_uri&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;/faq.html&quot;</span><span class="p">,</span> <span class="s2">&quot;/index.html&quot;</span><span class="p">]))</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df_sorted</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span>
+<span class="p">]</span>
+
+<span class="c1"># === Urutkan hasil akhir berdasarkan IP (Remote Host) ===</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="n">filtered</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;remote_host&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Tampilkan hasil ===</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah data hasil filter: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">filtered</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">filtered</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>  <span class="c1"># tampilkan 20 baris teratas</span>
+
+<span class="c1"># === 9️⃣ Simpan hasil ke file baru dan download ===</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;filtered_log_sorted_by_ip.csv&quot;</span>
+<span class="n">filtered</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah data hasil filter: 75656
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-ed46ccb3-a802-4fa5-90d4-d6af00d88325" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>remote_host</th>
+      <th>remote_logname</th>
+      <th>remote_user</th>
+      <th>request_time</th>
+      <th>request_method</th>
+      <th>request_uri</th>
+      <th>request_protocol</th>
+      <th>status</th>
+      <th>size_of_response_(incl._headers)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>109.192.104.209</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:27:27+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>19395</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>109.192.104.86</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:27:27+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>99209</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>109.192.109.233</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>757</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>109.192.111.243</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:59:37+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>10937</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>109.192.117.151</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>285</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>109.192.121.165</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>205</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>109.192.135.2</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1127</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>109.192.138.239</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>20926</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>109.192.143.138</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>304620</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>109.192.147.1</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:44+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>17723</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>109.192.156.94</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>95350</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>109.192.159.149</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>14002</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>109.192.163.11</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:45+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>48734</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>109.192.167.241</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>26887</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>109.192.17.160</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:45+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>187</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>109.192.173.8</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>304620</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>109.192.174.205</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:32+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>24865</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>109.192.177.231</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:34+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>251</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>109.192.185.107</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>788</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>109.192.185.202</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-18 20:58:45+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>10937</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-ed46ccb3-a802-4fa5-90d4-d6af00d88325')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-ed46ccb3-a802-4fa5-90d4-d6af00d88325 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-ed46ccb3-a802-4fa5-90d4-d6af00d88325');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-20e4efcb-80e2-4aa8-ba5f-321865b8d05d">
+      <button class="colab-df-quickchart" onclick="quickchart('df-20e4efcb-80e2-4aa8-ba5f-321865b8d05d')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-20e4efcb-80e2-4aa8-ba5f-321865b8d05d button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="data-lengkap-yang-mengandung-duplikasi">
+<h2><strong>4. Data lengkap yang mengandung duplikasi</strong><a class="headerlink" href="#data-lengkap-yang-mengandung-duplikasi" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+
+<span class="n">dupe_count</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s2">&quot;remote_host&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;📊 Jumlah kemunculan setiap IP:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dupe_count</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">))</span>  <span class="c1"># tampilkan 10 IP teratas</span>
+
+<span class="n">dupe_ips</span> <span class="o">=</span> <span class="n">dupe_count</span><span class="p">[</span><span class="n">dupe_count</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">🔍 Jumlah IP yang duplikat: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span>
+
+<span class="n">duplicates</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;remote_host&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dupe_ips</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">📋 Data lengkap yang mengandung duplikasi:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">duplicates</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>  <span class="c1"># tampilkan 20 baris pertama</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📊 Jumlah kemunculan setiap IP:
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>remote_host</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>66.249.63.228</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>66.249.213.145</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.242.12</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.149.62</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.127.53</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>134.34.81.143</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>65.55.203.175</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.102.3</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>65.55.22.206</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.109.88</th>
+      <td>3</td>
+    </tr>
+  </tbody>
+</table>
+</div><br><label><b>dtype:</b> int64</label></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>🔍 Jumlah IP yang duplikat: 2306
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>remote_host</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>66.249.63.228</th>
+      <td>4</td>
+    </tr>
+    <tr>
+      <th>66.249.213.145</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.242.12</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.149.62</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.127.53</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>66.249.129.145</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>212.126.198.72</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>66.249.159.29</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>65.55.8.138</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>65.55.250.252</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>2306 rows × 1 columns</p>
+</div><br><label><b>dtype:</b> int64</label></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>📋 Data lengkap yang mengandung duplikasi:
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-962b510e-3f56-43b0-a6f9-08da38b85689" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>remote_host</th>
+      <th>remote_logname</th>
+      <th>remote_user</th>
+      <th>request_time</th>
+      <th>request_method</th>
+      <th>request_uri</th>
+      <th>request_protocol</th>
+      <th>status</th>
+      <th>size_of_response_(incl._headers)</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>7</th>
+      <td>66.249.61.232</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:02:39+00:00</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>10946</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>65.55.80.97</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:02:51+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1416</td>
+    </tr>
+    <tr>
+      <th>29</th>
+      <td>65.55.247.6</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:03:41+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1202</td>
+    </tr>
+    <tr>
+      <th>93</th>
+      <td>65.55.6.89</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:06:54+00:00</td>
+      <td>GET</td>
+      <td>/somefile.zip</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>26936</td>
+    </tr>
+    <tr>
+      <th>127</th>
+      <td>65.55.143.49</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:12:58+00:00</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>269198</td>
+    </tr>
+    <tr>
+      <th>155</th>
+      <td>66.249.110.240</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:23:34+00:00</td>
+      <td>GET</td>
+      <td>/somefile.zip</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1416</td>
+    </tr>
+    <tr>
+      <th>167</th>
+      <td>65.55.218.159</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:30:51+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>16568</td>
+    </tr>
+    <tr>
+      <th>283</th>
+      <td>65.55.89.151</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:36:59+00:00</td>
+      <td>GET</td>
+      <td>/robots.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1590</td>
+    </tr>
+    <tr>
+      <th>291</th>
+      <td>65.55.25.110</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:39:01+00:00</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>788</td>
+    </tr>
+    <tr>
+      <th>292</th>
+      <td>65.55.145.135</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:39:07+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>205</td>
+    </tr>
+    <tr>
+      <th>306</th>
+      <td>65.55.206.126</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:39:48+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>2352</td>
+    </tr>
+    <tr>
+      <th>318</th>
+      <td>65.55.254.231</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:43:20+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1416</td>
+    </tr>
+    <tr>
+      <th>322</th>
+      <td>65.55.95.141</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:45:21+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>10310</td>
+    </tr>
+    <tr>
+      <th>325</th>
+      <td>65.55.253.211</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:46:37+00:00</td>
+      <td>GET</td>
+      <td>/somefile.zip</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1400</td>
+    </tr>
+    <tr>
+      <th>333</th>
+      <td>65.55.51.187</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:51:21+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>1416</td>
+    </tr>
+    <tr>
+      <th>369</th>
+      <td>24.203.73.208</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:56:55+00:00</td>
+      <td>GET</td>
+      <td>/contribute.txt</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>108</td>
+    </tr>
+    <tr>
+      <th>378</th>
+      <td>24.203.73.208</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 02:56:55+00:00</td>
+      <td>GET</td>
+      <td>/faq.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>304620</td>
+    </tr>
+    <tr>
+      <th>479</th>
+      <td>66.249.119.218</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 03:09:28+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>16573</td>
+    </tr>
+    <tr>
+      <th>714</th>
+      <td>65.55.139.20</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 03:49:22+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>16145</td>
+    </tr>
+    <tr>
+      <th>715</th>
+      <td>65.55.149.152</td>
+      <td>-</td>
+      <td>-</td>
+      <td>2009-10-15 03:50:20+00:00</td>
+      <td>GET</td>
+      <td>/index.html</td>
+      <td>HTTP/1.1</td>
+      <td>200</td>
+      <td>18590</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-962b510e-3f56-43b0-a6f9-08da38b85689')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-962b510e-3f56-43b0-a6f9-08da38b85689 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-962b510e-3f56-43b0-a6f9-08da38b85689');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-3855aa74-3a66-4d45-ab5f-4e0b867ce95e">
+      <button class="colab-df-quickchart" onclick="quickchart('df-3855aa74-3a66-4d45-ab5f-4e0b867ce95e')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-3855aa74-3a66-4d45-ab5f-4e0b867ce95e button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nama_file2</span> <span class="o">=</span> <span class="s1">&#39;/content/drive/MyDrive/PPW/webuageOutput /filtered_log_sorted_by_ip.csv&#39;</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">nama_file2</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="kc">None</span><span class="p">,</span> <span class="n">engine</span><span class="o">=</span><span class="s2">&quot;python&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Normalisasi nama kolom ===</span>
+<span class="n">df</span><span class="o">.</span><span class="n">columns</span> <span class="o">=</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span><span class="o">.</span><span class="n">str</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="s2">&quot; &quot;</span><span class="p">,</span> <span class="s2">&quot;_&quot;</span><span class="p">)</span>
+
+<span class="c1"># === Konversi waktu ke datetime ===</span>
+<span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_time&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">to_datetime</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_time&quot;</span><span class="p">],</span> <span class="n">errors</span><span class="o">=</span><span class="s2">&quot;coerce&quot;</span><span class="p">)</span>
+
+<span class="c1"># === Filter hanya method GET dan halaman index/faq ===</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_method&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;GET&quot;</span><span class="p">)</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;request_uri&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">([</span><span class="s2">&quot;/faq.html&quot;</span><span class="p">,</span> <span class="s2">&quot;/index.html&quot;</span><span class="p">]))</span> <span class="o">&amp;</span>
+    <span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s2">&quot;status&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="mi">200</span><span class="p">)</span>
+<span class="p">]</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># === Ganti halaman menjadi A/B ===</span>
+<span class="n">filtered</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">filtered</span><span class="p">[</span><span class="s2">&quot;request_uri&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">replace</span><span class="p">({</span>
+    <span class="s2">&quot;/index.html&quot;</span><span class="p">:</span> <span class="s2">&quot;A&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;/faq.html&quot;</span><span class="p">:</span> <span class="s2">&quot;B&quot;</span>
+<span class="p">})</span>
+
+<span class="c1"># === Urutkan berdasarkan IP dan waktu ===</span>
+<span class="n">filtered</span> <span class="o">=</span> <span class="n">filtered</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;remote_host&quot;</span><span class="p">,</span> <span class="s2">&quot;request_time&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># === Hitung selisih waktu antarakses (per IP) ===</span>
+<span class="n">filtered</span><span class="p">[</span><span class="s2">&quot;selisih_menit&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">filtered</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;remote_host&quot;</span><span class="p">)[</span><span class="s2">&quot;request_time&quot;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">dt</span><span class="o">.</span><span class="n">total_seconds</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">div</span><span class="p">(</span><span class="mi">60</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">round</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># === Buat kolom sesi per IP (gap ≥ 30 menit = sesi baru)</span>
+<span class="n">session_timeout</span> <span class="o">=</span> <span class="mi">30</span>  <span class="c1"># menit</span>
+<span class="n">filtered</span><span class="p">[</span><span class="s2">&quot;sesi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">filtered</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;remote_host&quot;</span><span class="p">)[</span><span class="s2">&quot;selisih_menit&quot;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="p">(</span><span class="n">x</span> <span class="o">&gt;</span> <span class="n">session_timeout</span><span class="p">)</span><span class="o">.</span><span class="n">cumsum</span><span class="p">()</span> <span class="o">+</span> <span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># === Pilih kolom utama dan tampilkan ===</span>
+<span class="n">final_table</span> <span class="o">=</span> <span class="n">filtered</span><span class="p">[[</span>
+    <span class="s2">&quot;remote_host&quot;</span><span class="p">,</span> <span class="s2">&quot;request_time&quot;</span><span class="p">,</span> <span class="s2">&quot;url&quot;</span><span class="p">,</span> <span class="s2">&quot;status&quot;</span><span class="p">,</span>
+    <span class="s2">&quot;size_of_response_(incl._headers)&quot;</span><span class="p">,</span> <span class="s2">&quot;selisih_menit&quot;</span><span class="p">,</span> <span class="s2">&quot;sesi&quot;</span>
+<span class="p">]]</span><span class="o">.</span><span class="n">rename</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">{</span><span class="s2">&quot;remote_host&quot;</span><span class="p">:</span> <span class="s2">&quot;ip&quot;</span><span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Semua data ditampilkan dengan pembagian sesi per 30 menit:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">final_table</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="c1"># === Simpan hasil ke file CSV ===</span>
+<span class="n">output_file</span> <span class="o">=</span> <span class="s2">&quot;sessionized_full_log_fixed.csv&quot;</span>
+<span class="n">final_table</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="n">output_file</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Semua data ditampilkan dengan pembagian sesi per 30 menit:
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-d920f798-30ce-4b36-b409-681817347738" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ip</th>
+      <th>request_time</th>
+      <th>url</th>
+      <th>status</th>
+      <th>size_of_response_(incl._headers)</th>
+      <th>selisih_menit</th>
+      <th>sesi</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>109.192.104.209</td>
+      <td>2009-10-18 18:27:27+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>19395</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>109.192.104.86</td>
+      <td>2009-10-18 18:27:27+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>99209</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>109.192.109.233</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>757</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>109.192.111.243</td>
+      <td>2009-10-18 20:59:37+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>10937</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>109.192.117.151</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>285</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>109.192.121.165</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>205</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>109.192.135.2</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>1127</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>109.192.138.239</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>20926</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>109.192.143.138</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>304620</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>109.192.147.1</td>
+      <td>2009-10-18 20:58:44+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>17723</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>109.192.156.94</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>95350</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>109.192.159.149</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>14002</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>109.192.163.11</td>
+      <td>2009-10-18 20:58:45+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>48734</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>109.192.167.241</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>26887</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>109.192.17.160</td>
+      <td>2009-10-18 20:58:45+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>187</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>109.192.173.8</td>
+      <td>2009-10-18 20:58:33+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>304620</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>109.192.174.205</td>
+      <td>2009-10-18 20:58:32+00:00</td>
+      <td>B</td>
+      <td>200</td>
+      <td>24865</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>109.192.177.231</td>
+      <td>2009-10-18 20:58:34+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>251</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>109.192.185.107</td>
+      <td>2009-10-18 18:26:27+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>788</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>109.192.185.202</td>
+      <td>2009-10-18 20:58:45+00:00</td>
+      <td>A</td>
+      <td>200</td>
+      <td>10937</td>
+      <td>0.0</td>
+      <td>1</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-d920f798-30ce-4b36-b409-681817347738')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-d920f798-30ce-4b36-b409-681817347738 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-d920f798-30ce-4b36-b409-681817347738');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-cb5cdd31-ee53-48d1-804b-e35ca80742a5">
+      <button class="colab-df-quickchart" onclick="quickchart('df-cb5cdd31-ee53-48d1-804b-e35ca80742a5')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-cb5cdd31-ee53-48d1-804b-e35ca80742a5 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Pastikan final_table sudah berisi ip, request_time, url, selisih_menit</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">final_table</span><span class="o">.</span><span class="n">copy</span><span class="p">()</span>
+
+<span class="c1"># === Tentukan batas sesi (30 menit) ===</span>
+<span class="n">session_timeout</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Timedelta</span><span class="p">(</span><span class="n">minutes</span><span class="o">=</span><span class="mi">30</span><span class="p">)</span>
+
+<span class="c1"># === Urutkan berdasarkan IP dan waktu ===</span>
+<span class="n">df2</span> <span class="o">=</span> <span class="n">df2</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;ip&quot;</span><span class="p">,</span> <span class="s2">&quot;request_time&quot;</span><span class="p">])</span><span class="o">.</span><span class="n">reset_index</span><span class="p">(</span><span class="n">drop</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+
+<span class="c1"># === Buat kolom sesi berdasarkan gap waktu antar akses per IP ===</span>
+<span class="n">df2</span><span class="p">[</span><span class="s2">&quot;sesi&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s2">&quot;ip&quot;</span><span class="p">)[</span><span class="s2">&quot;request_time&quot;</span><span class="p">]</span>
+    <span class="o">.</span><span class="n">diff</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">gt</span><span class="p">(</span><span class="n">session_timeout</span><span class="p">)</span>
+    <span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s2">&quot;ip&quot;</span><span class="p">])</span>
+    <span class="o">.</span><span class="n">cumsum</span><span class="p">()</span>
+    <span class="o">.</span><span class="n">add</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="p">)</span>
+
+<span class="c1"># === Tandai halaman A dan B dalam setiap sesi ===</span>
+<span class="n">df2</span><span class="p">[</span><span class="s2">&quot;A&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;A&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+<span class="n">df2</span><span class="p">[</span><span class="s2">&quot;B&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df2</span><span class="p">[</span><span class="s2">&quot;url&quot;</span><span class="p">]</span> <span class="o">==</span> <span class="s2">&quot;B&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">int</span><span class="p">)</span>
+
+<span class="c1"># === Rekap per IP dan sesi (gabungkan kunjungan dalam satu periode)</span>
+<span class="n">result</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">df2</span><span class="o">.</span><span class="n">groupby</span><span class="p">([</span><span class="s2">&quot;ip&quot;</span><span class="p">,</span> <span class="s2">&quot;sesi&quot;</span><span class="p">],</span> <span class="n">as_index</span><span class="o">=</span><span class="kc">False</span><span class="p">)[[</span><span class="s2">&quot;A&quot;</span><span class="p">,</span> <span class="s2">&quot;B&quot;</span><span class="p">]]</span>
+    <span class="o">.</span><span class="n">max</span><span class="p">()</span>  <span class="c1"># jika pernah ke A atau B dalam sesi tersebut = 1</span>
+<span class="p">)</span>
+
+<span class="c1"># === Hapus kolom sesi agar tampil seperti log ringkas ===</span>
+<span class="n">result</span> <span class="o">=</span> <span class="n">result</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">columns</span><span class="o">=</span><span class="p">[</span><span class="s2">&quot;sesi&quot;</span><span class="p">])</span>
+
+<span class="c1"># === Tampilkan hasil akhir ===</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Ringkasan kunjungan per IP (setiap gap ≥ 30 menit buat baris baru):&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">))</span>
+
+<span class="c1"># === Simpan ke CSV ===</span>
+<span class="n">result</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s2">&quot;ip_page_session_30min.csv&quot;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Ringkasan kunjungan per IP (setiap gap ≥ 30 menit buat baris baru):
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-c6d1bef5-ce5f-4240-8c5d-0c6ad3cb968b" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ip</th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>109.192.104.209</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>109.192.104.86</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>109.192.109.233</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>109.192.111.243</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>109.192.117.151</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>109.192.121.165</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>109.192.135.2</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>109.192.138.239</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>109.192.143.138</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>109.192.147.1</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>109.192.156.94</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>109.192.159.149</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>109.192.163.11</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>109.192.167.241</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>109.192.17.160</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>109.192.173.8</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>109.192.174.205</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>109.192.177.231</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>109.192.185.107</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>109.192.185.202</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-c6d1bef5-ce5f-4240-8c5d-0c6ad3cb968b')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-c6d1bef5-ce5f-4240-8c5d-0c6ad3cb968b button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-c6d1bef5-ce5f-4240-8c5d-0c6ad3cb968b');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-77744fca-f74c-4746-b603-13f40ea3e335">
+      <button class="colab-df-quickchart" onclick="quickchart('df-77744fca-f74c-4746-b603-13f40ea3e335')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-77744fca-f74c-4746-b603-13f40ea3e335 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+<section id="mencari-ip-yang-sering-muncul-lebih-dari-sekali">
+<h2><strong>5. Mencari IP yang sering muncul lebih dari sekali</strong><a class="headerlink" href="#mencari-ip-yang-sering-muncul-lebih-dari-sekali" title="Link to this heading">#</a></h2>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># === Periksa IP yang muncul lebih dari satu kali ===</span>
+<span class="n">ip_counts</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="s2">&quot;ip&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">value_counts</span><span class="p">()</span>
+
+<span class="c1"># Ambil hanya IP yang duplikat (muncul &gt; 1 kali)</span>
+<span class="n">dupe_ips</span> <span class="o">=</span> <span class="n">ip_counts</span><span class="p">[</span><span class="n">ip_counts</span> <span class="o">&gt;</span> <span class="mi">1</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah IP duplikat: </span><span class="si">{</span><span class="nb">len</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dupe_ips</span><span class="p">)</span>
+
+<span class="c1"># === Tampilkan baris lengkap dari IP yang duplikat ===</span>
+<span class="n">dupe_rows</span> <span class="o">=</span> <span class="n">result</span><span class="p">[</span><span class="n">result</span><span class="p">[</span><span class="s2">&quot;ip&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">isin</span><span class="p">(</span><span class="n">dupe_ips</span><span class="o">.</span><span class="n">index</span><span class="p">)]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Data lengkap untuk IP yang duplikat:&quot;</span><span class="p">)</span>
+<span class="n">display</span><span class="p">(</span><span class="n">dupe_rows</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah IP duplikat: 734
+</pre></div>
+</div>
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>count</th>
+    </tr>
+    <tr>
+      <th>ip</th>
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>65.55.157.143</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.99.24</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>66.249.60.199</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>65.55.251.19</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>65.55.163.84</th>
+      <td>3</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>66.249.33.148</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>65.55.2.41</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>66.249.206.235</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>66.249.42.60</th>
+      <td>2</td>
+    </tr>
+    <tr>
+      <th>91.121.71.39</th>
+      <td>2</td>
+    </tr>
+  </tbody>
+</table>
+<p>734 rows × 1 columns</p>
+</div><br><label><b>dtype:</b> int64</label></div><div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Data lengkap untuk IP yang duplikat:
+</pre></div>
+</div>
+<div class="output text_html">
+  <div id="df-39c51498-204e-4896-9ae6-a7186461e389" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>ip</th>
+      <th>A</th>
+      <th>B</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>3323</th>
+      <td>129.132.208.145</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>3324</th>
+      <td>129.132.208.145</td>
+      <td>0</td>
+      <td>1</td>
+    </tr>
+    <tr>
+      <th>5996</th>
+      <td>134.214.87.164</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>5997</th>
+      <td>134.214.87.164</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>6136</th>
+      <td>134.226.139.239</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>72428</th>
+      <td>91.23.240.235</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>72522</th>
+      <td>91.23.26.33</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>72523</th>
+      <td>91.23.26.33</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>72683</th>
+      <td>91.23.52.142</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+    <tr>
+      <th>72684</th>
+      <td>91.23.52.142</td>
+      <td>1</td>
+      <td>0</td>
+    </tr>
+  </tbody>
+</table>
+<p>1485 rows × 3 columns</p>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-39c51498-204e-4896-9ae6-a7186461e389')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-39c51498-204e-4896-9ae6-a7186461e389 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-39c51498-204e-4896-9ae6-a7186461e389');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-d076b9c8-23df-42df-84f4-5395c63c9454">
+      <button class="colab-df-quickchart" onclick="quickchart('df-d076b9c8-23df-42df-84f4-5395c63c9454')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-d076b9c8-23df-42df-84f4-5395c63c9454 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+  <div id="id_4de2365d-3e47-4e2d-941e-5197ac7a5603">
+    <style>
+      .colab-df-generate {
+        background-color: #E8F0FE;
+        border: none;
+        border-radius: 50%;
+        cursor: pointer;
+        display: none;
+        fill: #1967D2;
+        height: 32px;
+        padding: 0 0 0 0;
+        width: 32px;
+      }
+
+      .colab-df-generate:hover {
+        background-color: #E2EBFA;
+        box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+        fill: #174EA6;
+      }
+
+      [theme=dark] .colab-df-generate {
+        background-color: #3B4455;
+        fill: #D2E3FC;
+      }
+
+      [theme=dark] .colab-df-generate:hover {
+        background-color: #434B5C;
+        box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+        filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+        fill: #FFFFFF;
+      }
+    </style>
+    <button class="colab-df-generate" onclick="generateWithVariable('dupe_rows')"
+            title="Generate code using this dataframe."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+       width="24px">
+    <path d="M7,19H8.4L18.45,9,17,7.55,7,17.6ZM5,21V16.75L18.45,3.32a2,2,0,0,1,2.83,0l1.4,1.43a1.91,1.91,0,0,1,.58,1.4,1.91,1.91,0,0,1-.58,1.4L9.25,21ZM18.45,9,17,7.55Zm-12,3A5.31,5.31,0,0,0,4.9,8.1,5.31,5.31,0,0,0,1,6.5,5.31,5.31,0,0,0,4.9,4.9,5.31,5.31,0,0,0,6.5,1,5.31,5.31,0,0,0,8.1,4.9,5.31,5.31,0,0,0,12,6.5,5.46,5.46,0,0,0,6.5,12Z"/>
+  </svg>
+    </button>
+    <script>
+      (() => {
+      const buttonEl =
+        document.querySelector('#id_4de2365d-3e47-4e2d-941e-5197ac7a5603 button.colab-df-generate');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      buttonEl.onclick = () => {
+        google.colab.notebook.generateWithVariable('dupe_rows');
+      }
+      })();
+    </script>
+  </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="WebGoogle_10txt.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>WebGoogle-10txt</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="NASA.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Data Nasa</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#normalisasi-nama-kolom-agar-mudah-diakses"><strong>1. Normalisasi nama kolom agar mudah diakses</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#filter"><strong>2. Filter</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#cek-duplikasi"><strong>3. Cek Duplikasi</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#data-lengkap-yang-mengandung-duplikasi"><strong>4. Data lengkap yang mengandung duplikasi</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#mencari-ip-yang-sering-muncul-lebih-dari-sekali"><strong>5. Mencari IP yang sering muncul lebih dari sekali</strong></a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

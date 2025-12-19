@@ -1,0 +1,1098 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Crawling Data X &#8212; Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/CrawlDataX';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Word Graph Paper:svm" href="word_graph_svm.html" />
+    <link rel="prev" title="Facebook" href="facebook_ppw.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambangan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambangan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><strong>Tugas</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="WebMining.html"><strong>Web Mining</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html"><strong>Crawling Penambangan Web</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA-Berita.html"><strong>Crawling PTA, Berita, dan Link Page Output</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA_Manajemen.html"><strong>Crawling PTA Prodi Manajemen Abstrak Id.</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="ektraksi_LDA.html"><strong>Klasifikasi dengan ektraksi fitur menggunakan  Latent Dirichlet Allocation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Klasifikasi.html"><strong>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Clustering.html"><strong>Clustering Data Email</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="WebGoogle_10txt.html"><strong>WebGoogle-10txt</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="WebUsage.html"><strong>Web Usage</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NASA.html"><strong>Data Nasa</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nasa2.html"><strong>Data Nasa New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebusageNew.html"><strong>Web Usage New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="facebook_ppw.html"><strong>Facebook</strong></a></li>
+
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Crawling Data X</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_graph_svm.html"><strong>Word Graph Paper:svm</strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../UAS_PPW_FINAL.html"><strong>Word Graph - UAS</strong></a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter/issues/new?title=Issue%20on%20page%20%2Ftugass/CrawlDataX.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/CrawlDataX.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Crawling Data X</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="crawling-data-x">
+<h1><strong>Crawling Data X</strong><a class="headerlink" href="#crawling-data-x" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#@title Twitter Auth Token</span>
+
+<span class="n">twitter_auth_token</span> <span class="o">=</span> <span class="s1">&#39;963ab8acd52425ac0a41fb296d7f04bc1f68b521&#39;</span> <span class="c1"># change this auth token</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Import required Python package</span>
+<span class="o">!</span>pip<span class="w"> </span>install<span class="w"> </span>pandas
+
+<span class="c1"># Install Node.js (because tweet-harvest built using Node.js)</span>
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>ca-certificates<span class="w"> </span>curl<span class="w"> </span>gnupg
+<span class="o">!</span>sudo<span class="w"> </span>mkdir<span class="w"> </span>-p<span class="w"> </span>/etc/apt/keyrings
+<span class="o">!</span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://deb.nodesource.com/gpgkey/nodesource-repo.gpg.key<span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>gpg<span class="w"> </span>--dearmor<span class="w"> </span>-o<span class="w"> </span>/etc/apt/keyrings/nodesource.gpg
+
+<span class="o">!</span><span class="nv">NODE_MAJOR</span><span class="o">=</span><span class="m">20</span><span class="w"> </span><span class="o">&amp;&amp;</span><span class="w"> </span><span class="nb">echo</span><span class="w"> </span><span class="s2">&quot;deb [signed-by=/etc/apt/keyrings/nodesource.gpg] https://deb.nodesource.com/node_</span><span class="nv">$NODE_MAJOR</span><span class="s2">.x nodistro main&quot;</span><span class="w"> </span><span class="p">|</span><span class="w"> </span>sudo<span class="w"> </span>tee<span class="w"> </span>/etc/apt/sources.list.d/nodesource.list
+
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>update
+<span class="o">!</span>sudo<span class="w"> </span>apt-get<span class="w"> </span>install<span class="w"> </span>nodejs<span class="w"> </span>-y
+
+<span class="o">!</span>node<span class="w"> </span>-v
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Defaulting to user installation because normal site-packages is not writeable
+Requirement already satisfied: pandas in c:\programdata\anaconda3\lib\site-packages (1.4.4)
+Requirement already satisfied: pytz&gt;=2020.1 in c:\programdata\anaconda3\lib\site-packages (from pandas) (2022.1)
+Requirement already satisfied: python-dateutil&gt;=2.8.1 in c:\programdata\anaconda3\lib\site-packages (from pandas) (2.8.2)
+Requirement already satisfied: numpy&gt;=1.18.5 in c:\programdata\anaconda3\lib\site-packages (from pandas) (1.21.5)
+Requirement already satisfied: six&gt;=1.5 in c:\programdata\anaconda3\lib\site-packages (from python-dateutil&gt;=2.8.1-&gt;pandas) (1.16.0)
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+&#39;NODE_MAJOR&#39; is not recognized as an internal or external command,
+operable program or batch file.
+&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+&#39;sudo&#39; is not recognized as an internal or external command,
+operable program or batch file.
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>v22.11.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="o">!</span>npx<span class="w"> </span>playwright<span class="w"> </span>install
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>npm warn deprecated inflight@1.0.6: This module is not supported, and leaks memory. Do not use it. Check out lru-cache if you want a good and tested way to coalesce async requests by a key value, which is much more comprehensive and powerful.
+npm warn deprecated rimraf@3.0.2: Rimraf versions prior to v4 are no longer supported
+npm warn deprecated glob@7.2.3: Glob versions prior to v9 are no longer supported
+[v2.6.1] TimeoutError: page.goto: Timeout 60000ms exceeded.
+Call log:
+<span class=" -Color -Color-Faint">  - navigating to &quot;https://x.com/search-advanced?f=live&quot;, waiting until &quot;load&quot;</span>
+
+npm notice
+npm notice New major version of npm available! 10.9.0 -&gt; 11.6.4
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v11.6.4
+npm notice To update run: npm install -g npm@11.6.4
+npm notice
+</pre></div>
+</div>
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tweet Harvest [v2.6.1]
+
+Research by Helmi Satria
+Use it for Educational Purposes only!
+
+This script uses Chromium Browser to crawl data from Twitter with your Twitter auth token.
+Please enter your Twitter auth token when prompted.
+
+Note: Keep your access token secret! Don&#39;t share it with anyone else.
+Note: This script only runs on your local device.
+
+
+Opening twitter search page...
+
+Keywords: banjir
+Twitter Harvest v 2.6.1
+
+If you need help, please send this error screenshot to the maintainer, it was saved to &quot;c:\Users\Asus X441U\Downloads\tweets-data\Error-04-12-2025_11-35-08.png&quot;
+Downloading Firefox 144.0.2 (playwright build v1497)<span class=" -Color -Color-Faint"> from https://cdn.playwright.dev/dbazure/download/playwright/builds/firefox/1497/firefox-win64.zip</span>
+|                                                                                |   0% of 107.1 MiB
+|■■■■■■■■                                                                        |  10% of 107.1 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 107.1 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 107.1 MiB
+Firefox 144.0.2 (playwright build v1497) downloaded to C:\Users\Asus X441U\AppData\Local\ms-playwright\firefox-1497
+Downloading Webkit 26.0 (playwright build v2227)<span class=" -Color -Color-Faint"> from https://cdn.playwright.dev/dbazure/download/playwright/builds/webkit/2227/webkit-win64.zip</span>
+|                                                                                |   0% of 58.2 MiB
+|■■■■■■■■                                                                        |  10% of 58.2 MiB
+|■■■■■■■■■■■■■■■■                                                                |  20% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■                                                        |  30% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                                |  40% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                        |  50% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                                |  60% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                        |  70% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■                |  80% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■        |  90% of 58.2 MiB
+|■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■■| 100% of 58.2 MiB
+Webkit 26.0 (playwright build v2227) downloaded to C:\Users\Asus X441U\AppData\Local\ms-playwright\webkit-2227
+</pre></div>
+</div>
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>npm warn exec The following package was not found and will be installed: playwright@1.57.0
+╔═══════════════════════════════════════════════════════════════════════════════╗
+║ WARNING: It looks like you are running &#39;npx playwright install&#39; without first ║
+║ installing your project&#39;s dependencies.                                       ║
+║                                                                               ║
+║ To avoid unexpected behavior, please install your dependencies first, and     ║
+║ then run Playwright&#39;s install command:                                        ║
+║                                                                               ║
+║     npm install                                                               ║
+║     npx playwright install                                                    ║
+║                                                                               ║
+║ If your project does not yet depend on Playwright, first install the          ║
+║ applicable npm package (most commonly @playwright/test), and                  ║
+║ then run Playwright&#39;s install command to download the browsers:               ║
+║                                                                               ║
+║     npm install @playwright/test                                              ║
+║     npx playwright install                                                    ║
+║                                                                               ║
+╚═══════════════════════════════════════════════════════════════════════════════╝
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Crawl Data</span>
+
+<span class="n">filename</span> <span class="o">=</span> <span class="s1">&#39;banjir.csv&#39;</span>
+<span class="n">search_keyword</span> <span class="o">=</span> <span class="s1">&#39;banjir&#39;</span>
+<span class="n">limit</span> <span class="o">=</span> <span class="mi">500</span>
+
+<span class="o">!</span>npx<span class="w"> </span>-y<span class="w"> </span>tweet-harvest@2.6.1<span class="w"> </span>-o<span class="w"> </span><span class="s2">&quot;{filename}&quot;</span><span class="w"> </span>-s<span class="w"> </span><span class="s2">&quot;{search_keyword}&quot;</span><span class="w"> </span>--tab<span class="w"> </span><span class="s2">&quot;LATEST&quot;</span><span class="w"> </span>-l<span class="w"> </span><span class="o">{</span>limit<span class="o">}</span><span class="w"> </span>--token<span class="w"> </span><span class="o">{</span>twitter_auth_token<span class="o">}</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Tweet Harvest [v2.6.1]
+
+Research by Helmi Satria
+Use it for Educational Purposes only!
+
+This script uses Chromium Browser to crawl data from Twitter with your Twitter auth token.
+Please enter your Twitter auth token when prompted.
+
+Note: Keep your access token secret! Don&#39;t share it with anyone else.
+Note: This script only runs on your local device.
+
+
+Opening twitter search page...
+
+
+-- Scrolling... (1) (2)
+Filling in keywords: banjir
+
+ (3) (4) (5)
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 20
+
+-- Scrolling... (1) (2) (3)
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 40
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 60
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 80
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 100
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 120
+
+--Taking a break, waiting for 10 seconds...
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 140
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 160
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 180
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 200
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 218
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 238
+
+--Taking a break, waiting for 10 seconds...
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 258
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 278
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 298
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 317
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 337
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 355
+
+--Taking a break, waiting for 10 seconds...
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 375
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 395
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 415
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 435
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 455
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 475
+
+--Taking a break, waiting for 10 seconds...
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 495
+
+
+Your tweets saved to: c:\Users\Asus X441U\Downloads\tweets-data\banjir.csv
+Total tweets saved: 515
+Got 515 tweets, done scrolling...
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+
+<span class="c1"># Specify the path to your CSV file</span>
+<span class="n">file_path</span> <span class="o">=</span> <span class="sa">f</span><span class="s2">&quot;tweets-data/</span><span class="si">{</span><span class="n">filename</span><span class="si">}</span><span class="s2">&quot;</span>
+
+<span class="c1"># Read the CSV file into a pandas DataFrame</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">file_path</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s2">&quot;,&quot;</span><span class="p">)</span>
+
+<span class="c1"># Display the DataFrame</span>
+<span class="n">display</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html"><div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>conversation_id_str</th>
+      <th>created_at</th>
+      <th>favorite_count</th>
+      <th>full_text</th>
+      <th>id_str</th>
+      <th>image_url</th>
+      <th>in_reply_to_screen_name</th>
+      <th>lang</th>
+      <th>location</th>
+      <th>quote_count</th>
+      <th>reply_count</th>
+      <th>retweet_count</th>
+      <th>tweet_url</th>
+      <th>user_id_str</th>
+      <th>username</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1996438613869863403</td>
+      <td>Thu Dec 04 04:37:12 +0000 2025</td>
+      <td>0</td>
+      <td>Puan Terima Kunjungan Ketua MPR Tiongkok Singg...</td>
+      <td>1996438613869863403</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199643861386986...</td>
+      <td>798478258119405568</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>1996368741286989999</td>
+      <td>Thu Dec 04 04:36:54 +0000 2025</td>
+      <td>0</td>
+      <td>@KangManto123 temanku 9 hari terdampar krisis ...</td>
+      <td>1996438539014418892</td>
+      <td>NaN</td>
+      <td>KangManto123</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199643853901441...</td>
+      <td>1890072002683400192</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>1996438505292242979</td>
+      <td>Thu Dec 04 04:36:48 +0000 2025</td>
+      <td>0</td>
+      <td>terkait dampak banjir dan kelangkaan bbm https...</td>
+      <td>1996438514498756733</td>
+      <td>NaN</td>
+      <td>Humaspolsekbi11</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199643851449875...</td>
+      <td>1521675436740452353</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>1996438491916611888</td>
+      <td>Thu Dec 04 04:36:43 +0000 2025</td>
+      <td>0</td>
+      <td>lu ngapain mbak. bersihin banjir ga kayak gitu...</td>
+      <td>1996438491916611888</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199643849191661...</td>
+      <td>76302079</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>1996438478528115062</td>
+      <td>Thu Dec 04 04:36:39 +0000 2025</td>
+      <td>0</td>
+      <td>Penyaluran bantuan dan perbaikan infrastruktur...</td>
+      <td>1996438478528115062</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199643847852811...</td>
+      <td>255866913</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>...</th>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+      <td>...</td>
+    </tr>
+    <tr>
+      <th>510</th>
+      <td>1996199110945477063</td>
+      <td>Thu Dec 04 03:23:23 +0000 2025</td>
+      <td>0</td>
+      <td>@SinFourth__ Orang Tamiang udah ditahap minum ...</td>
+      <td>1996420037507527041</td>
+      <td>NaN</td>
+      <td>yinyuujun</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199642003750752...</td>
+      <td>1411243121799667713</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>511</th>
+      <td>1996420030196838496</td>
+      <td>Thu Dec 04 03:23:21 +0000 2025</td>
+      <td>0</td>
+      <td>pagi-malem cuman nangisin yang terdampak korba...</td>
+      <td>1996420030196838496</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199642003019683...</td>
+      <td>1976510426272890880</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>512</th>
+      <td>1996420006364770546</td>
+      <td>Thu Dec 04 03:23:15 +0000 2025</td>
+      <td>31</td>
+      <td>Turut berduka atas peristiwa banjir besar di A...</td>
+      <td>1996420006364770546</td>
+      <td>NaN</td>
+      <td>NaN</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>1</td>
+      <td>19</td>
+      <td>https://x.com/undefined/status/199642000636477...</td>
+      <td>43074696</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>513</th>
+      <td>1996193410957643801</td>
+      <td>Thu Dec 04 03:23:14 +0000 2025</td>
+      <td>0</td>
+      <td>@GuitarsCute @czxtrem @Uzzzzz222 padahal di ja...</td>
+      <td>1996419999096074551</td>
+      <td>NaN</td>
+      <td>GuitarsCute</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199641999909607...</td>
+      <td>1243775622536544257</td>
+      <td>NaN</td>
+    </tr>
+    <tr>
+      <th>514</th>
+      <td>1996384004145287260</td>
+      <td>Thu Dec 04 03:22:53 +0000 2025</td>
+      <td>0</td>
+      <td>@ch_chotimah2 @Uki23 @psi_id Banjir di Sumater...</td>
+      <td>1996419911099482401</td>
+      <td>NaN</td>
+      <td>ch_chotimah2</td>
+      <td>in</td>
+      <td>NaN</td>
+      <td>0</td>
+      <td>0</td>
+      <td>0</td>
+      <td>https://x.com/undefined/status/199641991109948...</td>
+      <td>2352745627</td>
+      <td>NaN</td>
+    </tr>
+  </tbody>
+</table>
+<p>515 rows × 15 columns</p>
+</div></div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Cek jumlah data yang didapatkan</span>
+
+<span class="n">num_tweets</span> <span class="o">=</span> <span class="nb">len</span><span class="p">(</span><span class="n">df</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Jumlah tweet dalam dataframe adalah </span><span class="si">{</span><span class="n">num_tweets</span><span class="si">}</span><span class="s2">.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah tweet dalam dataframe adalah 515.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="facebook_ppw.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Facebook</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="word_graph_svm.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Word Graph Paper:svm</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

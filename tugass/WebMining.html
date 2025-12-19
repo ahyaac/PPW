@@ -1,0 +1,676 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Web Mining &#8212; Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/WebMining';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Crawling Penambangan Web" href="CrawlingPPW.html" />
+    <link rel="prev" title="Tugas" href="index.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambangan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambangan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><strong>Tugas</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>Web Mining</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html"><strong>Crawling Penambangan Web</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA-Berita.html"><strong>Crawling PTA, Berita, dan Link Page Output</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA_Manajemen.html"><strong>Crawling PTA Prodi Manajemen Abstrak Id.</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="ektraksi_LDA.html"><strong>Klasifikasi dengan ektraksi fitur menggunakan  Latent Dirichlet Allocation</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Klasifikasi.html"><strong>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Clustering.html"><strong>Clustering Data Email</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="WebGoogle_10txt.html"><strong>WebGoogle-10txt</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="WebUsage.html"><strong>Web Usage</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NASA.html"><strong>Data Nasa</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nasa2.html"><strong>Data Nasa New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebusageNew.html"><strong>Web Usage New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="facebook_ppw.html"><strong>Facebook</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlDataX.html"><strong>Crawling Data X</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_graph_svm.html"><strong>Word Graph Paper:svm</strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../UAS_PPW_FINAL.html"><strong>Word Graph - UAS</strong></a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter/issues/new?title=Issue%20on%20page%20%2Ftugass/WebMining.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/WebMining.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Web Mining</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-web-mining">1. Pengertian Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-web-mining">2. Tujuan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macam-macam-web-mining">3. Macam-Macam Web Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-web-content-mining-wcm">A. Web Content Mining (WCM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-web-structure-mining-wsm">B. Web Structure Mining (WSM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-web-usage-mining-wum">C. Web Usage Mining (WUM)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daftar-pustaka">4. Daftar Pustaka</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="web-mining">
+<h1><strong>Web Mining</strong><a class="headerlink" href="#web-mining" title="Link to this heading">#</a></h1>
+<div style="text-align: justify">
+<section id="pengertian-web-mining">
+<h2>1. Pengertian Web Mining<a class="headerlink" href="#pengertian-web-mining" title="Link to this heading">#</a></h2>
+<p>Web mining adalah cara untuk mengambil informasi atau pola penting dari data yang ada di internet.<br />
+Data ini bisa berupa teks, gambar, video, audio, atau bahkan catatan bagaimana orang berinteraksi dengan situs web, misalnya halaman yang dikunjungi atau tombol yang diklik.</p>
+<p>Tujuan web mining adalah mengubah data mentah menjadi informasi yang berguna, seperti:</p>
+<ul class="simple">
+<li><p>Membantu bisnis memahami perilaku pengguna.</p></li>
+<li><p>Membuat keputusan yang lebih tepat.</p></li>
+<li><p>Meningkatkan strategi pemasaran.</p></li>
+</ul>
+<p>Web mining juga bisa membantu menemukan pola yang sulit dilihat langsung, misalnya tren yang sedang populer atau hubungan antara konten dan cara orang berinteraksi di situs web.</p>
+</section>
+<hr class="docutils" />
+<section id="tujuan-web-mining">
+<h2>2. Tujuan Web Mining<a class="headerlink" href="#tujuan-web-mining" title="Link to this heading">#</a></h2>
+<p>Tujuan utama dari web mining adalah untuk menghasilkan informasi yang berguna dari data web yang besar dan kompleks. Tujuan tersebut antara lain:</p>
+<ul class="simple">
+<li><p><strong>Memahami perilaku pengguna</strong><br />
+Mengetahui bagaimana orang menelusuri situs web, halaman yang paling sering dikunjungi, konten yang disukai, atau cara mereka berinteraksi.</p></li>
+<li><p><strong>Mendukung pengambilan keputusan berbasis data</strong><br />
+Memberikan data yang akurat agar perusahaan bisa membuat strategi pemasaran, promosi, pengembangan produk, atau layanan lebih tepat.</p></li>
+<li><p><strong>Personalisasi pengalaman pengguna</strong><br />
+Menyajikan konten atau rekomendasi produk sesuai dengan preferensi dan kebiasaan pengguna sebelumnya.</p></li>
+<li><p><strong>Mengoptimalkan desain dan navigasi situs web</strong><br />
+Membantu membuat situs lebih mudah digunakan dan lebih efisien.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="macam-macam-web-mining">
+<h2>3. Macam-Macam Web Mining<a class="headerlink" href="#macam-macam-web-mining" title="Link to this heading">#</a></h2>
+<section id="a-web-content-mining-wcm">
+<h3>A. Web Content Mining (WCM)<a class="headerlink" href="#a-web-content-mining-wcm" title="Link to this heading">#</a></h3>
+<p>Web Content Mining berfokus pada ekstraksi informasi dari isi halaman web, termasuk teks, gambar, video, dan audio.<br />
+Tujuannya adalah mencari informasi penting atau pola tersembunyi di konten web.</p>
+<p><strong>Contoh Penggunaan:</strong></p>
+<ul class="simple">
+<li><p>Analisis sentimen ulasan produk di situs e-commerce untuk mengetahui kepuasan pelanggan.</p></li>
+<li><p>Identifikasi topik trending di media sosial atau portal berita online.</p></li>
+<li><p>Mesin pencari menampilkan hasil yang relevan berdasarkan isi halaman.</p></li>
+</ul>
+<p><strong>Teknik yang Digunakan:</strong></p>
+<ul class="simple">
+<li><p><em>Text Mining</em>: menganalisis teks untuk menemukan kata kunci, frekuensi kata, dan pola penting.</p></li>
+<li><p><em>Natural Language Processing (NLP)</em>: memproses bahasa manusia untuk klasifikasi, ekstraksi informasi, atau analisis sentimen.</p></li>
+<li><p><em>Image &amp; Video Analysis</em>: mengambil informasi dari foto atau video, misalnya mengenali objek dalam foto produk.</p></li>
+<li><p><em>Web Scraping</em>: mengumpulkan data dari halaman web secara otomatis.</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="b-web-structure-mining-wsm">
+<h3>B. Web Structure Mining (WSM)<a class="headerlink" href="#b-web-structure-mining-wsm" title="Link to this heading">#</a></h3>
+<p>Web Structure Mining mempelajari struktur hyperlink antar halaman web.<br />
+Tujuannya adalah memahami struktur situs, halaman mana yang penting, dan bagaimana halaman saling terhubung.</p>
+<p><strong>Contoh Penggunaan:</strong></p>
+<ul class="simple">
+<li><p>Algoritma PageRank Google menentukan peringkat halaman web berdasarkan kualitas dan jumlah tautan yang masuk.</p></li>
+<li><p>Optimasi SEO dan pembuatan peta situs untuk navigasi yang lebih baik.</p></li>
+<li><p>Analisis jaringan antar situs untuk memahami hubungan antar halaman.</p></li>
+</ul>
+<p><strong>Teknik yang Digunakan:</strong></p>
+<ul>
+<li><p><em>Graph Theory (Teori Graf)</em>: halaman web direpresentasikan sebagai node, dan tautan menjadi edge.</p></li>
+<li><p><em>Link Analysis</em>: menilai pentingnya halaman berdasarkan jumlah dan kualitas tautan masuk dan keluar.</p></li>
+<li><p><em>Network Visualization Tools</em>: visualisasi hubungan antar halaman menggunakan software seperti Gephi atau Pajek.</p>
+<blockquote>
+<div><p>(Kosala &amp; Blockeel, 2000)</p>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="c-web-usage-mining-wum">
+<h3>C. Web Usage Mining (WUM)<a class="headerlink" href="#c-web-usage-mining-wum" title="Link to this heading">#</a></h3>
+<p>Web Usage Mining menganalisis data log dan interaksi pengguna di situs web untuk memahami perilaku dan preferensi pengguna.<br />
+Dengan informasi ini, perusahaan dapat menyesuaikan konten dan layanan yang ditawarkan kepada pengunjung.</p>
+<p><strong>Contoh Penggunaan:</strong></p>
+<ul class="simple">
+<li><p>Rekomendasi produk berdasarkan riwayat penelusuran dan pembelian pengguna.</p></li>
+<li><p>Personalisasi konten untuk meningkatkan keterlibatan pengguna.</p></li>
+<li><p>Analisis jalur navigasi untuk meningkatkan desain dan struktur situs web.</p></li>
+</ul>
+<p><strong>Teknik yang Digunakan:</strong></p>
+<ul class="simple">
+<li><p><em>Data Preprocessing</em>: membersihkan data log dari error, duplikasi, atau noise agar analisis lebih akurat.</p></li>
+<li><p><em>Clustering &amp; Classification</em>: mengelompokkan pengguna dengan perilaku serupa dan memprediksi kategori perilaku baru.</p></li>
+<li><p><em>Association Rule Mining</em>: menemukan hubungan antara item atau aktivitas yang sering terjadi bersamaan.</p></li>
+<li><p><em>Sequential Pattern Mining</em>: mengidentifikasi urutan perilaku umum pengguna.</p></li>
+<li><p><em>Web Analytics Tools</em>: mengumpulkan dan menganalisis data secara otomatis menggunakan software seperti Google Analytics atau Matomo.</p></li>
+</ul>
+</section>
+</section>
+<hr class="docutils" />
+<section id="daftar-pustaka">
+<h2>4. Daftar Pustaka<a class="headerlink" href="#daftar-pustaka" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p>J. Srivastava, P. Desikan, dan V. Kumar, “Web Mining — Concepts, Applications, and Research Directions,” Proc. 10th ACM SIGKDD Int. Conf. Knowl. Discov. Data Min., 2004. [Online].<br />
+<a class="reference external" href="https://dmr.cs.umn.edu/Papers/P2004_4.pdf">Tersedia di sini</a></p></li>
+<li><p>A. Herrouz, “Overview of Web Content Mining Tools,” <em>arXiv</em>, 2013. [Online].<br />
+<a class="reference external" href="https://arxiv.org/pdf/1307.1024">Tersedia di sini</a></p></li>
+<li><p>R. Kosala dan H. Blockeel, “Web Mining Research: A Survey,” <em>ACM SIGKDD Explor. Newsl.</em>, 2000. [Online].<br />
+<a class="reference external" href="https://dl">Tersedia di sini</a></p></li>
+</ul>
+</div>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="index.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Tugas</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="CrawlingPPW.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Crawling Penambangan Web</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#pengertian-web-mining">1. Pengertian Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#tujuan-web-mining">2. Tujuan Web Mining</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#macam-macam-web-mining">3. Macam-Macam Web Mining</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-web-content-mining-wcm">A. Web Content Mining (WCM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#b-web-structure-mining-wsm">B. Web Structure Mining (WSM)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#c-web-usage-mining-wum">C. Web Usage Mining (WUM)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#daftar-pustaka">4. Daftar Pustaka</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

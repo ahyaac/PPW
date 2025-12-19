@@ -1,0 +1,2281 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM &#8212; Penambangan Web</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.8ecb98da25f57f5357bf6f572d296f466b2cfe2517ffebfabe82451661e28f02.css?v=6644e6bb" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=f930bc37"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'tugass/UTS_PPW_Klasifikasi';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Clustering Data Email" href="UTS_PPW_Clustering.html" />
+    <link rel="prev" title="Klasifikasi dengan ektraksi fitur menggunakan Latent Dirichlet Allocation" href="ektraksi_LDA.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/AHYA.jpeg" class="logo__image only-light" alt="Penambangan Web - Home"/>
+    <script>document.write(`<img src="../_static/AHYA.jpeg" class="logo__image only-dark" alt="Penambangan Web - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Profile
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active has-children"><a class="reference internal" href="index.html"><strong>Tugas</strong></a><details open="open"><summary><span class="toctree-toggle" role="presentation"><i class="fa-solid fa-chevron-down"></i></span></summary><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="WebMining.html"><strong>Web Mining</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPPW.html"><strong>Crawling Penambangan Web</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA-Berita.html"><strong>Crawling PTA, Berita, dan Link Page Output</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlingPTA_Manajemen.html"><strong>Crawling PTA Prodi Manajemen Abstrak Id.</strong></a></li>
+
+
+<li class="toctree-l2"><a class="reference internal" href="ektraksi_LDA.html"><strong>Klasifikasi dengan ektraksi fitur menggunakan  Latent Dirichlet Allocation</strong></a></li>
+<li class="toctree-l2 current active"><a class="current reference internal" href="#"><strong>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="UTS_PPW_Clustering.html"><strong>Clustering Data Email</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="WebGoogle_10txt.html"><strong>WebGoogle-10txt</strong></a></li>
+
+
+
+
+
+
+
+
+
+
+<li class="toctree-l2"><a class="reference internal" href="WebUsage.html"><strong>Web Usage</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="NASA.html"><strong>Data Nasa</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="Nasa2.html"><strong>Data Nasa New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="WebusageNew.html"><strong>Web Usage New</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="facebook_ppw.html"><strong>Facebook</strong></a></li>
+
+<li class="toctree-l2"><a class="reference internal" href="CrawlDataX.html"><strong>Crawling Data X</strong></a></li>
+<li class="toctree-l2"><a class="reference internal" href="word_graph_svm.html"><strong>Word Graph Paper:svm</strong></a></li>
+</ul>
+</details></li>
+<li class="toctree-l1"><a class="reference internal" href="../UAS_PPW_FINAL.html"><strong>Word Graph - UAS</strong></a></li>
+
+
+
+
+
+
+
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/ahyaac/ppwjupyter/issues/new?title=Issue%20on%20page%20%2Ftugass/UTS_PPW_Klasifikasi.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/tugass/UTS_PPW_Klasifikasi.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="klasifikasi-berita-dengan-ekstraksi-fitur-model-topik-modelling-dengan-classifier-naive-bayes-dan-svm">
+<h1><strong>klasifikasi berita dengan ekstraksi fitur model topik modelling dengan classifier naïve bayes dan SVM</strong><a class="headerlink" href="#klasifikasi-berita-dengan-ekstraksi-fitur-model-topik-modelling-dengan-classifier-naive-bayes-dan-svm" title="Link to this heading">#</a></h1>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">gensim</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in /usr/local/lib/python3.12/dist-packages (4.3.3)
+Requirement already satisfied: numpy&lt;2.0,&gt;=1.18.5 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.26.4)
+Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.13.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.12/dist-packages (from gensim) (7.3.1)
+Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">gensim</span> <span class="n">matplotlib</span> <span class="n">seaborn</span> <span class="n">scikit</span><span class="o">-</span><span class="n">learn</span> <span class="n">pandas</span> <span class="n">numpy</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: gensim in /usr/local/lib/python3.12/dist-packages (4.3.3)
+Requirement already satisfied: matplotlib in /usr/local/lib/python3.12/dist-packages (3.10.0)
+Requirement already satisfied: seaborn in /usr/local/lib/python3.12/dist-packages (0.13.2)
+Requirement already satisfied: scikit-learn in /usr/local/lib/python3.12/dist-packages (1.6.1)
+Requirement already satisfied: pandas in /usr/local/lib/python3.12/dist-packages (2.2.2)
+Requirement already satisfied: numpy in /usr/local/lib/python3.12/dist-packages (1.26.4)
+Requirement already satisfied: scipy&lt;1.14.0,&gt;=1.7.0 in /usr/local/lib/python3.12/dist-packages (from gensim) (1.13.1)
+Requirement already satisfied: smart-open&gt;=1.8.1 in /usr/local/lib/python3.12/dist-packages (from gensim) (7.3.1)
+Requirement already satisfied: contourpy&gt;=1.0.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (1.3.3)
+Requirement already satisfied: cycler&gt;=0.10 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (0.12.1)
+Requirement already satisfied: fonttools&gt;=4.22.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (4.60.1)
+Requirement already satisfied: kiwisolver&gt;=1.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (1.4.9)
+Requirement already satisfied: packaging&gt;=20.0 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (25.0)
+Requirement already satisfied: pillow&gt;=8 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (11.3.0)
+Requirement already satisfied: pyparsing&gt;=2.3.1 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (3.2.5)
+Requirement already satisfied: python-dateutil&gt;=2.7 in /usr/local/lib/python3.12/dist-packages (from matplotlib) (2.9.0.post0)
+Requirement already satisfied: joblib&gt;=1.2.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn) (1.5.2)
+Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn) (3.6.0)
+Requirement already satisfied: pytz&gt;=2020.1 in /usr/local/lib/python3.12/dist-packages (from pandas) (2025.2)
+Requirement already satisfied: tzdata&gt;=2022.7 in /usr/local/lib/python3.12/dist-packages (from pandas) (2025.2)
+Requirement already satisfied: six&gt;=1.5 in /usr/local/lib/python3.12/dist-packages (from python-dateutil&gt;=2.7-&gt;matplotlib) (1.17.0)
+Requirement already satisfied: wrapt in /usr/local/lib/python3.12/dist-packages (from smart-open&gt;=1.8.1-&gt;gensim) (1.17.3)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">umap</span><span class="o">-</span><span class="n">learn</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Requirement already satisfied: umap-learn in /usr/local/lib/python3.12/dist-packages (0.5.9.post2)
+Requirement already satisfied: numpy&gt;=1.23 in /usr/local/lib/python3.12/dist-packages (from umap-learn) (1.26.4)
+Requirement already satisfied: scipy&gt;=1.3.1 in /usr/local/lib/python3.12/dist-packages (from umap-learn) (1.13.1)
+Requirement already satisfied: scikit-learn&gt;=1.6 in /usr/local/lib/python3.12/dist-packages (from umap-learn) (1.6.1)
+Requirement already satisfied: numba&gt;=0.51.2 in /usr/local/lib/python3.12/dist-packages (from umap-learn) (0.60.0)
+Requirement already satisfied: pynndescent&gt;=0.5 in /usr/local/lib/python3.12/dist-packages (from umap-learn) (0.5.13)
+Requirement already satisfied: tqdm in /usr/local/lib/python3.12/dist-packages (from umap-learn) (4.67.1)
+Requirement already satisfied: llvmlite&lt;0.44,&gt;=0.43.0dev0 in /usr/local/lib/python3.12/dist-packages (from numba&gt;=0.51.2-&gt;umap-learn) (0.43.0)
+Requirement already satisfied: joblib&gt;=0.11 in /usr/local/lib/python3.12/dist-packages (from pynndescent&gt;=0.5-&gt;umap-learn) (1.5.2)
+Requirement already satisfied: threadpoolctl&gt;=3.1.0 in /usr/local/lib/python3.12/dist-packages (from scikit-learn&gt;=1.6-&gt;umap-learn) (3.6.0)
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">import</span><span class="w"> </span><span class="nn">pandas</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">pd</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">numpy</span><span class="w"> </span><span class="k">as</span><span class="w"> </span><span class="nn">np</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">re</span>
+<span class="kn">import</span><span class="w"> </span><span class="nn">nltk</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">gensim</span><span class="w"> </span><span class="kn">import</span> <span class="n">corpora</span><span class="p">,</span> <span class="n">models</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.naive_bayes</span><span class="w"> </span><span class="kn">import</span> <span class="n">MultinomialNB</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.svm</span><span class="w"> </span><span class="kn">import</span> <span class="n">LinearSVC</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">sklearn.metrics</span><span class="w"> </span><span class="kn">import</span> <span class="n">accuracy_score</span><span class="p">,</span> <span class="n">classification_report</span>
+
+<span class="c1"># Download stopword bahasa Indonesia</span>
+<span class="n">nltk</span><span class="o">.</span><span class="n">download</span><span class="p">(</span><span class="s1">&#39;stopwords&#39;</span><span class="p">)</span>
+<span class="kn">from</span><span class="w"> </span><span class="nn">nltk.corpus</span><span class="w"> </span><span class="kn">import</span> <span class="n">stopwords</span>
+<span class="n">stop_words</span> <span class="o">=</span> <span class="n">stopwords</span><span class="o">.</span><span class="n">words</span><span class="p">(</span><span class="s1">&#39;indonesian&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stderr highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[nltk_data] Downloading package stopwords to /root/nltk_data...
+[nltk_data]   Package stopwords is already up-to-date!
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span><span class="w"> </span><span class="nn">google.colab</span><span class="w"> </span><span class="kn">import</span> <span class="n">drive</span>
+<span class="n">drive</span><span class="o">.</span><span class="n">mount</span><span class="p">(</span><span class="s1">&#39;/content/drive&#39;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Drive already mounted at /content/drive; to attempt to forcibly remount, call drive.mount(&quot;/content/drive&quot;, force_remount=True).
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Baca data</span>
+<span class="n">df_path</span> <span class="o">=</span> <span class="s2">&quot;/content/drive/MyDrive/PPW/UTS/Berita.csv&quot;</span>
+<span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="n">df_path</span><span class="p">)</span>
+
+<span class="c1"># Cek kolom</span>
+<span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">20</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-1024587b-a1a8-4281-bb98-c1129f8acd05" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>No</th>
+      <th>judul</th>
+      <th>berita</th>
+      <th>tanggal</th>
+      <th>kategori</th>
+      <th>link</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>Airlangga Harap Kenaikan UMP Tingkatkan Daya B...</td>
+      <td>Menteri Koordinator (Menko) Bidang Perekonomia...</td>
+      <td>Minggu, 01 Des 2024 23:40 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412012...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>2</td>
+      <td>PT SIER Beri Penghargaan untuk 50 Tenant Terba...</td>
+      <td>Dalam rangka memeriahkan hari jadi ke-50, PT S...</td>
+      <td>Minggu, 01 Des 2024 20:45 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412012...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>Prabowo Bakal Bentuk Kementerian Penerimaan Ne...</td>
+      <td>Wacana Presiden Prabowo Subianto akan membentu...</td>
+      <td>Minggu, 01 Des 2024 19:40 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>4</td>
+      <td>Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...</td>
+      <td>BPJS Ketenagakerjaan dan Kementerian Agama (Ke...</td>
+      <td>Minggu, 01 Des 2024 19:03 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>5</td>
+      <td>Pemerintah Segera Bentuk Satgas PHK Usai Tetap...</td>
+      <td>Pemerintah akan segera membentuk Satuan Tugas ...</td>
+      <td>Minggu, 01 Des 2024 19:00 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>5</th>
+      <td>6</td>
+      <td>AHY Buka-bukaan Nasib Kelanjutan Pembangunan I...</td>
+      <td>Menko Bidang Infrastruktur dan Pembangunan Kew...</td>
+      <td>Minggu, 01 Des 2024 18:20 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412011...</td>
+    </tr>
+    <tr>
+      <th>6</th>
+      <td>7</td>
+      <td>Badan Gizi Soal Biaya Makan Gratis Rp10 Ribu: ...</td>
+      <td>Kepala Badan Gizi Nasional Dadan Hindayana men...</td>
+      <td>Senin, 02 Des 2024 21:00 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412022...</td>
+    </tr>
+    <tr>
+      <th>7</th>
+      <td>8</td>
+      <td>Zulhas Minta Tambahan Anggaran Rp510 M Demi Ca...</td>
+      <td>Menteri Koordinator Bidang Pangan Zulkifli Has...</td>
+      <td>Senin, 02 Des 2024 20:45 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412021...</td>
+    </tr>
+    <tr>
+      <th>8</th>
+      <td>9</td>
+      <td>PLN Akan Uji Coba PLTS IKN 22 Desember</td>
+      <td>Uji coba alias commissioning pembangkit listri...</td>
+      <td>Senin, 02 Des 2024 20:20 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412021...</td>
+    </tr>
+    <tr>
+      <th>9</th>
+      <td>10</td>
+      <td>Profil Jhony Saputra, Anak Haji Isam yang Jadi...</td>
+      <td>Anak crazy rich pengusaha sawit Kalimantan Sam...</td>
+      <td>Senin, 02 Des 2024 20:00 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412021...</td>
+    </tr>
+    <tr>
+      <th>10</th>
+      <td>11</td>
+      <td>Kemendag Dorong UMKM Go Global Lewat Pekan Pen...</td>
+      <td>Menteri Perdagangan (Mendag) Budi Santoso seca...</td>
+      <td>Selasa, 03 Des 2024 22:05 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412032...</td>
+    </tr>
+    <tr>
+      <th>11</th>
+      <td>12</td>
+      <td>RDP Perdana, Komisi VI Beri Lampu Hijau Progra...</td>
+      <td>Dalam Rapat Dengar Pendapat (RDP) perdana bers...</td>
+      <td>Selasa, 03 Des 2024 22:02 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412032...</td>
+    </tr>
+    <tr>
+      <th>12</th>
+      <td>13</td>
+      <td>Mendag Pastikan Harga Bapok di Surabaya Stabil...</td>
+      <td>Menteri Perdagangan (Mendag) Budi Santoso mema...</td>
+      <td>Selasa, 03 Des 2024 21:56 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412032...</td>
+    </tr>
+    <tr>
+      <th>13</th>
+      <td>14</td>
+      <td>Investasi Pertamina Tembus Rp74 T per Oktober ...</td>
+      <td>PT Pertamina (Persero) mencatat realisasi inve...</td>
+      <td>Selasa, 03 Des 2024 21:00 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412031...</td>
+    </tr>
+    <tr>
+      <th>14</th>
+      <td>15</td>
+      <td>Dirut Bulog Jamin Stok Beras Aman Sampai Lewat...</td>
+      <td>Direktur Utama Perum Bulog Wahyu Suparyono men...</td>
+      <td>Rabu, 04 Des 2024 21:15 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412042...</td>
+    </tr>
+    <tr>
+      <th>15</th>
+      <td>16</td>
+      <td>Airlangga Nilai Ketegangan Politik di Korsel J...</td>
+      <td>Menteri Koordinator Bidang Perekonomian Airlan...</td>
+      <td>Rabu, 04 Des 2024 21:00 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412042...</td>
+    </tr>
+    <tr>
+      <th>16</th>
+      <td>17</td>
+      <td>Menaker Ancam Sanksi Pengusaha Bandel Tak Mau ...</td>
+      <td>Menteri Ketenagakerjaan (Menaker) Yassierli me...</td>
+      <td>Rabu, 04 Des 2024 20:37 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412042...</td>
+    </tr>
+    <tr>
+      <th>17</th>
+      <td>18</td>
+      <td>UMP 2025 Bisa Naik Lebih dari 6,5 Persen, Ini ...</td>
+      <td>Kementerian Ketenagakerjaan (Kemnaker) mengung...</td>
+      <td>Rabu, 04 Des 2024 20:15 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412041...</td>
+    </tr>
+    <tr>
+      <th>18</th>
+      <td>19</td>
+      <td>Menaker Ungkap Skema Jika Pengusaha Tak Sanggu...</td>
+      <td>Menteri Ketenagakerjaan (Menaker) Yassierli me...</td>
+      <td>Rabu, 04 Des 2024 19:59 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412041...</td>
+    </tr>
+    <tr>
+      <th>19</th>
+      <td>20</td>
+      <td>Gubernur Harus Tetapkan UMP 2025 Paling Lambat...</td>
+      <td>Menteri Ketenagakerjaan (Menaker) Yassierli me...</td>
+      <td>Rabu, 04 Des 2024 19:26 WIB</td>
+      <td>Ekonomi</td>
+      <td>https://www.cnnindonesia.com/ekonomi/202412041...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-1024587b-a1a8-4281-bb98-c1129f8acd05')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-1024587b-a1a8-4281-bb98-c1129f8acd05 button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-1024587b-a1a8-4281-bb98-c1129f8acd05');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-f3a5318f-1d15-4271-bacc-5fb1f9271c61">
+      <button class="colab-df-quickchart" onclick="quickchart('df-f3a5318f-1d15-4271-bacc-5fb1f9271c61')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-f3a5318f-1d15-4271-bacc-5fb1f9271c61 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;judul&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span> <span class="o">+</span> <span class="s2">&quot; &quot;</span> <span class="o">+</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;berita&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contoh teks gabungan:</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="mi">0</span><span class="p">])</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Contoh teks gabungan:
+
+Airlangga Harap Kenaikan UMP Tingkatkan Daya Beli Masyarakat Menengah Menteri Koordinator (Menko) Bidang Perekonomian Airlangga Hartarto berharap kenaikan upah minimum provinsi (UMP) sebesar 6,5 persen pada tahun 2025 bisa meningkatkan daya beli masyarakat kelas menengah.&quot;Oleh karena itu, sebagai start awal untuk menunjang daya beli mereka (masyarakat kelas menengah) maka kenaikan upah minimumnya didongkrak ke 6,5 persen,&quot; kata Airlangga di sela menghadiri Rapat Pimpinan Nasional (Rapimnas) Kadin 2024 di Jakarta, Minggu.Dia menyampaikan di tengah ketidakpastian global, pemerintah harus memperkuat struktur perekonomian dalam negeri. Salah satu struktur tersebut adalah kegiatan belanja kelompok masyarakat kelas menengah. Airlangga menuturkan kelompok masyarakat kelas menengah memiliki peran vital untuk mendorong komponen konsumsi. Konsumsi selama ini masih menjadi penopang terbesar pertumbuhan ekonomi nasional.Pemerintah Segera Bentuk Satgas PHK Usai Tetapkan UMP Naik 6,5 Persen &quot;Kita melihat di tengah ketidakpastian global yang harus kita lakukan adalah pendalaman struktur perekonomian di Indonesia menjaga daya beli, meningkatkan kelas menengah kita,&quot; ujarnya.Dia menyebutkan rata-rata pendapatan masyarakat Indonesia yaitu sebesar Rp2 juta sampai Rp9 juta.Sementara pengeluaran perbulannya juga mencapai Rp2 juta sampai Rp9 juta. Namun, kata Airlangga, saat ini pengeluaran warga kebanyakan di bawah Rp5 juta sebulan.&quot;Saat sekarang terbesar adalah pengeluaran di bawah Rp5 juta sebulan. Nah, itu yang mendasari Bapak Presiden (Prabowo Subianto) kemarin kita rapat untuk meningkatkan daya beli yang di sektor formal itu sebagian besar adalah pekerja di kalangan industri dan servis,&quot; tuturnya.Krena itu, untuk menunjang daya beli masyarakat kelas menengah, pemerintah menaikkan UMP 6,5 persen. Pemerintah ingin mempertahankan daya beli warga kelas menengah.&quot;Jadi tujuannya kita untuk mempertahankan daya beli dari pada kelas menengah kita yang tir atau desil di bawah 40 persen. Nah, ini penting untuk kita jaga karena pertumbuhan ekonomi kita ke depan, bahkan di kuartal ini tergantung dari pada daya beli kelas menengah,&quot; ucap Airlangga.&quot;Persoalannya daya beli yang kelas atas ini kadang-kadang kalau dia enggak dibeli barang ini desil 9 dan 10 dia belanja ke luar negeri. Maka kita betul-betul harus menjaga di kelas menengah ini,&quot; tambahnya.Apindo Merasa Tak Didengar Prabowo soal Kenaikan UMP 6,5 PersenSebelumnya, Presiden Prabowo Subianto mengumumkan kenaikan rata-rata UMP nasional sebesar 6,5 persen untuk tahun 2025. Hal ini berdasarkan hasil keputusan melalui rapat terbatas bersama pihak terkait pada Jumat (29/11) .&quot;Kita ambil keputusan untuk menaikkan rata-rata upah minimum nasional pada tahun 2025 sebesar 6,5 persen,&quot; kata Prabowo di Kantor Presiden, Kompleks Istana Kepresidenan, Jakarta.Presiden mengatakan kenaikan ini sedikit lebih tinggi dari usulan Menteri Ketenagakerjaan, Yassierli, yang sebelumnya merekomendasikan kenaikan sebesar 6 persen.Keputusan itu diambil setelah rapat terbatas yang membahas upah minimum sebagai jaring pengaman sosial bagi pekerja, terutama yang bekerja kurang dari 12 bulan. (tim/tsa) [Gambas:Video CNN]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Cleaning text</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">clean_text</span><span class="p">(</span><span class="n">text</span><span class="p">):</span>
+    <span class="c1"># ubah ke huruf kecil</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">text</span><span class="o">.</span><span class="n">lower</span><span class="p">()</span>
+    <span class="c1"># hilangkan karakter selain huruf</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;[^a-z\s]&#39;</span><span class="p">,</span> <span class="s1">&#39;&#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span>
+    <span class="c1"># hapus stopword</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="s1">&#39; &#39;</span><span class="o">.</span><span class="n">join</span><span class="p">([</span><span class="n">word</span> <span class="k">for</span> <span class="n">word</span> <span class="ow">in</span> <span class="n">text</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">if</span> <span class="n">word</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">stop_words</span><span class="p">])</span>
+    <span class="c1"># hapus spasi berlebih</span>
+    <span class="n">text</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">sub</span><span class="p">(</span><span class="sa">r</span><span class="s1">&#39;\s+&#39;</span><span class="p">,</span> <span class="s1">&#39; &#39;</span><span class="p">,</span> <span class="n">text</span><span class="p">)</span><span class="o">.</span><span class="n">strip</span><span class="p">()</span>
+    <span class="k">return</span> <span class="n">text</span>
+
+<span class="c1"># Terapkan fungsi ke kolom text</span>
+<span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_text&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;text&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">clean_text</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan hasil</span>
+<span class="n">df</span><span class="p">[[</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;clean_text&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_html">
+  <div id="df-f5bdcedf-d7c3-4171-8f88-1051a96a1dfd" class="colab-df-container">
+    <div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>judul</th>
+      <th>clean_text</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>Airlangga Harap Kenaikan UMP Tingkatkan Daya B...</td>
+      <td>airlangga harap kenaikan ump tingkatkan daya b...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>PT SIER Beri Penghargaan untuk 50 Tenant Terba...</td>
+      <td>pt sier penghargaan tenant terbaik hut rangka ...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>Prabowo Bakal Bentuk Kementerian Penerimaan Ne...</td>
+      <td>prabowo bentuk kementerian penerimaan negara d...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <div class="colab-df-buttons">
+
+  <div class="colab-df-container">
+    <button class="colab-df-convert" onclick="convertToInteractive('df-f5bdcedf-d7c3-4171-8f88-1051a96a1dfd')"
+            title="Convert this dataframe to an interactive table."
+            style="display:none;">
+
+  <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 -960 960 960">
+    <path d="M120-120v-720h720v720H120Zm60-500h600v-160H180v160Zm220 220h160v-160H400v160Zm0 220h160v-160H400v160ZM180-400h160v-160H180v160Zm440 0h160v-160H620v160ZM180-180h160v-160H180v160Zm440 0h160v-160H620v160Z"/>
+  </svg>
+    </button>
+
+  <style>
+    .colab-df-container {
+      display:flex;
+      gap: 12px;
+    }
+
+    .colab-df-convert {
+      background-color: #E8F0FE;
+      border: none;
+      border-radius: 50%;
+      cursor: pointer;
+      display: none;
+      fill: #1967D2;
+      height: 32px;
+      padding: 0 0 0 0;
+      width: 32px;
+    }
+
+    .colab-df-convert:hover {
+      background-color: #E2EBFA;
+      box-shadow: 0px 1px 2px rgba(60, 64, 67, 0.3), 0px 1px 3px 1px rgba(60, 64, 67, 0.15);
+      fill: #174EA6;
+    }
+
+    .colab-df-buttons div {
+      margin-bottom: 4px;
+    }
+
+    [theme=dark] .colab-df-convert {
+      background-color: #3B4455;
+      fill: #D2E3FC;
+    }
+
+    [theme=dark] .colab-df-convert:hover {
+      background-color: #434B5C;
+      box-shadow: 0px 1px 3px 1px rgba(0, 0, 0, 0.15);
+      filter: drop-shadow(0px 1px 2px rgba(0, 0, 0, 0.3));
+      fill: #FFFFFF;
+    }
+  </style>
+
+    <script>
+      const buttonEl =
+        document.querySelector('#df-f5bdcedf-d7c3-4171-8f88-1051a96a1dfd button.colab-df-convert');
+      buttonEl.style.display =
+        google.colab.kernel.accessAllowed ? 'block' : 'none';
+
+      async function convertToInteractive(key) {
+        const element = document.querySelector('#df-f5bdcedf-d7c3-4171-8f88-1051a96a1dfd');
+        const dataTable =
+          await google.colab.kernel.invokeFunction('convertToInteractive',
+                                                    [key], {});
+        if (!dataTable) return;
+
+        const docLinkHtml = 'Like what you see? Visit the ' +
+          '<a target="_blank" href=https://colab.research.google.com/notebooks/data_table.ipynb>data table notebook</a>'
+          + ' to learn more about interactive tables.';
+        element.innerHTML = '';
+        dataTable['output_type'] = 'display_data';
+        await google.colab.output.renderOutput(dataTable, element);
+        const docLink = document.createElement('div');
+        docLink.innerHTML = docLinkHtml;
+        element.appendChild(docLink);
+      }
+    </script>
+  </div>
+
+
+    <div id="df-44cc45ec-39e4-41f3-ae50-8cf276c0ed71">
+      <button class="colab-df-quickchart" onclick="quickchart('df-44cc45ec-39e4-41f3-ae50-8cf276c0ed71')"
+                title="Suggest charts"
+                style="display:none;">
+
+<svg xmlns="http://www.w3.org/2000/svg" height="24px"viewBox="0 0 24 24"
+     width="24px">
+    <g>
+        <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/>
+    </g>
+</svg>
+      </button>
+
+<style>
+  .colab-df-quickchart {
+      --bg-color: #E8F0FE;
+      --fill-color: #1967D2;
+      --hover-bg-color: #E2EBFA;
+      --hover-fill-color: #174EA6;
+      --disabled-fill-color: #AAA;
+      --disabled-bg-color: #DDD;
+  }
+
+  [theme=dark] .colab-df-quickchart {
+      --bg-color: #3B4455;
+      --fill-color: #D2E3FC;
+      --hover-bg-color: #434B5C;
+      --hover-fill-color: #FFFFFF;
+      --disabled-bg-color: #3B4455;
+      --disabled-fill-color: #666;
+  }
+
+  .colab-df-quickchart {
+    background-color: var(--bg-color);
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    display: none;
+    fill: var(--fill-color);
+    height: 32px;
+    padding: 0;
+    width: 32px;
+  }
+
+  .colab-df-quickchart:hover {
+    background-color: var(--hover-bg-color);
+    box-shadow: 0 1px 2px rgba(60, 64, 67, 0.3), 0 1px 3px 1px rgba(60, 64, 67, 0.15);
+    fill: var(--button-hover-fill-color);
+  }
+
+  .colab-df-quickchart-complete:disabled,
+  .colab-df-quickchart-complete:disabled:hover {
+    background-color: var(--disabled-bg-color);
+    fill: var(--disabled-fill-color);
+    box-shadow: none;
+  }
+
+  .colab-df-spinner {
+    border: 2px solid var(--fill-color);
+    border-color: transparent;
+    border-bottom-color: var(--fill-color);
+    animation:
+      spin 1s steps(1) infinite;
+  }
+
+  @keyframes spin {
+    0% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+      border-left-color: var(--fill-color);
+    }
+    20% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    30% {
+      border-color: transparent;
+      border-left-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+      border-right-color: var(--fill-color);
+    }
+    40% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-top-color: var(--fill-color);
+    }
+    60% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+    }
+    80% {
+      border-color: transparent;
+      border-right-color: var(--fill-color);
+      border-bottom-color: var(--fill-color);
+    }
+    90% {
+      border-color: transparent;
+      border-bottom-color: var(--fill-color);
+    }
+  }
+</style>
+
+      <script>
+        async function quickchart(key) {
+          const quickchartButtonEl =
+            document.querySelector('#' + key + ' button');
+          quickchartButtonEl.disabled = true;  // To prevent multiple clicks.
+          quickchartButtonEl.classList.add('colab-df-spinner');
+          try {
+            const charts = await google.colab.kernel.invokeFunction(
+                'suggestCharts', [key], {});
+          } catch (error) {
+            console.error('Error during call to suggestCharts:', error);
+          }
+          quickchartButtonEl.classList.remove('colab-df-spinner');
+          quickchartButtonEl.classList.add('colab-df-quickchart-complete');
+        }
+        (() => {
+          let quickchartButtonEl =
+            document.querySelector('#df-44cc45ec-39e4-41f3-ae50-8cf276c0ed71 button');
+          quickchartButtonEl.style.display =
+            google.colab.kernel.accessAllowed ? 'block' : 'none';
+        })();
+      </script>
+    </div>
+
+    </div>
+  </div>
+</div></div>
+</div>
+<p>Tokenisasi</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">texts</span> <span class="o">=</span> <span class="p">[</span><span class="n">row</span><span class="o">.</span><span class="n">split</span><span class="p">()</span> <span class="k">for</span> <span class="n">row</span> <span class="ow">in</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;clean_text&#39;</span><span class="p">]]</span>
+<span class="n">dictionary</span> <span class="o">=</span> <span class="n">corpora</span><span class="o">.</span><span class="n">Dictionary</span><span class="p">(</span><span class="n">texts</span><span class="p">)</span>
+<span class="n">corpus</span> <span class="o">=</span> <span class="p">[</span><span class="n">dictionary</span><span class="o">.</span><span class="n">doc2bow</span><span class="p">(</span><span class="n">text</span><span class="p">)</span> <span class="k">for</span> <span class="n">text</span> <span class="ow">in</span> <span class="n">texts</span><span class="p">]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Jumlah dokumen:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">corpus</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Kata unik dalam kamus:&quot;</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">dictionary</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Jumlah dokumen: 1500
+Kata unik dalam kamus: 37206
+</pre></div>
+</div>
+</div>
+</div>
+<p>Model LDA</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_topics</span> <span class="o">=</span> <span class="mi">120</span>  <span class="c1"># jumlah topik, bisa disesuaikan</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+<span class="c1"># Tampilkan daftar topik</span>
+<span class="k">for</span> <span class="n">idx</span><span class="p">,</span> <span class="n">topic</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">print_topics</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Topik </span><span class="si">{</span><span class="n">idx</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">:</span><span class="se">\n</span><span class="si">{</span><span class="n">topic</span><span class="si">}</span><span class="se">\n</span><span class="s2">&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Topik 1:
+0.025*&quot;umkm&quot; + 0.013*&quot;indonesia&quot; + 0.008*&quot;mesir&quot; + 0.008*&quot;usaha&quot; + 0.007*&quot;pelaku&quot; + 0.007*&quot;tim&quot; + 0.007*&quot;bpom&quot; + 0.006*&quot;sertifikasi&quot; + 0.006*&quot;pangan&quot; + 0.006*&quot;suriah&quot;
+
+Topik 2:
+0.017*&quot;erupsi&quot; + 0.016*&quot;prabowo&quot; + 0.015*&quot;gunung&quot; + 0.011*&quot;semeru&quot; + 0.010*&quot;persen&quot; + 0.009*&quot;golkar&quot; + 0.009*&quot;wib&quot; + 0.009*&quot;korut&quot; + 0.009*&quot;letusan&quot; + 0.008*&quot;besuk&quot;
+
+Topik 3:
+0.011*&quot;pajak&quot; + 0.010*&quot;rp&quot; + 0.009*&quot;opsen&quot; + 0.008*&quot;kendaraan&quot; + 0.008*&quot;persen&quot; + 0.007*&quot;pkb&quot; + 0.007*&quot;bermotor&quot; + 0.006*&quot;kek&quot; + 0.006*&quot;salah&quot; + 0.006*&quot;bbnkb&quot;
+
+Topik 4:
+0.025*&quot;palestina&quot; + 0.014*&quot;negara&quot; + 0.013*&quot;israel&quot; + 0.010*&quot;warga&quot; + 0.009*&quot;rumah&quot; + 0.007*&quot;orang&quot; + 0.006*&quot;gaza&quot; + 0.006*&quot;mengakui&quot; + 0.005*&quot;oktober&quot; + 0.005*&quot;sandera&quot;
+
+Topik 5:
+0.011*&quot;suriah&quot; + 0.008*&quot;kur&quot; + 0.007*&quot;kamp&quot; + 0.007*&quot;visa&quot; + 0.007*&quot;serangan&quot; + 0.007*&quot;kelompok&quot; + 0.006*&quot;orang&quot; + 0.005*&quot;perceraian&quot; + 0.005*&quot;kerja&quot; + 0.005*&quot;golden&quot;
+
+Topik 6:
+0.020*&quot;pelecehan&quot; + 0.016*&quot;korban&quot; + 0.016*&quot;bandung&quot; + 0.010*&quot;kota&quot; + 0.009*&quot;diduga&quot; + 0.009*&quot;orang&quot; + 0.009*&quot;braga&quot; + 0.008*&quot;dugaan&quot; + 0.008*&quot;indonesia&quot; + 0.007*&quot;houthi&quot;
+
+Topik 7:
+0.024*&quot;indeks&quot; + 0.021*&quot;persen&quot; + 0.016*&quot;saham&quot; + 0.014*&quot;menguat&quot; + 0.012*&quot;melemah&quot; + 0.009*&quot;bumn&quot; + 0.009*&quot;kerja&quot; + 0.008*&quot;lavani&quot; + 0.008*&quot;kementerian&quot; + 0.008*&quot;bursa&quot;
+
+Topik 8:
+0.032*&quot;minyak&quot; + 0.021*&quot;as&quot; + 0.016*&quot;persen&quot; + 0.015*&quot;us&quot; + 0.015*&quot;mentah&quot; + 0.014*&quot;harga&quot; + 0.011*&quot;barel&quot; + 0.010*&quot;kebijakan&quot; + 0.008*&quot;turun&quot; + 0.008*&quot;trump&quot;
+
+Topik 9:
+0.010*&quot;bekasi&quot; + 0.007*&quot;neymar&quot; + 0.006*&quot;pogba&quot; + 0.006*&quot;rpliter&quot; + 0.006*&quot;koperasi&quot; + 0.006*&quot;deolipa&quot; + 0.006*&quot;trpn&quot; + 0.006*&quot;cnn&quot; + 0.006*&quot;korban&quot; + 0.006*&quot;barat&quot;
+
+Topik 10:
+0.029*&quot;wni&quot; + 0.027*&quot;malaysia&quot; + 0.017*&quot;korban&quot; + 0.014*&quot;penembakan&quot; + 0.011*&quot;kbri&quot; + 0.010*&quot;warga&quot; + 0.010*&quot;negeri&quot; + 0.010*&quot;indonesia&quot; + 0.009*&quot;apmm&quot; + 0.008*&quot;insiden&quot;
+
+Topik 11:
+0.015*&quot;victor&quot; + 0.011*&quot;olmo&quot; + 0.010*&quot;suriah&quot; + 0.010*&quot;pau&quot; + 0.010*&quot;dani&quot; + 0.010*&quot;gunung&quot; + 0.008*&quot;steven&quot; + 0.008*&quot;utara&quot; + 0.008*&quot;hitam&quot; + 0.007*&quot;sulawesi&quot;
+
+Topik 12:
+0.021*&quot;bintoro&quot; + 0.017*&quot;prodia&quot; + 0.012*&quot;akbp&quot; + 0.009*&quot;metro&quot; + 0.009*&quot;indonesia&quot; + 0.008*&quot;anam&quot; + 0.008*&quot;dugaan&quot; + 0.008*&quot;tersangka&quot; + 0.007*&quot;pembunuhan&quot; + 0.007*&quot;bayu&quot;
+
+Topik 13:
+0.025*&quot;bumn&quot; + 0.014*&quot;indonesia&quot; + 0.013*&quot;jalan&quot; + 0.013*&quot;haji&quot; + 0.009*&quot;negara&quot; + 0.008*&quot;investasi&quot; + 0.007*&quot;prabowo&quot; + 0.007*&quot;ajaib&quot; + 0.007*&quot;terkait&quot; + 0.006*&quot;orang&quot;
+
+Topik 14:
+0.010*&quot;ekspor&quot; + 0.010*&quot;as&quot; + 0.008*&quot;umkm&quot; + 0.006*&quot;gaal&quot; + 0.005*&quot;kesepakatan&quot; + 0.005*&quot;cnn&quot; + 0.005*&quot;presiden&quot; + 0.005*&quot;israel&quot; + 0.004*&quot;pelaku&quot; + 0.004*&quot;iran&quot;
+
+Topik 15:
+0.048*&quot;haji&quot; + 0.020*&quot;jemaah&quot; + 0.012*&quot;pss&quot; + 0.012*&quot;indonesia&quot; + 0.011*&quot;biaya&quot; + 0.011*&quot;persib&quot; + 0.010*&quot;dpr&quot; + 0.010*&quot;arab&quot; + 0.009*&quot;saudi&quot; + 0.008*&quot;wni&quot;
+
+Topik 16:
+0.074*&quot;kebakaran&quot; + 0.044*&quot;los&quot; + 0.042*&quot;angeles&quot; + 0.023*&quot;api&quot; + 0.015*&quot;california&quot; + 0.012*&quot;palisades&quot; + 0.012*&quot;angin&quot; + 0.010*&quot;orang&quot; + 0.010*&quot;wilayah&quot; + 0.010*&quot;la&quot;
+
+Topik 17:
+0.054*&quot;makan&quot; + 0.048*&quot;program&quot; + 0.045*&quot;bergizi&quot; + 0.039*&quot;gratis&quot; + 0.033*&quot;mbg&quot; + 0.022*&quot;gizi&quot; + 0.013*&quot;makanan&quot; + 0.012*&quot;badan&quot; + 0.012*&quot;prabowo&quot; + 0.011*&quot;menu&quot;
+
+Topik 18:
+0.032*&quot;pesawat&quot; + 0.021*&quot;air&quot; + 0.018*&quot;orang&quot; + 0.016*&quot;jeju&quot; + 0.015*&quot;kecelakaan&quot; + 0.015*&quot;kebakaran&quot; + 0.011*&quot;wilayah&quot; + 0.009*&quot;los&quot; + 0.009*&quot;penerbangan&quot; + 0.008*&quot;angeles&quot;
+
+Topik 19:
+0.009*&quot;malaysia&quot; + 0.009*&quot;dwp&quot; + 0.008*&quot;polisi&quot; + 0.008*&quot;tol&quot; + 0.008*&quot;indonesia&quot; + 0.007*&quot;negara&quot; + 0.006*&quot;pemerasan&quot; + 0.006*&quot;penonton&quot; + 0.006*&quot;jakarta&quot; + 0.005*&quot;mengaku&quot;
+
+Topik 20:
+0.013*&quot;korban&quot; + 0.008*&quot;arus&quot; + 0.008*&quot;lampung&quot; + 0.007*&quot;kota&quot; + 0.007*&quot;bus&quot; + 0.006*&quot;sungai&quot; + 0.006*&quot;bandar&quot; + 0.006*&quot;terseret&quot; + 0.006*&quot;hanyut&quot; + 0.006*&quot;jalan&quot;
+
+Topik 21:
+0.023*&quot;ahsanhendra&quot; + 0.013*&quot;indonesia&quot; + 0.013*&quot;penumpang&quot; + 0.013*&quot;ahsan&quot; + 0.009*&quot;stasiun&quot; + 0.009*&quot;whoosh&quot; + 0.009*&quot;hendra&quot; + 0.008*&quot;karawang&quot; + 0.007*&quot;masters&quot; + 0.006*&quot;persen&quot;
+
+Topik 22:
+0.009*&quot;prabowo&quot; + 0.008*&quot;uang&quot; + 0.008*&quot;india&quot; + 0.007*&quot;presiden&quot; + 0.006*&quot;indonesia&quot; + 0.006*&quot;kereta&quot; + 0.006*&quot;b&quot; + 0.006*&quot;menteri&quot; + 0.005*&quot;palsu&quot; + 0.005*&quot;tsunami&quot;
+
+Topik 23:
+0.021*&quot;beras&quot; + 0.016*&quot;australia&quot; + 0.012*&quot;pemerintah&quot; + 0.010*&quot;advokat&quot; + 0.009*&quot;muhdlor&quot; + 0.009*&quot;ketenagakerjaan&quot; + 0.008*&quot;sidoarjo&quot; + 0.008*&quot;indonesia&quot; + 0.008*&quot;bpjs&quot; + 0.007*&quot;pekerja&quot;
+
+Topik 24:
+0.014*&quot;juara&quot; + 0.010*&quot;gak&quot; + 0.008*&quot;gelar&quot; + 0.007*&quot;tol&quot; + 0.007*&quot;bandara&quot; + 0.006*&quot;china&quot; + 0.005*&quot;data&quot; + 0.005*&quot;kendaraan&quot; + 0.005*&quot;operasional&quot; + 0.005*&quot;olimpiade&quot;
+
+Topik 25:
+0.089*&quot;israel&quot; + 0.025*&quot;serangan&quot; + 0.023*&quot;gaza&quot; + 0.022*&quot;senjata&quot; + 0.018*&quot;militer&quot; + 0.017*&quot;gencatan&quot; + 0.015*&quot;hamas&quot; + 0.015*&quot;pasukan&quot; + 0.015*&quot;perang&quot; + 0.012*&quot;trump&quot;
+
+Topik 26:
+0.034*&quot;pertamina&quot; + 0.017*&quot;energi&quot; + 0.013*&quot;al&quot; + 0.009*&quot;bbm&quot; + 0.007*&quot;masyarakat&quot; + 0.007*&quot;lpg&quot; + 0.007*&quot;utama&quot; + 0.006*&quot;gol&quot; + 0.006*&quot;nassr&quot; + 0.006*&quot;poin&quot;
+
+Topik 27:
+0.029*&quot;pemain&quot; + 0.020*&quot;indonesia&quot; + 0.017*&quot;timnas&quot; + 0.016*&quot;laga&quot; + 0.015*&quot;piala&quot; + 0.015*&quot;poin&quot; + 0.014*&quot;aff&quot; + 0.013*&quot;filipina&quot; + 0.013*&quot;vietnam&quot; + 0.012*&quot;gol&quot;
+
+Topik 28:
+0.015*&quot;minyakita&quot; + 0.007*&quot;harga&quot; + 0.005*&quot;pungut&quot; + 0.005*&quot;wajib&quot; + 0.005*&quot;pelaku&quot; + 0.005*&quot;minyak&quot; + 0.005*&quot;cpo&quot; + 0.005*&quot;proses&quot; + 0.005*&quot;distribusi&quot; + 0.005*&quot;menteri&quot;
+
+Topik 29:
+0.012*&quot;kpk&quot; + 0.010*&quot;tornado&quot; + 0.010*&quot;angeles&quot; + 0.009*&quot;pensiun&quot; + 0.009*&quot;ott&quot; + 0.009*&quot;los&quot; + 0.009*&quot;trump&quot; + 0.008*&quot;padam&quot; + 0.008*&quot;api&quot; + 0.007*&quot;usia&quot;
+
+Topik 30:
+0.013*&quot;metro&quot; + 0.013*&quot;iran&quot; + 0.012*&quot;persen&quot; + 0.011*&quot;polda&quot; + 0.010*&quot;puas&quot; + 0.008*&quot;akbp&quot; + 0.007*&quot;menyerang&quot; + 0.007*&quot;jaya&quot; + 0.006*&quot;diangkat&quot; + 0.005*&quot;singapura&quot;
+
+Topik 31:
+0.030*&quot;trump&quot; + 0.025*&quot;as&quot; + 0.020*&quot;rusia&quot; + 0.012*&quot;ukraina&quot; + 0.012*&quot;putin&quot; + 0.012*&quot;serikat&quot; + 0.010*&quot;presiden&quot; + 0.010*&quot;donald&quot; + 0.008*&quot;kapal&quot; + 0.008*&quot;pegawai&quot;
+
+Topik 32:
+0.009*&quot;orang&quot; + 0.008*&quot;indonesia&quot; + 0.006*&quot;hakim&quot; + 0.006*&quot;jerman&quot; + 0.006*&quot;new&quot; + 0.006*&quot;ton&quot; + 0.006*&quot;myanmar&quot; + 0.005*&quot;orleans&quot; + 0.005*&quot;malaysia&quot; + 0.005*&quot;bebas&quot;
+
+Topik 33:
+0.013*&quot;video&quot; + 0.010*&quot;taman&quot; + 0.010*&quot;gus&quot; + 0.009*&quot;anggota&quot; + 0.009*&quot;pemuda&quot; + 0.009*&quot;literasi&quot; + 0.008*&quot;dur&quot; + 0.008*&quot;pancasila&quot; + 0.008*&quot;jakarta&quot; + 0.007*&quot;izin&quot;
+
+Topik 34:
+0.014*&quot;presiden&quot; + 0.011*&quot;blok&quot; + 0.009*&quot;pemerintah&quot; + 0.008*&quot;partai&quot; + 0.008*&quot;mk&quot; + 0.007*&quot;putusan&quot; + 0.007*&quot;calon&quot; + 0.006*&quot;wakil&quot; + 0.006*&quot;ppn&quot; + 0.006*&quot;politik&quot;
+
+Topik 35:
+0.007*&quot;pesawat&quot; + 0.006*&quot;bandara&quot; + 0.006*&quot;meksiko&quot; + 0.005*&quot;as&quot; + 0.005*&quot;keluarga&quot; + 0.005*&quot;cnn&quot; + 0.005*&quot;masyarakat&quot; + 0.005*&quot;minyak&quot; + 0.004*&quot;bantuan&quot; + 0.004*&quot;harga&quot;
+
+Topik 36:
+0.012*&quot;mk&quot; + 0.008*&quot;pangan&quot; + 0.008*&quot;presiden&quot; + 0.007*&quot;putusan&quot; + 0.006*&quot;pesawat&quot; + 0.006*&quot;zakat&quot; + 0.005*&quot;pemerintah&quot; + 0.005*&quot;pupuk&quot; + 0.005*&quot;swasembada&quot; + 0.005*&quot;kementerian&quot;
+
+Topik 37:
+0.032*&quot;menu&quot; + 0.023*&quot;makan&quot; + 0.023*&quot;dadan&quot; + 0.022*&quot;bgn&quot; + 0.022*&quot;daerah&quot; + 0.020*&quot;lokal&quot; + 0.020*&quot;mbg&quot; + 0.017*&quot;sumber&quot; + 0.017*&quot;gizi&quot; + 0.017*&quot;protein&quot;
+
+Topik 38:
+0.007*&quot;alpukat&quot; + 0.006*&quot;pohon&quot; + 0.006*&quot;masyarakat&quot; + 0.006*&quot;banjir&quot; + 0.005*&quot;salah&quot; + 0.005*&quot;dunia&quot; + 0.004*&quot;usaha&quot; + 0.004*&quot;perempuan&quot; + 0.004*&quot;probolinggo&quot; + 0.004*&quot;wisata&quot;
+
+Topik 39:
+0.011*&quot;serangan&quot; + 0.011*&quot;korban&quot; + 0.011*&quot;indonesia&quot; + 0.009*&quot;rumah&quot; + 0.006*&quot;rs&quot; + 0.006*&quot;orang&quot; + 0.006*&quot;pasien&quot; + 0.006*&quot;atlet&quot; + 0.005*&quot;suriah&quot; + 0.005*&quot;saksi&quot;
+
+Topik 40:
+0.011*&quot;masjid&quot; + 0.009*&quot;mu&quot; + 0.007*&quot;menang&quot; + 0.007*&quot;barito&quot; + 0.006*&quot;jalan&quot; + 0.005*&quot;bantuan&quot; + 0.005*&quot;fungsional&quot; + 0.005*&quot;liga&quot; + 0.005*&quot;pertandingan&quot; + 0.005*&quot;amorim&quot;
+
+Topik 41:
+0.026*&quot;suriah&quot; + 0.018*&quot;al&quot; + 0.012*&quot;assad&quot; + 0.011*&quot;hts&quot; + 0.011*&quot;negara&quot; + 0.008*&quot;air&quot; + 0.007*&quot;presiden&quot; + 0.007*&quot;warga&quot; + 0.007*&quot;pemerintahan&quot; + 0.007*&quot;rezim&quot;
+
+Topik 42:
+0.028*&quot;united&quot; + 0.023*&quot;bangkok&quot; + 0.022*&quot;arhan&quot; + 0.011*&quot;liga&quot; + 0.010*&quot;pertandingan&quot; + 0.010*&quot;pemain&quot; + 0.009*&quot;bermain&quot; + 0.007*&quot;laga&quot; + 0.006*&quot;menit&quot; + 0.006*&quot;pratama&quot;
+
+Topik 43:
+0.007*&quot;korban&quot; + 0.007*&quot;sawah&quot; + 0.006*&quot;hektar&quot; + 0.006*&quot;partai&quot; + 0.005*&quot;ratusan&quot; + 0.005*&quot;lampung&quot; + 0.005*&quot;indonesia&quot; + 0.005*&quot;jalan&quot; + 0.005*&quot;anggota&quot; + 0.005*&quot;polisi&quot;
+
+Topik 44:
+0.039*&quot;pagar&quot; + 0.033*&quot;laut&quot; + 0.023*&quot;tangerang&quot; + 0.018*&quot;hgb&quot; + 0.015*&quot;pik&quot; + 0.013*&quot;nusron&quot; + 0.012*&quot;sertifikat&quot; + 0.012*&quot;nelayan&quot; + 0.011*&quot;misterius&quot; + 0.010*&quot;psn&quot;
+
+Topik 45:
+0.010*&quot;semarang&quot; + 0.008*&quot;aksi&quot; + 0.008*&quot;bijih&quot; + 0.007*&quot;besi&quot; + 0.006*&quot;gamma&quot; + 0.005*&quot;mitora&quot; + 0.005*&quot;kapolrestabes&quot; + 0.005*&quot;anggota&quot; + 0.005*&quot;brigadir&quot; + 0.005*&quot;aipda&quot;
+
+Topik 46:
+0.012*&quot;intelijen&quot; + 0.011*&quot;google&quot; + 0.010*&quot;kejaksaan&quot; + 0.008*&quot;militer&quot; + 0.007*&quot;kerugian&quot; + 0.007*&quot;bambang&quot; + 0.007*&quot;negara&quot; + 0.007*&quot;cfpb&quot; + 0.006*&quot;darurat&quot; + 0.006*&quot;bwf&quot;
+
+Topik 47:
+0.047*&quot;gaza&quot; + 0.022*&quot;israel&quot; + 0.017*&quot;palestina&quot; + 0.014*&quot;warga&quot; + 0.012*&quot;apple&quot; + 0.012*&quot;trump&quot; + 0.011*&quot;bantuan&quot; + 0.010*&quot;senjata&quot; + 0.008*&quot;gencatan&quot; + 0.008*&quot;as&quot;
+
+Topik 48:
+0.012*&quot;harga&quot; + 0.012*&quot;isis&quot; + 0.011*&quot;suriah&quot; + 0.009*&quot;rp&quot; + 0.009*&quot;teroris&quot; + 0.008*&quot;emas&quot; + 0.007*&quot;menetapkan&quot; + 0.007*&quot;rolex&quot; + 0.007*&quot;cnn&quot; + 0.006*&quot;negara&quot;
+
+Topik 49:
+0.025*&quot;mbg&quot; + 0.025*&quot;program&quot; + 0.019*&quot;penerima&quot; + 0.018*&quot;makan&quot; + 0.017*&quot;gratis&quot; + 0.015*&quot;bergizi&quot; + 0.015*&quot;sppg&quot; + 0.012*&quot;gizi&quot; + 0.011*&quot;barat&quot; + 0.010*&quot;jawa&quot;
+
+Topik 50:
+0.064*&quot;timnas&quot; + 0.051*&quot;pelatih&quot; + 0.050*&quot;indonesia&quot; + 0.035*&quot;kluivert&quot; + 0.032*&quot;shin&quot; + 0.027*&quot;tae&quot; + 0.026*&quot;sty&quot; + 0.025*&quot;yong&quot; + 0.023*&quot;pssi&quot; + 0.015*&quot;patrick&quot;
+
+Topik 51:
+0.014*&quot;persen&quot; + 0.011*&quot;dolar&quot; + 0.010*&quot;bupati&quot; + 0.009*&quot;nomor&quot; + 0.008*&quot;rupiah&quot; + 0.008*&quot;pertahanan&quot; + 0.006*&quot;kota&quot; + 0.006*&quot;calon&quot; + 0.006*&quot;mk&quot; + 0.006*&quot;anggaran&quot;
+
+Topik 52:
+0.015*&quot;liga&quot; + 0.015*&quot;vs&quot; + 0.013*&quot;city&quot; + 0.011*&quot;venezia&quot; + 0.011*&quot;pemain&quot; + 0.009*&quot;idzes&quot; + 0.009*&quot;man&quot; + 0.008*&quot;jay&quot; + 0.008*&quot;babak&quot; + 0.007*&quot;indonesia&quot;
+
+Topik 53:
+0.013*&quot;pmi&quot; + 0.011*&quot;filipina&quot; + 0.010*&quot;china&quot; + 0.009*&quot;typhon&quot; + 0.007*&quot;indonesia&quot; + 0.006*&quot;tyson&quot; + 0.006*&quot;rudal&quot; + 0.006*&quot;pantai&quot; + 0.006*&quot;as&quot; + 0.005*&quot;ketenagakerjaan&quot;
+
+Topik 54:
+0.036*&quot;ppn&quot; + 0.026*&quot;jasa&quot; + 0.021*&quot;barang&quot; + 0.021*&quot;prabowo&quot; + 0.020*&quot;persen&quot; + 0.013*&quot;belanja&quot; + 0.013*&quot;mewah&quot; + 0.012*&quot;kenaikan&quot; + 0.011*&quot;tarif&quot; + 0.011*&quot;keuangan&quot;
+
+Topik 55:
+0.044*&quot;jakarta&quot; + 0.016*&quot;dki&quot; + 0.015*&quot;januari&quot; + 0.014*&quot;warga&quot; + 0.013*&quot;kota&quot; + 0.011*&quot;desember&quot; + 0.010*&quot;lpg&quot; + 0.009*&quot;selatan&quot; + 0.008*&quot;kerja&quot; + 0.007*&quot;utara&quot;
+
+Topik 56:
+0.030*&quot;pemerasan&quot; + 0.021*&quot;polri&quot; + 0.021*&quot;dwp&quot; + 0.021*&quot;polda&quot; + 0.015*&quot;metro&quot; + 0.014*&quot;demosi&quot; + 0.014*&quot;propam&quot; + 0.013*&quot;polisi&quot; + 0.013*&quot;penonton&quot; + 0.011*&quot;sanksi&quot;
+
+Topik 57:
+0.040*&quot;kpk&quot; + 0.034*&quot;hasto&quot; + 0.022*&quot;pdip&quot; + 0.021*&quot;tersangka&quot; + 0.012*&quot;harun&quot; + 0.012*&quot;penyidik&quot; + 0.012*&quot;pemeriksaan&quot; + 0.011*&quot;saksi&quot; + 0.011*&quot;dugaan&quot; + 0.011*&quot;korupsi&quot;
+
+Topik 58:
+0.035*&quot;yoon&quot; + 0.018*&quot;presiden&quot; + 0.015*&quot;darurat&quot; + 0.014*&quot;militer&quot; + 0.013*&quot;korsel&quot; + 0.010*&quot;korea&quot; + 0.008*&quot;suk&quot; + 0.008*&quot;selatan&quot; + 0.007*&quot;parlemen&quot; + 0.007*&quot;yeol&quot;
+
+Topik 59:
+0.015*&quot;sritex&quot; + 0.013*&quot;sri&quot; + 0.010*&quot;menteri&quot; + 0.009*&quot;persen&quot; + 0.007*&quot;pailit&quot; + 0.007*&quot;keuangan&quot; + 0.007*&quot;pemerintah&quot; + 0.007*&quot;putusan&quot; + 0.007*&quot;mulyani&quot; + 0.006*&quot;ppn&quot;
+
+Topik 60:
+0.019*&quot;ppn&quot; + 0.017*&quot;gunung&quot; + 0.012*&quot;halmahera&quot; + 0.010*&quot;barat&quot; + 0.009*&quot;desa&quot; + 0.009*&quot;un&quot; + 0.009*&quot;status&quot; + 0.009*&quot;qris&quot; + 0.009*&quot;bnpb&quot; + 0.008*&quot;uang&quot;
+
+Topik 61:
+0.030*&quot;pt&quot; + 0.025*&quot;perusahaan&quot; + 0.023*&quot;agung&quot; + 0.018*&quot;hgb&quot; + 0.014*&quot;intan&quot; + 0.013*&quot;laut&quot; + 0.013*&quot;makmur&quot; + 0.011*&quot;pik&quot; + 0.010*&quot;kepemilikan&quot; + 0.010*&quot;pagar&quot;
+
+Topik 62:
+0.018*&quot;lembong&quot; + 0.016*&quot;tom&quot; + 0.014*&quot;pajak&quot; + 0.014*&quot;kerugian&quot; + 0.011*&quot;impor&quot; + 0.010*&quot;persen&quot; + 0.010*&quot;lapor&quot; + 0.010*&quot;tersangka&quot; + 0.010*&quot;keuangan&quot; + 0.009*&quot;gula&quot;
+
+Topik 63:
+0.033*&quot;bri&quot; + 0.018*&quot;trump&quot; + 0.009*&quot;sektor&quot; + 0.009*&quot;hut&quot; + 0.009*&quot;acara&quot; + 0.008*&quot;warga&quot; + 0.007*&quot;budaya&quot; + 0.007*&quot;pnm&quot; + 0.006*&quot;tradisional&quot; + 0.006*&quot;nasabah&quot;
+
+Topik 64:
+0.014*&quot;radja&quot; + 0.010*&quot;nainggolan&quot; + 0.009*&quot;indonesia&quot; + 0.008*&quot;tim&quot; + 0.008*&quot;pemain&quot; + 0.007*&quot;juara&quot; + 0.006*&quot;motogp&quot; + 0.006*&quot;fc&quot; + 0.005*&quot;liga&quot; + 0.005*&quot;suriah&quot;
+
+Topik 65:
+0.035*&quot;menit&quot; + 0.031*&quot;gol&quot; + 0.022*&quot;gawang&quot; + 0.020*&quot;piala&quot; + 0.019*&quot;vietnam&quot; + 0.019*&quot;aff&quot; + 0.014*&quot;babak&quot; + 0.014*&quot;thailand&quot; + 0.012*&quot;pemain&quot; + 0.012*&quot;indonesia&quot;
+
+Topik 66:
+0.029*&quot;darso&quot; + 0.013*&quot;kecelakaan&quot; + 0.009*&quot;mobil&quot; + 0.008*&quot;keluarga&quot; + 0.008*&quot;filipina&quot; + 0.007*&quot;tutik&quot; + 0.006*&quot;yogyakarta&quot; + 0.006*&quot;polisi&quot; + 0.006*&quot;kota&quot; + 0.005*&quot;indonesia&quot;
+
+Topik 67:
+0.023*&quot;ump&quot; + 0.019*&quot;upah&quot; + 0.015*&quot;provinsi&quot; + 0.015*&quot;minimum&quot; + 0.014*&quot;jane&quot; + 0.013*&quot;mary&quot; + 0.010*&quot;filipina&quot; + 0.010*&quot;kenaikan&quot; + 0.009*&quot;ketenagakerjaan&quot; + 0.008*&quot;pemerintah&quot;
+
+Topik 68:
+0.022*&quot;neymar&quot; + 0.014*&quot;pemain&quot; + 0.007*&quot;kudus&quot; + 0.007*&quot;arema&quot; + 0.007*&quot;united&quot; + 0.006*&quot;masyarakat&quot; + 0.005*&quot;mengenakan&quot; + 0.005*&quot;dewa&quot; + 0.005*&quot;barcelona&quot; + 0.005*&quot;messi&quot;
+
+Topik 69:
+0.009*&quot;polda&quot; + 0.008*&quot;orang&quot; + 0.008*&quot;tersangka&quot; + 0.008*&quot;anak&quot; + 0.007*&quot;mega&quot; + 0.007*&quot;kapolsek&quot; + 0.006*&quot;pdip&quot; + 0.006*&quot;mamuju&quot; + 0.006*&quot;sulbar&quot; + 0.006*&quot;pengeroyokan&quot;
+
+Topik 70:
+0.084*&quot;u&quot; + 0.044*&quot;indonesia&quot; + 0.025*&quot;yordania&quot; + 0.025*&quot;challenge&quot; + 0.023*&quot;timnas&quot; + 0.022*&quot;series&quot; + 0.021*&quot;asia&quot; + 0.019*&quot;suriah&quot; + 0.018*&quot;indra&quot; + 0.018*&quot;mandiri&quot;
+
+Topik 71:
+0.011*&quot;mlb&quot; + 0.010*&quot;indonesia&quot; + 0.010*&quot;investasi&quot; + 0.007*&quot;pwnu&quot; + 0.007*&quot;gus&quot; + 0.006*&quot;group&quot; + 0.006*&quot;rosan&quot; + 0.006*&quot;industri&quot; + 0.006*&quot;pbnu&quot; + 0.005*&quot;surabaya&quot;
+
+Topik 72:
+0.017*&quot;jokowi&quot; + 0.016*&quot;al&quot; + 0.014*&quot;presiden&quot; + 0.013*&quot;suriah&quot; + 0.009*&quot;pdip&quot; + 0.008*&quot;prabowo&quot; + 0.008*&quot;persita&quot; + 0.007*&quot;partai&quot; + 0.006*&quot;indonesia&quot; + 0.006*&quot;ri&quot;
+
+Topik 73:
+0.016*&quot;fajarrian&quot; + 0.013*&quot;vs&quot; + 0.010*&quot;indonesia&quot; + 0.009*&quot;unggul&quot; + 0.008*&quot;gim&quot; + 0.007*&quot;madrasah&quot; + 0.007*&quot;guru&quot; + 0.006*&quot;irwansyah&quot; + 0.006*&quot;liter&quot; + 0.006*&quot;pelatih&quot;
+
+Topik 74:
+0.030*&quot;indonesia&quot; + 0.027*&quot;brics&quot; + 0.015*&quot;anggota&quot; + 0.012*&quot;negara&quot; + 0.011*&quot;ekonomi&quot; + 0.009*&quot;ri&quot; + 0.009*&quot;resmi&quot; + 0.008*&quot;trump&quot; + 0.008*&quot;penuh&quot; + 0.007*&quot;rusia&quot;
+
+Topik 75:
+0.009*&quot;pimpinan&quot; + 0.009*&quot;program&quot; + 0.008*&quot;kemitraan&quot; + 0.007*&quot;ikn&quot; + 0.007*&quot;masyarakat&quot; + 0.007*&quot;lokal&quot; + 0.007*&quot;daerah&quot; + 0.006*&quot;mendukung&quot; + 0.005*&quot;sppg&quot; + 0.005*&quot;hilirisasi&quot;
+
+Topik 76:
+0.065*&quot;laut&quot; + 0.050*&quot;pagar&quot; + 0.018*&quot;kkp&quot; + 0.017*&quot;tangerang&quot; + 0.013*&quot;nelayan&quot; + 0.012*&quot;misterius&quot; + 0.012*&quot;perikanan&quot; + 0.012*&quot;kelautan&quot; + 0.009*&quot;tni&quot; + 0.008*&quot;km&quot;
+
+Topik 77:
+0.042*&quot;indonesia&quot; + 0.026*&quot;piala&quot; + 0.023*&quot;timnas&quot; + 0.021*&quot;pemain&quot; + 0.020*&quot;dunia&quot; + 0.014*&quot;erick&quot; + 0.013*&quot;tim&quot; + 0.012*&quot;pssi&quot; + 0.010*&quot;kualifikasi&quot; + 0.010*&quot;lolos&quot;
+
+Topik 78:
+0.047*&quot;suara&quot; + 0.022*&quot;kpu&quot; + 0.019*&quot;meraih&quot; + 0.018*&quot;rekapitulasi&quot; + 0.016*&quot;pilgub&quot; + 0.014*&quot;nomor&quot; + 0.013*&quot;urut&quot; + 0.013*&quot;gubernur&quot; + 0.012*&quot;paslon&quot; + 0.011*&quot;hasil&quot;
+
+Topik 79:
+0.016*&quot;rp&quot; + 0.014*&quot;korban&quot; + 0.009*&quot;pelaku&quot; + 0.007*&quot;dedy&quot; + 0.007*&quot;kpk&quot; + 0.006*&quot;orang&quot; + 0.006*&quot;warga&quot; + 0.005*&quot;harta&quot; + 0.005*&quot;kebakaran&quot; + 0.005*&quot;diduga&quot;
+
+Topik 80:
+0.015*&quot;jakarta&quot; + 0.010*&quot;listrik&quot; + 0.010*&quot;pramono&quot; + 0.009*&quot;gubernur&quot; + 0.009*&quot;tim&quot; + 0.009*&quot;makan&quot; + 0.008*&quot;transisi&quot; + 0.007*&quot;gratis&quot; + 0.007*&quot;pln&quot; + 0.007*&quot;gw&quot;
+
+Topik 81:
+0.043*&quot;jabatan&quot; + 0.041*&quot;diangkat&quot; + 0.040*&quot;metro&quot; + 0.027*&quot;polres&quot; + 0.025*&quot;akp&quot; + 0.021*&quot;kompol&quot; + 0.021*&quot;jaya&quot; + 0.018*&quot;polda&quot; + 0.016*&quot;kapolsek&quot; + 0.014*&quot;ps&quot;
+
+Topik 82:
+0.017*&quot;ahsanhendra&quot; + 0.011*&quot;kevin&quot; + 0.009*&quot;perpisahan&quot; + 0.007*&quot;herry&quot; + 0.007*&quot;buaya&quot; + 0.007*&quot;aryono&quot; + 0.007*&quot;megawati&quot; + 0.006*&quot;istora&quot; + 0.006*&quot;pensiun&quot; + 0.006*&quot;lepas&quot;
+
+Topik 83:
+0.013*&quot;korban&quot; + 0.012*&quot;orang&quot; + 0.010*&quot;black&quot; + 0.010*&quot;penumpang&quot; + 0.009*&quot;pesawat&quot; + 0.008*&quot;hawk&quot; + 0.008*&quot;helikopter&quot; + 0.007*&quot;airlines&quot; + 0.007*&quot;kapal&quot; + 0.007*&quot;tabrakan&quot;
+
+Topik 84:
+0.024*&quot;pidana&quot; + 0.016*&quot;pasal&quot; + 0.015*&quot;uang&quot; + 0.015*&quot;korupsi&quot; + 0.014*&quot;tindak&quot; + 0.011*&quot;negara&quot; + 0.010*&quot;prabowo&quot; + 0.010*&quot;menteri&quot; + 0.009*&quot;miftah&quot; + 0.009*&quot;penjara&quot;
+
+Topik 85:
+0.021*&quot;trump&quot; + 0.015*&quot;presiden&quot; + 0.008*&quot;hukuman&quot; + 0.007*&quot;mati&quot; + 0.007*&quot;warga&quot; + 0.005*&quot;tingkat&quot; + 0.005*&quot;senjata&quot; + 0.005*&quot;direktorat&quot; + 0.005*&quot;gencatan&quot; + 0.005*&quot;perempuan&quot;
+
+Topik 86:
+0.032*&quot;indonesia&quot; + 0.011*&quot;bahrain&quot; + 0.011*&quot;dunia&quot; + 0.010*&quot;timnas&quot; + 0.008*&quot;piala&quot; + 0.006*&quot;pertandingan&quot; + 0.006*&quot;vs&quot; + 0.005*&quot;cnn&quot; + 0.005*&quot;maret&quot; + 0.005*&quot;presiden&quot;
+
+Topik 87:
+0.015*&quot;taiwan&quot; + 0.011*&quot;china&quot; + 0.009*&quot;masela&quot; + 0.009*&quot;blok&quot; + 0.009*&quot;zhejiang&quot; + 0.008*&quot;pesawat&quot; + 0.007*&quot;laut&quot; + 0.007*&quot;giant&quot; + 0.007*&quot;wall&quot; + 0.007*&quot;proyek&quot;
+
+Topik 88:
+0.017*&quot;indonesia&quot; + 0.011*&quot;kamboja&quot; + 0.010*&quot;beras&quot; + 0.008*&quot;het&quot; + 0.007*&quot;filipina&quot; + 0.006*&quot;wni&quot; + 0.006*&quot;masjid&quot; + 0.005*&quot;reva&quot; + 0.005*&quot;mary&quot; + 0.005*&quot;wilayah&quot;
+
+Topik 89:
+0.029*&quot;korban&quot; + 0.016*&quot;mutilasi&quot; + 0.014*&quot;koper&quot; + 0.013*&quot;ngawi&quot; + 0.011*&quot;srp&quot; + 0.009*&quot;pelaku&quot; + 0.008*&quot;merah&quot; + 0.007*&quot;tubuh&quot; + 0.007*&quot;schumacher&quot; + 0.007*&quot;wanita&quot;
+
+Topik 90:
+0.017*&quot;mobil&quot; + 0.011*&quot;persen&quot; + 0.009*&quot;ruu&quot; + 0.009*&quot;negara&quot; + 0.008*&quot;rental&quot; + 0.007*&quot;orang&quot; + 0.007*&quot;senjata&quot; + 0.007*&quot;aturan&quot; + 0.007*&quot;udara&quot; + 0.007*&quot;jenis&quot;
+
+Topik 91:
+0.028*&quot;silat&quot; + 0.024*&quot;pencak&quot; + 0.014*&quot;kejuaraan&quot; + 0.013*&quot;dunia&quot; + 0.013*&quot;indonesia&quot; + 0.011*&quot;petugas&quot; + 0.009*&quot;olahraga&quot; + 0.009*&quot;world&quot; + 0.008*&quot;emas&quot; + 0.007*&quot;championship&quot;
+
+Topik 92:
+0.018*&quot;desa&quot; + 0.014*&quot;program&quot; + 0.011*&quot;pangan&quot; + 0.010*&quot;energi&quot; + 0.010*&quot;pt&quot; + 0.009*&quot;gizi&quot; + 0.008*&quot;masyarakat&quot; + 0.008*&quot;kebun&quot; + 0.008*&quot;pertamina&quot; + 0.007*&quot;kupang&quot;
+
+Topik 93:
+0.012*&quot;pn&quot; + 0.011*&quot;ketenagakerjaan&quot; + 0.011*&quot;bpjs&quot; + 0.009*&quot;ketua&quot; + 0.007*&quot;surabaya&quot; + 0.006*&quot;ronald&quot; + 0.006*&quot;tannur&quot; + 0.006*&quot;china&quot; + 0.006*&quot;of&quot; + 0.006*&quot;issa&quot;
+
+Topik 94:
+0.047*&quot;banjir&quot; + 0.020*&quot;kecamatan&quot; + 0.020*&quot;air&quot; + 0.019*&quot;desa&quot; + 0.017*&quot;kabupaten&quot; + 0.017*&quot;warga&quot; + 0.013*&quot;rumah&quot; + 0.013*&quot;sungai&quot; + 0.012*&quot;terdampak&quot; + 0.012*&quot;hujan&quot;
+
+Topik 95:
+0.010*&quot;sakit&quot; + 0.010*&quot;rumah&quot; + 0.007*&quot;gaza&quot; + 0.007*&quot;madrid&quot; + 0.007*&quot;hotel&quot; + 0.006*&quot;kesehatan&quot; + 0.006*&quot;endrick&quot; + 0.006*&quot;kamal&quot; + 0.006*&quot;adwan&quot; + 0.006*&quot;bali&quot;
+
+Topik 96:
+0.030*&quot;indonesia&quot; + 0.019*&quot;piala&quot; + 0.010*&quot;asia&quot; + 0.008*&quot;aff&quot; + 0.007*&quot;final&quot; + 0.007*&quot;timnas&quot; + 0.006*&quot;menang&quot; + 0.006*&quot;tim&quot; + 0.006*&quot;babak&quot; + 0.005*&quot;cnn&quot;
+
+Topik 97:
+0.024*&quot;karya&quot; + 0.019*&quot;judul&quot; + 0.007*&quot;korea&quot; + 0.006*&quot;ajp&quot; + 0.006*&quot;penyerangan&quot; + 0.005*&quot;warga&quot; + 0.005*&quot;indonesia&quot; + 0.005*&quot;tenggara&quot; + 0.004*&quot;bendera&quot; + 0.004*&quot;pertamina&quot;
+
+Topik 98:
+0.027*&quot;indonesia&quot; + 0.020*&quot;piala&quot; + 0.015*&quot;malaysia&quot; + 0.015*&quot;aff&quot; + 0.012*&quot;timnas&quot; + 0.010*&quot;tim&quot; + 0.008*&quot;b&quot; + 0.006*&quot;prabowo&quot; + 0.006*&quot;asia&quot; + 0.006*&quot;wanita&quot;
+
+Topik 99:
+0.016*&quot;menteri&quot; + 0.011*&quot;presiden&quot; + 0.010*&quot;trump&quot; + 0.009*&quot;as&quot; + 0.008*&quot;negara&quot; + 0.006*&quot;negeri&quot; + 0.005*&quot;pemerintahan&quot; + 0.004*&quot;anggota&quot; + 0.004*&quot;nelayan&quot; + 0.004*&quot;partai&quot;
+
+Topik 100:
+0.010*&quot;timur&quot; + 0.009*&quot;toko&quot; + 0.009*&quot;anak&quot; + 0.009*&quot;roti&quot; + 0.008*&quot;pelaku&quot; + 0.008*&quot;deif&quot; + 0.007*&quot;kolaka&quot; + 0.007*&quot;penganiayaan&quot; + 0.007*&quot;sukabumi&quot; + 0.007*&quot;bos&quot;
+
+Topik 101:
+0.012*&quot;rusia&quot; + 0.011*&quot;investasi&quot; + 0.011*&quot;ukraina&quot; + 0.008*&quot;wika&quot; + 0.008*&quot;indonesia&quot; + 0.008*&quot;gas&quot; + 0.007*&quot;proyek&quot; + 0.007*&quot;pdip&quot; + 0.006*&quot;atlet&quot; + 0.006*&quot;pb&quot;
+
+Topik 102:
+0.006*&quot;miftah&quot; + 0.006*&quot;kerja&quot; + 0.005*&quot;budi&quot; + 0.005*&quot;api&quot; + 0.005*&quot;produksi&quot; + 0.005*&quot;tornado&quot; + 0.005*&quot;perlindungan&quot; + 0.005*&quot;makan&quot; + 0.004*&quot;korban&quot; + 0.004*&quot;jakarta&quot;
+
+Topik 103:
+0.030*&quot;ikn&quot; + 0.013*&quot;kota&quot; + 0.013*&quot;basuki&quot; + 0.011*&quot;nusantara&quot; + 0.011*&quot;prabowo&quot; + 0.010*&quot;pembangunan&quot; + 0.009*&quot;stadion&quot; + 0.009*&quot;indonesia&quot; + 0.008*&quot;legislatif&quot; + 0.008*&quot;eksekutif&quot;
+
+Topik 104:
+0.030*&quot;kpk&quot; + 0.019*&quot;korupsi&quot; + 0.019*&quot;tannos&quot; + 0.017*&quot;paulus&quot; + 0.015*&quot;negara&quot; + 0.013*&quot;singapura&quot; + 0.011*&quot;polri&quot; + 0.008*&quot;indonesia&quot; + 0.007*&quot;orang&quot; + 0.007*&quot;anggota&quot;
+
+Topik 105:
+0.014*&quot;jalan&quot; + 0.010*&quot;rental&quot; + 0.009*&quot;korban&quot; + 0.008*&quot;penembakan&quot; + 0.008*&quot;mobil&quot; + 0.007*&quot;orang&quot; + 0.007*&quot;bos&quot; + 0.006*&quot;daerah&quot; + 0.006*&quot;area&quot; + 0.006*&quot;pemerintah&quot;
+
+Topik 106:
+0.049*&quot;red&quot; + 0.049*&quot;sparks&quot; + 0.032*&quot;megawati&quot; + 0.027*&quot;poin&quot; + 0.023*&quot;voli&quot; + 0.022*&quot;liga&quot; + 0.021*&quot;pink&quot; + 0.020*&quot;korea&quot; + 0.019*&quot;kemenangan&quot; + 0.018*&quot;spiders&quot;
+
+Topik 107:
+0.056*&quot;rp&quot; + 0.020*&quot;triliun&quot; + 0.019*&quot;juta&quot; + 0.018*&quot;pemerintah&quot; + 0.016*&quot;prabowo&quot; + 0.015*&quot;persen&quot; + 0.014*&quot;program&quot; + 0.013*&quot;anggaran&quot; + 0.011*&quot;presiden&quot; + 0.010*&quot;pangan&quot;
+
+Topik 108:
+0.017*&quot;persen&quot; + 0.013*&quot;ka&quot; + 0.007*&quot;kai&quot; + 0.007*&quot;indonesia&quot; + 0.007*&quot;pulau&quot; + 0.006*&quot;jawa&quot; + 0.006*&quot;miskin&quot; + 0.006*&quot;emas&quot; + 0.005*&quot;tiket&quot; + 0.005*&quot;perjalanan&quot;
+
+Topik 109:
+0.019*&quot;filipina&quot; + 0.013*&quot;thailand&quot; + 0.008*&quot;lampung&quot; + 0.005*&quot;s&quot; + 0.004*&quot;p&quot; + 0.004*&quot;gustavsson&quot; + 0.004*&quot;putusan&quot; + 0.004*&quot;palopo&quot; + 0.004*&quot;kota&quot; + 0.004*&quot;glodok&quot;
+
+Topik 110:
+0.009*&quot;prabowo&quot; + 0.009*&quot;pembangunan&quot; + 0.008*&quot;pemerintah&quot; + 0.007*&quot;undangundang&quot; + 0.006*&quot;presiden&quot; + 0.006*&quot;pertanian&quot; + 0.006*&quot;kerja&quot; + 0.006*&quot;masyarakat&quot; + 0.006*&quot;menteri&quot; + 0.005*&quot;ikn&quot;
+
+Topik 111:
+0.017*&quot;rp&quot; + 0.009*&quot;harga&quot; + 0.008*&quot;persen&quot; + 0.007*&quot;hukum&quot; + 0.005*&quot;afif&quot; + 0.005*&quot;miliar&quot; + 0.005*&quot;perkara&quot; + 0.005*&quot;rumah&quot; + 0.004*&quot;korban&quot; + 0.004*&quot;kg&quot;
+
+Topik 112:
+0.016*&quot;pelatih&quot; + 0.011*&quot;indonesia&quot; + 0.009*&quot;malaysia&quot; + 0.009*&quot;ganda&quot; + 0.008*&quot;dokumen&quot; + 0.008*&quot;putra&quot; + 0.007*&quot;pelatnas&quot; + 0.007*&quot;pbsi&quot; + 0.007*&quot;open&quot; + 0.007*&quot;kepala&quot;
+
+Topik 113:
+0.010*&quot;bri&quot; + 0.010*&quot;orang&quot; + 0.009*&quot;gempa&quot; + 0.009*&quot;rusia&quot; + 0.008*&quot;tentara&quot; + 0.008*&quot;merchant&quot; + 0.008*&quot;ukraina&quot; + 0.008*&quot;china&quot; + 0.008*&quot;wilayah&quot; + 0.007*&quot;pasukan&quot;
+
+Topik 114:
+0.010*&quot;nataru&quot; + 0.009*&quot;persen&quot; + 0.009*&quot;penumpang&quot; + 0.008*&quot;indonesia&quot; + 0.007*&quot;tiket&quot; + 0.006*&quot;harga&quot; + 0.006*&quot;masyarakat&quot; + 0.006*&quot;periode&quot; + 0.005*&quot;kereta&quot; + 0.005*&quot;juta&quot;
+
+Topik 115:
+0.060*&quot;pajak&quot; + 0.024*&quot;sistem&quot; + 0.020*&quot;coretax&quot; + 0.015*&quot;djp&quot; + 0.013*&quot;penerimaan&quot; + 0.012*&quot;program&quot; + 0.012*&quot;wajib&quot; + 0.012*&quot;perpajakan&quot; + 0.012*&quot;negara&quot; + 0.011*&quot;keuangan&quot;
+
+Topik 116:
+0.017*&quot;gempa&quot; + 0.012*&quot;bumi&quot; + 0.011*&quot;bwf&quot; + 0.010*&quot;gempabumi&quot; + 0.009*&quot;m&quot; + 0.008*&quot;towel&quot; + 0.008*&quot;axelsen&quot; + 0.008*&quot;cedera&quot; + 0.007*&quot;bmkg&quot; + 0.007*&quot;hasil&quot;
+
+Topik 117:
+0.059*&quot;gencatan&quot; + 0.055*&quot;senjata&quot; + 0.049*&quot;israel&quot; + 0.033*&quot;hamas&quot; + 0.029*&quot;gaza&quot; + 0.025*&quot;sandera&quot; + 0.019*&quot;kesepakatan&quot; + 0.016*&quot;palestina&quot; + 0.014*&quot;fase&quot; + 0.013*&quot;tahanan&quot;
+
+Topik 118:
+0.041*&quot;harga&quot; + 0.020*&quot;rp&quot; + 0.019*&quot;persen&quot; + 0.017*&quot;ppn&quot; + 0.014*&quot;pajak&quot; + 0.013*&quot;cabai&quot; + 0.013*&quot;ribu&quot; + 0.011*&quot;barang&quot; + 0.011*&quot;kg&quot; + 0.010*&quot;pj&quot;
+
+Topik 119:
+0.008*&quot;ramadan&quot; + 0.007*&quot;perjalanan&quot; + 0.006*&quot;frequent&quot; + 0.006*&quot;whoosher&quot; + 0.006*&quot;sier&quot; + 0.006*&quot;industri&quot; + 0.006*&quot;card&quot; + 0.005*&quot;libur&quot; + 0.005*&quot;mendukung&quot; + 0.005*&quot;delegasi&quot;
+
+Topik 120:
+0.020*&quot;rp&quot; + 0.010*&quot;khusus&quot; + 0.010*&quot;suriah&quot; + 0.009*&quot;aset&quot; + 0.008*&quot;berhasil&quot; + 0.008*&quot;triliun&quot; + 0.007*&quot;wib&quot; + 0.007*&quot;presiden&quot; + 0.007*&quot;tersangka&quot; + 0.006*&quot;assad&quot;
+</pre></div>
+</div>
+</div>
+</div>
+<p>Setiap dokumen menjadi vektor topik</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_topics</span> <span class="o">=</span> <span class="mi">120</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span>
+    <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span>
+    <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+    <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
+    <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">):</span>
+    <span class="n">topic_features</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">:</span>
+        <span class="n">topic_dist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">num_topics</span>
+        <span class="k">for</span> <span class="n">topic_id</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">get_document_topics</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+            <span class="n">topic_dist</span><span class="p">[</span><span class="n">topic_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span>
+        <span class="n">topic_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">topic_dist</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">topic_features</span><span class="p">)</span>
+
+<span class="n">X_topics</span> <span class="o">=</span> <span class="n">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bentuk matriks fitur:&quot;</span><span class="p">,</span> <span class="n">X_topics</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+
+<span class="n">topic_cols</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Topik_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_topics</span><span class="p">)]</span>
+<span class="n">df_topics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">topic_cols</span><span class="p">)</span>
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;kategori&#39;</span><span class="p">]],</span> <span class="n">df_topics</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">df_final</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bentuk matriks fitur: (1500, 120)
+                                               judul kategori  Topik_1  \
+0  Airlangga Harap Kenaikan UMP Tingkatkan Daya B...  Ekonomi      0.0   
+1  PT SIER Beri Penghargaan untuk 50 Tenant Terba...  Ekonomi      0.0   
+2  Prabowo Bakal Bentuk Kementerian Penerimaan Ne...  Ekonomi      0.0   
+3  Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...  Ekonomi      0.0   
+4  Pemerintah Segera Bentuk Satgas PHK Usai Tetap...  Ekonomi      0.0   
+
+   Topik_2  Topik_3  Topik_4  Topik_5  Topik_6  Topik_7  Topik_8  ...  \
+0      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+1      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+2      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+3      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+4      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+
+   Topik_111  Topik_112  Topik_113  Topik_114  Topik_115  Topik_116  \
+0        0.0        0.0        0.0        0.0   0.000000        0.0   
+1        0.0        0.0        0.0        0.0   0.034292        0.0   
+2        0.0        0.0        0.0        0.0   0.153331        0.0   
+3        0.0        0.0        0.0        0.0   0.000000        0.0   
+4        0.0        0.0        0.0        0.0   0.000000        0.0   
+
+   Topik_117  Topik_118  Topik_119  Topik_120  
+0        0.0        0.0   0.000000        0.0  
+1        0.0        0.0   0.676093        0.0  
+2        0.0        0.0   0.000000        0.0  
+3        0.0        0.0   0.000000        0.0  
+4        0.0        0.0   0.000000        0.0  
+
+[5 rows x 122 columns]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_topics</span> <span class="o">=</span> <span class="mi">132</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span>
+    <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span>
+    <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+    <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
+    <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+
+<span class="k">def</span><span class="w"> </span><span class="nf">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">):</span>
+    <span class="n">topic_features</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">:</span>
+        <span class="n">topic_dist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">num_topics</span>
+        <span class="k">for</span> <span class="n">topic_id</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">get_document_topics</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+            <span class="n">topic_dist</span><span class="p">[</span><span class="n">topic_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span>
+        <span class="n">topic_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">topic_dist</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">topic_features</span><span class="p">)</span>
+
+<span class="n">X_topics</span> <span class="o">=</span> <span class="n">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bentuk matriks fitur:&quot;</span><span class="p">,</span> <span class="n">X_topics</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Harus (1500, 132)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span>
+
+<span class="n">nb</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_topics</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== HASIL KLASIFIKASI: NAÏVE BAYES ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi Naïve Bayes:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">))</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 9. Klasifikasi SVM (Linear Support Vector Machine)</span>
+<span class="c1"># ======================================================</span>
+<span class="n">svm</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_topics</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== HASIL KLASIFIKASI: SVM ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi SVM:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">))</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 10. Gabungkan ke DataFrame dan Simpan</span>
+<span class="c1"># ======================================================</span>
+<span class="n">topic_cols</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Topik_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_topics</span><span class="p">)]</span>
+<span class="n">df_topics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">topic_cols</span><span class="p">)</span>
+
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;kategori&#39;</span><span class="p">]],</span> <span class="n">df_topics</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;Prediksi_NB&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred_nb</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;Prediksi_SVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred_svm</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah data akhir:&quot;</span><span class="p">,</span> <span class="n">df_final</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_final</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Simpan ke Google Drive</span>
+<span class="n">df_final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/PPW/UTS/hasil_klasifikasi_132topik.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ File &#39;hasil_klasifikasi_132topik.csv&#39; berhasil disimpan di Google Drive.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bentuk matriks fitur: (1500, 132)
+
+=== HASIL KLASIFIKASI: NAÏVE BAYES ===
+Akurasi Naïve Bayes: 79.8 %
+               precision    recall  f1-score   support
+
+      Ekonomi       0.74      0.76      0.75       375
+Internasional       0.84      0.80      0.82       375
+     Nasional       0.76      0.69      0.73       375
+     Olahraga       0.84      0.94      0.89       375
+
+     accuracy                           0.80      1500
+    macro avg       0.80      0.80      0.80      1500
+ weighted avg       0.80      0.80      0.80      1500
+
+
+=== HASIL KLASIFIKASI: SVM ===
+Akurasi SVM: 83.33 %
+               precision    recall  f1-score   support
+
+      Ekonomi       0.76      0.80      0.78       375
+Internasional       0.90      0.82      0.86       375
+     Nasional       0.77      0.77      0.77       375
+     Olahraga       0.90      0.95      0.92       375
+
+     accuracy                           0.83      1500
+    macro avg       0.83      0.83      0.83      1500
+ weighted avg       0.83      0.83      0.83      1500
+
+
+Jumlah data akhir: (1500, 136)
+                                               judul kategori   Topik_1  \
+0  Airlangga Harap Kenaikan UMP Tingkatkan Daya B...  Ekonomi  0.919479   
+1  PT SIER Beri Penghargaan untuk 50 Tenant Terba...  Ekonomi  0.000000   
+2  Prabowo Bakal Bentuk Kementerian Penerimaan Ne...  Ekonomi  0.000000   
+3  Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...  Ekonomi  0.000000   
+4  Pemerintah Segera Bentuk Satgas PHK Usai Tetap...  Ekonomi  0.210357   
+
+   Topik_2  Topik_3  Topik_4  Topik_5  Topik_6  Topik_7  Topik_8  ...  \
+0      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+1      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+2      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+3      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+4      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+
+   Topik_125  Topik_126  Topik_127  Topik_128  Topik_129  Topik_130  \
+0        0.0        0.0        0.0        0.0   0.000000        0.0   
+1        0.0        0.0        0.0        0.0   0.000000        0.0   
+2        0.0        0.0        0.0        0.0   0.781105        0.0   
+3        0.0        0.0        0.0        0.0   0.000000        0.0   
+4        0.0        0.0        0.0        0.0   0.000000        0.0   
+
+   Topik_131  Topik_132    Prediksi_NB   Prediksi_SVM  
+0        0.0        0.0        Ekonomi        Ekonomi  
+1        0.0        0.0  Internasional  Internasional  
+2        0.0        0.0  Internasional  Internasional  
+3        0.0        0.0        Ekonomi        Ekonomi  
+4        0.0        0.0        Ekonomi        Ekonomi  
+
+[5 rows x 136 columns]
+
+✅ File &#39;hasil_klasifikasi_132topik.csv&#39; berhasil disimpan di Google Drive.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">num_topics</span> <span class="o">=</span> <span class="mi">148</span>
+<span class="n">lda_model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span>
+    <span class="n">corpus</span><span class="o">=</span><span class="n">corpus</span><span class="p">,</span>
+    <span class="n">num_topics</span><span class="o">=</span><span class="n">num_topics</span><span class="p">,</span>
+    <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span>
+    <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span>
+    <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span>
+<span class="p">)</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 6. Ubah Dokumen ke Vektor Topik</span>
+<span class="c1"># ======================================================</span>
+<span class="k">def</span><span class="w"> </span><span class="nf">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">):</span>
+    <span class="n">topic_features</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">:</span>
+        <span class="n">topic_dist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">num_topics</span>
+        <span class="k">for</span> <span class="n">topic_id</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">get_document_topics</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+            <span class="n">topic_dist</span><span class="p">[</span><span class="n">topic_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span>
+        <span class="n">topic_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">topic_dist</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">topic_features</span><span class="p">)</span>
+
+<span class="n">X_topics</span> <span class="o">=</span> <span class="n">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Bentuk matriks fitur:&quot;</span><span class="p">,</span> <span class="n">X_topics</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>  <span class="c1"># Harus (1500, 148)</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 7. Ambil Label Target</span>
+<span class="c1"># ======================================================</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 8. Klasifikasi Naïve Bayes</span>
+<span class="c1"># ======================================================</span>
+<span class="n">nb</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_topics</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== HASIL KLASIFIKASI: NAÏVE BAYES ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi Naïve Bayes:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">))</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 9. Klasifikasi SVM (Linear Support Vector Machine)</span>
+<span class="c1"># ======================================================</span>
+<span class="n">svm</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">(</span><span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+<span class="n">svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_topics</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== HASIL KLASIFIKASI: SVM ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi SVM:&quot;</span><span class="p">,</span> <span class="nb">round</span><span class="p">(</span><span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span> <span class="o">*</span> <span class="mi">100</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="s2">&quot;%&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">))</span>
+
+<span class="c1"># ======================================================</span>
+<span class="c1"># 10. Gabungkan ke DataFrame dan Simpan</span>
+<span class="c1"># ======================================================</span>
+<span class="n">topic_cols</span> <span class="o">=</span> <span class="p">[</span><span class="sa">f</span><span class="s2">&quot;Topik_</span><span class="si">{</span><span class="n">i</span><span class="o">+</span><span class="mi">1</span><span class="si">}</span><span class="s2">&quot;</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">num_topics</span><span class="p">)]</span>
+<span class="n">df_topics</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">columns</span><span class="o">=</span><span class="n">topic_cols</span><span class="p">)</span>
+
+<span class="n">df_final</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">concat</span><span class="p">([</span><span class="n">df</span><span class="p">[[</span><span class="s1">&#39;judul&#39;</span><span class="p">,</span> <span class="s1">&#39;kategori&#39;</span><span class="p">]],</span> <span class="n">df_topics</span><span class="p">],</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;Prediksi_NB&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred_nb</span>
+<span class="n">df_final</span><span class="p">[</span><span class="s1">&#39;Prediksi_SVM&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">y_pred_svm</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">Jumlah data akhir:&quot;</span><span class="p">,</span> <span class="n">df_final</span><span class="o">.</span><span class="n">shape</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">df_final</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
+
+<span class="c1"># Simpan ke Google Drive</span>
+<span class="n">df_final</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/PPW/UTS/hasil_klasifikasi_148topik.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">✅ File &#39;hasil_klasifikasi_148topik.csv&#39; berhasil disimpan di Google Drive.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Bentuk matriks fitur: (1500, 148)
+
+=== HASIL KLASIFIKASI: NAÏVE BAYES ===
+Akurasi Naïve Bayes: 80.6 %
+               precision    recall  f1-score   support
+
+      Ekonomi       0.76      0.78      0.77       375
+Internasional       0.83      0.79      0.81       375
+     Nasional       0.74      0.70      0.72       375
+     Olahraga       0.89      0.95      0.92       375
+
+     accuracy                           0.81      1500
+    macro avg       0.80      0.81      0.80      1500
+ weighted avg       0.80      0.81      0.80      1500
+
+
+=== HASIL KLASIFIKASI: SVM ===
+Akurasi SVM: 83.33 %
+               precision    recall  f1-score   support
+
+      Ekonomi       0.79      0.82      0.81       375
+Internasional       0.83      0.83      0.83       375
+     Nasional       0.77      0.73      0.75       375
+     Olahraga       0.93      0.96      0.94       375
+
+     accuracy                           0.83      1500
+    macro avg       0.83      0.83      0.83      1500
+ weighted avg       0.83      0.83      0.83      1500
+
+
+Jumlah data akhir: (1500, 152)
+                                               judul kategori  Topik_1  \
+0  Airlangga Harap Kenaikan UMP Tingkatkan Daya B...  Ekonomi      0.0   
+1  PT SIER Beri Penghargaan untuk 50 Tenant Terba...  Ekonomi      0.0   
+2  Prabowo Bakal Bentuk Kementerian Penerimaan Ne...  Ekonomi      0.0   
+3  Sinergi Kemenag &amp; BPJS Ketenagakerjaan Lindung...  Ekonomi      0.0   
+4  Pemerintah Segera Bentuk Satgas PHK Usai Tetap...  Ekonomi      0.0   
+
+   Topik_2  Topik_3  Topik_4  Topik_5  Topik_6  Topik_7  Topik_8  ...  \
+0      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+1      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+2      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+3      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+4      0.0      0.0      0.0      0.0      0.0      0.0      0.0  ...   
+
+   Topik_141  Topik_142  Topik_143  Topik_144  Topik_145  Topik_146  \
+0        0.0        0.0        0.0        0.0        0.0   0.235736   
+1        0.0        0.0        0.0        0.0        0.0   0.000000   
+2        0.0        0.0        0.0        0.0        0.0   0.000000   
+3        0.0        0.0        0.0        0.0        0.0   0.000000   
+4        0.0        0.0        0.0        0.0        0.0   0.346360   
+
+   Topik_147  Topik_148    Prediksi_NB  Prediksi_SVM  
+0        0.0        0.0        Ekonomi       Ekonomi  
+1        0.0        0.0  Internasional       Ekonomi  
+2        0.0        0.0        Ekonomi       Ekonomi  
+3        0.0        0.0       Nasional      Nasional  
+4        0.0        0.0        Ekonomi       Ekonomi  
+
+[5 rows x 152 columns]
+
+✅ File &#39;hasil_klasifikasi_148topik.csv&#39; berhasil disimpan di Google Drive.
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span><span class="w"> </span><span class="nf">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">):</span>
+    <span class="n">topic_features</span> <span class="o">=</span> <span class="p">[]</span>
+    <span class="k">for</span> <span class="n">doc</span> <span class="ow">in</span> <span class="n">corpus</span><span class="p">:</span>
+        <span class="n">topic_dist</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="o">*</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">num_topics</span>
+        <span class="k">for</span> <span class="n">topic_id</span><span class="p">,</span> <span class="n">prob</span> <span class="ow">in</span> <span class="n">lda_model</span><span class="o">.</span><span class="n">get_document_topics</span><span class="p">(</span><span class="n">doc</span><span class="p">):</span>
+            <span class="n">topic_dist</span><span class="p">[</span><span class="n">topic_id</span><span class="p">]</span> <span class="o">=</span> <span class="n">prob</span>
+        <span class="n">topic_features</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">topic_dist</span><span class="p">)</span>
+    <span class="k">return</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">topic_features</span><span class="p">)</span>
+
+
+<span class="n">topic_nums</span> <span class="o">=</span> <span class="p">[</span><span class="mi">120</span><span class="p">,</span> <span class="mi">132</span><span class="p">,</span> <span class="mi">148</span><span class="p">]</span>
+<span class="n">nb_scores</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">svm_scores</span> <span class="o">=</span> <span class="p">[]</span>
+
+<span class="k">for</span> <span class="n">n_topics</span> <span class="ow">in</span> <span class="n">topic_nums</span><span class="p">:</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Jumlah topik: </span><span class="si">{</span><span class="n">n_topics</span><span class="si">}</span><span class="s2"> ===&quot;</span><span class="p">)</span>
+    <span class="n">lda_model</span> <span class="o">=</span> <span class="n">models</span><span class="o">.</span><span class="n">LdaModel</span><span class="p">(</span><span class="n">corpus</span><span class="p">,</span> <span class="n">num_topics</span><span class="o">=</span><span class="n">n_topics</span><span class="p">,</span> <span class="n">id2word</span><span class="o">=</span><span class="n">dictionary</span><span class="p">,</span> <span class="n">passes</span><span class="o">=</span><span class="mi">10</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+    <span class="n">X_topics</span> <span class="o">=</span> <span class="n">get_topic_vector</span><span class="p">(</span><span class="n">lda_model</span><span class="p">,</span> <span class="n">corpus</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span>
+
+    <span class="c1"># Split data</span>
+    <span class="n">X_train</span><span class="p">,</span> <span class="n">X_test</span><span class="p">,</span> <span class="n">y_train</span><span class="p">,</span> <span class="n">y_test</span> <span class="o">=</span> <span class="n">train_test_split</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">test_size</span><span class="o">=</span><span class="mf">0.2</span><span class="p">,</span> <span class="n">random_state</span><span class="o">=</span><span class="mi">42</span><span class="p">)</span>
+
+    <span class="c1"># Naive Bayes</span>
+    <span class="n">nb</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+    <span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">acc_nb</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">)</span>
+    <span class="n">nb_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc_nb</span><span class="p">)</span>
+
+    <span class="c1"># SVM</span>
+    <span class="n">svm</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">()</span>
+    <span class="n">svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_train</span><span class="p">,</span> <span class="n">y_train</span><span class="p">)</span>
+    <span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_test</span><span class="p">)</span>
+    <span class="n">acc_svm</span> <span class="o">=</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y_test</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">)</span>
+    <span class="n">svm_scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">acc_svm</span><span class="p">)</span>
+
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi Naïve Bayes: </span><span class="si">{</span><span class="n">acc_nb</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="sa">f</span><span class="s2">&quot;Akurasi SVM: </span><span class="si">{</span><span class="n">acc_svm</span><span class="si">:</span><span class="s2">.4f</span><span class="si">}</span><span class="s2">&quot;</span><span class="p">)</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">figure</span><span class="p">(</span><span class="n">figsize</span><span class="o">=</span><span class="p">(</span><span class="mi">8</span><span class="p">,</span><span class="mi">5</span><span class="p">))</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">topic_nums</span><span class="p">,</span> <span class="n">nb_scores</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;o&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;Naïve Bayes&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">topic_nums</span><span class="p">,</span> <span class="n">svm_scores</span><span class="p">,</span> <span class="n">marker</span><span class="o">=</span><span class="s1">&#39;s&#39;</span><span class="p">,</span> <span class="n">label</span><span class="o">=</span><span class="s1">&#39;SVM&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Perbandingan Akurasi Berdasarkan Jumlah Topik LDA&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">xlabel</span><span class="p">(</span><span class="s1">&#39;Jumlah Topik&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">ylabel</span><span class="p">(</span><span class="s1">&#39;Akurasi&#39;</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">legend</span><span class="p">()</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">grid</span><span class="p">(</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
+
+<span class="n">hasil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Jumlah Topik&#39;</span><span class="p">:</span> <span class="n">topic_nums</span><span class="p">,</span>
+    <span class="s1">&#39;Akurasi Naïve Bayes&#39;</span><span class="p">:</span> <span class="n">nb_scores</span><span class="p">,</span>
+    <span class="s1">&#39;Akurasi SVM&#39;</span><span class="p">:</span> <span class="n">svm_scores</span>
+<span class="p">})</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;</span><span class="se">\n</span><span class="s2">=== Ringkasan Akurasi ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">hasil</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Jumlah topik: 120 ===
+Akurasi Naïve Bayes: 0.7900
+Akurasi SVM: 0.7933
+
+=== Jumlah topik: 132 ===
+Akurasi Naïve Bayes: 0.7867
+Akurasi SVM: 0.8100
+
+=== Jumlah topik: 148 ===
+Akurasi Naïve Bayes: 0.7700
+Akurasi SVM: 0.7733
+</pre></div>
+</div>
+<img alt="../_images/572deca36370ce7f385582c3594dbe368f8e19ee0acd69dbaca70666bca9f706.png" src="../_images/572deca36370ce7f385582c3594dbe368f8e19ee0acd69dbaca70666bca9f706.png" />
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Ringkasan Akurasi ===
+   Jumlah Topik  Akurasi Naïve Bayes  Akurasi SVM
+0           120             0.790000     0.793333
+1           132             0.786667     0.810000
+2           148             0.770000     0.773333
+</pre></div>
+</div>
+</div>
+</div>
+<p>Target(label berita)</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">if</span> <span class="s1">&#39;kategori&#39;</span> <span class="ow">not</span> <span class="ow">in</span> <span class="n">df</span><span class="o">.</span><span class="n">columns</span><span class="p">:</span>
+    <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s2">&quot;Kolom &#39;kategori&#39; tidak ditemukan di dataset.&quot;</span><span class="p">)</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;kategori&#39;</span><span class="p">]</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Contoh label:&quot;</span><span class="p">,</span> <span class="n">y</span><span class="o">.</span><span class="n">unique</span><span class="p">())</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Contoh label: [&#39;Ekonomi&#39; &#39;Olahraga&#39; &#39;Nasional&#39; &#39;Internasional&#39;]
+</pre></div>
+</div>
+</div>
+</div>
+<p>Klasifikasi NB</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">nb</span> <span class="o">=</span> <span class="n">MultinomialNB</span><span class="p">()</span>
+<span class="n">nb</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred_nb</span> <span class="o">=</span> <span class="n">nb</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_topics</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Hasil Naïve Bayes ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_nb</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Hasil Naïve Bayes ===
+Akurasi: 0.8113333333333334
+               precision    recall  f1-score   support
+
+      Ekonomi       0.74      0.84      0.79       375
+Internasional       0.82      0.81      0.82       375
+     Nasional       0.78      0.63      0.70       375
+     Olahraga       0.90      0.96      0.93       375
+
+     accuracy                           0.81      1500
+    macro avg       0.81      0.81      0.81      1500
+ weighted avg       0.81      0.81      0.81      1500
+</pre></div>
+</div>
+</div>
+</div>
+<p>Klasifikasi SVM</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">svm</span> <span class="o">=</span> <span class="n">LinearSVC</span><span class="p">()</span>
+<span class="n">svm</span><span class="o">.</span><span class="n">fit</span><span class="p">(</span><span class="n">X_topics</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">y_pred_svm</span> <span class="o">=</span> <span class="n">svm</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">X_topics</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;=== Hasil SVM ===&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Akurasi:&quot;</span><span class="p">,</span> <span class="n">accuracy_score</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">classification_report</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">y_pred_svm</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>=== Hasil SVM ===
+Akurasi: 0.826
+               precision    recall  f1-score   support
+
+      Ekonomi       0.78      0.84      0.81       375
+Internasional       0.83      0.82      0.82       375
+     Nasional       0.76      0.70      0.73       375
+     Olahraga       0.94      0.94      0.94       375
+
+     accuracy                           0.83      1500
+    macro avg       0.83      0.83      0.83      1500
+ weighted avg       0.83      0.83      0.83      1500
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">hasil</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">({</span>
+    <span class="s1">&#39;Judul&#39;</span><span class="p">:</span> <span class="n">df</span><span class="p">[</span><span class="s1">&#39;judul&#39;</span><span class="p">],</span>
+    <span class="s1">&#39;Kategori_Asli&#39;</span><span class="p">:</span> <span class="n">y</span><span class="p">,</span>
+    <span class="s1">&#39;Prediksi_NB&#39;</span><span class="p">:</span> <span class="n">y_pred_nb</span><span class="p">,</span>
+    <span class="s1">&#39;Prediksi_SVM&#39;</span><span class="p">:</span> <span class="n">y_pred_svm</span>
+<span class="p">})</span>
+
+<span class="n">hasil</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;/content/drive/MyDrive/PPW/UTS/hasil_klasifikasi2_1500.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;✅ File hasil_klasifikasi_1500.csv berhasil disimpan di Google Drive.&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>✅ File hasil_klasifikasi_1500.csv berhasil disimpan di Google Drive.
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./tugass"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="ektraksi_LDA.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><strong>Klasifikasi dengan ektraksi fitur menggunakan  Latent Dirichlet Allocation</strong></p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="UTS_PPW_Clustering.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><strong>Clustering Data Email</strong></p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ahya Cinta Azka Marinda
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
